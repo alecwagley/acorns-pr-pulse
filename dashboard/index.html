@@ -65,7 +65,7 @@
     <div class="flex-1 text-sm text-white/80 leading-relaxed max-w-3xl">
       <div class="text-[10px] uppercase tracking-widest brand-accent font-bold mb-2">Start here</div>
       <p class="mb-3">Yo PR team! This dashboard pulls the latest press coverage on Acorns and 11 fintech competitors. Refreshes every day at 12pm ET. Nothing for you to maintain.</p>
-      <p class="mb-3"><span class="brand-accent font-medium">Acorns in the News</span> is at the top — your own coverage first. Below that, <span class="brand-accent font-medium">Official PR</span> shows competitor press releases + SEC filings (the high-signal stuff). <span class="brand-accent font-medium">The Buzz</span> is everything else — tech press, regulatory news, analyst commentary. Per-brand tiles below; running reporter list at the bottom.</p>
+      <p class="mb-3"><span class="brand-accent font-medium">Mention Volume</span> at the top shows the at-a-glance picture: total stories per brand with sentiment stacked (green positive, gray neutral, red negative). Then <span class="brand-accent font-medium">Acorns in the News</span> for your own coverage, <span class="brand-accent font-medium">Official PR</span> for competitor press releases + SEC filings, and <span class="brand-accent font-medium">The Buzz</span> for everything else (tech press, regulatory, analyst). Running reporter list at the bottom.</p>
       <p>Every headline links straight to the source. When the same story is covered by multiple outlets, you'll see them stacked on one card.</p>
     </div>
     <button onclick="dismissWhy()" class="text-white/40 hover:text-white/80 text-2xl leading-none -mt-1" aria-label="Dismiss">×</button>
@@ -74,7 +74,141 @@
 
 <main class="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10 space-y-10 sm:space-y-12">
 
-  <!-- 1. Acorns in the News -->
+  <!-- 1. Mention Volume (chart) — at top for at-a-glance overview -->
+  
+<section>
+  <div class="flex items-baseline gap-3 mb-3">
+    <h2 class="text-2xl font-semibold text-white">Mention Volume</h2>
+    <span class="text-xs text-white/40">Last 14 days · sentiment-stacked · syndicated coverage counts once</span>
+  </div>
+  
+<div class="flex flex-wrap gap-x-4 gap-y-2 text-xs text-white/60 mb-4">
+  <span class="inline-flex items-center gap-2">
+    <span class="inline-block w-3 h-3 rounded-sm bg-emerald-500/80"></span> Positive
+  </span>
+  <span class="inline-flex items-center gap-2">
+    <span class="inline-block w-3 h-3 rounded-sm bg-white/30"></span> Neutral
+  </span>
+  <span class="inline-flex items-center gap-2">
+    <span class="inline-block w-3 h-3 rounded-sm bg-rose-500/80"></span> Negative
+  </span>
+</div>
+
+  <div class="bg-white/[0.02] border border-white/10 rounded-2xl p-4 sm:p-6 space-y-2">
+    
+<div class="flex items-center gap-3 sm:gap-4">
+  <div class="w-24 sm:w-32 shrink-0 text-xs sm:text-sm text-white text-right">Kalshi</div>
+  <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-6 sm:h-7">
+    <div class="flex h-full" style="width: 100.00%"><div class="bg-emerald-500/80 h-full" style="width: 47.06%" title="16 positive"></div><div class="bg-white/30 h-full" style="width: 26.47%" title="9 neutral"></div><div class="bg-rose-500/80 h-full" style="width: 26.47%" title="9 negative"></div></div>
+  </div>
+  <div class="hidden sm:flex gap-2 text-[11px] tabular-nums shrink-0 w-24"><span class="text-emerald-400">16+</span> <span class="text-white/50">9·</span> <span class="text-rose-400">9-</span></div>
+  <div class="w-10 text-right text-sm text-white/70 tabular-nums">34</div>
+</div>
+
+<div class="flex items-center gap-3 sm:gap-4">
+  <div class="w-24 sm:w-32 shrink-0 text-xs sm:text-sm text-white text-right">Polymarket</div>
+  <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-6 sm:h-7">
+    <div class="flex h-full" style="width: 82.35%"><div class="bg-emerald-500/80 h-full" style="width: 25.00%" title="7 positive"></div><div class="bg-white/30 h-full" style="width: 25.00%" title="7 neutral"></div><div class="bg-rose-500/80 h-full" style="width: 50.00%" title="14 negative"></div></div>
+  </div>
+  <div class="hidden sm:flex gap-2 text-[11px] tabular-nums shrink-0 w-24"><span class="text-emerald-400">7+</span> <span class="text-white/50">7·</span> <span class="text-rose-400">14-</span></div>
+  <div class="w-10 text-right text-sm text-white/70 tabular-nums">28</div>
+</div>
+
+<div class="flex items-center gap-3 sm:gap-4">
+  <div class="w-24 sm:w-32 shrink-0 text-xs sm:text-sm text-white text-right">Chase</div>
+  <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-6 sm:h-7">
+    <div class="flex h-full" style="width: 61.76%"><div class="bg-emerald-500/80 h-full" style="width: 38.10%" title="8 positive"></div><div class="bg-white/30 h-full" style="width: 52.38%" title="11 neutral"></div><div class="bg-rose-500/80 h-full" style="width: 9.52%" title="2 negative"></div></div>
+  </div>
+  <div class="hidden sm:flex gap-2 text-[11px] tabular-nums shrink-0 w-24"><span class="text-emerald-400">8+</span> <span class="text-white/50">11·</span> <span class="text-rose-400">2-</span></div>
+  <div class="w-10 text-right text-sm text-white/70 tabular-nums">21</div>
+</div>
+
+<div class="flex items-center gap-3 sm:gap-4">
+  <div class="w-24 sm:w-32 shrink-0 text-xs sm:text-sm text-white text-right">Robinhood</div>
+  <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-6 sm:h-7">
+    <div class="flex h-full" style="width: 38.24%"><div class="bg-emerald-500/80 h-full" style="width: 61.54%" title="8 positive"></div><div class="bg-white/30 h-full" style="width: 38.46%" title="5 neutral"></div></div>
+  </div>
+  <div class="hidden sm:flex gap-2 text-[11px] tabular-nums shrink-0 w-24"><span class="text-emerald-400">8+</span> <span class="text-white/50">5·</span></div>
+  <div class="w-10 text-right text-sm text-white/70 tabular-nums">13</div>
+</div>
+
+<div class="flex items-center gap-3 sm:gap-4">
+  <div class="w-24 sm:w-32 shrink-0 text-xs sm:text-sm text-white text-right">Cash App</div>
+  <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-6 sm:h-7">
+    <div class="flex h-full" style="width: 35.29%"><div class="bg-emerald-500/80 h-full" style="width: 58.33%" title="7 positive"></div><div class="bg-white/30 h-full" style="width: 33.33%" title="4 neutral"></div><div class="bg-rose-500/80 h-full" style="width: 8.33%" title="1 negative"></div></div>
+  </div>
+  <div class="hidden sm:flex gap-2 text-[11px] tabular-nums shrink-0 w-24"><span class="text-emerald-400">7+</span> <span class="text-white/50">4·</span> <span class="text-rose-400">1-</span></div>
+  <div class="w-10 text-right text-sm text-white/70 tabular-nums">12</div>
+</div>
+
+<div class="flex items-center gap-3 sm:gap-4">
+  <div class="w-24 sm:w-32 shrink-0 text-xs sm:text-sm text-white text-right">SoFi</div>
+  <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-6 sm:h-7">
+    <div class="flex h-full" style="width: 23.53%"><div class="bg-emerald-500/80 h-full" style="width: 87.50%" title="7 positive"></div><div class="bg-white/30 h-full" style="width: 12.50%" title="1 neutral"></div></div>
+  </div>
+  <div class="hidden sm:flex gap-2 text-[11px] tabular-nums shrink-0 w-24"><span class="text-emerald-400">7+</span> <span class="text-white/50">1·</span></div>
+  <div class="w-10 text-right text-sm text-white/70 tabular-nums">8</div>
+</div>
+
+<div class="flex items-center gap-3 sm:gap-4">
+  <div class="w-24 sm:w-32 shrink-0 text-xs sm:text-sm text-white text-right">Chime</div>
+  <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-6 sm:h-7">
+    <div class="flex h-full" style="width: 20.59%"><div class="bg-emerald-500/80 h-full" style="width: 42.86%" title="3 positive"></div><div class="bg-white/30 h-full" style="width: 42.86%" title="3 neutral"></div><div class="bg-rose-500/80 h-full" style="width: 14.29%" title="1 negative"></div></div>
+  </div>
+  <div class="hidden sm:flex gap-2 text-[11px] tabular-nums shrink-0 w-24"><span class="text-emerald-400">3+</span> <span class="text-white/50">3·</span> <span class="text-rose-400">1-</span></div>
+  <div class="w-10 text-right text-sm text-white/70 tabular-nums">7</div>
+</div>
+
+<div class="flex items-center gap-3 sm:gap-4">
+  <div class="w-24 sm:w-32 shrink-0 text-xs sm:text-sm brand-accent font-semibold text-right">Acorns</div>
+  <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-6 sm:h-7">
+    <div class="flex h-full" style="width: 5.88%"><div class="bg-emerald-500/80 h-full" style="width: 50.00%" title="1 positive"></div><div class="bg-white/30 h-full" style="width: 50.00%" title="1 neutral"></div></div>
+  </div>
+  <div class="hidden sm:flex gap-2 text-[11px] tabular-nums shrink-0 w-24"><span class="text-emerald-400">1+</span> <span class="text-white/50">1·</span></div>
+  <div class="w-10 text-right text-sm brand-accent font-bold tabular-nums">2</div>
+</div>
+
+<div class="flex items-center gap-3 sm:gap-4">
+  <div class="w-24 sm:w-32 shrink-0 text-xs sm:text-sm text-white text-right">Betterment</div>
+  <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-6 sm:h-7">
+    <div class="flex h-full" style="width: 5.88%"><div class="bg-emerald-500/80 h-full" style="width: 50.00%" title="1 positive"></div><div class="bg-white/30 h-full" style="width: 50.00%" title="1 neutral"></div></div>
+  </div>
+  <div class="hidden sm:flex gap-2 text-[11px] tabular-nums shrink-0 w-24"><span class="text-emerald-400">1+</span> <span class="text-white/50">1·</span></div>
+  <div class="w-10 text-right text-sm text-white/70 tabular-nums">2</div>
+</div>
+
+<div class="flex items-center gap-3 sm:gap-4">
+  <div class="w-24 sm:w-32 shrink-0 text-xs sm:text-sm text-white text-right">Wealthfront</div>
+  <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-6 sm:h-7">
+    <div class="flex h-full" style="width: 5.88%"><div class="bg-white/30 h-full" style="width: 100.00%" title="2 neutral"></div></div>
+  </div>
+  <div class="hidden sm:flex gap-2 text-[11px] tabular-nums shrink-0 w-24"><span class="text-white/50">2·</span></div>
+  <div class="w-10 text-right text-sm text-white/70 tabular-nums">2</div>
+</div>
+
+<div class="flex items-center gap-3 sm:gap-4">
+  <div class="w-24 sm:w-32 shrink-0 text-xs sm:text-sm text-white text-right">Greenlight</div>
+  <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-6 sm:h-7">
+    <div class="flex h-full" style="width: 2.94%"><div class="bg-emerald-500/80 h-full" style="width: 100.00%" title="1 positive"></div></div>
+  </div>
+  <div class="hidden sm:flex gap-2 text-[11px] tabular-nums shrink-0 w-24"><span class="text-emerald-400">1+</span></div>
+  <div class="w-10 text-right text-sm text-white/70 tabular-nums">1</div>
+</div>
+
+<div class="flex items-center gap-3 sm:gap-4">
+  <div class="w-24 sm:w-32 shrink-0 text-xs sm:text-sm text-white text-right">Alinea</div>
+  <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-6 sm:h-7">
+    
+  </div>
+  
+  <div class="w-10 text-right text-sm text-white/70 tabular-nums">0</div>
+</div>
+
+  </div>
+</section>
+
+
+  <!-- 2. Acorns in the News -->
   <section>
     <div class="flex items-baseline gap-3 mb-5">
       <h2 class="text-2xl font-semibold text-white">Acorns in the News</h2>
@@ -124,7 +258,7 @@
     </div>
   </section>
 
-  <!-- 2. Official PR -->
+  <!-- 3. Official PR -->
   <section>
     <div class="flex items-baseline gap-3 mb-5">
       <h2 class="text-2xl font-semibold text-white">Official PR</h2>
@@ -141,7 +275,7 @@
   
 <div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
   <a href="wealthfront.html" class="text-[10px] uppercase tracking-widest brand-accent font-semibold hover:underline whitespace-nowrap">Wealthfront</a><span class="text-white/20">·</span>
-  <span>2h ago</span>
+  <span>3h ago</span>
   <span class="text-white/20">·</span>
   <a href="https://www.globenewswire.com/news-release/2026/05/14/3295333/0/en/wealthfront-to-announce-fiscal-first-quarter-2027-financial-results-on-june-4-2026.html" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
     GlobeNewswire
@@ -161,7 +295,7 @@
   
 <div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
   <a href="polymarket.html" class="text-[10px] uppercase tracking-widest brand-accent font-semibold hover:underline whitespace-nowrap">Polymarket</a><span class="text-white/20">·</span>
-  <span>6h ago</span>
+  <span>7h ago</span>
   <span class="text-white/20">·</span>
   <a href="https://www.businesswire.com/news/home/20260513833232/en/Polymarket-Named-Official-Prediction-Market-Partner-of-Serie-A-in-the-U.S." target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
     Business Wire
@@ -181,7 +315,7 @@
   
 <div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
   <a href="polymarket.html" class="text-[10px] uppercase tracking-widest brand-accent font-semibold hover:underline whitespace-nowrap">Polymarket</a><span class="text-white/20">·</span>
-  <span>9h ago</span>
+  <span>10h ago</span>
   <span class="text-white/20">·</span>
   <a href="https://www.newsfilecorp.com/release/297384/Neptune-Establishes-Position-in-Polymarket-Expanding-Exposure-to-Blockchain-Financial-Platforms" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
     TMX Newsfile
@@ -334,7 +468,7 @@
     </div>
   </section>
 
-  <!-- 3. The Buzz (with brand filter chips) -->
+  <!-- 4. The Buzz (with brand filter chips) -->
   <section>
     <div class="flex items-baseline gap-3 mb-4">
       <h2 class="text-2xl font-semibold text-white">The Buzz</h2>
@@ -447,7 +581,7 @@
   
 <div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
   <a href="polymarket.html" class="text-[10px] uppercase tracking-widest brand-accent font-semibold hover:underline whitespace-nowrap">Polymarket</a><span class="text-white/20">·</span>
-  <span>3h ago</span>
+  <span>4h ago</span>
   <span class="text-white/20">·</span>
   <a href="https://sports.yahoo.com/articles/polymarket-named-italian-serie-exclusive-190900210.html" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
     Yahoo Sports
@@ -467,7 +601,7 @@
   
 <div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
   <a href="kalshi.html" class="text-[10px] uppercase tracking-widest brand-accent font-semibold hover:underline whitespace-nowrap">Kalshi</a><span class="text-white/20">·</span>
-  <span>3h ago</span>
+  <span>4h ago</span>
   <span class="text-white/20">·</span>
   <a href="https://www.si.com/betting/prediction-market/news/the-kalshi-market-predicts-a-stanley-cup-collision-course-between-these-two-teams" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
     Sports Illustrated
@@ -507,7 +641,7 @@
   
 <div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
   <a href="kalshi.html" class="text-[10px] uppercase tracking-widest brand-accent font-semibold hover:underline whitespace-nowrap">Kalshi</a><span class="text-white/20">·</span>
-  <span>4h ago</span>
+  <span>5h ago</span>
   <span class="text-white/20">·</span>
   <a href="https://coinspot.io/en/analysis/polymarket-volumes-fall-for-the-first-time-since-august-kalshi-keeps-growing/" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
     Coinspot.io
@@ -589,7 +723,7 @@
   
 <div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
   <a href="kalshi.html" class="text-[10px] uppercase tracking-widest brand-accent font-semibold hover:underline whitespace-nowrap">Kalshi</a><span class="text-white/20">·</span>
-  <span>5h ago</span>
+  <span>6h ago</span>
   <span class="text-white/20">·</span>
   <a href="https://www.bloomberg.com/news/articles/2026-05-14/draftkings-dkng-gets-rare-sell-rating-as-kalshi-polymarket-threaten-growth" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
     Bloomberg.com
@@ -629,7 +763,7 @@
   
 <div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
   <a href="robinhood.html" class="text-[10px] uppercase tracking-widest brand-accent font-semibold hover:underline whitespace-nowrap">Robinhood</a><span class="text-white/20">·</span>
-  <span>6h ago</span>
+  <span>7h ago</span>
   <span class="text-white/20">·</span>
   <a href="https://www.moomoo.com/community/feed/6th-week-of-trading-hood-updated-116573799841798" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
     Moomoo
@@ -650,7 +784,7 @@
 <div class="mt-3">
   <div class="flex items-center gap-2 text-[11px] text-white/45 mb-2">
     <a href="kalshi.html" class="text-[10px] uppercase tracking-widest brand-accent font-semibold hover:underline whitespace-nowrap">Kalshi</a><span class="text-white/20">·</span>
-    <span>6h ago</span>
+    <span>7h ago</span>
     <span class="text-white/20">·</span>
     <span class="brand-accent font-semibold">2 sources</span>
   </div>
@@ -753,7 +887,7 @@
   
 <div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
   <a href="kalshi.html" class="text-[10px] uppercase tracking-widest brand-accent font-semibold hover:underline whitespace-nowrap">Kalshi</a><span class="text-white/20">·</span>
-  <span>7h ago</span>
+  <span>8h ago</span>
   <span class="text-white/20">·</span>
   <a href="https://www.bloomberg.com/news/articles/2026-05-14/virtu-starts-trading-on-kalshi-as-event-bets-draw-in-wall-street" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
     Bloomberg.com
@@ -773,7 +907,7 @@
   
 <div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
   <a href="kalshi.html" class="text-[10px] uppercase tracking-widest brand-accent font-semibold hover:underline whitespace-nowrap">Kalshi</a><span class="text-white/20">·</span>
-  <span>7h ago</span>
+  <span>8h ago</span>
   <span class="text-white/20">·</span>
   <a href="https://www.sportsbettingdime.com/news/betting/cftc-has-voice-heard-in-kalshi-vs-ohio-sports-event-contract-lawsuit/" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
     Sports Betting Dime
@@ -793,7 +927,7 @@
   
 <div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
   <a href="polymarket.html" class="text-[10px] uppercase tracking-widest brand-accent font-semibold hover:underline whitespace-nowrap">Polymarket</a><span class="text-white/20">·</span>
-  <span>8h ago</span>
+  <span>9h ago</span>
   <span class="text-white/20">·</span>
   <a href="https://www.yogonet.com/international/news/2026/05/14/120500-polymarket-moves-forward-with-us-comeback-as-ios-rollout-begins" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
     Yogonet
@@ -853,7 +987,7 @@
   
 <div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
   <a href="chase.html" class="text-[10px] uppercase tracking-widest brand-accent font-semibold hover:underline whitespace-nowrap">Chase</a><span class="text-white/20">·</span>
-  <span>10h ago</span>
+  <span>11h ago</span>
   <span class="text-white/20">·</span>
   <a href="https://www.bizjournals.com/houston/news/2026/05/14/houston-major-focus-jpmorgan-chase-initiative.html" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
     The Business Journals
@@ -893,7 +1027,7 @@
   
 <div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
   <a href="robinhood.html" class="text-[10px] uppercase tracking-widest brand-accent font-semibold hover:underline whitespace-nowrap">Robinhood</a><span class="text-white/20">·</span>
-  <span>12h ago</span>
+  <span>13h ago</span>
   <span class="text-white/20">·</span>
   <a href="https://www.moomoo.com/news/post/70000254/barclays-maintains-robinhood-hoodus-with-buy-rating-maintains-target-price" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
     Moomoo
@@ -913,7 +1047,7 @@
   
 <div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
   <a href="chase.html" class="text-[10px] uppercase tracking-widest brand-accent font-semibold hover:underline whitespace-nowrap">Chase</a><span class="text-white/20">·</span>
-  <span>13h ago</span>
+  <span>14h ago</span>
   <span class="text-white/20">·</span>
   <a href="https://www.pressconnects.com/story/news/local/2026/05/14/chase-bank-to-replace-former-dennys-on-the-vestal-parkway/90048609007/" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
     Press &amp; Sun-Bulletin
@@ -973,7 +1107,7 @@
   
 <div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
   <a href="kalshi.html" class="text-[10px] uppercase tracking-widest brand-accent font-semibold hover:underline whitespace-nowrap">Kalshi</a><span class="text-white/20">·</span>
-  <span>15h ago</span>
+  <span>16h ago</span>
   <span class="text-white/20">·</span>
   <a href="https://www.casino.org/news/cathie-woods-ark-boosts-kalshi-stake-in-recent-funding-round/" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
     Casino.org
@@ -993,7 +1127,7 @@
   
 <div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
   <a href="polymarket.html" class="text-[10px] uppercase tracking-widest brand-accent font-semibold hover:underline whitespace-nowrap">Polymarket</a><span class="text-white/20">·</span>
-  <span>15h ago</span>
+  <span>16h ago</span>
   <span class="text-white/20">·</span>
   <a href="https://www.casino.org/news/polymarket-drops-waitlist-goes-live-in-us-for-select-users/" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
     Casino.org
@@ -1013,7 +1147,7 @@
   
 <div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
   <a href="polymarket.html" class="text-[10px] uppercase tracking-widest brand-accent font-semibold hover:underline whitespace-nowrap">Polymarket</a><span class="text-white/20">·</span>
-  <span>16h ago</span>
+  <span>17h ago</span>
   <span class="text-white/20">·</span>
   <a href="https://en.yenisafak.com/world/polymarket-faces-scrutiny-over-suspected-insider-betting-activity-3718264" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
     Yeni Safak English
@@ -1033,7 +1167,7 @@
   
 <div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
   <a href="polymarket.html" class="text-[10px] uppercase tracking-widest brand-accent font-semibold hover:underline whitespace-nowrap">Polymarket</a><span class="text-white/20">·</span>
-  <span>19h ago</span>
+  <span>20h ago</span>
   <span class="text-white/20">·</span>
   <a href="https://www.chaincatcher.com/en/article/2264652" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
     链捕手ChainCatcher
@@ -1093,7 +1227,7 @@
   
 <div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
   <a href="polymarket.html" class="text-[10px] uppercase tracking-widest brand-accent font-semibold hover:underline whitespace-nowrap">Polymarket</a><span class="text-white/20">·</span>
-  <span>22h ago</span>
+  <span>23h ago</span>
   <span class="text-white/20">·</span>
   <a href="https://www.startuphub.ai/ai-news/prediction-markets/2026/polymarket-bets-on-bitcoin-s-150k-future" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
     StartupHub.ai
@@ -2738,116 +2872,6 @@
     </div>
     <p id="buzz-empty" class="hidden text-white/50 text-sm mt-4">No items for this brand in the last 14 days.</p>
   </section>
-
-  <!-- 4. Mention Volume (chart) -->
-  
-<section>
-  <div class="flex items-baseline gap-3 mb-5">
-    <h2 class="text-2xl font-semibold text-white">Mention Volume</h2>
-    <span class="text-xs text-white/40">Acorns vs competitors · last 14 days · this snapshot will become a monthly trend chart once we have multiple weeks logged</span>
-  </div>
-  <div class="bg-white/[0.02] border border-white/10 rounded-2xl p-6 space-y-2">
-    
-<div class="flex items-center gap-4">
-  <div class="w-32 shrink-0 text-sm text-white text-right">Kalshi</div>
-  <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-7">
-    <div class="bg-white/30 h-full transition-all" style="width: 100%"></div>
-  </div>
-  <div class="w-12 text-right text-sm text-white/70 tabular-nums">34</div>
-</div>
-
-<div class="flex items-center gap-4">
-  <div class="w-32 shrink-0 text-sm text-white text-right">Polymarket</div>
-  <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-7">
-    <div class="bg-white/30 h-full transition-all" style="width: 82%"></div>
-  </div>
-  <div class="w-12 text-right text-sm text-white/70 tabular-nums">28</div>
-</div>
-
-<div class="flex items-center gap-4">
-  <div class="w-32 shrink-0 text-sm text-white text-right">Chase</div>
-  <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-7">
-    <div class="bg-white/30 h-full transition-all" style="width: 62%"></div>
-  </div>
-  <div class="w-12 text-right text-sm text-white/70 tabular-nums">21</div>
-</div>
-
-<div class="flex items-center gap-4">
-  <div class="w-32 shrink-0 text-sm text-white text-right">Robinhood</div>
-  <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-7">
-    <div class="bg-white/30 h-full transition-all" style="width: 38%"></div>
-  </div>
-  <div class="w-12 text-right text-sm text-white/70 tabular-nums">13</div>
-</div>
-
-<div class="flex items-center gap-4">
-  <div class="w-32 shrink-0 text-sm text-white text-right">Cash App</div>
-  <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-7">
-    <div class="bg-white/30 h-full transition-all" style="width: 35%"></div>
-  </div>
-  <div class="w-12 text-right text-sm text-white/70 tabular-nums">12</div>
-</div>
-
-<div class="flex items-center gap-4">
-  <div class="w-32 shrink-0 text-sm text-white text-right">SoFi</div>
-  <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-7">
-    <div class="bg-white/30 h-full transition-all" style="width: 24%"></div>
-  </div>
-  <div class="w-12 text-right text-sm text-white/70 tabular-nums">8</div>
-</div>
-
-<div class="flex items-center gap-4">
-  <div class="w-32 shrink-0 text-sm text-white text-right">Chime</div>
-  <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-7">
-    <div class="bg-white/30 h-full transition-all" style="width: 21%"></div>
-  </div>
-  <div class="w-12 text-right text-sm text-white/70 tabular-nums">7</div>
-</div>
-
-<div class="flex items-center gap-4">
-  <div class="w-32 shrink-0 text-sm brand-accent font-semibold text-right">Acorns</div>
-  <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-7">
-    <div class="bg-brand-accent h-full transition-all" style="width: 6%"></div>
-  </div>
-  <div class="w-12 text-right text-sm brand-accent font-bold tabular-nums">2</div>
-</div>
-
-<div class="flex items-center gap-4">
-  <div class="w-32 shrink-0 text-sm text-white text-right">Betterment</div>
-  <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-7">
-    <div class="bg-white/30 h-full transition-all" style="width: 6%"></div>
-  </div>
-  <div class="w-12 text-right text-sm text-white/70 tabular-nums">2</div>
-</div>
-
-<div class="flex items-center gap-4">
-  <div class="w-32 shrink-0 text-sm text-white text-right">Wealthfront</div>
-  <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-7">
-    <div class="bg-white/30 h-full transition-all" style="width: 6%"></div>
-  </div>
-  <div class="w-12 text-right text-sm text-white/70 tabular-nums">2</div>
-</div>
-
-<div class="flex items-center gap-4">
-  <div class="w-32 shrink-0 text-sm text-white text-right">Greenlight</div>
-  <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-7">
-    <div class="bg-white/30 h-full transition-all" style="width: 3%"></div>
-  </div>
-  <div class="w-12 text-right text-sm text-white/70 tabular-nums">1</div>
-</div>
-
-<div class="flex items-center gap-4">
-  <div class="w-32 shrink-0 text-sm text-white text-right">Alinea</div>
-  <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-7">
-    <div class="bg-white/30 h-full transition-all" style="width: 0%"></div>
-  </div>
-  <div class="w-12 text-right text-sm text-white/70 tabular-nums">0</div>
-</div>
-
-  </div>
-  <p class="text-xs text-white/40 mt-3">Counts each unique story once — syndicated coverage across multiple outlets collapses to one mention (e.g., the Kalshi-tribes lawsuit covered by 9 outlets counts as 1).</p>
-</section>
-
 
   <!-- 5. Top Reporters (running) -->
   <section>

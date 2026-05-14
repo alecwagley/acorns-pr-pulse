@@ -116,7 +116,7 @@ HEADER_HOMEPAGE = """
     <div class="flex-1 text-sm text-white/80 leading-relaxed max-w-3xl">
       <div class="text-[10px] uppercase tracking-widest brand-accent font-bold mb-2">Start here</div>
       <p class="mb-3">Yo PR team! This dashboard pulls the latest press coverage on Acorns and 11 fintech competitors. Refreshes every day at 12pm ET. Nothing for you to maintain.</p>
-      <p class="mb-3"><span class="brand-accent font-medium">Acorns in the News</span> is at the top — your own coverage first. Below that, <span class="brand-accent font-medium">Official PR</span> shows competitor press releases + SEC filings (the high-signal stuff). <span class="brand-accent font-medium">The Buzz</span> is everything else — tech press, regulatory news, analyst commentary. Per-brand tiles below; running reporter list at the bottom.</p>
+      <p class="mb-3"><span class="brand-accent font-medium">Mention Volume</span> at the top shows the at-a-glance picture: total stories per brand with sentiment stacked (green positive, gray neutral, red negative). Then <span class="brand-accent font-medium">Acorns in the News</span> for your own coverage, <span class="brand-accent font-medium">Official PR</span> for competitor press releases + SEC filings, and <span class="brand-accent font-medium">The Buzz</span> for everything else (tech press, regulatory, analyst). Running reporter list at the bottom.</p>
       <p>Every headline links straight to the source. When the same story is covered by multiple outlets, you'll see them stacked on one card.</p>
     </div>
     <button onclick="dismissWhy()" class="text-white/40 hover:text-white/80 text-2xl leading-none -mt-1" aria-label="Dismiss">×</button>
@@ -372,50 +372,106 @@ def render_item(item: dict, *, show_brand: bool = False) -> str:
 
 
 def render_mentions_chart(by_brand: dict, refresh_date: str) -> str:
-    """Render a horizontal bar chart comparing total mention counts across all
-    tracked entities. Acorns highlighted in brand-accent green; competitors in
-    neutral white. Pure HTML/CSS — no JS or charting library."""
-    # Compute counts, sorted by count desc. Include zero-count brands so the
-    # chart shows the full landscape (Alinea's silence is itself a finding).
+    """Render a horizontal stacked-bar chart: each brand's total mentions split
+    into positive / neutral / negative segments. Pure HTML/CSS — no JS."""
+    from collections import Counter
     rows = []
     for brand, _slug in ALL_TRACKED:
         items = by_brand.get(brand, [])
-        # Count each item once even if it was grouped from multiple sources —
-        # the chart tracks "stories" not "publisher hits." Alec's stated goal
-        # was "mentions across major outlets" but tracking unique stories
-        # makes for a cleaner comparison and avoids inflating brands that
-        # happen to get more syndication coverage.
-        count = len(items)
-        rows.append((brand, count))
-    rows.sort(key=lambda r: -r[1])
-    max_count = max((r[1] for r in rows), default=1) or 1
+        sentiments = Counter(i.get("sentiment", "neutral") for i in items)
+        rows.append({
+            "brand": brand,
+            "total": len(items),
+            "positive": sentiments.get("positive", 0),
+            "neutral": sentiments.get("neutral", 0),
+            "negative": sentiments.get("negative", 0),
+        })
+    rows.sort(key=lambda r: -r["total"])
+    max_count = max((r["total"] for r in rows), default=1) or 1
 
     bars_html = ""
-    for brand, count in rows:
-        pct = int(round((count / max_count) * 100))
-        is_subject = (brand == SUBJECT[0])
-        bar_color = "bg-brand-accent" if is_subject else "bg-white/30"
+    for r in rows:
+        is_subject = (r["brand"] == SUBJECT[0])
         label_class = "brand-accent font-semibold" if is_subject else "text-white"
         count_class = "brand-accent font-bold" if is_subject else "text-white/70"
+        if r["total"] == 0:
+            inner = ""
+        else:
+            # Bar width is total/max; within the bar, segments are each sentiment's
+            # share of the total (so each segment is colored proportionally).
+            # We render three flex children with flex-basis as percentages.
+            bar_width_pct = (r["total"] / max_count) * 100
+            pos_share = (r["positive"] / r["total"]) * 100
+            neu_share = (r["neutral"]  / r["total"]) * 100
+            neg_share = (r["negative"] / r["total"]) * 100
+            seg_pos = (
+                f'<div class="bg-emerald-500/80 h-full" '
+                f'style="width: {pos_share:.2f}%" '
+                f'title="{r["positive"]} positive"></div>'
+            ) if r["positive"] else ""
+            seg_neu = (
+                f'<div class="bg-white/30 h-full" '
+                f'style="width: {neu_share:.2f}%" '
+                f'title="{r["neutral"]} neutral"></div>'
+            ) if r["neutral"] else ""
+            seg_neg = (
+                f'<div class="bg-rose-500/80 h-full" '
+                f'style="width: {neg_share:.2f}%" '
+                f'title="{r["negative"]} negative"></div>'
+            ) if r["negative"] else ""
+            inner = (
+                f'<div class="flex h-full" style="width: {bar_width_pct:.2f}%">'
+                f'{seg_pos}{seg_neu}{seg_neg}'
+                f'</div>'
+            )
+        # Per-sentiment count callout (small text) so users see exact counts.
+        counts_inline = ""
+        if r["total"] > 0:
+            parts = []
+            if r["positive"]:
+                parts.append(f'<span class="text-emerald-400">{r["positive"]}+</span>')
+            if r["neutral"]:
+                parts.append(f'<span class="text-white/50">{r["neutral"]}·</span>')
+            if r["negative"]:
+                parts.append(f'<span class="text-rose-400">{r["negative"]}-</span>')
+            counts_inline = (
+                '<div class="hidden sm:flex gap-2 text-[11px] tabular-nums shrink-0 w-24">'
+                + " ".join(parts) +
+                '</div>'
+            )
         bars_html += f"""
-<div class="flex items-center gap-4">
-  <div class="w-32 shrink-0 text-sm {label_class} text-right">{escape(brand)}</div>
-  <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-7">
-    <div class="{bar_color} h-full transition-all" style="width: {pct}%"></div>
+<div class="flex items-center gap-3 sm:gap-4">
+  <div class="w-24 sm:w-32 shrink-0 text-xs sm:text-sm {label_class} text-right">{escape(r['brand'])}</div>
+  <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-6 sm:h-7">
+    {inner}
   </div>
-  <div class="w-12 text-right text-sm {count_class} tabular-nums">{count}</div>
+  {counts_inline}
+  <div class="w-10 text-right text-sm {count_class} tabular-nums">{r['total']}</div>
+</div>
+"""
+    legend = """
+<div class="flex flex-wrap gap-x-4 gap-y-2 text-xs text-white/60 mb-4">
+  <span class="inline-flex items-center gap-2">
+    <span class="inline-block w-3 h-3 rounded-sm bg-emerald-500/80"></span> Positive
+  </span>
+  <span class="inline-flex items-center gap-2">
+    <span class="inline-block w-3 h-3 rounded-sm bg-white/30"></span> Neutral
+  </span>
+  <span class="inline-flex items-center gap-2">
+    <span class="inline-block w-3 h-3 rounded-sm bg-rose-500/80"></span> Negative
+  </span>
 </div>
 """
     return f"""
 <section>
-  <div class="flex items-baseline gap-3 mb-5">
+  <div class="flex items-baseline gap-3 mb-3">
     <h2 class="text-2xl font-semibold text-white">Mention Volume</h2>
-    <span class="text-xs text-white/40">Acorns vs competitors · last 14 days · this snapshot will become a monthly trend chart once we have multiple weeks logged</span>
+    <span class="text-xs text-white/40">Last 14 days · sentiment-stacked · syndicated coverage counts once</span>
   </div>
-  <div class="bg-white/[0.02] border border-white/10 rounded-2xl p-6 space-y-2">
+  {legend}
+  <div class="bg-white/[0.02] border border-white/10 rounded-2xl p-4 sm:p-6 space-y-2">
     {bars_html}
   </div>
-  <p class="text-xs text-white/40 mt-3">Counts each unique story once — syndicated coverage across multiple outlets collapses to one mention (e.g., the Kalshi-tribes lawsuit covered by 9 outlets counts as 1).</p>
 </section>
 """
 
@@ -531,7 +587,10 @@ def render_index(
     body = f"""
 <main class="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10 space-y-10 sm:space-y-12">
 
-  <!-- 1. Acorns in the News -->
+  <!-- 1. Mention Volume (chart) — at top for at-a-glance overview -->
+  {mentions_chart_html}
+
+  <!-- 2. Acorns in the News -->
   <section>
     <div class="flex items-baseline gap-3 mb-5">
       <h2 class="text-2xl font-semibold text-white">Acorns in the News</h2>
@@ -542,7 +601,7 @@ def render_index(
     </div>
   </section>
 
-  <!-- 2. Official PR -->
+  <!-- 3. Official PR -->
   <section>
     <div class="flex items-baseline gap-3 mb-5">
       <h2 class="text-2xl font-semibold text-white">Official PR</h2>
@@ -553,7 +612,7 @@ def render_index(
     </div>
   </section>
 
-  <!-- 3. The Buzz (with brand filter chips) -->
+  <!-- 4. The Buzz (with brand filter chips) -->
   <section>
     <div class="flex items-baseline gap-3 mb-4">
       <h2 class="text-2xl font-semibold text-white">The Buzz</h2>
@@ -578,9 +637,6 @@ def render_index(
     </div>
     <p id="buzz-empty" class="hidden text-white/50 text-sm mt-4">No items for this brand in the last 14 days.</p>
   </section>
-
-  <!-- 4. Mention Volume (chart) -->
-  {mentions_chart_html}
 
   <!-- 5. Top Reporters (running) -->
   <section>
