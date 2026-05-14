@@ -80,7 +80,7 @@
     </div>
     <div class="grid grid-cols-1 gap-3">
       
-<div class="item-card border border-white/10 rounded-xl px-5 py-4">
+<div class="item-card buzz-item border border-white/10 rounded-xl px-5 py-4" data-brand-slug="wealthfront">
   <h3 class="text-base font-medium text-white leading-snug">
     <a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxORzRpUGhMVnBnUWk3ZVNseDRLMmhqQmk2WDdHSk5PNm1nRk5xRlhMa0JGRUtTT2ZtQ3NyV2Y2eUdhSWlGTVc3SlVKZ1FfX25EUU5mQUJJX19adlQyQkM0ZEM2RWxadzhRei0zOXlOYlJLRy0tRFktWG9TRHdDd3dNVDNXdUk1VUZRTExYSkU5NEktQzBnTU02Sm1QcVM3eHQtR2c?oc=5" target="_blank" rel="noopener" class="hover:underline">Fund Update: 508,777 $VUG shares added to Wealthfront Advisers LLC portfolio</a>
   </h3>
@@ -134,6 +134,28 @@
       localStorage.setItem('vscrl-pr-pulse-why-seen', '1');
     }
   } catch(e) {}
+
+  // Buzz section: filter by brand. Click a chip → show only that brand's items
+  // (or all items when the "All" chip is clicked). Active chip gets brand-accent
+  // styling. Empty-state message renders when zero items match.
+  function filterBuzz(button, slug) {
+    var chips = document.querySelectorAll('#buzz-filters button[data-brand-filter]');
+    chips.forEach(function(c) {
+      var active = c.getAttribute('data-brand-filter') === slug;
+      c.className = active
+        ? 'px-3 py-1.5 rounded-full text-xs font-semibold border bg-brand-accent/15 text-[#74C947] border-brand-accent transition whitespace-nowrap cursor-pointer'
+        : 'px-3 py-1.5 rounded-full text-xs font-medium border bg-white/[0.03] text-white/70 border-white/10 hover:border-white/30 hover:text-white transition whitespace-nowrap cursor-pointer';
+    });
+    var items = document.querySelectorAll('#buzz-grid > .buzz-item');
+    var visible = 0;
+    items.forEach(function(it) {
+      var match = (slug === 'all') || (it.getAttribute('data-brand-slug') === slug);
+      it.style.display = match ? '' : 'none';
+      if (match) visible++;
+    });
+    var empty = document.getElementById('buzz-empty');
+    if (empty) empty.classList.toggle('hidden', visible > 0);
+  }
 </script>
 </body>
 </html>

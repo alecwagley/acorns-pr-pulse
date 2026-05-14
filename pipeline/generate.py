@@ -35,9 +35,11 @@ from pipeline.sources import SUBJECT, BRANDS, ALL_TRACKED
 ACCENT_HEX = "#74C947"
 
 # How many items to show in each homepage section.
-ACORNS_LIMIT = 20
-OFFICIAL_LIMIT = 25
-BUZZ_LIMIT = 40
+ACORNS_LIMIT = 30
+OFFICIAL_LIMIT = 40
+# No cap on Buzz items: the brand filter is the primary navigation, so we want
+# every item in the DOM so any per-brand filter shows everything available.
+BUZZ_LIMIT = 10_000
 TOP_REPORTERS_LIMIT = 25
 
 
@@ -170,6 +172,28 @@ FOOTER = """
       localStorage.setItem('vscrl-pr-pulse-why-seen', '1');
     }
   } catch(e) {}
+
+  // Buzz section: filter by brand. Click a chip → show only that brand's items
+  // (or all items when the "All" chip is clicked). Active chip gets brand-accent
+  // styling. Empty-state message renders when zero items match.
+  function filterBuzz(button, slug) {
+    var chips = document.querySelectorAll('#buzz-filters button[data-brand-filter]');
+    chips.forEach(function(c) {
+      var active = c.getAttribute('data-brand-filter') === slug;
+      c.className = active
+        ? 'px-3 py-1.5 rounded-full text-xs font-semibold border bg-brand-accent/15 text-[#74C947] border-brand-accent transition whitespace-nowrap cursor-pointer'
+        : 'px-3 py-1.5 rounded-full text-xs font-medium border bg-white/[0.03] text-white/70 border-white/10 hover:border-white/30 hover:text-white transition whitespace-nowrap cursor-pointer';
+    });
+    var items = document.querySelectorAll('#buzz-grid > .buzz-item');
+    var visible = 0;
+    items.forEach(function(it) {
+      var match = (slug === 'all') || (it.getAttribute('data-brand-slug') === slug);
+      it.style.display = match ? '' : 'none';
+      if (match) visible++;
+    });
+    var empty = document.getElementById('buzz-empty');
+    if (empty) empty.classList.toggle('hidden', visible > 0);
+  }
 </script>
 </body>
 </html>
@@ -274,7 +298,7 @@ def render_item(item: dict, *, show_brand: bool = False) -> str:
     # on the title still opens an article. Otherwise the whole card is the link.
     primary_url = sources[0]["url"]
     return f"""
-<div class="item-card border border-white/10 rounded-xl px-5 py-4">
+<div class="item-card buzz-item border border-white/10 rounded-xl px-5 py-4" data-brand-slug="{escape(item.get('slug',''))}">
   <h3 class="text-base font-medium text-white leading-snug">
     <a href="{escape(primary_url)}" target="_blank" rel="noopener" class="hover:underline">{escape(item['title'])}</a>{filing_chip}{official_chip}
   </h3>
@@ -284,23 +308,18 @@ def render_item(item: dict, *, show_brand: bool = False) -> str:
 """
 
 
-def render_brand_tile(brand: str, slug: str, items: list[dict]) -> str:
-    """Render the homepage tile for a brand (or for Acorns)."""
-    count = len(items)
-    label = _relative_date(items[0]["date"]) if items else "no items"
-    badge_color = "brand-accent" if count > 0 else "text-white/40"
-    return f"""
-<a href="{escape(slug)}.html"
-   class="brand-tile block border border-white/10 rounded-xl px-5 py-5 bg-white/[0.02]">
-  <div class="flex items-start justify-between mb-3">
-    <div class="text-base font-semibold text-white">{escape(brand)}</div>
-    <div class="text-xs {badge_color}">{count}</div>
-  </div>
-  <div class="text-[11px] text-white/50">
-    Last: <span class="text-white/80">{label}</span>
-  </div>
-</a>
-"""
+def render_brand_chip(brand: str, slug: str, count: int, active: bool = False) -> str:
+    """Render a filter chip used to filter the Buzz feed by brand."""
+    base = "px-3 py-1.5 rounded-full text-xs font-medium border transition whitespace-nowrap cursor-pointer"
+    if active:
+        cls = f"{base} bg-brand-accent/15 text-[#74C947] border-brand-accent"
+    else:
+        cls = f"{base} bg-white/[0.03] text-white/70 border-white/10 hover:border-white/30 hover:text-white"
+    count_str = f' <span class="text-white/40">{count}</span>' if count else ' <span class="text-white/25">0</span>'
+    return (
+        f'<button type="button" class="{cls}" data-brand-filter="{escape(slug)}" '
+        f'onclick="filterBuzz(this, \'{escape(slug)}\')">{escape(brand)}{count_str}</button>'
+    )
 
 
 def render_reporter_row(row: dict) -> str:
@@ -340,10 +359,19 @@ def render_index(
     if not buzz_items:
         buzz_html = '<p class="text-white/50 text-sm">No buzz items in the last 14 days.</p>'
 
-    # Tiles: Acorns first, then 11 competitors.
-    tiles_html = render_brand_tile(SUBJECT[0], SUBJECT[1], by_brand.get(SUBJECT[0], []))
+    # Filter chips for Buzz section. "All" + each competitor brand. Acorns is
+    # in its own section at top so isn't included in the Buzz filter row.
+    chips_html = (
+        f'<button type="button" data-brand-filter="all" '
+        f'class="px-3 py-1.5 rounded-full text-xs font-semibold border bg-brand-accent/15 text-[#74C947] border-brand-accent transition whitespace-nowrap cursor-pointer" '
+        f'onclick="filterBuzz(this, \'all\')">All <span class="text-white/40">{len(buzz_items)}</span></button>'
+    )
+    buzz_by_brand: dict[str, int] = {}
+    for it in buzz_items:
+        buzz_by_brand[it["brand"]] = buzz_by_brand.get(it["brand"], 0) + 1
     for brand, slug in BRANDS:
-        tiles_html += render_brand_tile(brand, slug, by_brand.get(brand, []))
+        n = buzz_by_brand.get(brand, 0)
+        chips_html += render_brand_chip(brand, slug, n, active=False)
 
     reporters_html = ""
     if reporters_top:
@@ -391,29 +419,22 @@ def render_index(
     </div>
   </section>
 
-  <!-- 3. The Buzz -->
+  <!-- 3. The Buzz (with brand filter chips) -->
   <section>
-    <div class="flex items-baseline gap-3 mb-5">
+    <div class="flex items-baseline gap-3 mb-4">
       <h2 class="text-2xl font-semibold text-white">The Buzz</h2>
-      <span class="text-xs text-white/40">{len(buzz_items)} items · press coverage, analyst commentary, regulatory news</span>
+      <span class="text-xs text-white/40">{len(buzz_items)} items · click a brand below to filter</span>
     </div>
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+    <div id="buzz-filters" class="flex flex-wrap gap-2 mb-6">
+      {chips_html}
+    </div>
+    <div id="buzz-grid" class="grid grid-cols-1 lg:grid-cols-2 gap-3">
       {buzz_html}
     </div>
+    <p id="buzz-empty" class="hidden text-white/50 text-sm mt-4">No items for this brand in the last 14 days.</p>
   </section>
 
-  <!-- 4. By Brand -->
-  <section>
-    <div class="flex items-baseline gap-3 mb-5">
-      <h2 class="text-2xl font-semibold text-white">By Brand</h2>
-      <span class="text-xs text-white/40">Click any tile to drill into that brand's items</span>
-    </div>
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-      {tiles_html}
-    </div>
-  </section>
-
-  <!-- 5. Top Reporters (running) -->
+  <!-- 4. Top Reporters (running) -->
   <section>
     <div class="flex items-baseline gap-3 mb-5">
       <h2 class="text-2xl font-semibold text-white">Top Reporters</h2>

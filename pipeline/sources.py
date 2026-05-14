@@ -171,6 +171,16 @@ BLOCKED_TITLE_PATTERNS = [
     "buying cash app",       # crypto/payment account spam
     "buy verified",          # account-sale spam
     "for sale",              # account-sale spam
+    # Clickbait analyst patterns — surfaced during live-site audit
+    "stock guide",           # "Robinhood vs Schwab 2026 Stock Guide"
+    "can reach $",           # "Can JPMorgan Stock Reach $400 in 2026?"
+    "in focus across",       # "Why Is X Stock in Focus Across Wall Street"
+    "stock in focus",        # same pattern
+    "best stocks",
+    "top stocks",
+    "stocks to buy",
+    "stocks to watch",
+    "stock to watch",
 ]
 
 # SEC filing forms worth surfacing. 8-K = material events (the gold). 10-Q/10-K

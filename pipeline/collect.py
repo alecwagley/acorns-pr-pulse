@@ -411,20 +411,31 @@ _STOPWORDS = {
 
 
 def _title_tokens(title: str, brand_aliases: list[str]) -> set[str]:
-    """Tokenize a title for similarity comparison. Lowercase, drop stopwords, drop
-    brand-name tokens (so 'Kalshi sues NM tribes' vs 'New Mexico tribes sue Kalshi'
-    don't both reduce to 'kalshi + tribes')."""
+    """Tokenize a title for similarity comparison. Returns unigrams + adjacent
+    bigrams (a-b pairs).
+
+    Bigrams are critical for catching syndicated stories: 'second venture fund'
+    is a strong topical signal that 'second' or 'venture' or 'fund' alone aren't.
+    A 5-way syndicated story about Robinhood's RVII fund all share the bigrams
+    {second-venture, venture-fund} even when their full token sets diverge.
+    """
     text = title.lower()
     for alias in brand_aliases:
         text = text.replace(alias, " ")
-    tokens = re.findall(r"[a-z0-9]+", text)
-    return {t for t in tokens if t not in _STOPWORDS and len(t) > 2}
+    raw = re.findall(r"[a-z0-9]+", text)
+    significant = [t for t in raw if t not in _STOPWORDS and len(t) > 2]
+    tokens: set[str] = set(significant)
+    # Add adjacent-pair bigrams (joined with '-' to namespace them away from unigrams).
+    for i in range(len(significant) - 1):
+        tokens.add(f"{significant[i]}-{significant[i+1]}")
+    return tokens
 
 
 def group_similar(
     items: list[dict],
-    title_threshold: float = 0.45,
-    combined_threshold: float = 0.35,
+    title_threshold: float = 0.30,
+    combined_threshold: float = 0.25,
+    bigram_threshold: int = 2,
     hours: int = 72,
 ) -> list[dict]:
     """Group items reporting the same story across multiple publishers.
@@ -489,7 +500,22 @@ def group_similar(
                 len(anchor_full_tokens & other_full_tokens)
                 / max(len(anchor_full_tokens | other_full_tokens), 1)
             )
-            if title_jac >= title_threshold or full_jac >= combined_threshold:
+            # Count shared bigrams (tokens with a '-'). 2+ shared bigrams is a strong
+            # topical signal even when overall Jaccard is low — catches the case where
+            # writers vary word choice but agree on the core noun phrase ('second venture fund',
+            # 'interactive brokers', 'new mexico tribes').
+            shared_bigrams = sum(
+                1 for t in (anchor_title_tokens & other_title_tokens) if "-" in t
+            )
+            shared_bigrams_full = sum(
+                1 for t in (anchor_full_tokens & other_full_tokens) if "-" in t
+            )
+            if (
+                title_jac >= title_threshold
+                or full_jac >= combined_threshold
+                or shared_bigrams >= bigram_threshold
+                or shared_bigrams_full >= bigram_threshold + 1
+            ):
                 used[j] = True
                 group.append(other)
 
