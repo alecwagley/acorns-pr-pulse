@@ -2115,6 +2115,26 @@
     "is_official": false
   },
   {
+    "brand": "Polymarket",
+    "slug": "polymarket",
+    "title": "Polymarket New Markets (Monthly)",
+    "summary": "Polymarket New Markets (Monthly) The Block",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOajlSWlRpUy1kekJFa2lYOW1WbHFJRlBVNVdmNjdhb2h5Ykk2YTgwZkVEU3I0Tk8tc2tUaWp2by1xZHZ3bTVJZUV4WHBESWRSZnNlWWtoUF9wbGpkemswZzFOZ3hwVWsyaFhGN2dVQUpBanFMUXVmbndwZjU3aFNyeUpKa1JYZFc2VlduaVNJUC1vSC1Mb0lQVS00Z19maDNCQ2c?oc=5",
+    "source": "The Block",
+    "author": "",
+    "date": "2026-05-10T07:00:00+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "The Block",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOajlSWlRpUy1kekJFa2lYOW1WbHFJRlBVNVdmNjdhb2h5Ykk2YTgwZkVEU3I0Tk8tc2tUaWp2by1xZHZ3bTVJZUV4WHBESWRSZnNlWWtoUF9wbGpkemswZzFOZ3hwVWsyaFhGN2dVQUpBanFMUXVmbndwZjU3aFNyeUpKa1JYZFc2VlduaVNJUC1vSC1Mb0lQVS00Z19maDNCQ2c?oc=5",
+        "author": ""
+      }
+    ],
+    "group_size": 1,
+    "is_official": false
+  },
+  {
     "brand": "Chase",
     "slug": "chase",
     "title": "Can JPMorgan Chase Stock Reach $400 in 2026?",
@@ -2177,17 +2197,17 @@
   {
     "brand": "Chime",
     "slug": "chime",
-    "title": "Chime MyPay Cash Advance: 2026 Review",
-    "summary": "Chime MyPay Cash Advance: 2026 Review NerdWallet",
-    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBkSnBCN1BKVEZFZjVweTZzalpoSGozOHVRSUY3NDBpX0pHRlhYd1FvS1hoMm9TQ0xYS25KQlJQNlBxQVE5MnZvZGJ3LXFTQVFIM3Z4QkpMV05mbXBNOGhSTUpzYmVEVkpTRTFPSDItdVNoZXMx?oc=5",
-    "source": "NerdWallet",
+    "title": "Chime Is A Hidden Gem In Fintech! #Chime #fintech (pLoXQW1gf2)",
+    "summary": "Chime Is A Hidden Gem In Fintech! #Chime #fintech (pLoXQW1gf2) Fathom Journal",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFB2eTJnNDJWYUhJazVKWTZhaWhkYng2MnFhamtvN2VXdXJuQXlzZlZLYmVUS2YycUJmLWFPWm9zbm05RURSeEJCT2JGQWNycTctaFpYdThVSWtEdWF5TEd3ZUMzenBHWXFUSFdpMXBBOEY?oc=5",
+    "source": "Fathom Journal",
     "author": "",
-    "date": "2026-05-08T17:39:13+00:00",
+    "date": "2026-05-09T07:57:21+00:00",
     "type": "news",
     "sources": [
       {
-        "publisher": "NerdWallet",
-        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBkSnBCN1BKVEZFZjVweTZzalpoSGozOHVRSUY3NDBpX0pHRlhYd1FvS1hoMm9TQ0xYS25KQlJQNlBxQVE5MnZvZGJ3LXFTQVFIM3Z4QkpMV05mbXBNOGhSTUpzYmVEVkpTRTFPSDItdVNoZXMx?oc=5",
+        "publisher": "Fathom Journal",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFB2eTJnNDJWYUhJazVKWTZhaWhkYng2MnFhamtvN2VXdXJuQXlzZlZLYmVUS2YycUJmLWFPWm9zbm05RURSeEJCT2JGQWNycTctaFpYdThVSWtEdWF5TEd3ZUMzenBHWXFUSFdpMXBBOEY?oc=5",
         "author": ""
       }
     ],
@@ -2297,8 +2317,8 @@
   {
     "brand": "Robinhood",
     "slug": "robinhood",
-    "title": "8-K Filing \u00b7 8-K",
-    "summary": "SEC 8-K filing by Robinhood on 2026-05-08.",
+    "title": "Leadership change (officers / directors) \u00b7 8-K Filing",
+    "summary": "SEC 8-K filing by Robinhood on 2026-05-08. Leadership change (officers / directors)",
     "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000065/hood-20260507.htm",
     "source": "SEC EDGAR",
     "author": "",
@@ -2381,6 +2401,51 @@
       }
     ],
     "group_size": 1,
+    "is_official": false
+  },
+  {
+    "brand": "Chime",
+    "slug": "chime",
+    "title": "Chime Delivers First GAAP Profit and Raises 2026 Outlook",
+    "summary": "Chime Delivers First GAAP Profit and Raises 2026 Outlook The Globe and Mail",
+    "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPel8teTBQdE5UbWptRGhBT1pfd0MtTnd4amZHWG9wLUp6S0d0eEIwRVlOMXB3VTRWR1BKYVlfSldOU3IwV0lzeVFqVGdGTjJCQkpDT2VRek9hODFjX0QzcHl0aDFySVY1VG8wTmtPR3AwTHpndmpTT3EwekxyeE5BbjBuVEdCMy1MNDNxTm9SMmMxSm5neWRLVUkweUIwOUdSUzZ4S1d5N0NaVUVzbmxaRFNhaUl4SXhJdlRSUF95OHUyN2UzS3BHVzBEeFZiaVJWb284bXdCWTI?oc=5",
+    "source": "The Globe and Mail",
+    "author": "",
+    "date": "2026-05-07T21:12:00+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "The Globe and Mail",
+        "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPel8teTBQdE5UbWptRGhBT1pfd0MtTnd4amZHWG9wLUp6S0d0eEIwRVlOMXB3VTRWR1BKYVlfSldOU3IwV0lzeVFqVGdGTjJCQkpDT2VRek9hODFjX0QzcHl0aDFySVY1VG8wTmtPR3AwTHpndmpTT3EwekxyeE5BbjBuVEdCMy1MNDNxTm9SMmMxSm5neWRLVUkweUIwOUdSUzZ4S1d5N0NaVUVzbmxaRFNhaUl4SXhJdlRSUF95OHUyN2UzS3BHVzBEeFZiaVJWb284bXdCWTI?oc=5",
+        "author": ""
+      }
+    ],
+    "group_size": 1,
+    "is_official": false
+  },
+  {
+    "brand": "Chime",
+    "slug": "chime",
+    "title": "Chime reaches GAAP profitability in Q1",
+    "summary": "Chime reaches GAAP profitability in Q1 eMarketer",
+    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNQXRxZm5pTjlwVzQ2UlhmM3ZxZlRrZmdhNG5VSFVuNzhOR25ZU19YMkVQYzlJYVJveXl6cmx5Q0ROOEZtVjVGdXltUEYxNUtocXE5c3Byd1QtWmhVQWtaUFVKUmVlZ3EzZmFZUl9Dc2VOUWtNSnJWRkFZdlFxeGFXWmMzcmVxeFI5Qk84?oc=5",
+    "source": "eMarketer",
+    "author": "",
+    "date": "2026-05-07T18:10:14+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "eMarketer",
+        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNQXRxZm5pTjlwVzQ2UlhmM3ZxZlRrZmdhNG5VSFVuNzhOR25ZU19YMkVQYzlJYVJveXl6cmx5Q0ROOEZtVjVGdXltUEYxNUtocXE5c3Byd1QtWmhVQWtaUFVKUmVlZ3EzZmFZUl9Dc2VOUWtNSnJWRkFZdlFxeGFXWmMzcmVxeFI5Qk84?oc=5",
+        "author": ""
+      },
+      {
+        "publisher": "American Banker",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQUVlPVDM0UURMNzhFR3FGNk9SOENCM0NudElmeU1uQzMxUHlKWWN3RUEzdDMycE9FTkg3WXhMUS1MdkFaRGl4aGFHaTNyWnQ4Uk1GSmJ1UjRVcWVpNjk4MjVvblJTRVNlNTFNUmp4T2Y2Rkx1QTctMWpMcG1jV19sNTNuUktMamc?oc=5",
+        "author": ""
+      }
+    ],
+    "group_size": 2,
     "is_official": false
   },
   {
@@ -2486,8 +2551,8 @@
   {
     "brand": "Cash App",
     "slug": "cash-app",
-    "title": "10-Q Filing \u00b7 10-Q",
-    "summary": "SEC 10-Q filing by Cash App on 2026-05-07.",
+    "title": "Quarterly report \u00b7 10-Q Filing",
+    "summary": "SEC 10-Q filing by Cash App on 2026-05-07. Quarterly report",
     "url": "https://www.sec.gov/Archives/edgar/data/1512673/000162828026032200/xyz-20260331.htm",
     "source": "SEC EDGAR",
     "author": "",
@@ -2505,8 +2570,8 @@
   {
     "brand": "Cash App",
     "slug": "cash-app",
-    "title": "8-K Filing \u00b7 8-K",
-    "summary": "SEC 8-K filing by Cash App on 2026-05-07.",
+    "title": "Earnings release / financial results \u00b7 8-K Filing",
+    "summary": "SEC 8-K filing by Cash App on 2026-05-07. Earnings release / financial results",
     "url": "https://www.sec.gov/Archives/edgar/data/1512673/000119312526212032/d132441d8k.htm",
     "source": "SEC EDGAR",
     "author": "",
@@ -2524,8 +2589,8 @@
   {
     "brand": "SoFi",
     "slug": "sofi",
-    "title": "10-Q Filing \u00b7 10-Q",
-    "summary": "SEC 10-Q filing by SoFi on 2026-05-07.",
+    "title": "Quarterly report \u00b7 10-Q Filing",
+    "summary": "SEC 10-Q filing by SoFi on 2026-05-07. Quarterly report",
     "url": "https://www.sec.gov/Archives/edgar/data/1818874/000181887426000037/sofi-20260331.htm",
     "source": "SEC EDGAR",
     "author": "",
@@ -2543,8 +2608,8 @@
   {
     "brand": "Chase",
     "slug": "chase",
-    "title": "8-K Filing \u00b7 8-K",
-    "summary": "SEC 8-K filing by Chase on 2026-05-07.",
+    "title": "Material event \u00b7 8-K Filing",
+    "summary": "SEC 8-K filing by Chase on 2026-05-07. Material event",
     "url": "https://www.sec.gov/Archives/edgar/data/19617/000119312526211978/d903351d8k.htm",
     "source": "SEC EDGAR",
     "author": "",
@@ -2847,8 +2912,8 @@
   {
     "brand": "Cash App",
     "slug": "cash-app",
-    "title": "8-K Filing \u00b7 8-K",
-    "summary": "SEC 8-K filing by Cash App on 2026-05-04.",
+    "title": "Material event \u00b7 8-K Filing",
+    "summary": "SEC 8-K filing by Cash App on 2026-05-04. Material event",
     "url": "https://www.sec.gov/Archives/edgar/data/1512673/000119312526204101/d112286d8k.htm",
     "source": "SEC EDGAR",
     "author": "",
@@ -2906,8 +2971,8 @@
   {
     "brand": "Chase",
     "slug": "chase",
-    "title": "10-Q Filing \u00b7 10-Q",
-    "summary": "SEC 10-Q filing by Chase on 2026-05-01.",
+    "title": "Quarterly report \u00b7 10-Q Filing",
+    "summary": "SEC 10-Q filing by Chase on 2026-05-01. Quarterly report",
     "url": "https://www.sec.gov/Archives/edgar/data/19617/000162828026029344/jpm-20260331.htm",
     "source": "SEC EDGAR",
     "author": "",

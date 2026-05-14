@@ -40,11 +40,15 @@ DATA_PATH = ROOT / "data" / "current.json"
 
 sys.path.insert(0, str(ROOT))
 from pipeline.sources import (
-    ALL_TRACKED, SEC_CIKS, SEC_FORMS,
+    ALL_TRACKED, SEC_CIKS, SEC_FORMS, SEC_8K_ITEMS,
     BLOCKED_PUBLISHERS, BLOCKED_TITLE_PATTERNS,
     OFFICIAL_PR_PUBLISHERS,
     google_news_rss_url, sec_filings_url,
 )
+
+# Cache of fetched 8-K TLDRs, keyed by filing URL. Persisted to disk so weekly
+# refreshes don't re-fetch the same filings. Filings are immutable once filed.
+SEC_TLDR_CACHE_PATH = ROOT / "data" / "sec_tldr_cache.json"
 
 
 # Brand-name patterns used for relevance checking. The brand name (or one of these
@@ -205,8 +209,67 @@ def fetch_google_news(brand: str, slug: str) -> list[dict]:
     return items
 
 
-def fetch_sec_filings(brand: str, slug: str) -> list[dict]:
-    """Fetch recent SEC filings for a public brand. Returns 8-K / 10-Q / 10-K items."""
+def _load_tldr_cache() -> dict:
+    if SEC_TLDR_CACHE_PATH.exists():
+        try:
+            return json.loads(SEC_TLDR_CACHE_PATH.read_text())
+        except Exception:
+            return {}
+    return {}
+
+
+def _save_tldr_cache(cache: dict) -> None:
+    SEC_TLDR_CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    SEC_TLDR_CACHE_PATH.write_text(json.dumps(cache, indent=2, sort_keys=True))
+
+
+def fetch_8k_tldr(filing_url: str, cache: dict) -> str:
+    """Fetch an 8-K's cover page and extract a plain-English TLDR from its Item codes.
+
+    Returns a short comma-joined description like "Earnings release / financial results,
+    Other material event" — or empty string if extraction fails. Cached by URL since
+    SEC filings are immutable.
+    """
+    if filing_url in cache:
+        return cache[filing_url]
+
+    try:
+        resp = httpx.get(filing_url, headers={"User-Agent": SEC_UA}, timeout=20.0, follow_redirects=True)
+        resp.raise_for_status()
+        text = resp.text
+    except Exception as e:
+        print(f"  ! TLDR fetch failed for {filing_url}: {e}", file=sys.stderr)
+        cache[filing_url] = ""
+        return ""
+
+    # 8-K cover pages contain headings like "Item 5.02 Departure of Directors..."
+    # We extract every "Item N.NN" code that appears and map to plain English.
+    # Most 8-Ks list 2-4 items; some only have one.
+    item_codes = re.findall(r"Item\s+(\d+\.\d+)", text)
+    # Dedupe preserving order
+    seen = set()
+    unique_codes = []
+    for code in item_codes:
+        if code not in seen:
+            seen.add(code)
+            unique_codes.append(code)
+
+    descriptions = [SEC_8K_ITEMS[code] for code in unique_codes if code in SEC_8K_ITEMS]
+    tldr = ", ".join(descriptions[:3])  # cap at 3 items so the TLDR stays scannable
+    if len(descriptions) > 3:
+        tldr += f" (+ {len(descriptions) - 3} more)"
+
+    cache[filing_url] = tldr
+    return tldr
+
+
+def fetch_sec_filings(brand: str, slug: str, tldr_cache: dict, window_cutoff: datetime) -> list[dict]:
+    """Fetch recent SEC filings for a public brand. Returns 8-K / 10-Q / 10-K items.
+
+    For 8-Ks (the high-signal material-events filings), fetches the cover page and
+    extracts a plain-English TLDR from the Item codes. Cached per-URL since filings
+    are immutable.
+    """
     url = sec_filings_url(brand)
     if not url:
         return []
@@ -227,6 +290,17 @@ def fetch_sec_filings(brand: str, slug: str) -> list[dict]:
     descriptions = recent.get("primaryDocDescription", [])
     cik = SEC_CIKS[brand].lstrip("0")
 
+    # Plain-English labels for the major form types (used as a fallback TLDR
+    # when the form doesn't lend itself to item-code extraction).
+    FORM_LABELS = {
+        "8-K":    "Material event",
+        "8-K/A":  "Material event (amended)",
+        "10-Q":   "Quarterly report",
+        "10-K":   "Annual report",
+        "S-1":    "IPO registration",
+        "S-1/A":  "IPO registration (amended)",
+    }
+
     for i, form in enumerate(forms):
         if form not in SEC_FORMS:
             continue
@@ -234,16 +308,42 @@ def fetch_sec_filings(brand: str, slug: str) -> list[dict]:
             dt = datetime.fromisoformat(dates[i]).replace(tzinfo=timezone.utc)
         except Exception:
             continue
+        # Skip filings older than our window so we don't fetch TLDRs for items
+        # that wouldn't make it into the dashboard anyway.
+        if dt < window_cutoff:
+            continue
+
         acc = accession_numbers[i].replace("-", "")
         doc = primary_docs[i]
         filing_url = f"https://www.sec.gov/Archives/edgar/data/{cik}/{acc}/{doc}"
-        desc = descriptions[i] if i < len(descriptions) else ""
+        primary_desc = descriptions[i] if i < len(descriptions) else ""
+
+        # Build the TLDR. For 8-Ks, parse item codes. For other forms, use the
+        # static label. Fall back to the primaryDocDescription field if available.
+        tldr = ""
+        if form in ("8-K", "8-K/A"):
+            tldr = fetch_8k_tldr(filing_url, tldr_cache)
+        if not tldr:
+            tldr = FORM_LABELS.get(form, "")
+        if not tldr and primary_desc and primary_desc.upper() != f"FORM {form}":
+            tldr = primary_desc
+
+        # Render the title as a plain-English TLDR followed by the form-code tag.
+        # E.g. "Earnings release / financial results · 8-K Filing" instead of
+        # the old "8-K Filing · FORM 8-K".
+        if tldr:
+            title = f"{tldr} · {form} Filing"
+        else:
+            title = f"{form} Filing"
+        # Cap title length to avoid breaking the card layout.
+        if len(title) > 140:
+            title = title[:137] + "…"
 
         items.append({
             "brand":   brand,
             "slug":    slug,
-            "title":   _clean_text(f"{form} Filing" + (f" · {desc}" if desc else "")),
-            "summary": f"SEC {form} filing by {brand} on {dates[i]}.",
+            "title":   _clean_text(title),
+            "summary": f"SEC {form} filing by {brand} on {dates[i]}. {tldr}" if tldr else f"SEC {form} filing by {brand} on {dates[i]}.",
             "url":     filing_url,
             "source":  "SEC EDGAR",
             "author":  "",
@@ -459,15 +559,20 @@ def update_reporters_log(items: list[dict]) -> None:
 
 def main() -> None:
     all_items: list[dict] = []
+    window_cutoff = datetime.now(timezone.utc) - timedelta(days=WINDOW_DAYS)
+    tldr_cache = _load_tldr_cache()
     print(f"Collecting PR items (last {WINDOW_DAYS} days) across {len(ALL_TRACKED)} entities (1 subject + {len(ALL_TRACKED)-1} competitors)...")
+    print(f"  SEC TLDR cache: {len(tldr_cache)} entries")
     for brand, slug in ALL_TRACKED:
         print(f"  · {brand}", end="", flush=True)
         news = fetch_google_news(brand, slug)
-        sec = fetch_sec_filings(brand, slug)
+        sec = fetch_sec_filings(brand, slug, tldr_cache, window_cutoff)
         n_news, n_sec = len(news), len(sec)
         all_items.extend(news)
         all_items.extend(sec)
         print(f"  → news={n_news}, sec={n_sec}")
+    _save_tldr_cache(tldr_cache)
+    print(f"  SEC TLDR cache: {len(tldr_cache)} entries (saved)")
 
     print(f"\nRaw total: {len(all_items)}")
     all_items = filter_noise(all_items)

@@ -180,6 +180,45 @@ BLOCKED_TITLE_PATTERNS = [
 SEC_FORMS = {"8-K", "8-K/A", "10-Q", "10-K", "S-1", "S-1/A"}
 
 
+# SEC 8-K item codes → plain-English descriptions. Used to turn "Item 5.02"
+# into "Leadership change" in the TLDR. Source: SEC Form 8-K instructions.
+# https://www.sec.gov/files/form8-k.pdf
+SEC_8K_ITEMS = {
+    "1.01": "Entered material agreement",
+    "1.02": "Terminated material agreement",
+    "1.03": "Bankruptcy / receivership",
+    "1.04": "Mine safety violation",
+    "1.05": "Material cybersecurity incident",
+    "2.01": "Completed acquisition or disposition",
+    "2.02": "Earnings release / financial results",
+    "2.03": "Created direct financial obligation",
+    "2.04": "Triggered direct financial obligation",
+    "2.05": "Costs from exit / disposal activity",
+    "2.06": "Material impairment",
+    "3.01": "Listing standard / delisting notice",
+    "3.02": "Unregistered equity sales",
+    "3.03": "Modified rights of security holders",
+    "4.01": "Changed accountant",
+    "4.02": "Non-reliance on prior financial statements",
+    "5.01": "Change in control",
+    "5.02": "Leadership change (officers / directors)",
+    "5.03": "Amended charter or bylaws",
+    "5.04": "Insider-trading blackout period",
+    "5.05": "Amended ethics code",
+    "5.06": "Change in shell-company status",
+    "5.07": "Shareholder vote results",
+    "5.08": "Shareholder nominations notice",
+    "6.01": "ABS informational disclosure",
+    "6.02": "Change in servicer / trustee",
+    "6.03": "Change in credit enhancement",
+    "6.04": "Failure to make required distribution",
+    "6.05": "Securities act updating disclosure",
+    "7.01": "Regulation FD disclosure",
+    "8.01": "Other material event",
+    "9.01": "Financial statements / exhibits",
+}
+
+
 def google_news_rss_url(brand: str) -> str:
     """Build the Google News RSS URL for a brand's search query."""
     from urllib.parse import quote
