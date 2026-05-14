@@ -805,12 +805,14 @@ def main() -> None:
     _save_og_cache(og_cache)
     print(f"  OG cache: {len(og_cache)} entries (saved, {fetched_count} new fetches this run)")
 
-    # Sentiment classification (Acorns items only — the PR team's primary focus).
-    # Heuristic; runs against the (now-enriched) title + summary.
-    for item in all_items:
-        if item["brand"] == "Acorns":
-            text = item.get("title", "") + " " + item.get("summary", "")
-            item["sentiment"] = classify_sentiment(text)
+    # Sentiment classification (every item, every brand — not just Acorns).
+    # Uses Claude Haiku 4.5 when ANTHROPIC_API_KEY is set; falls back to a
+    # keyword heuristic otherwise. Cached per URL so daily refreshes only
+    # classify new articles. Module: pipeline/llm_sentiment.py.
+    from pipeline.llm_sentiment import classify_all as _classify_all
+    print(f"\nClassifying sentiment...")
+    stats = _classify_all(all_items)
+    print(f"  cached: {stats['cached']}, LLM-new: {stats['llm_new']}, heuristic-fallback: {stats['heuristic']}")
 
     all_items.sort(key=lambda x: x["date"], reverse=True)
 

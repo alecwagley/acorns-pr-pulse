@@ -55,7 +55,17 @@ else
   git push -u origin main 2>&1 | tail -3 || true
 fi
 
-# 2. (Skipped — no API tokens needed; collector uses free public endpoints)
+# 2. GitHub Actions secret for ANTHROPIC_API_KEY (powers LLM sentiment classification).
+#    Only set if the key is present in ~/.config/vscrl/secrets.env; if missing, the
+#    collector falls back to the heuristic classifier and the dashboard still works.
+if [[ -n "${ANTHROPIC_API_KEY:-}" ]]; then
+  gh secret set ANTHROPIC_API_KEY --repo "$GH_OWNER/$REPO_NAME" --body "$ANTHROPIC_API_KEY"
+  echo "✓ ANTHROPIC_API_KEY set on GitHub Actions (LLM sentiment enabled)"
+else
+  echo "⚠ ANTHROPIC_API_KEY missing from secrets.env — daily cron will use heuristic sentiment."
+  echo "  To enable LLM-based sentiment: add ANTHROPIC_API_KEY=... to ~/.config/vscrl/secrets.env,"
+  echo "  then re-run this script (or push the GitHub Actions secret manually)."
+fi
 
 # 3. Vercel project (idempotent)
 EXISTING=$(curl -sS "https://api.vercel.com/v10/projects/$REPO_NAME" \

@@ -98,14 +98,14 @@ HEADER_HOMEPAGE = """
       <div class="text-white/40 font-light text-2xl">×</div>
       <div class="flex flex-col gap-1">
         <img src="assets/acorns-logo.svg" alt="Acorns" class="h-10 w-auto" />
-        <div class="text-xs text-white/50">PR Pulse · Weekly</div>
+        <div class="text-xs text-white/50">PR Pulse · Daily</div>
       </div>
       <button id="why-pill" onclick="toggleWhy()" class="ml-2 text-xs text-[#74C947]/80 hover:text-[#74C947] border border-[#74C947]/30 hover:border-[#74C947]/60 px-3 py-1.5 rounded-full transition whitespace-nowrap">
         Start here →
       </button>
     </div>
     <div class="text-right text-xs text-white/40">
-      <div>Refreshed weekly · Mon 7am ET</div>
+      <div>Refreshed daily · 12pm ET</div>
       <div class="text-white/60 mt-1">Last refresh: $refresh_date</div>
     </div>
   </div>
@@ -115,7 +115,7 @@ HEADER_HOMEPAGE = """
   <div class="max-w-7xl mx-auto px-6 py-5 flex items-start gap-5">
     <div class="flex-1 text-sm text-white/80 leading-relaxed max-w-3xl">
       <div class="text-[10px] uppercase tracking-widest brand-accent font-bold mb-2">Start here</div>
-      <p class="mb-3">Yo PR team! This dashboard pulls the latest press coverage on Acorns and 11 fintech competitors. Refreshes every Monday at 7am ET. Nothing for you to maintain.</p>
+      <p class="mb-3">Yo PR team! This dashboard pulls the latest press coverage on Acorns and 11 fintech competitors. Refreshes every day at 12pm ET. Nothing for you to maintain.</p>
       <p class="mb-3"><span class="brand-accent font-medium">Acorns in the News</span> is at the top — your own coverage first. Below that, <span class="brand-accent font-medium">Official PR</span> shows competitor press releases + SEC filings (the high-signal stuff). <span class="brand-accent font-medium">The Buzz</span> is everything else — tech press, regulatory news, analyst commentary. Per-brand tiles below; running reporter list at the bottom.</p>
       <p>Every headline links straight to the source. When the same story is covered by multiple outlets, you'll see them stacked on one card.</p>
     </div>
@@ -173,26 +173,65 @@ FOOTER = """
     }
   } catch(e) {}
 
-  // Buzz section: filter by brand. Click a chip → show only that brand's items
-  // (or all items when the "All" chip is clicked). Active chip gets brand-accent
-  // styling. Empty-state message renders when zero items match.
-  function filterBuzz(button, slug) {
-    var chips = document.querySelectorAll('#buzz-filters button[data-brand-filter]');
-    chips.forEach(function(c) {
-      var active = c.getAttribute('data-brand-filter') === slug;
-      c.className = active
-        ? 'px-3 py-1.5 rounded-full text-xs font-semibold border bg-brand-accent/15 text-[#74C947] border-brand-accent transition whitespace-nowrap cursor-pointer'
-        : 'px-3 py-1.5 rounded-full text-xs font-medium border bg-white/[0.03] text-white/70 border-white/10 hover:border-white/30 hover:text-white transition whitespace-nowrap cursor-pointer';
-    });
+  // Buzz section: filter by brand AND sentiment (AND-combined). Each filter
+  // row keeps one active chip; "All" resets that dimension. Visibility = match
+  // on BOTH brand and sentiment. Active chip gets brand-accent styling.
+  var _buzzFilter = { brand: 'all', sentiment: 'all' };
+  function _applyBuzzFilter() {
     var items = document.querySelectorAll('#buzz-grid > .buzz-item');
     var visible = 0;
     items.forEach(function(it) {
-      var match = (slug === 'all') || (it.getAttribute('data-brand-slug') === slug);
+      var brandMatch = (_buzzFilter.brand === 'all') || (it.getAttribute('data-brand-slug') === _buzzFilter.brand);
+      var sentimentMatch = (_buzzFilter.sentiment === 'all') || (it.getAttribute('data-sentiment') === _buzzFilter.sentiment);
+      var match = brandMatch && sentimentMatch;
       it.style.display = match ? '' : 'none';
       if (match) visible++;
     });
     var empty = document.getElementById('buzz-empty');
     if (empty) empty.classList.toggle('hidden', visible > 0);
+  }
+  function _styleChip(c, active, accent) {
+    if (active) {
+      c.className = 'px-3 py-1.5 rounded-full text-xs font-semibold border ' + accent.bg + ' ' + accent.text + ' ' + accent.border + ' transition whitespace-nowrap cursor-pointer';
+    } else {
+      c.className = 'px-3 py-1.5 rounded-full text-xs font-medium border bg-white/[0.03] ' + accent.idleText + ' ' + accent.idleBorder + ' hover:bg-white/[0.06] transition whitespace-nowrap cursor-pointer';
+    }
+  }
+  function setBrandFilter(button, slug) {
+    _buzzFilter.brand = slug;
+    var chips = document.querySelectorAll('#buzz-brand-filters button[data-brand-filter]');
+    chips.forEach(function(c) {
+      var active = c.getAttribute('data-brand-filter') === slug;
+      _styleChip(c, active, {
+        bg: 'bg-brand-accent/15', text: 'text-[#74C947]', border: 'border-brand-accent',
+        idleText: 'text-white/70', idleBorder: 'border-white/10 hover:border-white/30 hover:text-white',
+      });
+    });
+    _applyBuzzFilter();
+  }
+  function setSentimentFilter(button, sentiment) {
+    _buzzFilter.sentiment = sentiment;
+    var palettes = {
+      'all':      { text: 'text-[#74C947]', border: 'border-brand-accent', bg: 'bg-brand-accent/15' },
+      'positive': { text: 'text-emerald-400', border: 'border-emerald-400', bg: 'bg-emerald-400/15' },
+      'neutral':  { text: 'text-white', border: 'border-white/40', bg: 'bg-white/[0.10]' },
+      'negative': { text: 'text-rose-400', border: 'border-rose-400', bg: 'bg-rose-400/15' },
+    };
+    var idlePalettes = {
+      'all':      { idleText: 'text-[#74C947]/80', idleBorder: 'border-brand-accent/30' },
+      'positive': { idleText: 'text-emerald-400/90', idleBorder: 'border-emerald-400/30' },
+      'neutral':  { idleText: 'text-white/60', idleBorder: 'border-white/15' },
+      'negative': { idleText: 'text-rose-400/90', idleBorder: 'border-rose-400/30' },
+    };
+    var chips = document.querySelectorAll('#buzz-sentiment-filters button[data-sentiment-filter]');
+    chips.forEach(function(c) {
+      var key = c.getAttribute('data-sentiment-filter');
+      var active = (key === sentiment);
+      var palette = palettes[key] || palettes['all'];
+      var idle = idlePalettes[key] || idlePalettes['all'];
+      _styleChip(c, active, Object.assign({}, palette, idle));
+    });
+    _applyBuzzFilter();
   }
 </script>
 </body>
@@ -318,8 +357,9 @@ def render_item(item: dict, *, show_brand: bool = False) -> str:
     # Primary URL: when multi-source, link the title to the first source so a click
     # on the title still opens an article. Otherwise the whole card is the link.
     primary_url = sources[0]["url"]
+    sentiment_attr = item.get("sentiment") or "neutral"
     return f"""
-<div class="item-card buzz-item border border-white/10 rounded-xl px-5 py-4" data-brand-slug="{escape(item.get('slug',''))}">
+<div class="item-card buzz-item border border-white/10 rounded-xl px-5 py-4" data-brand-slug="{escape(item.get('slug',''))}" data-sentiment="{escape(sentiment_attr)}">
   <h3 class="text-base font-medium text-white leading-snug">
     <a href="{escape(primary_url)}" target="_blank" rel="noopener" class="hover:underline">{escape(item['title'])}</a>{filing_chip}{official_chip}{sentiment_chip}
   </h3>
@@ -429,12 +469,12 @@ def render_index(
     if not buzz_items:
         buzz_html = '<p class="text-white/50 text-sm">No buzz items in the last 14 days.</p>'
 
-    # Filter chips for Buzz section. "All" + each competitor brand. Acorns is
-    # in its own section at top so isn't included in the Buzz filter row.
+    # Brand filter chips: "All" + each competitor brand. Acorns is in its own
+    # section at top so isn't included in the Buzz brand row.
     chips_html = (
         f'<button type="button" data-brand-filter="all" '
         f'class="px-3 py-1.5 rounded-full text-xs font-semibold border bg-brand-accent/15 text-[#74C947] border-brand-accent transition whitespace-nowrap cursor-pointer" '
-        f'onclick="filterBuzz(this, \'all\')">All <span class="text-white/40">{len(buzz_items)}</span></button>'
+        f'onclick="setBrandFilter(this, \'all\')">All <span class="text-white/40">{len(buzz_items)}</span></button>'
     )
     buzz_by_brand: dict[str, int] = {}
     for it in buzz_items:
@@ -442,6 +482,26 @@ def render_index(
     for brand, slug in BRANDS:
         n = buzz_by_brand.get(brand, 0)
         chips_html += render_brand_chip(brand, slug, n, active=False)
+
+    # Sentiment filter chips: "All" + Positive / Negative / Neutral. AND-combines
+    # with the brand filter so users can drill down to e.g. only-negative-Kalshi.
+    buzz_by_sentiment = {"positive": 0, "negative": 0, "neutral": 0}
+    for it in buzz_items:
+        buzz_by_sentiment[it.get("sentiment", "neutral")] += 1
+    sentiment_chips_html = (
+        f'<button type="button" data-sentiment-filter="all" '
+        f'class="px-3 py-1.5 rounded-full text-xs font-semibold border bg-brand-accent/15 text-[#74C947] border-brand-accent transition whitespace-nowrap cursor-pointer" '
+        f'onclick="setSentimentFilter(this, \'all\')">All</button>'
+        f'<button type="button" data-sentiment-filter="positive" '
+        f'class="px-3 py-1.5 rounded-full text-xs font-medium border bg-white/[0.03] text-emerald-400/90 border-emerald-400/30 hover:bg-emerald-400/10 transition whitespace-nowrap cursor-pointer" '
+        f'onclick="setSentimentFilter(this, \'positive\')">▲ Positive <span class="text-white/40">{buzz_by_sentiment["positive"]}</span></button>'
+        f'<button type="button" data-sentiment-filter="neutral" '
+        f'class="px-3 py-1.5 rounded-full text-xs font-medium border bg-white/[0.03] text-white/60 border-white/15 hover:bg-white/[0.06] transition whitespace-nowrap cursor-pointer" '
+        f'onclick="setSentimentFilter(this, \'neutral\')">Neutral <span class="text-white/40">{buzz_by_sentiment["neutral"]}</span></button>'
+        f'<button type="button" data-sentiment-filter="negative" '
+        f'class="px-3 py-1.5 rounded-full text-xs font-medium border bg-white/[0.03] text-rose-400/90 border-rose-400/30 hover:bg-rose-400/10 transition whitespace-nowrap cursor-pointer" '
+        f'onclick="setSentimentFilter(this, \'negative\')">▼ Negative <span class="text-white/40">{buzz_by_sentiment["negative"]}</span></button>'
+    )
 
     mentions_chart_html = render_mentions_chart(by_brand, refresh_date)
 
@@ -497,8 +557,19 @@ def render_index(
       <h2 class="text-2xl font-semibold text-white">The Buzz</h2>
       <span class="text-xs text-white/40">{len(buzz_items)} items · click a brand below to filter</span>
     </div>
-    <div id="buzz-filters" class="flex flex-wrap gap-2 mb-6">
-      {chips_html}
+    <div class="space-y-3 mb-6">
+      <div>
+        <div class="text-[10px] uppercase tracking-widest text-white/40 mb-2">Filter by brand</div>
+        <div id="buzz-brand-filters" class="flex flex-wrap gap-2">
+          {chips_html}
+        </div>
+      </div>
+      <div>
+        <div class="text-[10px] uppercase tracking-widest text-white/40 mb-2">Filter by sentiment</div>
+        <div id="buzz-sentiment-filters" class="flex flex-wrap gap-2">
+          {sentiment_chips_html}
+        </div>
+      </div>
     </div>
     <div id="buzz-grid" class="grid grid-cols-1 lg:grid-cols-2 gap-3">
       {buzz_html}

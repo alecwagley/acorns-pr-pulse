@@ -17,7 +17,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "negative"
   },
   {
     "brand": "Polymarket",
@@ -37,7 +38,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "negative"
   },
   {
     "brand": "Kalshi",
@@ -97,7 +99,8 @@
       }
     ],
     "group_size": 9,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "negative"
   },
   {
     "brand": "Kalshi",
@@ -117,7 +120,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Wealthfront",
@@ -137,7 +141,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": true
+    "is_official": true,
+    "sentiment": "positive"
   },
   {
     "brand": "Polymarket",
@@ -157,7 +162,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Kalshi",
@@ -177,7 +183,29 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
+  },
+  {
+    "brand": "Robinhood",
+    "slug": "robinhood",
+    "title": "Why Robinhood (HOOD) Stock Is Up Today",
+    "summary": "Detailed price information for Robinhood Markets Inc Cl A (HOOD-Q) from The Globe and Mail including charting and trades.",
+    "url": "https://www.theglobeandmail.com/investing/markets/stocks/HOOD/pressreleases/1940340/why-robinhood-hood-stock-is-up-today/",
+    "source": "The Globe and Mail",
+    "author": "",
+    "date": "2026-05-14T18:56:23+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "The Globe and Mail",
+        "url": "https://www.theglobeandmail.com/investing/markets/stocks/HOOD/pressreleases/1940340/why-robinhood-hood-stock-is-up-today/",
+        "author": ""
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Kalshi",
@@ -197,7 +225,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Kalshi",
@@ -217,7 +246,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Kalshi",
@@ -237,7 +267,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Polymarket",
@@ -262,7 +293,8 @@
       }
     ],
     "group_size": 2,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Kalshi",
@@ -282,7 +314,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Kalshi",
@@ -302,7 +335,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Kalshi",
@@ -322,7 +356,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Robinhood",
@@ -342,32 +377,34 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Polymarket",
     "slug": "polymarket",
     "title": "Polymarket Named Official Prediction Market Partner of Serie A in the U.S.",
     "summary": "NEW YORK--(BUSINESS WIRE)--May 14, 2026",
-    "url": "https://www.swxlocalsports.com/polymarket-named-official-prediction-market-partner-of-serie-a-in-the-u-s/article_6f0b86ff-ba50-5730-b638-300e4549a8da.html",
-    "source": "SWX Local Sports",
+    "url": "https://www.bdtonline.com/sports/national_sports/polymarket-named-official-prediction-market-partner-of-serie-a-in-the-u-s/article_9fde9e71-07a8-522a-b207-5da6f0c5c0c2.html",
+    "source": "Bluefield Daily Telegraph",
     "author": "",
     "date": "2026-05-14T16:00:15+00:00",
     "type": "news",
     "sources": [
       {
-        "publisher": "SWX Local Sports",
-        "url": "https://www.swxlocalsports.com/polymarket-named-official-prediction-market-partner-of-serie-a-in-the-u-s/article_6f0b86ff-ba50-5730-b638-300e4549a8da.html",
+        "publisher": "Bluefield Daily Telegraph",
+        "url": "https://www.bdtonline.com/sports/national_sports/polymarket-named-official-prediction-market-partner-of-serie-a-in-the-u-s/article_9fde9e71-07a8-522a-b207-5da6f0c5c0c2.html",
         "author": ""
       },
       {
-        "publisher": "Bluefield Daily Telegraph",
-        "url": "https://www.bdtonline.com/sports/national_sports/polymarket-named-official-prediction-market-partner-of-serie-a-in-the-u-s/article_9fde9e71-07a8-522a-b207-5da6f0c5c0c2.html",
+        "publisher": "Business Wire",
+        "url": "https://www.businesswire.com/news/home/20260513833232/en/Polymarket-Named-Official-Prediction-Market-Partner-of-Serie-A-in-the-U.S.",
         "author": ""
       }
     ],
     "group_size": 2,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Kalshi",
@@ -392,7 +429,8 @@
       }
     ],
     "group_size": 2,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Chase",
@@ -412,7 +450,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Robinhood",
@@ -432,7 +471,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Polymarket",
@@ -457,7 +497,8 @@
       }
     ],
     "group_size": 2,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Kalshi",
@@ -487,7 +528,8 @@
       }
     ],
     "group_size": 3,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Kalshi",
@@ -507,7 +549,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Kalshi",
@@ -527,7 +570,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "negative"
   },
   {
     "brand": "Polymarket",
@@ -547,7 +591,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Kalshi",
@@ -567,7 +612,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Kalshi",
@@ -587,7 +633,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Polymarket",
@@ -607,7 +654,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": true
+    "is_official": true,
+    "sentiment": "neutral"
   },
   {
     "brand": "Chase",
@@ -627,7 +675,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Robinhood",
@@ -647,7 +696,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Robinhood",
@@ -667,7 +717,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Chase",
@@ -687,7 +738,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Polymarket",
@@ -712,7 +764,8 @@
       }
     ],
     "group_size": 2,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Polymarket",
@@ -732,7 +785,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "negative"
   },
   {
     "brand": "Polymarket",
@@ -752,7 +806,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Kalshi",
@@ -772,7 +827,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Polymarket",
@@ -792,7 +848,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "negative"
   },
   {
     "brand": "Polymarket",
@@ -812,7 +869,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Polymarket",
@@ -832,7 +890,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "negative"
   },
   {
     "brand": "Polymarket",
@@ -852,7 +911,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "negative"
   },
   {
     "brand": "Chase",
@@ -872,7 +932,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Polymarket",
@@ -892,7 +953,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Kalshi",
@@ -917,7 +979,8 @@
       }
     ],
     "group_size": 2,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "negative"
   },
   {
     "brand": "Polymarket",
@@ -937,7 +1000,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Kalshi",
@@ -957,7 +1021,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Chase",
@@ -977,7 +1042,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "negative"
   },
   {
     "brand": "Chase",
@@ -1057,7 +1123,8 @@
       }
     ],
     "group_size": 13,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Robinhood",
@@ -1077,7 +1144,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Polymarket",
@@ -1097,7 +1165,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Kalshi",
@@ -1117,7 +1186,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Kalshi",
@@ -1137,7 +1207,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Kalshi",
@@ -1157,7 +1228,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Kalshi",
@@ -1177,7 +1249,29 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
+  },
+  {
+    "brand": "Robinhood",
+    "slug": "robinhood",
+    "title": "A Robinhood co-founder just raised $275 million to put AI data centers in orbit \u2014 and the real pitch isn't the physics, it's a seven-year waitlist nobody can fix on the ground",
+    "summary": "Cowboy Space Corp. has raised $275 million in Series B funding to build orbital data centers powered by sunlight and launched on a rocket the company is designing itself. The round signals investor appetite for a thesis that has moved from science-fiction adjacent to venture-fundable in roughly eighteen months: if\u2026",
+    "url": "https://spacedaily.com/sd-n-a-robinhood-co-founder-just-raised-275-million-to-put-ai-data-centers-in-orbit-and-the-real-pitch-isnt-the-physics-its-a-seven-year-waitlist-nobody-can-fix-on-the-ground/",
+    "source": "Space Daily",
+    "author": "",
+    "date": "2026-05-13T13:55:44+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "Space Daily",
+        "url": "https://spacedaily.com/sd-n-a-robinhood-co-founder-just-raised-275-million-to-put-ai-data-centers-in-orbit-and-the-real-pitch-isnt-the-physics-its-a-seven-year-waitlist-nobody-can-fix-on-the-ground/",
+        "author": ""
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Chase",
@@ -1197,7 +1291,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Polymarket",
@@ -1217,7 +1312,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Chase",
@@ -1237,7 +1333,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Chase",
@@ -1257,7 +1354,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Chase",
@@ -1277,7 +1375,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "SoFi",
@@ -1297,7 +1396,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Chase",
@@ -1317,7 +1417,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Kalshi",
@@ -1337,7 +1438,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Chase",
@@ -1357,7 +1459,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Kalshi",
@@ -1377,7 +1480,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Chase",
@@ -1397,7 +1501,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Robinhood",
@@ -1417,7 +1522,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Polymarket",
@@ -1437,7 +1543,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "SoFi",
@@ -1457,7 +1564,29 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
+  },
+  {
+    "brand": "Kalshi",
+    "slug": "kalshi",
+    "title": "Kentuckians sue Kalshi to recover gambling losses",
+    "summary": "The lead plaintiff says the futures markets provided by the New York-based company are nothing more than unregulated and unlicensed gambling.",
+    "url": "https://www.courthousenews.com/kentuckians-sue-kalshi-to-recover-gambling-losses/",
+    "source": "Courthouse News",
+    "author": "",
+    "date": "2026-05-12T17:29:46+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "Courthouse News",
+        "url": "https://www.courthousenews.com/kentuckians-sue-kalshi-to-recover-gambling-losses/",
+        "author": ""
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "negative"
   },
   {
     "brand": "Chase",
@@ -1477,7 +1606,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "negative"
   },
   {
     "brand": "Chase",
@@ -1497,7 +1627,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Kalshi",
@@ -1517,7 +1648,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "negative"
   },
   {
     "brand": "Robinhood",
@@ -1537,7 +1669,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "SoFi",
@@ -1557,7 +1690,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "negative"
   },
   {
     "brand": "Kalshi",
@@ -1577,7 +1711,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "negative"
   },
   {
     "brand": "Robinhood",
@@ -1597,7 +1732,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Robinhood",
@@ -1632,7 +1768,8 @@
       }
     ],
     "group_size": 4,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Robinhood",
@@ -1672,7 +1809,8 @@
       }
     ],
     "group_size": 5,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Kalshi",
@@ -1692,7 +1830,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Polymarket",
@@ -1712,7 +1851,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "negative"
   },
   {
     "brand": "Polymarket",
@@ -1732,7 +1872,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "SoFi",
@@ -1752,7 +1893,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "SoFi",
@@ -1772,7 +1914,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Chase",
@@ -1792,7 +1935,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "SoFi",
@@ -1812,7 +1956,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Chase",
@@ -1832,7 +1977,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "negative"
   },
   {
     "brand": "Polymarket",
@@ -1852,7 +1998,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Polymarket",
@@ -1872,7 +2019,29 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
+  },
+  {
+    "brand": "Kalshi",
+    "slug": "kalshi",
+    "title": "As Colorado debates sports betting reform, Kalshi operates outside state rules",
+    "summary": "One of the largest prediction market platforms operates in Colorado essentially as a sportsbook outside the regulated system.",
+    "url": "https://www.kunc.org/politics/2026-05-11/as-colorado-debates-sports-betting-reform-kalshi-operates-outside-state-rules",
+    "source": "KUNC",
+    "author": "",
+    "date": "2026-05-11T11:39:00+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "KUNC",
+        "url": "https://www.kunc.org/politics/2026-05-11/as-colorado-debates-sports-betting-reform-kalshi-operates-outside-state-rules",
+        "author": ""
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Chase",
@@ -1892,7 +2061,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Robinhood",
@@ -1912,7 +2082,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Acorns",
@@ -1953,27 +2124,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
-  },
-  {
-    "brand": "Polymarket",
-    "slug": "polymarket",
-    "title": "Polymarket New Markets (Monthly)",
-    "summary": "Polymarket New Markets (Monthly) The Block",
-    "url": "https://www.theblock.co/data/decentralized-finance/prediction-markets/polymarket-new-markets-monthly",
-    "source": "The Block",
-    "author": "",
-    "date": "2026-05-10T07:00:00+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "The Block",
-        "url": "https://www.theblock.co/data/decentralized-finance/prediction-markets/polymarket-new-markets-monthly",
-        "author": ""
-      }
-    ],
-    "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Chase",
@@ -1993,7 +2145,50 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
+  },
+  {
+    "brand": "SoFi",
+    "slug": "sofi",
+    "title": "SoFi's Galileo integration: A key engine behind its fintech expansion",
+    "summary": "SoFi's Galileo integration: A key engine behind its fintech expansion MSN",
+    "url": "https://www.msn.com/en-us/money/general/sofi-s-galileo-integration-a-key-engine-behind-its-fintech-expansion/ar-AA1Zyliw?ocid=BingNewsVerp&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
+    "source": "MSN",
+    "author": "",
+    "date": "2026-05-10T04:35:11+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "MSN",
+        "url": "https://www.msn.com/en-us/money/general/sofi-s-galileo-integration-a-key-engine-behind-its-fintech-expansion/ar-AA1Zyliw?ocid=BingNewsVerp&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
+        "author": ""
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "neutral"
+  },
+  {
+    "brand": "Robinhood",
+    "slug": "robinhood",
+    "title": "Robinhood Review + COMPLETE Step-By-Step Tutorial + Pros And Cons (DoH4UocDzW)",
+    "summary": "Robinhood Review + COMPLETE Step-By-Step Tutorial + Pros And Cons (DoH4UocDzW) Fathom Journal",
+    "url": "https://fathomjournal.org/2ca9e204smm/bd6299e3-Iw1EHyhULCIACwU.html",
+    "source": "Fathom Journal",
+    "author": "",
+    "date": "2026-05-10T03:54:30+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "Fathom Journal",
+        "url": "https://fathomjournal.org/2ca9e204smm/bd6299e3-Iw1EHyhULCIACwU.html",
+        "author": ""
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Polymarket",
@@ -2013,7 +2208,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Chime",
@@ -2033,7 +2229,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Kalshi",
@@ -2053,7 +2250,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Cash App",
@@ -2073,7 +2271,29 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
+  },
+  {
+    "brand": "Chime",
+    "slug": "chime",
+    "title": "How Chime overcame trust challenges when deploying its AI agent",
+    "summary": "How Chime overcame trust challenges when deploying its AI agent Customer Experience Dive",
+    "url": "https://www.customerexperiencedive.com/news/how-chime-overcame-trust-challenges-deploying-ai-agent-jade/819651/",
+    "source": "Customer Experience Dive",
+    "author": "",
+    "date": "2026-05-08T13:04:02+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "Customer Experience Dive",
+        "url": "https://www.customerexperiencedive.com/news/how-chime-overcame-trust-challenges-deploying-ai-agent-jade/819651/",
+        "author": ""
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Cash App",
@@ -2093,7 +2313,29 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
+  },
+  {
+    "brand": "Kalshi",
+    "slug": "kalshi",
+    "title": "Kalshi\u2019s $22 billion problem",
+    "summary": "Kalshi\u2019s $22 billion problem Fast Company",
+    "url": "https://www.fastcompany.com/91538789/kalshi-22-billion-problem-sports-betting-states",
+    "source": "Fast Company",
+    "author": "",
+    "date": "2026-05-08T11:09:53+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "Fast Company",
+        "url": "https://www.fastcompany.com/91538789/kalshi-22-billion-problem-sports-betting-states",
+        "author": ""
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Kalshi",
@@ -2113,7 +2355,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Cash App",
@@ -2133,7 +2376,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Cash App",
@@ -2153,7 +2397,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Robinhood",
@@ -2172,7 +2417,8 @@
         "author": ""
       }
     ],
-    "is_official": true
+    "is_official": true,
+    "sentiment": "neutral"
   },
   {
     "brand": "Cash App",
@@ -2192,7 +2438,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Cash App",
@@ -2212,7 +2459,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Cash App",
@@ -2229,15 +2477,11 @@
         "publisher": "Reuters",
         "url": "https://www.reuters.com/business/block-quarterly-profit-jumps-resilient-consumer-spending-2026-05-07/",
         "author": ""
-      },
-      {
-        "publisher": "CNA",
-        "url": "https://www.channelnewsasia.com/business/block-raises-annual-gross-profit-outlook-cash-app-stands-out-6108096",
-        "author": ""
       }
     ],
-    "group_size": 2,
-    "is_official": false
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Polymarket",
@@ -2257,52 +2501,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
-  },
-  {
-    "brand": "Chime",
-    "slug": "chime",
-    "title": "Chime Delivers First GAAP Profit and Raises 2026 Outlook",
-    "summary": "Detailed price information for Chime Financial Inc Cl A (CHYM-Q) from The Globe and Mail including charting and trades.",
-    "url": "https://www.theglobeandmail.com/investing/markets/stocks/CHYM/pressreleases/1786868/chime-delivers-first-gaap-profit-and-raises-2026-outlook/",
-    "source": "The Globe and Mail",
-    "author": "",
-    "date": "2026-05-07T21:12:00+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "The Globe and Mail",
-        "url": "https://www.theglobeandmail.com/investing/markets/stocks/CHYM/pressreleases/1786868/chime-delivers-first-gaap-profit-and-raises-2026-outlook/",
-        "author": ""
-      }
-    ],
-    "group_size": 1,
-    "is_official": false
-  },
-  {
-    "brand": "Chime",
-    "slug": "chime",
-    "title": "Chime reaches GAAP profitability in Q1",
-    "summary": "Account holder growth and engagement drove its first profitable quarter. Read online",
-    "url": "https://www.emarketer.com/content/chime-gaap-profitability-account-holder-growth-q1",
-    "source": "eMarketer",
-    "author": "",
-    "date": "2026-05-07T18:10:14+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "eMarketer",
-        "url": "https://www.emarketer.com/content/chime-gaap-profitability-account-holder-growth-q1",
-        "author": ""
-      },
-      {
-        "publisher": "American Banker",
-        "url": "https://www.americanbanker.com/payments/news/chime-hits-gaap-profitability-in-q1",
-        "author": ""
-      }
-    ],
-    "group_size": 2,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Polymarket",
@@ -2322,7 +2522,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Kalshi",
@@ -2342,7 +2543,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Kalshi",
@@ -2362,7 +2564,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Betterment",
@@ -2382,7 +2585,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Cash App",
@@ -2401,7 +2605,8 @@
         "author": ""
       }
     ],
-    "is_official": true
+    "is_official": true,
+    "sentiment": "neutral"
   },
   {
     "brand": "Cash App",
@@ -2420,7 +2625,8 @@
         "author": ""
       }
     ],
-    "is_official": true
+    "is_official": true,
+    "sentiment": "neutral"
   },
   {
     "brand": "SoFi",
@@ -2439,7 +2645,8 @@
         "author": ""
       }
     ],
-    "is_official": true
+    "is_official": true,
+    "sentiment": "neutral"
   },
   {
     "brand": "Chase",
@@ -2458,7 +2665,8 @@
         "author": ""
       }
     ],
-    "is_official": true
+    "is_official": true,
+    "sentiment": "neutral"
   },
   {
     "brand": "Chime",
@@ -2478,7 +2686,29 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
+  },
+  {
+    "brand": "Chime",
+    "slug": "chime",
+    "title": "Chime hits GAAP profitability in Q1",
+    "summary": "The neobank reported a 25% year-over-year increase in revenue for the quarter ended March 31, with active users jumping 19% to 10.2 million. The company also raised its full-year 2026 guidance and authorized a $200 million share repurchase program.",
+    "url": "https://www.americanbanker.com/payments/news/chime-hits-gaap-profitability-in-q1",
+    "source": "American Banker",
+    "author": "",
+    "date": "2026-05-06T21:03:00+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "American Banker",
+        "url": "https://www.americanbanker.com/payments/news/chime-hits-gaap-profitability-in-q1",
+        "author": ""
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Chime",
@@ -2498,7 +2728,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Cash App",
@@ -2518,27 +2749,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
-  },
-  {
-    "brand": "Polymarket",
-    "slug": "polymarket",
-    "title": "Polymarket\u2019s Homecoming Is Shaky and its U.S. CEO Is AWOL",
-    "summary": "Polymarket\u2019s Homecoming Is Shaky and its U.S. CEO Is AWOL The Information",
-    "url": "https://www.theinformation.com/articles/polymarkets-homecoming-shaky-u-s-ceo-awol",
-    "source": "The Information",
-    "author": "",
-    "date": "2026-05-06T13:00:00+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "The Information",
-        "url": "https://www.theinformation.com/articles/polymarkets-homecoming-shaky-u-s-ceo-awol",
-        "author": ""
-      }
-    ],
-    "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Acorns",
@@ -2579,7 +2791,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "negative"
   },
   {
     "brand": "Chime",
@@ -2599,7 +2812,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Wealthfront",
@@ -2624,7 +2838,8 @@
       }
     ],
     "group_size": 2,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Chime",
@@ -2644,7 +2859,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Chime",
@@ -2664,27 +2880,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
-  },
-  {
-    "brand": "Robinhood",
-    "slug": "robinhood",
-    "title": "Robinhood CEO issues bold outlook on prediction markets business",
-    "summary": "Robinhood CEO issues bold outlook on prediction markets business thestreet.com",
-    "url": "https://www.thestreet.com/investing/stocks/robinhood-ceo-issues-bold-outlook-on-prediction-markets-business",
-    "source": "thestreet.com",
-    "author": "",
-    "date": "2026-05-05T07:00:00+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "thestreet.com",
-        "url": "https://www.thestreet.com/investing/stocks/robinhood-ceo-issues-bold-outlook-on-prediction-markets-business",
-        "author": ""
-      }
-    ],
-    "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Cash App",
@@ -2704,7 +2901,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Betterment",
@@ -2724,7 +2922,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Polymarket",
@@ -2744,7 +2943,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Chime",
@@ -2764,7 +2964,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Cash App",
@@ -2783,7 +2984,8 @@
         "author": ""
       }
     ],
-    "is_official": true
+    "is_official": true,
+    "sentiment": "neutral"
   },
   {
     "brand": "Greenlight",
@@ -2803,7 +3005,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Polymarket",
@@ -2823,7 +3026,8 @@
       }
     ],
     "group_size": 1,
-    "is_official": false
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Chase",
@@ -2842,6 +3046,7 @@
         "author": ""
       }
     ],
-    "is_official": true
+    "is_official": true,
+    "sentiment": "neutral"
   }
 ]

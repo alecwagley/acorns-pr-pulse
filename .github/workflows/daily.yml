@@ -1,9 +1,10 @@
-name: Weekly PR Refresh
+name: Daily PR Refresh
 
 on:
   schedule:
-    # Mondays at 11:00 UTC (7am ET during EDT, 6am ET during EST)
-    - cron: "0 11 * * 1"
+    # 16:00 UTC = 12pm ET during EDT (March-November), 11am ET during EST.
+    # ET is the working time zone for the Acorns PR team in NYC.
+    - cron: "0 16 * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -25,6 +26,8 @@ jobs:
           pip install -r pipeline/requirements.txt
 
       - name: Collect items (Google News + SEC EDGAR)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python3 pipeline/collect.py
 
       - name: Regenerate dashboard HTML
@@ -38,6 +41,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes."
           else
-            git commit -m "Weekly refresh $(date -u +%Y-%m-%d)"
+            git commit -m "Daily refresh $(date -u +%Y-%m-%d)"
             git push
           fi
