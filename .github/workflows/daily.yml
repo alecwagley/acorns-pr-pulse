@@ -50,3 +50,22 @@ jobs:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
         run: python3 pipeline/notify.py
+
+      - name: Slack alert on failure
+        if: failure()
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          if [ -z "$SLACK_WEBHOOK_URL" ]; then
+            echo "No SLACK_WEBHOOK_URL set; skipping Slack alert. GitHub will still email the repo owner on failure (default)."
+            exit 0
+          fi
+          # GH context provides the run URL so we can deep-link to the failure logs.
+          RUN_URL="https://github.com/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          PAYLOAD=$(cat <<EOF
+          {
+            "text": ":warning: Acorns PR Pulse daily run FAILED on $(date -u +%Y-%m-%d)\nCheck logs: $RUN_URL"
+          }
+          EOF
+          )
+          curl -sS -X POST -H 'Content-Type: application/json' --data "$PAYLOAD" "$SLACK_WEBHOOK_URL"

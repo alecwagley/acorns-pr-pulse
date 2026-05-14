@@ -67,12 +67,23 @@ if [[ -n "${GMAIL_USER:-}" && -n "${GMAIL_APP_PASSWORD:-}" ]]; then
   gh secret set GMAIL_APP_PASSWORD --repo "$GH_OWNER/$REPO_NAME" --body "$GMAIL_APP_PASSWORD"
   echo "✓ GMAIL_USER + GMAIL_APP_PASSWORD set (daily email enabled)"
 else
-  echo "⚠ GMAIL_USER and/or GMAIL_APP_PASSWORD missing from secrets.env — daily email won't send."
+  echo "⚠ GMAIL_USER and/or GMAIL_APP_PASSWORD missing from secrets.env. Daily email won't send."
   echo "  To enable: 1) generate an app password at https://myaccount.google.com/apppasswords"
   echo "             2) add to ~/.config/vscrl/secrets.env:"
   echo "                GMAIL_USER=alec@vscrl.co"
   echo "                GMAIL_APP_PASSWORD=xxxx xxxx xxxx xxxx"
   echo "             3) re-run this script"
+fi
+
+# 2c. Slack webhook for failure alerts.
+if [[ -n "${SLACK_WEBHOOK_URL:-}" ]]; then
+  gh secret set SLACK_WEBHOOK_URL --repo "$GH_OWNER/$REPO_NAME" --body "$SLACK_WEBHOOK_URL"
+  echo "✓ SLACK_WEBHOOK_URL set (failure alerts to Slack enabled)"
+else
+  echo "⚠ SLACK_WEBHOOK_URL missing. Failures will only email the repo owner (GitHub default)."
+  echo "  To enable Slack: 1) create incoming webhook at api.slack.com/apps (one-time, free)"
+  echo "                   2) add SLACK_WEBHOOK_URL=https://hooks.slack.com/... to secrets.env"
+  echo "                   3) re-run this script"
 fi
 
 # 3. Vercel project (idempotent)

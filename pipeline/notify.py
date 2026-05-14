@@ -25,7 +25,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA_PATH = ROOT / "data" / "current.json"
 
 RECIPIENT = "jinny.davoudi@acorns.com"
-SUBJECT = "Acorns PR Pulse — daily update"
+SUBJECT = "Acorns PR Pulse, daily update"
 
 
 def build_tldr() -> str:
@@ -108,10 +108,10 @@ def build_body() -> str:
     tldr = build_tldr()
     tldr_block = ""
     if tldr:
-        tldr_block = f"\nTLDR — what's notable today:\n{tldr}\n"
+        tldr_block = f"\nTLDR. What's notable today:\n{tldr}\n"
 
     return (
-        "Hey Jinny — daily has been updated. Check it out!\n"
+        "Hey Jinny, daily has been updated. Check it out!\n"
         + tldr_block
         + "\nhttps://acorns-pr.vscrl.co\n"
         "User: acorns-pr\n"
