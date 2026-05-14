@@ -401,6 +401,22 @@
       c.className = 'px-3 py-1.5 rounded-full text-xs font-medium border bg-white/[0.03] ' + accent.idleText + ' ' + accent.idleBorder + ' hover:bg-white/[0.06] transition whitespace-nowrap cursor-pointer';
     }
   }
+  // Chart segment click: apply brand+sentiment filter to the Buzz section and
+  // scroll the user to it. For the SUBJECT brand (Acorns) the relevant items
+  // live in their own section, so scroll there instead.
+  function chartSegmentClick(slug, sentiment) {
+    if (slug === 'acorns') {
+      var target = document.getElementById('acorns-news-section');
+      if (target) target.scrollIntoView({behavior: 'smooth', block: 'start'});
+      return;
+    }
+    var brandChip = document.querySelector('#buzz-brand-filters button[data-brand-filter="' + slug + '"]');
+    if (brandChip) setBrandFilter(brandChip, slug);
+    var sentChip = document.querySelector('#buzz-sentiment-filters button[data-sentiment-filter="' + sentiment + '"]');
+    if (sentChip) setSentimentFilter(sentChip, sentiment);
+    var buzz = document.getElementById('buzz-section');
+    if (buzz) buzz.scrollIntoView({behavior: 'smooth', block: 'start'});
+  }
   function setBrandFilter(button, slug) {
     _buzzFilter.brand = slug;
     var chips = document.querySelectorAll('#buzz-brand-filters button[data-brand-filter]');

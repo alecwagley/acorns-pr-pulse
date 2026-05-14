@@ -197,6 +197,22 @@ FOOTER = """
       c.className = 'px-3 py-1.5 rounded-full text-xs font-medium border bg-white/[0.03] ' + accent.idleText + ' ' + accent.idleBorder + ' hover:bg-white/[0.06] transition whitespace-nowrap cursor-pointer';
     }
   }
+  // Chart segment click: apply brand+sentiment filter to the Buzz section and
+  // scroll the user to it. For the SUBJECT brand (Acorns) the relevant items
+  // live in their own section, so scroll there instead.
+  function chartSegmentClick(slug, sentiment) {
+    if (slug === 'acorns') {
+      var target = document.getElementById('acorns-news-section');
+      if (target) target.scrollIntoView({behavior: 'smooth', block: 'start'});
+      return;
+    }
+    var brandChip = document.querySelector('#buzz-brand-filters button[data-brand-filter="' + slug + '"]');
+    if (brandChip) setBrandFilter(brandChip, slug);
+    var sentChip = document.querySelector('#buzz-sentiment-filters button[data-sentiment-filter="' + sentiment + '"]');
+    if (sentChip) setSentimentFilter(sentChip, sentiment);
+    var buzz = document.getElementById('buzz-section');
+    if (buzz) buzz.scrollIntoView({behavior: 'smooth', block: 'start'});
+  }
   function setBrandFilter(button, slug) {
     _buzzFilter.brand = slug;
     var chips = document.querySelectorAll('#buzz-brand-filters button[data-brand-filter]');
@@ -376,11 +392,12 @@ def render_mentions_chart(by_brand: dict, refresh_date: str) -> str:
     into positive / neutral / negative segments. Pure HTML/CSS — no JS."""
     from collections import Counter
     rows = []
-    for brand, _slug in ALL_TRACKED:
+    for brand, slug in ALL_TRACKED:
         items = by_brand.get(brand, [])
         sentiments = Counter(i.get("sentiment", "neutral") for i in items)
         rows.append({
             "brand": brand,
+            "slug": slug,
             "total": len(items),
             "positive": sentiments.get("positive", 0),
             "neutral": sentiments.get("neutral", 0),
@@ -405,19 +422,22 @@ def render_mentions_chart(by_brand: dict, refresh_date: str) -> str:
             neu_share = (r["neutral"]  / r["total"]) * 100
             neg_share = (r["negative"] / r["total"]) * 100
             seg_pos = (
-                f'<div class="bg-emerald-500/80 h-full" '
+                f'<button type="button" class="bg-emerald-500/80 hover:bg-emerald-400 h-full cursor-pointer transition" '
                 f'style="width: {pos_share:.2f}%" '
-                f'title="{r["positive"]} positive"></div>'
+                f'title="{r["positive"]} positive {escape(r["brand"])} {"story" if r["positive"]==1 else "stories"} — click to filter" '
+                f'onclick="chartSegmentClick(\'{escape(r["slug"])}\', \'positive\')"></button>'
             ) if r["positive"] else ""
             seg_neu = (
-                f'<div class="bg-white/30 h-full" '
+                f'<button type="button" class="bg-white/30 hover:bg-white/50 h-full cursor-pointer transition" '
                 f'style="width: {neu_share:.2f}%" '
-                f'title="{r["neutral"]} neutral"></div>'
+                f'title="{r["neutral"]} neutral {escape(r["brand"])} {"story" if r["neutral"]==1 else "stories"} — click to filter" '
+                f'onclick="chartSegmentClick(\'{escape(r["slug"])}\', \'neutral\')"></button>'
             ) if r["neutral"] else ""
             seg_neg = (
-                f'<div class="bg-rose-500/80 h-full" '
+                f'<button type="button" class="bg-rose-500/80 hover:bg-rose-400 h-full cursor-pointer transition" '
                 f'style="width: {neg_share:.2f}%" '
-                f'title="{r["negative"]} negative"></div>'
+                f'title="{r["negative"]} negative {escape(r["brand"])} {"story" if r["negative"]==1 else "stories"} — click to filter" '
+                f'onclick="chartSegmentClick(\'{escape(r["slug"])}\', \'negative\')"></button>'
             ) if r["negative"] else ""
             inner = (
                 f'<div class="flex h-full" style="width: {bar_width_pct:.2f}%">'
@@ -450,7 +470,7 @@ def render_mentions_chart(by_brand: dict, refresh_date: str) -> str:
 <section>
   <div class="flex items-baseline gap-3 mb-3">
     <h2 class="text-2xl font-semibold text-white">Mention Volume</h2>
-    <span class="text-xs text-white/40">Last 14 days · sentiment-stacked · syndicated coverage counts once</span>
+    <span class="text-xs text-white/40">Last 14 days · click any segment to filter The Buzz by that brand + sentiment</span>
   </div>
   {legend}
   <div class="bg-white/[0.02] border border-white/10 rounded-2xl p-4 sm:p-6 space-y-2">
@@ -575,7 +595,7 @@ def render_index(
   {mentions_chart_html}
 
   <!-- 2. Acorns in the News -->
-  <section>
+  <section id="acorns-news-section">
     <div class="flex items-baseline gap-3 mb-5">
       <h2 class="text-2xl font-semibold text-white">Acorns in the News</h2>
       <span class="text-xs text-white/40">{len(acorns_items)} items · last 14 days</span>
@@ -597,7 +617,7 @@ def render_index(
   </section>
 
   <!-- 4. The Buzz (with brand filter chips) -->
-  <section>
+  <section id="buzz-section">
     <div class="flex items-baseline gap-3 mb-4">
       <h2 class="text-2xl font-semibold text-white">The Buzz</h2>
       <span class="text-xs text-white/40">{len(buzz_items)} items · click a brand below to filter</span>

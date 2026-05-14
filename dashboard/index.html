@@ -79,7 +79,7 @@
 <section>
   <div class="flex items-baseline gap-3 mb-3">
     <h2 class="text-2xl font-semibold text-white">Mention Volume</h2>
-    <span class="text-xs text-white/40">Last 14 days · sentiment-stacked · syndicated coverage counts once</span>
+    <span class="text-xs text-white/40">Last 14 days · click any segment to filter The Buzz by that brand + sentiment</span>
   </div>
   
 <div class="flex flex-wrap gap-x-4 gap-y-2 text-xs text-white/60 mb-4">
@@ -99,7 +99,7 @@
 <div class="flex items-center gap-3 sm:gap-4">
   <div class="w-24 sm:w-32 shrink-0 text-xs sm:text-sm text-white text-right">Kalshi</div>
   <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-6 sm:h-7">
-    <div class="flex h-full" style="width: 100.00%"><div class="bg-emerald-500/80 h-full" style="width: 47.06%" title="16 positive"></div><div class="bg-white/30 h-full" style="width: 26.47%" title="9 neutral"></div><div class="bg-rose-500/80 h-full" style="width: 26.47%" title="9 negative"></div></div>
+    <div class="flex h-full" style="width: 100.00%"><button type="button" class="bg-emerald-500/80 hover:bg-emerald-400 h-full cursor-pointer transition" style="width: 47.06%" title="16 positive Kalshi stories — click to filter" onclick="chartSegmentClick('kalshi', 'positive')"></button><button type="button" class="bg-white/30 hover:bg-white/50 h-full cursor-pointer transition" style="width: 26.47%" title="9 neutral Kalshi stories — click to filter" onclick="chartSegmentClick('kalshi', 'neutral')"></button><button type="button" class="bg-rose-500/80 hover:bg-rose-400 h-full cursor-pointer transition" style="width: 26.47%" title="9 negative Kalshi stories — click to filter" onclick="chartSegmentClick('kalshi', 'negative')"></button></div>
   </div>
   <div class="w-10 text-right text-sm text-white/70 tabular-nums">34</div>
 </div>
@@ -107,7 +107,7 @@
 <div class="flex items-center gap-3 sm:gap-4">
   <div class="w-24 sm:w-32 shrink-0 text-xs sm:text-sm text-white text-right">Polymarket</div>
   <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-6 sm:h-7">
-    <div class="flex h-full" style="width: 82.35%"><div class="bg-emerald-500/80 h-full" style="width: 25.00%" title="7 positive"></div><div class="bg-white/30 h-full" style="width: 25.00%" title="7 neutral"></div><div class="bg-rose-500/80 h-full" style="width: 50.00%" title="14 negative"></div></div>
+    <div class="flex h-full" style="width: 82.35%"><button type="button" class="bg-emerald-500/80 hover:bg-emerald-400 h-full cursor-pointer transition" style="width: 25.00%" title="7 positive Polymarket stories — click to filter" onclick="chartSegmentClick('polymarket', 'positive')"></button><button type="button" class="bg-white/30 hover:bg-white/50 h-full cursor-pointer transition" style="width: 25.00%" title="7 neutral Polymarket stories — click to filter" onclick="chartSegmentClick('polymarket', 'neutral')"></button><button type="button" class="bg-rose-500/80 hover:bg-rose-400 h-full cursor-pointer transition" style="width: 50.00%" title="14 negative Polymarket stories — click to filter" onclick="chartSegmentClick('polymarket', 'negative')"></button></div>
   </div>
   <div class="w-10 text-right text-sm text-white/70 tabular-nums">28</div>
 </div>
@@ -115,7 +115,7 @@
 <div class="flex items-center gap-3 sm:gap-4">
   <div class="w-24 sm:w-32 shrink-0 text-xs sm:text-sm text-white text-right">Chase</div>
   <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-6 sm:h-7">
-    <div class="flex h-full" style="width: 61.76%"><div class="bg-emerald-500/80 h-full" style="width: 38.10%" title="8 positive"></div><div class="bg-white/30 h-full" style="width: 52.38%" title="11 neutral"></div><div class="bg-rose-500/80 h-full" style="width: 9.52%" title="2 negative"></div></div>
+    <div class="flex h-full" style="width: 61.76%"><button type="button" class="bg-emerald-500/80 hover:bg-emerald-400 h-full cursor-pointer transition" style="width: 38.10%" title="8 positive Chase stories — click to filter" onclick="chartSegmentClick('chase', 'positive')"></button><button type="button" class="bg-white/30 hover:bg-white/50 h-full cursor-pointer transition" style="width: 52.38%" title="11 neutral Chase stories — click to filter" onclick="chartSegmentClick('chase', 'neutral')"></button><button type="button" class="bg-rose-500/80 hover:bg-rose-400 h-full cursor-pointer transition" style="width: 9.52%" title="2 negative Chase stories — click to filter" onclick="chartSegmentClick('chase', 'negative')"></button></div>
   </div>
   <div class="w-10 text-right text-sm text-white/70 tabular-nums">21</div>
 </div>
@@ -123,7 +123,7 @@
 <div class="flex items-center gap-3 sm:gap-4">
   <div class="w-24 sm:w-32 shrink-0 text-xs sm:text-sm text-white text-right">Robinhood</div>
   <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-6 sm:h-7">
-    <div class="flex h-full" style="width: 38.24%"><div class="bg-emerald-500/80 h-full" style="width: 61.54%" title="8 positive"></div><div class="bg-white/30 h-full" style="width: 38.46%" title="5 neutral"></div></div>
+    <div class="flex h-full" style="width: 38.24%"><button type="button" class="bg-emerald-500/80 hover:bg-emerald-400 h-full cursor-pointer transition" style="width: 61.54%" title="8 positive Robinhood stories — click to filter" onclick="chartSegmentClick('robinhood', 'positive')"></button><button type="button" class="bg-white/30 hover:bg-white/50 h-full cursor-pointer transition" style="width: 38.46%" title="5 neutral Robinhood stories — click to filter" onclick="chartSegmentClick('robinhood', 'neutral')"></button></div>
   </div>
   <div class="w-10 text-right text-sm text-white/70 tabular-nums">13</div>
 </div>
@@ -131,7 +131,7 @@
 <div class="flex items-center gap-3 sm:gap-4">
   <div class="w-24 sm:w-32 shrink-0 text-xs sm:text-sm text-white text-right">Cash App</div>
   <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-6 sm:h-7">
-    <div class="flex h-full" style="width: 35.29%"><div class="bg-emerald-500/80 h-full" style="width: 58.33%" title="7 positive"></div><div class="bg-white/30 h-full" style="width: 33.33%" title="4 neutral"></div><div class="bg-rose-500/80 h-full" style="width: 8.33%" title="1 negative"></div></div>
+    <div class="flex h-full" style="width: 35.29%"><button type="button" class="bg-emerald-500/80 hover:bg-emerald-400 h-full cursor-pointer transition" style="width: 58.33%" title="7 positive Cash App stories — click to filter" onclick="chartSegmentClick('cash-app', 'positive')"></button><button type="button" class="bg-white/30 hover:bg-white/50 h-full cursor-pointer transition" style="width: 33.33%" title="4 neutral Cash App stories — click to filter" onclick="chartSegmentClick('cash-app', 'neutral')"></button><button type="button" class="bg-rose-500/80 hover:bg-rose-400 h-full cursor-pointer transition" style="width: 8.33%" title="1 negative Cash App story — click to filter" onclick="chartSegmentClick('cash-app', 'negative')"></button></div>
   </div>
   <div class="w-10 text-right text-sm text-white/70 tabular-nums">12</div>
 </div>
@@ -139,7 +139,7 @@
 <div class="flex items-center gap-3 sm:gap-4">
   <div class="w-24 sm:w-32 shrink-0 text-xs sm:text-sm text-white text-right">SoFi</div>
   <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-6 sm:h-7">
-    <div class="flex h-full" style="width: 23.53%"><div class="bg-emerald-500/80 h-full" style="width: 87.50%" title="7 positive"></div><div class="bg-white/30 h-full" style="width: 12.50%" title="1 neutral"></div></div>
+    <div class="flex h-full" style="width: 23.53%"><button type="button" class="bg-emerald-500/80 hover:bg-emerald-400 h-full cursor-pointer transition" style="width: 87.50%" title="7 positive SoFi stories — click to filter" onclick="chartSegmentClick('sofi', 'positive')"></button><button type="button" class="bg-white/30 hover:bg-white/50 h-full cursor-pointer transition" style="width: 12.50%" title="1 neutral SoFi story — click to filter" onclick="chartSegmentClick('sofi', 'neutral')"></button></div>
   </div>
   <div class="w-10 text-right text-sm text-white/70 tabular-nums">8</div>
 </div>
@@ -147,7 +147,7 @@
 <div class="flex items-center gap-3 sm:gap-4">
   <div class="w-24 sm:w-32 shrink-0 text-xs sm:text-sm text-white text-right">Chime</div>
   <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-6 sm:h-7">
-    <div class="flex h-full" style="width: 20.59%"><div class="bg-emerald-500/80 h-full" style="width: 42.86%" title="3 positive"></div><div class="bg-white/30 h-full" style="width: 42.86%" title="3 neutral"></div><div class="bg-rose-500/80 h-full" style="width: 14.29%" title="1 negative"></div></div>
+    <div class="flex h-full" style="width: 20.59%"><button type="button" class="bg-emerald-500/80 hover:bg-emerald-400 h-full cursor-pointer transition" style="width: 42.86%" title="3 positive Chime stories — click to filter" onclick="chartSegmentClick('chime', 'positive')"></button><button type="button" class="bg-white/30 hover:bg-white/50 h-full cursor-pointer transition" style="width: 42.86%" title="3 neutral Chime stories — click to filter" onclick="chartSegmentClick('chime', 'neutral')"></button><button type="button" class="bg-rose-500/80 hover:bg-rose-400 h-full cursor-pointer transition" style="width: 14.29%" title="1 negative Chime story — click to filter" onclick="chartSegmentClick('chime', 'negative')"></button></div>
   </div>
   <div class="w-10 text-right text-sm text-white/70 tabular-nums">7</div>
 </div>
@@ -155,7 +155,7 @@
 <div class="flex items-center gap-3 sm:gap-4">
   <div class="w-24 sm:w-32 shrink-0 text-xs sm:text-sm brand-accent font-semibold text-right">Acorns</div>
   <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-6 sm:h-7">
-    <div class="flex h-full" style="width: 5.88%"><div class="bg-emerald-500/80 h-full" style="width: 50.00%" title="1 positive"></div><div class="bg-white/30 h-full" style="width: 50.00%" title="1 neutral"></div></div>
+    <div class="flex h-full" style="width: 5.88%"><button type="button" class="bg-emerald-500/80 hover:bg-emerald-400 h-full cursor-pointer transition" style="width: 50.00%" title="1 positive Acorns story — click to filter" onclick="chartSegmentClick('acorns', 'positive')"></button><button type="button" class="bg-white/30 hover:bg-white/50 h-full cursor-pointer transition" style="width: 50.00%" title="1 neutral Acorns story — click to filter" onclick="chartSegmentClick('acorns', 'neutral')"></button></div>
   </div>
   <div class="w-10 text-right text-sm brand-accent font-bold tabular-nums">2</div>
 </div>
@@ -163,7 +163,7 @@
 <div class="flex items-center gap-3 sm:gap-4">
   <div class="w-24 sm:w-32 shrink-0 text-xs sm:text-sm text-white text-right">Betterment</div>
   <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-6 sm:h-7">
-    <div class="flex h-full" style="width: 5.88%"><div class="bg-emerald-500/80 h-full" style="width: 50.00%" title="1 positive"></div><div class="bg-white/30 h-full" style="width: 50.00%" title="1 neutral"></div></div>
+    <div class="flex h-full" style="width: 5.88%"><button type="button" class="bg-emerald-500/80 hover:bg-emerald-400 h-full cursor-pointer transition" style="width: 50.00%" title="1 positive Betterment story — click to filter" onclick="chartSegmentClick('betterment', 'positive')"></button><button type="button" class="bg-white/30 hover:bg-white/50 h-full cursor-pointer transition" style="width: 50.00%" title="1 neutral Betterment story — click to filter" onclick="chartSegmentClick('betterment', 'neutral')"></button></div>
   </div>
   <div class="w-10 text-right text-sm text-white/70 tabular-nums">2</div>
 </div>
@@ -171,7 +171,7 @@
 <div class="flex items-center gap-3 sm:gap-4">
   <div class="w-24 sm:w-32 shrink-0 text-xs sm:text-sm text-white text-right">Wealthfront</div>
   <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-6 sm:h-7">
-    <div class="flex h-full" style="width: 5.88%"><div class="bg-white/30 h-full" style="width: 100.00%" title="2 neutral"></div></div>
+    <div class="flex h-full" style="width: 5.88%"><button type="button" class="bg-white/30 hover:bg-white/50 h-full cursor-pointer transition" style="width: 100.00%" title="2 neutral Wealthfront stories — click to filter" onclick="chartSegmentClick('wealthfront', 'neutral')"></button></div>
   </div>
   <div class="w-10 text-right text-sm text-white/70 tabular-nums">2</div>
 </div>
@@ -179,7 +179,7 @@
 <div class="flex items-center gap-3 sm:gap-4">
   <div class="w-24 sm:w-32 shrink-0 text-xs sm:text-sm text-white text-right">Greenlight</div>
   <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-6 sm:h-7">
-    <div class="flex h-full" style="width: 2.94%"><div class="bg-emerald-500/80 h-full" style="width: 100.00%" title="1 positive"></div></div>
+    <div class="flex h-full" style="width: 2.94%"><button type="button" class="bg-emerald-500/80 hover:bg-emerald-400 h-full cursor-pointer transition" style="width: 100.00%" title="1 positive Greenlight story — click to filter" onclick="chartSegmentClick('greenlight', 'positive')"></button></div>
   </div>
   <div class="w-10 text-right text-sm text-white/70 tabular-nums">1</div>
 </div>
@@ -197,7 +197,7 @@
 
 
   <!-- 2. Acorns in the News -->
-  <section>
+  <section id="acorns-news-section">
     <div class="flex items-baseline gap-3 mb-5">
       <h2 class="text-2xl font-semibold text-white">Acorns in the News</h2>
       <span class="text-xs text-white/40">2 items · last 14 days</span>
@@ -457,7 +457,7 @@
   </section>
 
   <!-- 4. The Buzz (with brand filter chips) -->
-  <section>
+  <section id="buzz-section">
     <div class="flex items-baseline gap-3 mb-4">
       <h2 class="text-2xl font-semibold text-white">The Buzz</h2>
       <span class="text-xs text-white/40">118 items · click a brand below to filter</span>
@@ -507,7 +507,7 @@
   
 <div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
   <a href="polymarket.html" class="text-[10px] uppercase tracking-widest brand-accent font-semibold hover:underline whitespace-nowrap">Polymarket</a><span class="text-white/20">·</span>
-  <span>just now</span>
+  <span>2h ago</span>
   <span class="text-white/20">·</span>
   <a href="https://www.esquire.com/news-politics/politics/a71311005/polymarket-bets-israel-iran-war-casino/" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
     Esquire
@@ -528,7 +528,7 @@
 <div class="mt-3">
   <div class="flex items-center gap-2 text-[11px] text-white/45 mb-2">
     <a href="kalshi.html" class="text-[10px] uppercase tracking-widest brand-accent font-semibold hover:underline whitespace-nowrap">Kalshi</a><span class="text-white/20">·</span>
-    <span>2h ago</span>
+    <span>3h ago</span>
     <span class="text-white/20">·</span>
     <span class="brand-accent font-semibold">9 sources</span>
   </div>
@@ -609,7 +609,7 @@
   
 <div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
   <a href="kalshi.html" class="text-[10px] uppercase tracking-widest brand-accent font-semibold hover:underline whitespace-nowrap">Kalshi</a><span class="text-white/20">·</span>
-  <span>4h ago</span>
+  <span>5h ago</span>
   <span class="text-white/20">·</span>
   <a href="https://www.si.com/betting/prediction-market/news/the-war-on-kalshi-just-escalated-minnesota-s-felony-push-may-reach-supreme-court" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
     Sports Illustrated
@@ -670,7 +670,7 @@
 <div class="mt-3">
   <div class="flex items-center gap-2 text-[11px] text-white/45 mb-2">
     <a href="polymarket.html" class="text-[10px] uppercase tracking-widest brand-accent font-semibold hover:underline whitespace-nowrap">Polymarket</a><span class="text-white/20">·</span>
-    <span>5h ago</span>
+    <span>6h ago</span>
     <span class="text-white/20">·</span>
     <span class="brand-accent font-semibold">2 sources</span>
   </div>
@@ -793,7 +793,7 @@
   
 <div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
   <a href="chase.html" class="text-[10px] uppercase tracking-widest brand-accent font-semibold hover:underline whitespace-nowrap">Chase</a><span class="text-white/20">·</span>
-  <span>7h ago</span>
+  <span>8h ago</span>
   <span class="text-white/20">·</span>
   <a href="https://www.ad-hoc-news.de/boerse/news/ueberblick/jpmorgan-chase-and-co-stock-us46625h1005-strong-q4-earnings-and/69335525" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
     AD HOC NEWS
@@ -955,7 +955,7 @@
   
 <div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
   <a href="kalshi.html" class="text-[10px] uppercase tracking-widest brand-accent font-semibold hover:underline whitespace-nowrap">Kalshi</a><span class="text-white/20">·</span>
-  <span>9h ago</span>
+  <span>10h ago</span>
   <span class="text-white/20">·</span>
   <a href="https://www.casino.org/news/kalshi-claims-it-isnt-a-sportsbook-but-has-made-35-million-in-parlay-fees-this-year-alone/" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
     Casino.org
@@ -1175,7 +1175,7 @@
   
 <div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
   <a href="polymarket.html" class="text-[10px] uppercase tracking-widest brand-accent font-semibold hover:underline whitespace-nowrap">Polymarket</a><span class="text-white/20">·</span>
-  <span>21h ago</span>
+  <span>22h ago</span>
   <span class="text-white/20">·</span>
   <a href="https://www.bitget.com/news/detail/12560605412571" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
     Bitget
@@ -2423,7 +2423,7 @@
   
 <div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
   <a href="cash-app.html" class="text-[10px] uppercase tracking-widest brand-accent font-semibold hover:underline whitespace-nowrap">Cash App</a><span class="text-white/20">·</span>
-  <span>6d ago</span>
+  <span>2026-05-07</span>
   <span class="text-white/20">·</span>
   <a href="https://finimize.com/content/block-raises-its-2026-outlook-as-cash-app-keeps-growing" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
     Finimize
@@ -2926,6 +2926,22 @@
     } else {
       c.className = 'px-3 py-1.5 rounded-full text-xs font-medium border bg-white/[0.03] ' + accent.idleText + ' ' + accent.idleBorder + ' hover:bg-white/[0.06] transition whitespace-nowrap cursor-pointer';
     }
+  }
+  // Chart segment click: apply brand+sentiment filter to the Buzz section and
+  // scroll the user to it. For the SUBJECT brand (Acorns) the relevant items
+  // live in their own section, so scroll there instead.
+  function chartSegmentClick(slug, sentiment) {
+    if (slug === 'acorns') {
+      var target = document.getElementById('acorns-news-section');
+      if (target) target.scrollIntoView({behavior: 'smooth', block: 'start'});
+      return;
+    }
+    var brandChip = document.querySelector('#buzz-brand-filters button[data-brand-filter="' + slug + '"]');
+    if (brandChip) setBrandFilter(brandChip, slug);
+    var sentChip = document.querySelector('#buzz-sentiment-filters button[data-sentiment-filter="' + sentiment + '"]');
+    if (sentChip) setSentimentFilter(sentChip, sentiment);
+    var buzz = document.getElementById('buzz-section');
+    if (buzz) buzz.scrollIntoView({behavior: 'smooth', block: 'start'});
   }
   function setBrandFilter(button, slug) {
     _buzzFilter.brand = slug;
