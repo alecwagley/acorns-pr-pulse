@@ -587,7 +587,7 @@ def render_index(
     body = f"""
 <main class="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10 space-y-10 sm:space-y-12">
 
-  <!-- 1. Mention Volume (chart) — at top for at-a-glance overview -->
+  <!-- 1. Mention Volume (chart) at top for at-a-glance overview -->
   {mentions_chart_html}
 
   <!-- 2. Acorns in the News -->
