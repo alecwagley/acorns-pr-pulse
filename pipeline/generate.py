@@ -424,28 +424,12 @@ def render_mentions_chart(by_brand: dict, refresh_date: str) -> str:
                 f'{seg_pos}{seg_neu}{seg_neg}'
                 f'</div>'
             )
-        # Per-sentiment count callout (small text) so users see exact counts.
-        counts_inline = ""
-        if r["total"] > 0:
-            parts = []
-            if r["positive"]:
-                parts.append(f'<span class="text-emerald-400">{r["positive"]}+</span>')
-            if r["neutral"]:
-                parts.append(f'<span class="text-white/50">{r["neutral"]}·</span>')
-            if r["negative"]:
-                parts.append(f'<span class="text-rose-400">{r["negative"]}-</span>')
-            counts_inline = (
-                '<div class="hidden sm:flex gap-2 text-[11px] tabular-nums shrink-0 w-24">'
-                + " ".join(parts) +
-                '</div>'
-            )
         bars_html += f"""
 <div class="flex items-center gap-3 sm:gap-4">
   <div class="w-24 sm:w-32 shrink-0 text-xs sm:text-sm {label_class} text-right">{escape(r['brand'])}</div>
   <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-6 sm:h-7">
     {inner}
   </div>
-  {counts_inline}
   <div class="w-10 text-right text-sm {count_class} tabular-nums">{r['total']}</div>
 </div>
 """
