@@ -23,6 +23,7 @@ Output schema (list of items, sorted by date desc):
 """
 from __future__ import annotations
 
+import html
 import json
 import re
 import sys
@@ -71,17 +72,55 @@ SEC_UA = "VSCRL acorns-pr-pulse (alec@vscrl.co)"
 WINDOW_DAYS = 14
 
 
-def _summary(text: str, limit: int = 280) -> str:
-    """Strip HTML, collapse whitespace, trim to ~limit chars at a word boundary."""
+def _clean_text(text: str) -> str:
+    """Decode HTML entities, strip tags, collapse whitespace. Used for titles AND summaries.
+
+    Handles common contamination in RSS / Google News output:
+      - HTML entities: &amp; &nbsp; &#39; &quot; &mdash; etc.
+      - Embedded tags: <a>, <em>, <br>
+      - Doubled-up whitespace from concatenated fragments
+      - Control characters (rare but seen in algorithmic-source headlines)
+      - Leading/trailing punctuation crud
+    """
     if not text:
         return ""
-    # Quick HTML strip — feedparser sometimes leaves <a> tags in descriptions
+    # 1. Decode HTML entities (twice — some feeds double-encode, e.g. &amp;amp;)
+    text = html.unescape(html.unescape(text))
+    # 2. Strip HTML tags
     text = re.sub(r"<[^>]+>", " ", text)
-    text = re.sub(r"\s+", " ", text).strip()
+    # 3. Drop control characters (preserve newlines/tabs as spaces)
+    text = re.sub(r"[\x00-\x08\x0B-\x1F\x7F]", " ", text)
+    # 4. Collapse whitespace (including non-breaking-space U+00A0)
+    text = re.sub(r"[\s ]+", " ", text).strip()
+    # 5. Trim stray leading/trailing punctuation
+    text = text.strip(" \t​·-—|·,")
+    return text
+
+
+def _summary(text: str, limit: int = 280) -> str:
+    """Clean + trim to ~limit chars at a word boundary."""
+    text = _clean_text(text)
+    if not text:
+        return ""
     if len(text) <= limit:
         return text
     cut = text[:limit].rsplit(" ", 1)[0]
     return cut + "…"
+
+
+def _suspicious_chars(text: str) -> str:
+    """Return any 'suspicious' chars still in a title after cleaning. Used for audit logging."""
+    # Suspicious: HTML entity remnants, raw HTML brackets, control chars
+    matches = []
+    if re.search(r"&[a-z#0-9]+;", text):
+        matches.append("html-entity")
+    if "<" in text or ">" in text:
+        matches.append("angle-bracket")
+    if re.search(r"[\x00-\x1F\x7F]", text):
+        matches.append("control-char")
+    if " " in text:
+        matches.append("nbsp")
+    return ",".join(matches)
 
 
 def _domain(url: str) -> str:
@@ -106,12 +145,13 @@ def fetch_google_news(brand: str, slug: str) -> list[dict]:
     for entry in feed.entries:
         # Google News wraps publisher in the title: "Headline - Publisher Name".
         # We split that off and use it as the source label when present.
-        title = entry.get("title", "")
+        # IMPORTANT: clean BEFORE splitting so HTML entities don't break the rpartition.
+        title = _clean_text(entry.get("title", ""))
         publisher_from_title = None
         if " - " in title:
-            head, _, tail = title.rpartition(" - ")
-            if head and tail and len(tail) < 60:  # heuristic: publisher names are short
-                title = head
+            head_part, _, tail = title.rpartition(" - ")
+            if head_part and tail and len(tail) < 60:  # heuristic: publisher names are short
+                title = head_part
                 publisher_from_title = tail
 
         link = entry.get("link", "")
@@ -182,7 +222,7 @@ def fetch_sec_filings(brand: str, slug: str) -> list[dict]:
         items.append({
             "brand":   brand,
             "slug":    slug,
-            "title":   f"{form} Filing" + (f" · {desc}" if desc else ""),
+            "title":   _clean_text(f"{form} Filing" + (f" · {desc}" if desc else "")),
             "summary": f"SEC {form} filing by {brand} on {dates[i]}.",
             "url":     filing_url,
             "source":  "SEC EDGAR",
@@ -261,6 +301,22 @@ def main() -> None:
     print(f"After {WINDOW_DAYS}-day window: {len(all_items)}")
 
     all_items.sort(key=lambda x: x["date"], reverse=True)
+
+    # Title audit: scan for any titles that still carry suspicious characters
+    # AFTER cleaning. If anything shows up, it means _clean_text needs more cases;
+    # surface so we can patch instead of shipping garbled headlines to the PR team.
+    audit_failures = []
+    for item in all_items:
+        flags = _suspicious_chars(item["title"])
+        if flags:
+            audit_failures.append((flags, item["brand"], item["title"]))
+    print(f"\nTitle audit: {len(all_items) - len(audit_failures)}/{len(all_items)} clean")
+    if audit_failures:
+        print(f"  ! {len(audit_failures)} titles failed audit:")
+        for flags, brand, title in audit_failures[:10]:
+            print(f"    [{flags}] [{brand}] {title[:90]}")
+        if len(audit_failures) > 10:
+            print(f"    ... and {len(audit_failures) - 10} more")
 
     DATA_PATH.parent.mkdir(parents=True, exist_ok=True)
     DATA_PATH.write_text(json.dumps(all_items, indent=2))

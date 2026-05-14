@@ -195,39 +195,38 @@ def _relative_date(iso: str) -> str:
 
 
 def render_item(item: dict, *, show_brand: bool = False) -> str:
-    """Render a single news/filing item as a card."""
+    """Render a single news/filing item as a card. Title is the lead element;
+    brand + date + source render BELOW the title as a small metadata footer."""
     brand_chip = ""
     if show_brand:
         brand_chip = (
-            f'<a href="{escape(item["slug"])}.html" '
-            f'class="text-[10px] uppercase tracking-widest brand-accent font-semibold '
-            f'whitespace-nowrap hover:underline">{escape(item["brand"])}</a>'
+            f'<span class="text-[10px] uppercase tracking-widest brand-accent font-semibold">'
+            f'{escape(item["brand"])}</span>'
             f'<span class="text-white/20">·</span>'
         )
     filing_chip = ""
     if item.get("type") == "filing":
         filing_chip = (
             '<span class="text-[10px] uppercase tracking-widest text-amber-400/80 '
-            'bg-amber-400/10 px-2 py-0.5 rounded">SEC Filing</span>'
+            'bg-amber-400/10 px-2 py-0.5 rounded ml-2">SEC Filing</span>'
         )
     summary_html = ""
     if item.get("summary"):
         summary_html = (
-            f'<p class="text-sm text-white/60 leading-relaxed mt-1">'
+            f'<p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">'
             f'{escape(item["summary"])}</p>'
         )
     return f"""
 <a href="{escape(item['url'])}" target="_blank" rel="noopener"
    class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+  <h3 class="text-base font-medium text-white leading-snug">{escape(item['title'])}{filing_chip}</h3>
+  {summary_html}
+  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
     {brand_chip}
     <span>{_relative_date(item['date'])}</span>
     <span class="text-white/20">·</span>
     <span>{escape(item.get('source', '') or 'Source')}</span>
-    {filing_chip}
   </div>
-  <h3 class="text-base font-medium text-white leading-snug">{escape(item['title'])}</h3>
-  {summary_html}
 </a>
 """
 

@@ -34,7 +34,10 @@ GH_OWNER="$(gh api user --jq .login)"
 [[ -z "$GH_OWNER" ]] && { echo "ERROR: gh CLI not authed"; exit 1; }
 
 if [[ -z "$SITE_PASSWORD" ]]; then
-  SITE_PASSWORD="$(LC_ALL=C tr -dc 'A-Za-z0-9' </dev/urandom | head -c 16)"
+  # Generate 16-char alphanumeric password. Using python3 avoids the SIGPIPE-with-pipefail
+  # gotcha that hits `tr -dc 'A-Za-z0-9' </dev/urandom | head -c 16` (tr writes to a
+  # closed pipe after head exits, which pipefail surfaces as exit 141).
+  SITE_PASSWORD="$(python3 -c "import secrets,string;print(''.join(secrets.choice(string.ascii_letters+string.digits) for _ in range(16)))")"
 fi
 
 echo "=== Deploy plan ==="
