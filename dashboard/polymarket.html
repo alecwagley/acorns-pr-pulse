@@ -128,7 +128,7 @@
   
 <div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
   
-  <span>just now</span>
+  <span>2h ago</span>
   <span class="text-white/20">·</span>
   <a href="https://www.bostonglobe.com/2026/05/14/business/draftkings-sell-rating-kalshi-polymarket/" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
     The Boston Globe
@@ -250,7 +250,7 @@
   
 <div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
   
-  <span>15h ago</span>
+  <span>16h ago</span>
   <span class="text-white/20">·</span>
   <a href="https://en.cryptonomist.ch/2026/05/14/polymarket-entertainment-prediction-markets-euphoria/" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
     The Cryptonomist
@@ -270,7 +270,7 @@
   
 <div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
   
-  <span>15h ago</span>
+  <span>16h ago</span>
   <span class="text-white/20">·</span>
   <a href="https://www.wsj.com/opinion/should-polymarket-and-kalshi-allow-you-to-bet-on-a-crisis-4d9dcb39" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
     WSJ
@@ -698,6 +698,29 @@
     } else {
       c.className = 'px-3 py-1.5 rounded-full text-xs font-medium border bg-white/[0.03] ' + accent.idleText + ' ' + accent.idleBorder + ' hover:bg-white/[0.06] transition whitespace-nowrap cursor-pointer';
     }
+  }
+  // Chart segment hover tooltip. Renders a single body-level pill so the
+  // tooltip can never be clipped by overflow-hidden parents.
+  function _ensureChartTip() {
+    var tip = document.getElementById('chart-tooltip');
+    if (tip) return tip;
+    tip = document.createElement('div');
+    tip.id = 'chart-tooltip';
+    tip.style.cssText = 'position:fixed;pointer-events:none;z-index:50;padding:4px 8px;background:rgba(0,0,0,0.95);color:#fff;font-size:11px;font-weight:500;border-radius:4px;white-space:nowrap;opacity:0;transform:translateX(-50%);transition:opacity 0.12s;box-shadow:0 4px 12px rgba(0,0,0,0.4)';
+    document.body.appendChild(tip);
+    return tip;
+  }
+  function showChartTip(el, text) {
+    var tip = _ensureChartTip();
+    tip.textContent = text;
+    var rect = el.getBoundingClientRect();
+    tip.style.left = (rect.left + rect.width / 2) + 'px';
+    tip.style.top  = (rect.top - 30) + 'px';
+    tip.style.opacity = '1';
+  }
+  function hideChartTip() {
+    var tip = document.getElementById('chart-tooltip');
+    if (tip) tip.style.opacity = '0';
   }
   // Chart segment click: apply brand+sentiment filter to the Buzz section and
   // scroll the user to it. For the SUBJECT brand (Acorns) the relevant items

@@ -197,6 +197,29 @@ FOOTER = """
       c.className = 'px-3 py-1.5 rounded-full text-xs font-medium border bg-white/[0.03] ' + accent.idleText + ' ' + accent.idleBorder + ' hover:bg-white/[0.06] transition whitespace-nowrap cursor-pointer';
     }
   }
+  // Chart segment hover tooltip. Renders a single body-level pill so the
+  // tooltip can never be clipped by overflow-hidden parents.
+  function _ensureChartTip() {
+    var tip = document.getElementById('chart-tooltip');
+    if (tip) return tip;
+    tip = document.createElement('div');
+    tip.id = 'chart-tooltip';
+    tip.style.cssText = 'position:fixed;pointer-events:none;z-index:50;padding:4px 8px;background:rgba(0,0,0,0.95);color:#fff;font-size:11px;font-weight:500;border-radius:4px;white-space:nowrap;opacity:0;transform:translateX(-50%);transition:opacity 0.12s;box-shadow:0 4px 12px rgba(0,0,0,0.4)';
+    document.body.appendChild(tip);
+    return tip;
+  }
+  function showChartTip(el, text) {
+    var tip = _ensureChartTip();
+    tip.textContent = text;
+    var rect = el.getBoundingClientRect();
+    tip.style.left = (rect.left + rect.width / 2) + 'px';
+    tip.style.top  = (rect.top - 30) + 'px';
+    tip.style.opacity = '1';
+  }
+  function hideChartTip() {
+    var tip = document.getElementById('chart-tooltip');
+    if (tip) tip.style.opacity = '0';
+  }
   // Chart segment click: apply brand+sentiment filter to the Buzz section and
   // scroll the user to it. For the SUBJECT brand (Acorns) the relevant items
   // live in their own section, so scroll there instead.
@@ -421,24 +444,20 @@ def render_mentions_chart(by_brand: dict, refresh_date: str) -> str:
             pos_share = (r["positive"] / r["total"]) * 100
             neu_share = (r["neutral"]  / r["total"]) * 100
             neg_share = (r["negative"] / r["total"]) * 100
-            seg_pos = (
-                f'<button type="button" class="bg-emerald-500/80 hover:bg-emerald-400 h-full cursor-pointer transition" '
-                f'style="width: {pos_share:.2f}%" '
-                f'title="{r["positive"]} positive {escape(r["brand"])} {"story" if r["positive"]==1 else "stories"} — click to filter" '
-                f'onclick="chartSegmentClick(\'{escape(r["slug"])}\', \'positive\')"></button>'
-            ) if r["positive"] else ""
-            seg_neu = (
-                f'<button type="button" class="bg-white/30 hover:bg-white/50 h-full cursor-pointer transition" '
-                f'style="width: {neu_share:.2f}%" '
-                f'title="{r["neutral"]} neutral {escape(r["brand"])} {"story" if r["neutral"]==1 else "stories"} — click to filter" '
-                f'onclick="chartSegmentClick(\'{escape(r["slug"])}\', \'neutral\')"></button>'
-            ) if r["neutral"] else ""
-            seg_neg = (
-                f'<button type="button" class="bg-rose-500/80 hover:bg-rose-400 h-full cursor-pointer transition" '
-                f'style="width: {neg_share:.2f}%" '
-                f'title="{r["negative"]} negative {escape(r["brand"])} {"story" if r["negative"]==1 else "stories"} — click to filter" '
-                f'onclick="chartSegmentClick(\'{escape(r["slug"])}\', \'negative\')"></button>'
-            ) if r["negative"] else ""
+            def _seg(color_class: str, hover_class: str, share: float, n: int, label: str, sentiment_key: str) -> str:
+                story_word = "story" if n == 1 else "stories"
+                tooltip = f"{n} {label} {escape(r['brand'])} {story_word}"
+                return (
+                    f'<button type="button" '
+                    f'class="{color_class} {hover_class} h-full cursor-pointer transition" '
+                    f'style="width: {share:.2f}%" '
+                    f'onmouseenter="showChartTip(this, \'{tooltip}\')" '
+                    f'onmouseleave="hideChartTip()" '
+                    f'onclick="chartSegmentClick(\'{escape(r["slug"])}\', \'{sentiment_key}\')"></button>'
+                )
+            seg_pos = _seg("bg-emerald-500/80", "hover:bg-emerald-400", pos_share, r["positive"], "positive", "positive") if r["positive"] else ""
+            seg_neu = _seg("bg-white/30",       "hover:bg-white/50",    neu_share, r["neutral"],  "neutral",  "neutral")  if r["neutral"]  else ""
+            seg_neg = _seg("bg-rose-500/80",    "hover:bg-rose-400",    neg_share, r["negative"], "negative", "negative") if r["negative"] else ""
             inner = (
                 f'<div class="flex h-full" style="width: {bar_width_pct:.2f}%">'
                 f'{seg_pos}{seg_neu}{seg_neg}'
