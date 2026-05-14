@@ -55,16 +55,24 @@ else
   git push -u origin main 2>&1 | tail -3 || true
 fi
 
-# 2. GitHub Actions secret for ANTHROPIC_API_KEY (powers LLM sentiment classification).
-#    Only set if the key is present in ~/.config/vscrl/secrets.env; if missing, the
-#    collector falls back to the heuristic classifier and the dashboard still works.
+# 2. GitHub Actions secret for ANTHROPIC_API_KEY (optional — LLM sentiment).
 if [[ -n "${ANTHROPIC_API_KEY:-}" ]]; then
   gh secret set ANTHROPIC_API_KEY --repo "$GH_OWNER/$REPO_NAME" --body "$ANTHROPIC_API_KEY"
   echo "✓ ANTHROPIC_API_KEY set on GitHub Actions (LLM sentiment enabled)"
+fi
+
+# 2b. GitHub Actions secrets for Gmail SMTP (daily email-to-Jinny step).
+if [[ -n "${GMAIL_USER:-}" && -n "${GMAIL_APP_PASSWORD:-}" ]]; then
+  gh secret set GMAIL_USER --repo "$GH_OWNER/$REPO_NAME" --body "$GMAIL_USER"
+  gh secret set GMAIL_APP_PASSWORD --repo "$GH_OWNER/$REPO_NAME" --body "$GMAIL_APP_PASSWORD"
+  echo "✓ GMAIL_USER + GMAIL_APP_PASSWORD set (daily email enabled)"
 else
-  echo "⚠ ANTHROPIC_API_KEY missing from secrets.env — daily cron will use heuristic sentiment."
-  echo "  To enable LLM-based sentiment: add ANTHROPIC_API_KEY=... to ~/.config/vscrl/secrets.env,"
-  echo "  then re-run this script (or push the GitHub Actions secret manually)."
+  echo "⚠ GMAIL_USER and/or GMAIL_APP_PASSWORD missing from secrets.env — daily email won't send."
+  echo "  To enable: 1) generate an app password at https://myaccount.google.com/apppasswords"
+  echo "             2) add to ~/.config/vscrl/secrets.env:"
+  echo "                GMAIL_USER=alec@vscrl.co"
+  echo "                GMAIL_APP_PASSWORD=xxxx xxxx xxxx xxxx"
+  echo "             3) re-run this script"
 fi
 
 # 3. Vercel project (idempotent)
