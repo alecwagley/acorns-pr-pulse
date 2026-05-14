@@ -34,6 +34,7 @@ from urllib.parse import urlparse
 import feedparser
 import httpx
 from dateutil import parser as dateparser
+from googlenewsdecoder import gnewsdecoder
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_PATH = ROOT / "data" / "current.json"
@@ -43,12 +44,24 @@ from pipeline.sources import (
     ALL_TRACKED, SEC_CIKS, SEC_FORMS, SEC_8K_ITEMS,
     BLOCKED_PUBLISHERS, BLOCKED_TITLE_PATTERNS,
     OFFICIAL_PR_PUBLISHERS,
+    SENTIMENT_POSITIVE, SENTIMENT_NEGATIVE,
     google_news_rss_url, sec_filings_url,
 )
 
 # Cache of fetched 8-K TLDRs, keyed by filing URL. Persisted to disk so weekly
 # refreshes don't re-fetch the same filings. Filings are immutable once filed.
 SEC_TLDR_CACHE_PATH = ROOT / "data" / "sec_tldr_cache.json"
+
+# Cache of fetched OG meta descriptions, keyed by article URL. Articles don't
+# change after publication, so we cache them indefinitely. Pruned by URL-not-in-
+# current-data check at the end of each run to keep the file bounded.
+OG_CACHE_PATH = ROOT / "data" / "og_cache.json"
+
+# Cache of decoded Google News redirect URLs → real publisher URLs. Google News
+# RSS gives us base64-encoded redirect URLs; the decoder hits a Google endpoint
+# to resolve to the publisher's article URL. We cache per-redirect-URL since the
+# mapping is stable. This makes subsequent runs fast (no decoding round-trips).
+URL_DECODE_CACHE_PATH = ROOT / "data" / "url_decode_cache.json"
 
 
 # Brand-name patterns used for relevance checking. The brand name (or one of these
@@ -207,6 +220,130 @@ def fetch_google_news(brand: str, slug: str) -> list[dict]:
             "type":    "news",
         })
     return items
+
+
+def _load_url_decode_cache() -> dict:
+    if URL_DECODE_CACHE_PATH.exists():
+        try:
+            return json.loads(URL_DECODE_CACHE_PATH.read_text())
+        except Exception:
+            return {}
+    return {}
+
+
+def _save_url_decode_cache(cache: dict) -> None:
+    URL_DECODE_CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    URL_DECODE_CACHE_PATH.write_text(json.dumps(cache, indent=2, sort_keys=True))
+
+
+def decode_gnews_url(gnews_url: str, cache: dict) -> str:
+    """Resolve a Google News redirect URL to the publisher's actual article URL.
+    Cached forever (Google News URLs map 1:1 to article URLs and never change).
+
+    Returns the decoded URL on success; the original URL on failure (so the link
+    still works via the Google News resolver in the user's browser).
+    """
+    if gnews_url in cache:
+        return cache[gnews_url]
+    if "news.google.com/rss/articles" not in gnews_url:
+        # Not a Google News URL; return as-is.
+        cache[gnews_url] = gnews_url
+        return gnews_url
+    try:
+        result = gnewsdecoder(gnews_url, interval=0)
+        if isinstance(result, dict) and result.get("status") and result.get("decoded_url"):
+            cache[gnews_url] = result["decoded_url"]
+            return result["decoded_url"]
+    except Exception:
+        pass
+    # Decoder failed — fall back to the original URL (still clickable via Google News).
+    cache[gnews_url] = gnews_url
+    return gnews_url
+
+
+def _load_og_cache() -> dict:
+    if OG_CACHE_PATH.exists():
+        try:
+            return json.loads(OG_CACHE_PATH.read_text())
+        except Exception:
+            return {}
+    return {}
+
+
+def _save_og_cache(cache: dict) -> None:
+    OG_CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    OG_CACHE_PATH.write_text(json.dumps(cache, indent=2, sort_keys=True))
+
+
+def fetch_og_summary(url: str, cache: dict) -> str:
+    """Fetch an article and extract an OG / meta description for use as the card
+    summary. Falls back to first <p> text. Cached forever by URL.
+
+    Returns empty string if the fetch fails or no description is found; the
+    caller falls back to the RSS-provided summary in that case.
+    """
+    if url in cache:
+        return cache[url]
+    try:
+        resp = httpx.get(
+            url,
+            headers={"User-Agent": "Mozilla/5.0 (compatible; VSCRL-PR-Pulse/1.0)"},
+            timeout=10.0,
+            follow_redirects=True,
+        )
+        if resp.status_code != 200:
+            cache[url] = ""
+            return ""
+        html_text = resp.text
+    except Exception:
+        cache[url] = ""
+        return ""
+
+    desc = ""
+    # 1. Try og:description (most outlets set this; quality is usually high).
+    m = re.search(
+        r'<meta\s+property=["\']og:description["\']\s+content=["\']([^"\']+)["\']',
+        html_text, re.IGNORECASE,
+    )
+    if m:
+        desc = m.group(1)
+    if not desc:
+        # 2. Try standard meta description.
+        m = re.search(
+            r'<meta\s+name=["\']description["\']\s+content=["\']([^"\']+)["\']',
+            html_text, re.IGNORECASE,
+        )
+        if m:
+            desc = m.group(1)
+    if not desc:
+        # 3. Fall back to first <p>.
+        m = re.search(r"<p[^>]*>([^<]{40,})</p>", html_text)
+        if m:
+            desc = m.group(1)
+
+    desc = _clean_text(desc)
+    # Cap so a single card doesn't dominate.
+    if len(desc) > 320:
+        desc = desc[:317].rsplit(" ", 1)[0] + "…"
+    cache[url] = desc
+    return desc
+
+
+def classify_sentiment(text: str) -> str:
+    """Heuristic sentiment classifier using positive/negative keyword lexicons.
+    Returns 'positive', 'negative', or 'neutral'. Title-only signals are
+    weighted more heavily than summary text.
+
+    Not bulletproof — keyword lists never are for news. Catches the obvious
+    funding/launch (positive) vs lawsuit/probe (negative) cases; ambiguous
+    falls to neutral. Renders as a colored badge in the Acorns section.
+    """
+    lower = text.lower()
+    pos = sum(1 for w in SENTIMENT_POSITIVE if w in lower)
+    neg = sum(1 for w in SENTIMENT_NEGATIVE if w in lower)
+    if pos == neg:
+        return "neutral"
+    return "positive" if pos > neg else "negative"
 
 
 def _load_tldr_cache() -> dict:
@@ -617,6 +754,63 @@ def main() -> None:
     # Mark each item as Official PR or Buzz (skip for filings — they're always Official).
     for item in all_items:
         item["is_official"] = classify_official(item)
+
+    # Decode Google News redirect URLs to actual publisher article URLs. This
+    # also fixes the dashboard's source links to go straight to the publisher
+    # instead of via the Google News resolver (one fewer click for the PR team).
+    url_decode_cache = _load_url_decode_cache()
+    print(f"\nDecoding Google News URLs → publisher URLs...")
+    print(f"  URL decode cache: {len(url_decode_cache)} entries")
+    decoded_count = 0
+    for item in all_items:
+        if item.get("type") == "filing":
+            continue
+        orig_url = item.get("url", "")
+        if not orig_url:
+            continue
+        real_url = decode_gnews_url(orig_url, url_decode_cache)
+        if real_url != orig_url:
+            item["url"] = real_url
+            decoded_count += 1
+        # Also decode URLs inside grouped sources.
+        for s in item.get("sources", []):
+            s_url = s.get("url", "")
+            if s_url:
+                s["url"] = decode_gnews_url(s_url, url_decode_cache)
+    _save_url_decode_cache(url_decode_cache)
+    print(f"  URL decode cache: {len(url_decode_cache)} entries (saved, {decoded_count} resolved this run)")
+
+    # Enrich summaries from the article's Open Graph / meta description tag.
+    # Now that URLs point at publisher pages (not the Google News resolver),
+    # OG meta tags actually surface real summaries. Cached per URL; subsequent
+    # runs are nearly free.
+    og_cache = _load_og_cache()
+    print(f"\nFetching article summaries (OG meta descriptions)...")
+    print(f"  OG cache: {len(og_cache)} entries")
+    fetched_count = 0
+    for item in all_items:
+        if item.get("type") == "filing":
+            continue
+        url = item.get("url", "")
+        if not url:
+            continue
+        was_cached = url in og_cache
+        og_desc = fetch_og_summary(url, og_cache)
+        if og_desc and og_desc.lower() != item.get("title", "").lower():
+            # Only replace summary if the OG description differs from the title
+            # (some sites set OG description to the title verbatim — useless).
+            item["summary"] = og_desc
+            if not was_cached:
+                fetched_count += 1
+    _save_og_cache(og_cache)
+    print(f"  OG cache: {len(og_cache)} entries (saved, {fetched_count} new fetches this run)")
+
+    # Sentiment classification (Acorns items only — the PR team's primary focus).
+    # Heuristic; runs against the (now-enriched) title + summary.
+    for item in all_items:
+        if item["brand"] == "Acorns":
+            text = item.get("title", "") + " " + item.get("summary", "")
+            item["sentiment"] = classify_sentiment(text)
 
     all_items.sort(key=lambda x: x["date"], reverse=True)
 

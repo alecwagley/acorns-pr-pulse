@@ -247,6 +247,27 @@ def render_item(item: dict, *, show_brand: bool = False) -> str:
             '<span class="text-[10px] uppercase tracking-widest text-[#74C947]/90 '
             'bg-[#74C947]/10 px-2 py-0.5 rounded ml-2 align-middle">Official</span>'
         )
+    # Sentiment badge (Acorns items only — set during collection).
+    sentiment_chip = ""
+    sentiment = item.get("sentiment")
+    if sentiment == "positive":
+        sentiment_chip = (
+            '<span class="text-[10px] uppercase tracking-widest text-emerald-400 '
+            'bg-emerald-400/10 border border-emerald-400/30 px-2 py-0.5 rounded ml-2 align-middle">'
+            '▲ Positive</span>'
+        )
+    elif sentiment == "negative":
+        sentiment_chip = (
+            '<span class="text-[10px] uppercase tracking-widest text-rose-400 '
+            'bg-rose-400/10 border border-rose-400/30 px-2 py-0.5 rounded ml-2 align-middle">'
+            '▼ Negative</span>'
+        )
+    elif sentiment == "neutral":
+        sentiment_chip = (
+            '<span class="text-[10px] uppercase tracking-widest text-white/50 '
+            'bg-white/[0.05] border border-white/15 px-2 py-0.5 rounded ml-2 align-middle">'
+            'Neutral</span>'
+        )
     summary_html = ""
     if item.get("summary"):
         summary_html = (
@@ -300,11 +321,60 @@ def render_item(item: dict, *, show_brand: bool = False) -> str:
     return f"""
 <div class="item-card buzz-item border border-white/10 rounded-xl px-5 py-4" data-brand-slug="{escape(item.get('slug',''))}">
   <h3 class="text-base font-medium text-white leading-snug">
-    <a href="{escape(primary_url)}" target="_blank" rel="noopener" class="hover:underline">{escape(item['title'])}</a>{filing_chip}{official_chip}
+    <a href="{escape(primary_url)}" target="_blank" rel="noopener" class="hover:underline">{escape(item['title'])}</a>{filing_chip}{official_chip}{sentiment_chip}
   </h3>
   {summary_html}
   {sources_html}
 </div>
+"""
+
+
+def render_mentions_chart(by_brand: dict, refresh_date: str) -> str:
+    """Render a horizontal bar chart comparing total mention counts across all
+    tracked entities. Acorns highlighted in brand-accent green; competitors in
+    neutral white. Pure HTML/CSS — no JS or charting library."""
+    # Compute counts, sorted by count desc. Include zero-count brands so the
+    # chart shows the full landscape (Alinea's silence is itself a finding).
+    rows = []
+    for brand, _slug in ALL_TRACKED:
+        items = by_brand.get(brand, [])
+        # Count each item once even if it was grouped from multiple sources —
+        # the chart tracks "stories" not "publisher hits." Alec's stated goal
+        # was "mentions across major outlets" but tracking unique stories
+        # makes for a cleaner comparison and avoids inflating brands that
+        # happen to get more syndication coverage.
+        count = len(items)
+        rows.append((brand, count))
+    rows.sort(key=lambda r: -r[1])
+    max_count = max((r[1] for r in rows), default=1) or 1
+
+    bars_html = ""
+    for brand, count in rows:
+        pct = int(round((count / max_count) * 100))
+        is_subject = (brand == SUBJECT[0])
+        bar_color = "bg-brand-accent" if is_subject else "bg-white/30"
+        label_class = "brand-accent font-semibold" if is_subject else "text-white"
+        count_class = "brand-accent font-bold" if is_subject else "text-white/70"
+        bars_html += f"""
+<div class="flex items-center gap-4">
+  <div class="w-32 shrink-0 text-sm {label_class} text-right">{escape(brand)}</div>
+  <div class="flex-1 bg-white/[0.04] rounded overflow-hidden h-7">
+    <div class="{bar_color} h-full transition-all" style="width: {pct}%"></div>
+  </div>
+  <div class="w-12 text-right text-sm {count_class} tabular-nums">{count}</div>
+</div>
+"""
+    return f"""
+<section>
+  <div class="flex items-baseline gap-3 mb-5">
+    <h2 class="text-2xl font-semibold text-white">Mention Volume</h2>
+    <span class="text-xs text-white/40">Acorns vs competitors · last 14 days · this snapshot will become a monthly trend chart once we have multiple weeks logged</span>
+  </div>
+  <div class="bg-white/[0.02] border border-white/10 rounded-2xl p-6 space-y-2">
+    {bars_html}
+  </div>
+  <p class="text-xs text-white/40 mt-3">Counts each unique story once — syndicated coverage across multiple outlets collapses to one mention (e.g., the Kalshi-tribes lawsuit covered by 9 outlets counts as 1).</p>
+</section>
 """
 
 
@@ -373,6 +443,8 @@ def render_index(
         n = buzz_by_brand.get(brand, 0)
         chips_html += render_brand_chip(brand, slug, n, active=False)
 
+    mentions_chart_html = render_mentions_chart(by_brand, refresh_date)
+
     reporters_html = ""
     if reporters_top:
         rows = "\n".join(render_reporter_row(r) for r in reporters_top)
@@ -434,7 +506,10 @@ def render_index(
     <p id="buzz-empty" class="hidden text-white/50 text-sm mt-4">No items for this brand in the last 14 days.</p>
   </section>
 
-  <!-- 4. Top Reporters (running) -->
+  <!-- 4. Mention Volume (chart) -->
+  {mentions_chart_html}
+
+  <!-- 5. Top Reporters (running) -->
   <section>
     <div class="flex items-baseline gap-3 mb-5">
       <h2 class="text-2xl font-semibold text-white">Top Reporters</h2>

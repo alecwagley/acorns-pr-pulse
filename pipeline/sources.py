@@ -190,6 +190,36 @@ BLOCKED_TITLE_PATTERNS = [
 SEC_FORMS = {"8-K", "8-K/A", "10-Q", "10-K", "S-1", "S-1/A"}
 
 
+# Keyword lexicons for heuristic sentiment classification. Used on the Acorns
+# section's items to render a positive / negative / neutral badge. Not
+# bulletproof (a keyword list never is for news copy), but catches the obvious
+# cases: funding rounds + partnerships + wins → positive; lawsuits + fines +
+# regulatory probes + outages → negative; ambiguous lands at neutral.
+SENTIMENT_POSITIVE = {
+    "raises", "raised", "raising", "secures", "secured", "closes", "closed",
+    "launches", "launched", "launching", "expands", "expanded", "growth",
+    "growing", "wins", "won", "winning", "partners", "partnership", "deal",
+    "agreement", "milestone", "record", "best", "top", "leading", "first",
+    "exclusive", "premier", "honored", "honors", "awarded", "award", "boost",
+    "boosts", "soars", "surges", "rally", "rallies", "beat", "beats",
+    "exceeds", "exceeded", "outperforms", "outperformed", "innovative",
+    "innovation", "breakthrough", "success", "successful", "approved",
+    "acquires", "acquired", "completes", "completed",
+}
+SENTIMENT_NEGATIVE = {
+    "loss", "losses", "lawsuit", "lawsuits", "sue", "sues", "sued", "suing",
+    "fraud", "scandal", "investigation", "investigates", "probe", "fine",
+    "fined", "penalty", "penalties", "penalized", "violation", "violations",
+    "illegal", "warning", "warned", "decline", "declines", "declined",
+    "drops", "fell", "plunges", "plunged", "crashed", "weak", "concerns",
+    "concern", "concerned", "risk", "risks", "scrutiny", "criticism",
+    "criticized", "facing", "faces", "breach", "leak", "outage", "shutdown",
+    "layoffs", "layoff", "fired", "fires", "firing", "downgraded",
+    "delisted", "bankrupt", "bankruptcy", "default", "defaulted",
+    "miss", "missed", "missing", "subpoena", "subpoenaed",
+}
+
+
 # SEC 8-K item codes → plain-English descriptions. Used to turn "Item 5.02"
 # into "Leadership change" in the TLDR. Source: SEC Form 8-K instructions.
 # https://www.sec.gov/files/form8-k.pdf
