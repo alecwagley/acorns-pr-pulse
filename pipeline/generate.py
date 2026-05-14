@@ -92,19 +92,19 @@ PAGE_HEAD = """<!doctype html>
 
 HEADER_HOMEPAGE = """
 <header class="border-b border-white/10">
-  <div class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
-    <div class="flex items-center gap-5">
-      <img src="assets/vscrl-wordmark.png" alt="VSCRL" class="h-14 w-auto" />
-      <div class="text-white/40 font-light text-2xl">×</div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-5 sm:py-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+    <div class="flex flex-wrap items-center gap-3 sm:gap-5">
+      <img src="assets/vscrl-wordmark.png" alt="VSCRL" class="h-10 sm:h-14 w-auto" />
+      <div class="text-white/40 font-light text-xl sm:text-2xl">×</div>
       <div class="flex flex-col gap-1">
-        <img src="assets/acorns-logo.svg" alt="Acorns" class="h-10 w-auto" />
-        <div class="text-xs text-white/50">PR Pulse · Daily</div>
+        <img src="assets/acorns-logo.svg" alt="Acorns" class="h-7 sm:h-10 w-auto" />
+        <div class="text-[10px] sm:text-xs text-white/50">PR Pulse · Daily</div>
       </div>
-      <button id="why-pill" onclick="toggleWhy()" class="ml-2 text-xs text-[#74C947]/80 hover:text-[#74C947] border border-[#74C947]/30 hover:border-[#74C947]/60 px-3 py-1.5 rounded-full transition whitespace-nowrap">
+      <button id="why-pill" onclick="toggleWhy()" class="text-xs text-[#74C947]/80 hover:text-[#74C947] border border-[#74C947]/30 hover:border-[#74C947]/60 px-3 py-1.5 rounded-full transition whitespace-nowrap">
         Start here →
       </button>
     </div>
-    <div class="text-right text-xs text-white/40">
+    <div class="text-left md:text-right text-xs text-white/40">
       <div>Refreshed daily · 12pm ET</div>
       <div class="text-white/60 mt-1">Last refresh: $refresh_date</div>
     </div>
@@ -126,15 +126,15 @@ HEADER_HOMEPAGE = """
 
 HEADER_BRAND = """
 <header class="border-b border-white/10">
-  <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-    <div class="flex items-center gap-4">
-      <a href="index.html" class="flex items-center gap-4">
-        <img src="assets/vscrl-wordmark.png" alt="VSCRL" class="h-10 w-auto" />
-        <div class="text-white/40 font-light text-xl">×</div>
-        <img src="assets/acorns-logo.svg" alt="Acorns" class="h-7 w-auto" />
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+    <div class="flex flex-wrap items-center gap-3 sm:gap-4">
+      <a href="index.html" class="flex items-center gap-3 sm:gap-4">
+        <img src="assets/vscrl-wordmark.png" alt="VSCRL" class="h-8 sm:h-10 w-auto" />
+        <div class="text-white/40 font-light text-lg sm:text-xl">×</div>
+        <img src="assets/acorns-logo.svg" alt="Acorns" class="h-6 sm:h-7 w-auto" />
       </a>
-      <span class="text-white/30 mx-2">/</span>
-      <span class="text-sm uppercase tracking-widest text-white/70 font-semibold">$brand</span>
+      <span class="text-white/30">/</span>
+      <span class="text-xs sm:text-sm uppercase tracking-widest text-white/70 font-semibold">$brand</span>
     </div>
     <a href="index.html" class="text-xs text-white/50 hover:text-white/80 transition">← Back to overview</a>
   </div>
@@ -274,39 +274,40 @@ def render_item(item: dict, *, show_brand: bool = False) -> str:
             f'hover:underline whitespace-nowrap">{escape(item["brand"])}</a>'
             f'<span class="text-white/20">·</span>'
         )
-    filing_chip = ""
+    # Each badge gets whitespace-nowrap so its contents stay together when it wraps.
+    badges: list[str] = []
     if item.get("type") == "filing":
-        filing_chip = (
-            '<span class="text-[10px] uppercase tracking-widest text-amber-400/80 '
-            'bg-amber-400/10 px-2 py-0.5 rounded ml-2 align-middle">SEC Filing</span>'
+        badges.append(
+            '<span class="inline-block whitespace-nowrap text-[10px] uppercase tracking-widest '
+            'text-amber-400/80 bg-amber-400/10 px-2 py-0.5 rounded">SEC Filing</span>'
         )
-    official_chip = ""
     if item.get("is_official") and item.get("type") != "filing":
-        official_chip = (
-            '<span class="text-[10px] uppercase tracking-widest text-[#74C947]/90 '
-            'bg-[#74C947]/10 px-2 py-0.5 rounded ml-2 align-middle">Official</span>'
+        badges.append(
+            '<span class="inline-block whitespace-nowrap text-[10px] uppercase tracking-widest '
+            'text-[#74C947]/90 bg-[#74C947]/10 px-2 py-0.5 rounded">Official</span>'
         )
-    # Sentiment badge (Acorns items only — set during collection).
-    sentiment_chip = ""
     sentiment = item.get("sentiment")
     if sentiment == "positive":
-        sentiment_chip = (
-            '<span class="text-[10px] uppercase tracking-widest text-emerald-400 '
-            'bg-emerald-400/10 border border-emerald-400/30 px-2 py-0.5 rounded ml-2 align-middle">'
+        badges.append(
+            '<span class="inline-block whitespace-nowrap text-[10px] uppercase tracking-widest '
+            'text-emerald-400 bg-emerald-400/10 border border-emerald-400/30 px-2 py-0.5 rounded">'
             '▲ Positive</span>'
         )
     elif sentiment == "negative":
-        sentiment_chip = (
-            '<span class="text-[10px] uppercase tracking-widest text-rose-400 '
-            'bg-rose-400/10 border border-rose-400/30 px-2 py-0.5 rounded ml-2 align-middle">'
+        badges.append(
+            '<span class="inline-block whitespace-nowrap text-[10px] uppercase tracking-widest '
+            'text-rose-400 bg-rose-400/10 border border-rose-400/30 px-2 py-0.5 rounded">'
             '▼ Negative</span>'
         )
     elif sentiment == "neutral":
-        sentiment_chip = (
-            '<span class="text-[10px] uppercase tracking-widest text-white/50 '
-            'bg-white/[0.05] border border-white/15 px-2 py-0.5 rounded ml-2 align-middle">'
+        badges.append(
+            '<span class="inline-block whitespace-nowrap text-[10px] uppercase tracking-widest '
+            'text-white/50 bg-white/[0.05] border border-white/15 px-2 py-0.5 rounded">'
             'Neutral</span>'
         )
+    badges_html = ""
+    if badges:
+        badges_html = '<div class="flex flex-wrap gap-2 mt-2">' + "".join(badges) + "</div>"
     summary_html = ""
     if item.get("summary"):
         summary_html = (
@@ -361,8 +362,9 @@ def render_item(item: dict, *, show_brand: bool = False) -> str:
     return f"""
 <div class="item-card buzz-item border border-white/10 rounded-xl px-5 py-4" data-brand-slug="{escape(item.get('slug',''))}" data-sentiment="{escape(sentiment_attr)}">
   <h3 class="text-base font-medium text-white leading-snug">
-    <a href="{escape(primary_url)}" target="_blank" rel="noopener" class="hover:underline">{escape(item['title'])}</a>{filing_chip}{official_chip}{sentiment_chip}
+    <a href="{escape(primary_url)}" target="_blank" rel="noopener" class="hover:underline">{escape(item['title'])}</a>
   </h3>
+  {badges_html}
   {summary_html}
   {sources_html}
 </div>
@@ -527,7 +529,7 @@ def render_index(
         reporters_html = '<p class="text-white/50 text-sm">No bylined coverage in the feed yet. This list fills in over time as feeds with author data come in.</p>'
 
     body = f"""
-<main class="max-w-7xl mx-auto px-6 py-10 space-y-12">
+<main class="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10 space-y-10 sm:space-y-12">
 
   <!-- 1. Acorns in the News -->
   <section>
@@ -603,7 +605,7 @@ def render_brand_page(brand: str, slug: str, items: list[dict]) -> str:
 
     if not items:
         body = f"""
-<main class="max-w-4xl mx-auto px-6 py-12">
+<main class="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-12">
   <h1 class="text-3xl font-semibold mb-3">{escape(brand)}</h1>
   <p class="text-white/60">No items in the last 14 days. Check back after the next refresh.</p>
 </main>
@@ -616,7 +618,7 @@ def render_brand_page(brand: str, slug: str, items: list[dict]) -> str:
         buzz_html = "\n".join(render_item(it, show_brand=False) for it in buzz) or '<p class="text-white/50 text-sm">No buzz items in the last 14 days.</p>'
 
         body = f"""
-<main class="max-w-4xl mx-auto px-6 py-10 space-y-10">
+<main class="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-10 space-y-8 sm:space-y-10">
   <div>
     <h1 class="text-3xl font-semibold text-white mb-2">{escape(brand)}</h1>
     <p class="text-sm text-white/50">
