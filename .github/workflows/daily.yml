@@ -1,10 +1,9 @@
-name: Daily PR Refresh
+name: Daily PR Refresh (manual fallback)
 
+# Primary daily refresh runs as a Claude Code routine at 12pm ET. This workflow
+# is kept as a manual-dispatch fallback for cases where the routine fails and
+# you want to force a refresh by hand from the GitHub UI.
 on:
-  schedule:
-    # 16:00 UTC = 12pm ET during EDT (March-November), 11am ET during EST.
-    # ET is the working time zone for the Acorns PR team in NYC.
-    - cron: "0 16 * * *"
   workflow_dispatch: {}
 
 permissions:

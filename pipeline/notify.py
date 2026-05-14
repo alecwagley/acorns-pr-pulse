@@ -105,6 +105,7 @@ def build_tldr() -> str:
 
 
 def build_body() -> str:
+    """Plain-text body. Used by smtplib (legacy path)."""
     tldr = build_tldr()
     tldr_block = ""
     if tldr:
@@ -120,6 +121,87 @@ def build_body() -> str:
         "Yell if anything is off!\n"
         "\n"
         "Alec\n"
+    )
+
+
+def build_html_body() -> str:
+    """HTML body for Superhuman MCP's create_or_update_draft.
+
+    The Claude Code daily routine calls this, passes the result to Superhuman.
+    Format matches the plain-text version: same intro, TLDR bullets, link block,
+    sign-off. Renders cleanly in any email client.
+    """
+    try:
+        data = json.loads(DATA_PATH.read_text())
+    except Exception:
+        data = []
+
+    bullets_html = ""
+    picked_urls: set = set()
+
+    def html_bullet(item: dict, prefix: str = "") -> str:
+        if item.get("url") in picked_urls:
+            return ""
+        picked_urls.add(item.get("url", ""))
+        title = item.get("title", "")[:140]
+        brand = item.get("brand", "")
+        n = item.get("group_size", 1)
+        tail = f" ({n} outlets covering)" if n > 1 else ""
+        # Escape minimal HTML special chars; this is constant-format content.
+        safe = title.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+        return f"<li>{prefix}[{brand}] {safe}{tail}</li>"
+
+    acorns_items = [i for i in data if i.get("brand") == "Acorns"]
+    for it in acorns_items[:1]:
+        bullets_html += html_bullet(it)
+
+    competitors = [i for i in data if i.get("brand") != "Acorns"]
+
+    def substantive(it):
+        t = it.get("title", "").lower()
+        if t.startswith(("guarantor:", "form ", "amendment ")):
+            return False
+        if "8-k filing" in t or "10-q filing" in t or "10-k filing" in t:
+            return False
+        return len(t) >= 30
+
+    grouped = sorted(
+        [c for c in competitors if substantive(c)],
+        key=lambda x: -x.get("group_size", 1),
+    )
+    for it in grouped[:1]:
+        if it.get("group_size", 1) > 1:
+            bullets_html += html_bullet(it)
+
+    negatives = sorted(
+        [i for i in competitors if i.get("sentiment") == "negative"],
+        key=lambda x: -x.get("group_size", 1),
+    )
+    for it in negatives[:1]:
+        bullets_html += html_bullet(it, "▼ ")
+
+    positives = sorted(
+        [i for i in competitors if i.get("sentiment") == "positive"],
+        key=lambda x: -x.get("group_size", 1),
+    )
+    for it in positives[:1]:
+        bullets_html += html_bullet(it, "▲ ")
+
+    tldr_block = ""
+    if bullets_html:
+        tldr_block = (
+            "<p><strong>TLDR. What's notable today:</strong></p>\n"
+            f"<ul>\n{bullets_html}\n</ul>\n"
+        )
+
+    return (
+        "<p>Hey Jinny, daily has been updated. Check it out!</p>\n"
+        + tldr_block
+        + '<p><a href="https://acorns-pr.vscrl.co">https://acorns-pr.vscrl.co</a><br>\n'
+        "User: acorns-pr<br>\n"
+        "Pass: Kq97KeaXKY2GdoET</p>\n"
+        "<p>Yell if anything is off!</p>\n"
+        "<p>Alec</p>\n"
     )
 
 
