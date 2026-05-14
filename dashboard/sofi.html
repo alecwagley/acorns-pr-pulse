@@ -17,7 +17,7 @@
   .item-card:hover { background-color: rgba(255,255,255,0.03); border-color: rgba(116, 201, 71, 0.3); }
   .brand-tile { transition: transform 0.15s ease, border-color 0.15s ease; }
   .brand-tile:hover { transform: translateY(-2px); border-color: #74C947; }
-  /* Why-pill attention animation (first-visit wiggle) */
+  /* Why-pill attention animation */
   @keyframes why-wiggle {
     0%, 100% { transform: translateX(0) scale(1); }
     10% { transform: translateX(-3px) scale(1.06); }
@@ -55,124 +55,188 @@
   </div>
 </header>
 
-<main class="max-w-4xl mx-auto px-6 py-10">
-  <div class="mb-8">
+<main class="max-w-4xl mx-auto px-6 py-10 space-y-10">
+  <div>
     <h1 class="text-3xl font-semibold text-white mb-2">SoFi</h1>
     <p class="text-sm text-white/50">
       8 items in the last 14 days · newest first
     </p>
   </div>
-  <div class="grid grid-cols-1 gap-3">
-    
-<a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxNN2pkNlRrV0hVVGVLTktPQ1Q1R0tzOWVmV1h1Q2NhN1ZDNUIyQldJUzNnbXFZaFIxRVdIaEQ0eHZ4c0xpS182ZE51dzhaSlZHOFhjOEx5N1pXN1Nhc0E1bTR1ZGpKbUlqWUZ6Z3Y1bTdRQ3RFNFNGU3daZTJETWF4VThzUm95c2JVRFo3RXoxRVlnTGt5OE5qam1RNW5XVnpadWZNbFRGQ1p1QQ?oc=5" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">SoFi acquires PrimaryBid assets to expand retail investing platform</h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">SoFi acquires PrimaryBid assets to expand retail investing platform IBS Intelligence</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
-    
-    <span>yesterday</span>
-    <span class="text-white/20">·</span>
-    <span>IBS Intelligence</span>
-  </div>
-</a>
+
+  <section>
+    <div class="flex items-baseline gap-3 mb-4">
+      <h2 class="text-xl font-semibold text-white">Official PR</h2>
+      <span class="text-xs text-white/40">1 items</span>
+    </div>
+    <div class="grid grid-cols-1 gap-3">
+      
+<div class="item-card border border-white/10 rounded-xl px-5 py-4">
+  <h3 class="text-base font-medium text-white leading-snug">
+    <a href="https://www.sec.gov/Archives/edgar/data/1818874/000181887426000037/sofi-20260331.htm" target="_blank" rel="noopener" class="hover:underline">10-Q Filing · 10-Q</a><span class="text-[10px] uppercase tracking-widest text-amber-400/80 bg-amber-400/10 px-2 py-0.5 rounded ml-2 align-middle">SEC Filing</span>
+  </h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-2">SEC 10-Q filing by SoFi on 2026-05-07.</p>
+  
+<div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
+  
+  <span>2026-05-07</span>
+  <span class="text-white/20">·</span>
+  <a href="https://www.sec.gov/Archives/edgar/data/1818874/000181887426000037/sofi-20260331.htm" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
+    SEC EDGAR
+  </a>
+  <span></span>
+</div>
+
+</div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="flex items-baseline gap-3 mb-4">
+      <h2 class="text-xl font-semibold text-white">The Buzz</h2>
+      <span class="text-xs text-white/40">7 items</span>
+    </div>
+    <div class="grid grid-cols-1 gap-3">
+      
+<div class="item-card border border-white/10 rounded-xl px-5 py-4">
+  <h3 class="text-base font-medium text-white leading-snug">
+    <a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxNN2pkNlRrV0hVVGVLTktPQ1Q1R0tzOWVmV1h1Q2NhN1ZDNUIyQldJUzNnbXFZaFIxRVdIaEQ0eHZ4c0xpS182ZE51dzhaSlZHOFhjOEx5N1pXN1Nhc0E1bTR1ZGpKbUlqWUZ6Z3Y1bTdRQ3RFNFNGU3daZTJETWF4VThzUm95c2JVRFo3RXoxRVlnTGt5OE5qam1RNW5XVnpadWZNbFRGQ1p1QQ?oc=5" target="_blank" rel="noopener" class="hover:underline">SoFi acquires PrimaryBid assets to expand retail investing platform</a>
+  </h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-2">SoFi acquires PrimaryBid assets to expand retail investing platform IBS Intelligence</p>
+  
+<div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
+  
+  <span>yesterday</span>
+  <span class="text-white/20">·</span>
+  <a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxNN2pkNlRrV0hVVGVLTktPQ1Q1R0tzOWVmV1h1Q2NhN1ZDNUIyQldJUzNnbXFZaFIxRVdIaEQ0eHZ4c0xpS182ZE51dzhaSlZHOFhjOEx5N1pXN1Nhc0E1bTR1ZGpKbUlqWUZ6Z3Y1bTdRQ3RFNFNGU3daZTJETWF4VThzUm95c2JVRFo3RXoxRVlnTGt5OE5qam1RNW5XVnpadWZNbFRGQ1p1QQ?oc=5" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
+    IBS Intelligence
+  </a>
+  <span></span>
+</div>
+
+</div>
 
 
-<a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE80X3Y1cnJOWnJpYXZFdUY0Y1kxWW1oMDVlZGY1UTltOURza0MxbjFmUlk4VGNWQ1h3NzhCa1hWb2dvMzdhMUZhTklzOVVwVVVLNzdNaGxMNTE3bXFYTGlJLU9VNnBTNXRTd1dV?oc=5" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">SoFi Technologies acquires most assets of PrimaryBid, ending UK fintech’s independence</h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">SoFi Technologies acquires most assets of PrimaryBid, ending UK fintech’s independence Crypto Briefing</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
-    
-    <span>2d ago</span>
-    <span class="text-white/20">·</span>
-    <span>Crypto Briefing</span>
-  </div>
-</a>
+<div class="item-card border border-white/10 rounded-xl px-5 py-4">
+  <h3 class="text-base font-medium text-white leading-snug">
+    <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE80X3Y1cnJOWnJpYXZFdUY0Y1kxWW1oMDVlZGY1UTltOURza0MxbjFmUlk4VGNWQ1h3NzhCa1hWb2dvMzdhMUZhTklzOVVwVVVLNzdNaGxMNTE3bXFYTGlJLU9VNnBTNXRTd1dV?oc=5" target="_blank" rel="noopener" class="hover:underline">SoFi Technologies acquires most assets of PrimaryBid, ending UK fintech’s independence</a>
+  </h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-2">SoFi Technologies acquires most assets of PrimaryBid, ending UK fintech’s independence Crypto Briefing</p>
+  
+<div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
+  
+  <span>2d ago</span>
+  <span class="text-white/20">·</span>
+  <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE80X3Y1cnJOWnJpYXZFdUY0Y1kxWW1oMDVlZGY1UTltOURza0MxbjFmUlk4VGNWQ1h3NzhCa1hWb2dvMzdhMUZhTklzOVVwVVVLNzdNaGxMNTE3bXFYTGlJLU9VNnBTNXRTd1dV?oc=5" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
+    Crypto Briefing
+  </a>
+  <span></span>
+</div>
+
+</div>
 
 
-<a href="https://news.google.com/rss/articles/CBMiekFVX3lxTE1CdjhiUHU2WnVVRVpGQlhDcWdRS0gxd2JFZlM3MUZrbEJOZFZ0QXpNam1TVmJPTE50RVF2R3RuY2czaTMxU19PaTVWZTJZRzJ3R29GNGU4dVlUNm1WNURUeHlKRkx1d2F3WG5USHJaUlpWcUxOYmUzWnNR?oc=5" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">SoFi buys PrimaryBid assets</h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">SoFi buys PrimaryBid assets Finextra Research</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
-    
-    <span>2d ago</span>
-    <span class="text-white/20">·</span>
-    <span>Finextra Research</span>
-  </div>
-</a>
+<div class="item-card border border-white/10 rounded-xl px-5 py-4">
+  <h3 class="text-base font-medium text-white leading-snug">
+    <a href="https://news.google.com/rss/articles/CBMiekFVX3lxTE1CdjhiUHU2WnVVRVpGQlhDcWdRS0gxd2JFZlM3MUZrbEJOZFZ0QXpNam1TVmJPTE50RVF2R3RuY2czaTMxU19PaTVWZTJZRzJ3R29GNGU4dVlUNm1WNURUeHlKRkx1d2F3WG5USHJaUlpWcUxOYmUzWnNR?oc=5" target="_blank" rel="noopener" class="hover:underline">SoFi buys PrimaryBid assets</a>
+  </h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-2">SoFi buys PrimaryBid assets Finextra Research</p>
+  
+<div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
+  
+  <span>2d ago</span>
+  <span class="text-white/20">·</span>
+  <a href="https://news.google.com/rss/articles/CBMiekFVX3lxTE1CdjhiUHU2WnVVRVpGQlhDcWdRS0gxd2JFZlM3MUZrbEJOZFZ0QXpNam1TVmJPTE50RVF2R3RuY2czaTMxU19PaTVWZTJZRzJ3R29GNGU4dVlUNm1WNURUeHlKRkx1d2F3WG5USHJaUlpWcUxOYmUzWnNR?oc=5" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
+    Finextra Research
+  </a>
+  <span></span>
+</div>
+
+</div>
 
 
-<a href="https://news.google.com/rss/articles/CBMif0FVX3lxTE5aSjc5WkpKU0EzUkxTWVg5Rk1uM29tdEJmU3VJbk8zLVlxUDVHTnVJQWpOS1lZYURKbUw1WmtHaHJWOERwc05OQzJDVXphV1dPLVdfMUxsQ3RnbHhrXzlRVjlxSlRGWVdseTQ1czhTMzNaNW96dkVLYlRIakZFOUU?oc=5" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">SoFi acquires UK fintech PrimaryBid to expand retail access in capital markets.</h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">SoFi acquires UK fintech PrimaryBid to expand retail access in capital markets. Pluang</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
-    
-    <span>2d ago</span>
-    <span class="text-white/20">·</span>
-    <span>Pluang</span>
-  </div>
-</a>
+<div class="item-card border border-white/10 rounded-xl px-5 py-4">
+  <h3 class="text-base font-medium text-white leading-snug">
+    <a href="https://news.google.com/rss/articles/CBMif0FVX3lxTE5aSjc5WkpKU0EzUkxTWVg5Rk1uM29tdEJmU3VJbk8zLVlxUDVHTnVJQWpOS1lZYURKbUw1WmtHaHJWOERwc05OQzJDVXphV1dPLVdfMUxsQ3RnbHhrXzlRVjlxSlRGWVdseTQ1czhTMzNaNW96dkVLYlRIakZFOUU?oc=5" target="_blank" rel="noopener" class="hover:underline">SoFi acquires UK fintech PrimaryBid to expand retail access in capital markets.</a>
+  </h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-2">SoFi acquires UK fintech PrimaryBid to expand retail access in capital markets. Pluang</p>
+  
+<div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
+  
+  <span>2d ago</span>
+  <span class="text-white/20">·</span>
+  <a href="https://news.google.com/rss/articles/CBMif0FVX3lxTE5aSjc5WkpKU0EzUkxTWVg5Rk1uM29tdEJmU3VJbk8zLVlxUDVHTnVJQWpOS1lZYURKbUw1WmtHaHJWOERwc05OQzJDVXphV1dPLVdfMUxsQ3RnbHhrXzlRVjlxSlRGWVdseTQ1czhTMzNaNW96dkVLYlRIakZFOUU?oc=5" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
+    Pluang
+  </a>
+  <span></span>
+</div>
+
+</div>
 
 
-<a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxPQ1JlVjhLVzVVS0trNE9OREtLdkc4X0NPMmxRM19wM1RiUnpVSlQzeFFESnBYWDFUc09TX0VlYThzeDlpaE1TZEZOZm9QUUhvQWtRb0gzNzY0MmxaWTBNUng0N29CUnMtblFPaGxrVFMycC1TTTZ4YWN3ZUEyRkxpWU4tdFJEcEU0UjF5UEgwYTBZd2hS?oc=5" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">SoFi Acquires Capital Markets Partner PrimaryBid</h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">SoFi Acquires Capital Markets Partner PrimaryBid PYMNTS.com</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
-    
-    <span>2d ago</span>
-    <span class="text-white/20">·</span>
-    <span>PYMNTS.com</span>
-  </div>
-</a>
+<div class="item-card border border-white/10 rounded-xl px-5 py-4">
+  <h3 class="text-base font-medium text-white leading-snug">
+    <a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxPQ1JlVjhLVzVVS0trNE9OREtLdkc4X0NPMmxRM19wM1RiUnpVSlQzeFFESnBYWDFUc09TX0VlYThzeDlpaE1TZEZOZm9QUUhvQWtRb0gzNzY0MmxaWTBNUng0N29CUnMtblFPaGxrVFMycC1TTTZ4YWN3ZUEyRkxpWU4tdFJEcEU0UjF5UEgwYTBZd2hS?oc=5" target="_blank" rel="noopener" class="hover:underline">SoFi Acquires Capital Markets Partner PrimaryBid</a>
+  </h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-2">SoFi Acquires Capital Markets Partner PrimaryBid PYMNTS.com</p>
+  
+<div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
+  
+  <span>2d ago</span>
+  <span class="text-white/20">·</span>
+  <a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxPQ1JlVjhLVzVVS0trNE9OREtLdkc4X0NPMmxRM19wM1RiUnpVSlQzeFFESnBYWDFUc09TX0VlYThzeDlpaE1TZEZOZm9QUUhvQWtRb0gzNzY0MmxaWTBNUng0N29CUnMtblFPaGxrVFMycC1TTTZ4YWN3ZUEyRkxpWU4tdFJEcEU0UjF5UEgwYTBZd2hS?oc=5" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
+    PYMNTS.com
+  </a>
+  <span></span>
+</div>
+
+</div>
 
 
-<a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxPd3RFYXBmeFd6NHVTLWNGY3B3MkJVSnhjd250TXJmTjJpNnJ5TnhOVklocG5pRmFVaWJkUExPeWp6Ri1CMDRZRDRIaFBQVWl1cnBJYXdBb1RMcHY3RW5sQ29kRmFSN3ZKQlpLRmlnTU1KalZMRlNMMm1obVlGTFdfSHFXbTBOMjZRS1V1Q3RFZ2d4ZnN6eHV6TUVaWnVMeGIxWmg0ajNMTWxNRjA?oc=5" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">SoFi Technologies Taking Over Fintech PrimaryBid, Sky News Reports</h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">SoFi Technologies Taking Over Fintech PrimaryBid, Sky News Reports Moomoo</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
-    
-    <span>3d ago</span>
-    <span class="text-white/20">·</span>
-    <span>Moomoo</span>
-  </div>
-</a>
+<div class="item-card border border-white/10 rounded-xl px-5 py-4">
+  <h3 class="text-base font-medium text-white leading-snug">
+    <a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxPd3RFYXBmeFd6NHVTLWNGY3B3MkJVSnhjd250TXJmTjJpNnJ5TnhOVklocG5pRmFVaWJkUExPeWp6Ri1CMDRZRDRIaFBQVWl1cnBJYXdBb1RMcHY3RW5sQ29kRmFSN3ZKQlpLRmlnTU1KalZMRlNMMm1obVlGTFdfSHFXbTBOMjZRS1V1Q3RFZ2d4ZnN6eHV6TUVaWnVMeGIxWmg0ajNMTWxNRjA?oc=5" target="_blank" rel="noopener" class="hover:underline">SoFi Technologies Taking Over Fintech PrimaryBid, Sky News Reports</a>
+  </h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-2">SoFi Technologies Taking Over Fintech PrimaryBid, Sky News Reports Moomoo</p>
+  
+<div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
+  
+  <span>3d ago</span>
+  <span class="text-white/20">·</span>
+  <a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxPd3RFYXBmeFd6NHVTLWNGY3B3MkJVSnhjd250TXJmTjJpNnJ5TnhOVklocG5pRmFVaWJkUExPeWp6Ri1CMDRZRDRIaFBQVWl1cnBJYXdBb1RMcHY3RW5sQ29kRmFSN3ZKQlpLRmlnTU1KalZMRlNMMm1obVlGTFdfSHFXbTBOMjZRS1V1Q3RFZ2d4ZnN6eHV6TUVaWnVMeGIxWmg0ajNMTWxNRjA?oc=5" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
+    Moomoo
+  </a>
+  <span></span>
+</div>
+
+</div>
 
 
-<a href="https://news.google.com/rss/articles/CBMi6wJBVV95cUxQMWVaMGRtRS1uUkNCM0NaLWJJQ1lCMjFHcVhrdkpkdzE3b1RmYWI0OThoU0V0bDNKRjVFSVd3dW9sU3dlX0luS0NmLU9XUDIyelVlSXhpWEthUFRvellSYlFNMTF2VktHRVY1OGhLWWRxaHlJdkZNYmJtb1pZa2tzUmhLTnNCMlROamxkX1NFRFBUY2xxRFlIcnFiN1ZZalRrdHFHRm9XQVpFYlVsZXJ6UjZFV2lEVmoyZWZ1ZExOdzFySmp5QV8xcXZ5QzJTQUZxNnRiM0ZOMkV2M2dZZ3RQMG9IajJja1g4LWUyRF9FRUt1NHQxTk8wdEVfbEx2cml0VWc2NnBpdUlBU09HZXRBd3FyTXlpd0NRTXZtd1NETHJ5UU5fWk5IQ3lvLUFwNXF2a3ZYOGI1UU13cVoxV0dXYW42X2ZhMWY2ZjhNeU83aEdyeXFORVE0Mlk1RnRXem03TnpDZ0VsUEdYaTg?oc=5" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">SoFi&#x27;s Galileo integration: A key engine behind its fintech expansion</h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">SoFi&#x27;s Galileo integration: A key engine behind its fintech expansion MSN</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
-    
-    <span>4d ago</span>
-    <span class="text-white/20">·</span>
-    <span>MSN</span>
-  </div>
-</a>
+<div class="item-card border border-white/10 rounded-xl px-5 py-4">
+  <h3 class="text-base font-medium text-white leading-snug">
+    <a href="https://news.google.com/rss/articles/CBMi6wJBVV95cUxQMWVaMGRtRS1uUkNCM0NaLWJJQ1lCMjFHcVhrdkpkdzE3b1RmYWI0OThoU0V0bDNKRjVFSVd3dW9sU3dlX0luS0NmLU9XUDIyelVlSXhpWEthUFRvellSYlFNMTF2VktHRVY1OGhLWWRxaHlJdkZNYmJtb1pZa2tzUmhLTnNCMlROamxkX1NFRFBUY2xxRFlIcnFiN1ZZalRrdHFHRm9XQVpFYlVsZXJ6UjZFV2lEVmoyZWZ1ZExOdzFySmp5QV8xcXZ5QzJTQUZxNnRiM0ZOMkV2M2dZZ3RQMG9IajJja1g4LWUyRF9FRUt1NHQxTk8wdEVfbEx2cml0VWc2NnBpdUlBU09HZXRBd3FyTXlpd0NRTXZtd1NETHJ5UU5fWk5IQ3lvLUFwNXF2a3ZYOGI1UU13cVoxV0dXYW42X2ZhMWY2ZjhNeU83aEdyeXFORVE0Mlk1RnRXem03TnpDZ0VsUEdYaTg?oc=5" target="_blank" rel="noopener" class="hover:underline">SoFi&#x27;s Galileo integration: A key engine behind its fintech expansion</a>
+  </h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-2">SoFi&#x27;s Galileo integration: A key engine behind its fintech expansion MSN</p>
+  
+<div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
+  
+  <span>4d ago</span>
+  <span class="text-white/20">·</span>
+  <a href="https://news.google.com/rss/articles/CBMi6wJBVV95cUxQMWVaMGRtRS1uUkNCM0NaLWJJQ1lCMjFHcVhrdkpkdzE3b1RmYWI0OThoU0V0bDNKRjVFSVd3dW9sU3dlX0luS0NmLU9XUDIyelVlSXhpWEthUFRvellSYlFNMTF2VktHRVY1OGhLWWRxaHlJdkZNYmJtb1pZa2tzUmhLTnNCMlROamxkX1NFRFBUY2xxRFlIcnFiN1ZZalRrdHFHRm9XQVpFYlVsZXJ6UjZFV2lEVmoyZWZ1ZExOdzFySmp5QV8xcXZ5QzJTQUZxNnRiM0ZOMkV2M2dZZ3RQMG9IajJja1g4LWUyRF9FRUt1NHQxTk8wdEVfbEx2cml0VWc2NnBpdUlBU09HZXRBd3FyTXlpd0NRTXZtd1NETHJ5UU5fWk5IQ3lvLUFwNXF2a3ZYOGI1UU13cVoxV0dXYW42X2ZhMWY2ZjhNeU83aEdyeXFORVE0Mlk1RnRXem03TnpDZ0VsUEdYaTg?oc=5" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
+    MSN
+  </a>
+  <span></span>
+</div>
 
+</div>
 
-<a href="https://www.sec.gov/Archives/edgar/data/1818874/000181887426000037/sofi-20260331.htm" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">10-Q Filing · 10-Q<span class="text-[10px] uppercase tracking-widest text-amber-400/80 bg-amber-400/10 px-2 py-0.5 rounded ml-2">SEC Filing</span></h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">SEC 10-Q filing by SoFi on 2026-05-07.</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
-    
-    <span>2026-05-07</span>
-    <span class="text-white/20">·</span>
-    <span>SEC EDGAR</span>
-  </div>
-</a>
-
-  </div>
+    </div>
+  </section>
 </main>
 
 <footer class="border-t border-white/10 mt-16">
   <div class="max-w-7xl mx-auto px-6 py-8 text-center text-xs text-white/40">
-    Built and maintained weekly by <span class="brand-accent">VSCRL</span> · PR Pulse · Tracks 11 fintech competitors
+    Built and maintained weekly by <span class="brand-accent">VSCRL</span> · PR Pulse · Tracks Acorns + 11 fintech competitors
   </div>
 </footer>
 

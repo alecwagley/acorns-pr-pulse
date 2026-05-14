@@ -17,7 +17,7 @@
   .item-card:hover { background-color: rgba(255,255,255,0.03); border-color: rgba(116, 201, 71, 0.3); }
   .brand-tile { transition: transform 0.15s ease, border-color 0.15s ease; }
   .brand-tile:hover { transform: translateY(-2px); border-color: #74C947; }
-  /* Why-pill attention animation (first-visit wiggle) */
+  /* Why-pill attention animation */
   @keyframes why-wiggle {
     0%, 100% { transform: translateX(0) scale(1); }
     10% { transform: translateX(-3px) scale(1.06); }
@@ -55,319 +55,422 @@
   </div>
 </header>
 
-<main class="max-w-4xl mx-auto px-6 py-10">
-  <div class="mb-8">
+<main class="max-w-4xl mx-auto px-6 py-10 space-y-10">
+  <div>
     <h1 class="text-3xl font-semibold text-white mb-2">Robinhood</h1>
     <p class="text-sm text-white/50">
-      23 items in the last 14 days · newest first
+      20 items in the last 14 days · newest first
     </p>
   </div>
-  <div class="grid grid-cols-1 gap-3">
-    
-<a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxPelNVallVVXdkempoMzNsTEFVeF9kX19qZXk1eHNocjNjdFNvaVk2T2VicXZrRDdWZ3puOFVMYWN4M1JtbW1EZVJUeGVfUWRiQ2VhNlRLWDl5aGpJSENMTEt4clhjRldZUU1KUUozNnI5N3pmMzM1anRJTTNKRzF3ZVFYcWRtZER3cnc3RGlnUGxVRXVERzRnUklsdEd1NUd3TzZmNzh4SjFHVTJLNkxrYUtlbi15SlpHaHdNY3Z3?oc=5" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">Why Robinhood (HOOD) Stock Is Up Today</h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">Why Robinhood (HOOD) Stock Is Up Today The Globe and Mail</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
-    
-    <span>2h ago</span>
-    <span class="text-white/20">·</span>
-    <span>The Globe and Mail</span>
-  </div>
-</a>
+
+  <section>
+    <div class="flex items-baseline gap-3 mb-4">
+      <h2 class="text-xl font-semibold text-white">Official PR</h2>
+      <span class="text-xs text-white/40">1 items</span>
+    </div>
+    <div class="grid grid-cols-1 gap-3">
+      
+<div class="item-card border border-white/10 rounded-xl px-5 py-4">
+  <h3 class="text-base font-medium text-white leading-snug">
+    <a href="https://www.sec.gov/Archives/edgar/data/1783879/000178387926000065/hood-20260507.htm" target="_blank" rel="noopener" class="hover:underline">8-K Filing · 8-K</a><span class="text-[10px] uppercase tracking-widest text-amber-400/80 bg-amber-400/10 px-2 py-0.5 rounded ml-2 align-middle">SEC Filing</span>
+  </h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-2">SEC 8-K filing by Robinhood on 2026-05-08.</p>
+  
+<div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
+  
+  <span>6d ago</span>
+  <span class="text-white/20">·</span>
+  <a href="https://www.sec.gov/Archives/edgar/data/1783879/000178387926000065/hood-20260507.htm" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
+    SEC EDGAR
+  </a>
+  <span></span>
+</div>
+
+</div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="flex items-baseline gap-3 mb-4">
+      <h2 class="text-xl font-semibold text-white">The Buzz</h2>
+      <span class="text-xs text-white/40">19 items</span>
+    </div>
+    <div class="grid grid-cols-1 gap-3">
+      
+<div class="item-card border border-white/10 rounded-xl px-5 py-4">
+  <h3 class="text-base font-medium text-white leading-snug">
+    <a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxOVk9EWWpsei1pT0loSmVjbHZ0Y1ZZY1NmdkVCVXJWTWNKYWlWck5oZUVLRHlveFNsMW1SSnE5VHF5aGRuSUg1M3E4Nk16M1ZkOGJHdEJaeC1MRzRkaDYyek9tMW1qZ0QwMENVdkthanVlSi05azlSel9YOUdNVnh0d2F0QVkzcl8zaVFfMFVkRQ?oc=5" target="_blank" rel="noopener" class="hover:underline">6th week of trading $HOOD - updated</a>
+  </h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-2">6th week of trading $HOOD - updated Moomoo</p>
+  
+<div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
+  
+  <span>5h ago</span>
+  <span class="text-white/20">·</span>
+  <a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxOVk9EWWpsei1pT0loSmVjbHZ0Y1ZZY1NmdkVCVXJWTWNKYWlWck5oZUVLRHlveFNsMW1SSnE5VHF5aGRuSUg1M3E4Nk16M1ZkOGJHdEJaeC1MRzRkaDYyek9tMW1qZ0QwMENVdkthanVlSi05azlSel9YOUdNVnh0d2F0QVkzcl8zaVFfMFVkRQ?oc=5" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
+    Moomoo
+  </a>
+  <span></span>
+</div>
+
+</div>
 
 
-<a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxOVk9EWWpsei1pT0loSmVjbHZ0Y1ZZY1NmdkVCVXJWTWNKYWlWck5oZUVLRHlveFNsMW1SSnE5VHF5aGRuSUg1M3E4Nk16M1ZkOGJHdEJaeC1MRzRkaDYyek9tMW1qZ0QwMENVdkthanVlSi05azlSel9YOUdNVnh0d2F0QVkzcl8zaVFfMFVkRQ?oc=5" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">6th week of trading $HOOD - updated</h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">6th week of trading $HOOD - updated Moomoo</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
-    
-    <span>5h ago</span>
-    <span class="text-white/20">·</span>
-    <span>Moomoo</span>
-  </div>
-</a>
+<div class="item-card border border-white/10 rounded-xl px-5 py-4">
+  <h3 class="text-base font-medium text-white leading-snug">
+    <a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxPQ05jWUMzcGIzWGRyelQyNFhGcWhycHZkbGlDLVpOR3h3dzM2Qm4wSXV5UWRfSXM1NXl4MFBUVDU3bkFIbVJKYW1wdFlacV95UnJnNmo0UjZsUWlzQlFpRlpIUHlkWE9ub0hoaDlRakVwc25YQlRRMzQ4aExWZFRFRVFtSjlKMnpGa0hoQ2xVZlBVcFRfdFBmLVBSdDQ4MHZmY05PVmwzeXhEa3prdGtzVkkzT0U1Z2tvQlpkcXdWMlFzMHli?oc=5" target="_blank" rel="noopener" class="hover:underline">Trump Discloses Large Stock Purchases in Nvidia, Robinhood, Palantir and Other Tech Firms</a>
+  </h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-2">Trump Discloses Large Stock Purchases in Nvidia, Robinhood, Palantir and Other Tech Firms Quiver Quantitative</p>
+  
+<div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
+  
+  <span>6h ago</span>
+  <span class="text-white/20">·</span>
+  <a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxPQ05jWUMzcGIzWGRyelQyNFhGcWhycHZkbGlDLVpOR3h3dzM2Qm4wSXV5UWRfSXM1NXl4MFBUVDU3bkFIbVJKYW1wdFlacV95UnJnNmo0UjZsUWlzQlFpRlpIUHlkWE9ub0hoaDlRakVwc25YQlRRMzQ4aExWZFRFRVFtSjlKMnpGa0hoQ2xVZlBVcFRfdFBmLVBSdDQ4MHZmY05PVmwzeXhEa3prdGtzVkkzT0U1Z2tvQlpkcXdWMlFzMHli?oc=5" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
+    Quiver Quantitative
+  </a>
+  <span></span>
+</div>
+
+</div>
 
 
-<a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxPQ05jWUMzcGIzWGRyelQyNFhGcWhycHZkbGlDLVpOR3h3dzM2Qm4wSXV5UWRfSXM1NXl4MFBUVDU3bkFIbVJKYW1wdFlacV95UnJnNmo0UjZsUWlzQlFpRlpIUHlkWE9ub0hoaDlRakVwc25YQlRRMzQ4aExWZFRFRVFtSjlKMnpGa0hoQ2xVZlBVcFRfdFBmLVBSdDQ4MHZmY05PVmwzeXhEa3prdGtzVkkzT0U1Z2tvQlpkcXdWMlFzMHli?oc=5" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">Trump Discloses Large Stock Purchases in Nvidia, Robinhood, Palantir and Other Tech Firms</h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">Trump Discloses Large Stock Purchases in Nvidia, Robinhood, Palantir and Other Tech Firms Quiver Quantitative</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
-    
-    <span>5h ago</span>
-    <span class="text-white/20">·</span>
-    <span>Quiver Quantitative</span>
-  </div>
-</a>
+<div class="item-card border border-white/10 rounded-xl px-5 py-4">
+  <h3 class="text-base font-medium text-white leading-snug">
+    <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE5WeWhHN1FTOWVEbE9HZUs2TXRaRHVTZVQxNHNTZ0V1Z21EbUpnUEhta2Q4Y2owdE51a3RXLTE1RnBIX3dhaWlLdzFEdWVIcVFVdkVjZ0hRQnlSUQ?oc=5" target="_blank" rel="noopener" class="hover:underline">Bear Market Earnings Comparison: Pure Crypto Exchanges vs. Multi-Asset Platforms—Robinhood Is More Resilient Than Coinbase</a>
+  </h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-2">Bear Market Earnings Comparison: Pure Crypto Exchanges vs. Multi-Asset Platforms—Robinhood Is More Resilient Than Coinbase 深潮TechFlow</p>
+  
+<div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
+  
+  <span>11h ago</span>
+  <span class="text-white/20">·</span>
+  <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE5WeWhHN1FTOWVEbE9HZUs2TXRaRHVTZVQxNHNTZ0V1Z21EbUpnUEhta2Q4Y2owdE51a3RXLTE1RnBIX3dhaWlLdzFEdWVIcVFVdkVjZ0hRQnlSUQ?oc=5" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
+    深潮TechFlow
+  </a>
+  <span></span>
+</div>
+
+</div>
 
 
-<a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE5xMS0wd0xCTFM1cTRKWEIyWnBnTWJnUFJBdWlBV0RFQ085VkZsYkRvalI2dkdNUVU3Mk84VGIzZkRnY2oyWWpFaWhLalVEb0xRRmtZNkRHZGszNEtsWlV2SUhWclZxU1RtRnJfZ1NUZGVNaE9k?oc=5" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">Robinhood files for IPO of second retail venture fund RVII amid AI hype</h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">Robinhood files for IPO of second retail venture fund RVII amid AI hype Crypto Briefing</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
-    
-    <span>10h ago</span>
-    <span class="text-white/20">·</span>
-    <span>Crypto Briefing</span>
-  </div>
-</a>
+<div class="item-card border border-white/10 rounded-xl px-5 py-4">
+  <h3 class="text-base font-medium text-white leading-snug">
+    <a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxQYzlzdTNkTzJNc2kxbHcyZWhLbDlUazJHTFRYSFhhbTRrbnR3ZXRFQ0Vob3h3Um9pMktPNlF0VjZhVkcyOUpsMHB6UDVDOS1XR0R3WGN5b0hzVS13dWFpcnJnWWFRMDlINHA1WC1mSXZXLS1ibmNQZkZ4bzBCN3BuS0xaUUJlUERHSzczVEZGdmJRMWhBeG0yc2RtT2cxOWZu?oc=5" target="_blank" rel="noopener" class="hover:underline">Robinhood Eyes Second Venture Fund Targeting Private Markets</a>
+  </h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-2">Robinhood Eyes Second Venture Fund Targeting Private Markets citybiz</p>
+  
+<div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
+  
+  <span>11h ago</span>
+  <span class="text-white/20">·</span>
+  <a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxQYzlzdTNkTzJNc2kxbHcyZWhLbDlUazJHTFRYSFhhbTRrbnR3ZXRFQ0Vob3h3Um9pMktPNlF0VjZhVkcyOUpsMHB6UDVDOS1XR0R3WGN5b0hzVS13dWFpcnJnWWFRMDlINHA1WC1mSXZXLS1ibmNQZkZ4bzBCN3BuS0xaUUJlUERHSzczVEZGdmJRMWhBeG0yc2RtT2cxOWZu?oc=5" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
+    citybiz
+  </a>
+  <span></span>
+</div>
+
+</div>
 
 
-<a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE5WeWhHN1FTOWVEbE9HZUs2TXRaRHVTZVQxNHNTZ0V1Z21EbUpnUEhta2Q4Y2owdE51a3RXLTE1RnBIX3dhaWlLdzFEdWVIcVFVdkVjZ0hRQnlSUQ?oc=5" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">Bear Market Earnings Comparison: Pure Crypto Exchanges vs. Multi-Asset Platforms—Robinhood Is More Resilient Than Coinbase</h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">Bear Market Earnings Comparison: Pure Crypto Exchanges vs. Multi-Asset Platforms—Robinhood Is More Resilient Than Coinbase 深潮TechFlow</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
-    
-    <span>10h ago</span>
-    <span class="text-white/20">·</span>
-    <span>深潮TechFlow</span>
-  </div>
-</a>
+<div class="item-card border border-white/10 rounded-xl px-5 py-4">
+  <h3 class="text-base font-medium text-white leading-snug">
+    <a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxPQ1A1M3k4eFczUXFhX0xtX2pway1LZWQ5VXota3ZRUzlVS2xxYUZyak1fWWQyeDY1NVN4MVVJZFZwNEJxckg4NVlaaVpLZERiUUNtV1ZDMXdQSW9FXzBNZkVLTjEzQVRUS3ZXVXJEOHdob1VHcDMtVmRwNF9MeHZHSXIwV2pBSjZRY3loZE4zYzVVbXRzdlp4NWtlN2FqY3M5ZWhJS0MzcFd2NnVaZEg1OHhySlh4a2s?oc=5" target="_blank" rel="noopener" class="hover:underline">Barclays Maintains Robinhood(HOOD.US) With Buy Rating, Maintains Target Price $82</a>
+  </h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-2">Barclays Maintains Robinhood(HOOD.US) With Buy Rating, Maintains Target Price $82 Moomoo</p>
+  
+<div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
+  
+  <span>11h ago</span>
+  <span class="text-white/20">·</span>
+  <a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxPQ1A1M3k4eFczUXFhX0xtX2pway1LZWQ5VXota3ZRUzlVS2xxYUZyak1fWWQyeDY1NVN4MVVJZFZwNEJxckg4NVlaaVpLZERiUUNtV1ZDMXdQSW9FXzBNZkVLTjEzQVRUS3ZXVXJEOHdob1VHcDMtVmRwNF9MeHZHSXIwV2pBSjZRY3loZE4zYzVVbXRzdlp4NWtlN2FqY3M5ZWhJS0MzcFd2NnVaZEg1OHhySlh4a2s?oc=5" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
+    Moomoo
+  </a>
+  <span></span>
+</div>
+
+</div>
 
 
-<a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxQYzlzdTNkTzJNc2kxbHcyZWhLbDlUazJHTFRYSFhhbTRrbnR3ZXRFQ0Vob3h3Um9pMktPNlF0VjZhVkcyOUpsMHB6UDVDOS1XR0R3WGN5b0hzVS13dWFpcnJnWWFRMDlINHA1WC1mSXZXLS1ibmNQZkZ4bzBCN3BuS0xaUUJlUERHSzczVEZGdmJRMWhBeG0yc2RtT2cxOWZu?oc=5" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">Robinhood Eyes Second Venture Fund Targeting Private Markets</h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">Robinhood Eyes Second Venture Fund Targeting Private Markets citybiz</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
-    
-    <span>10h ago</span>
-    <span class="text-white/20">·</span>
-    <span>citybiz</span>
-  </div>
-</a>
+<div class="item-card border border-white/10 rounded-xl px-5 py-4">
+  <h3 class="text-base font-medium text-white leading-snug">
+    <a href="https://news.google.com/rss/articles/CBMi2gFBVV95cUxObThURU5jbFg5bWh6a01KNHpkNzBqeWVHanNsZUR5WEtJaXlaLWt2bXF6eVJha0F1bFEwMUt3UUdkZkVHNGtIeHpfVnZYNG92cm42bEszVXk2ckJTVEZBV3ZVdlRxYjFwUWEzbU1nQjJ3TXF1bUFxa0VocGpKbzV0RXEzYkhlVmN2aVl6bE9ycXQwLVV2NUQxdldVMnpEMkFMMFlTaUxHRU9MSHR0VGt0MGtxZHJHdXdyaTNYMFVTaUNoY1dwOTFVR05SYkVGN29IOHBNampjdnkwUQ?oc=5" target="_blank" rel="noopener" class="hover:underline">Robinhood sees significant YoY platform assets growth in April</a>
+  </h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-2">Robinhood sees significant YoY platform assets growth in April MSN</p>
+  
+<div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
+  
+  <span>23h ago</span>
+  <span class="text-white/20">·</span>
+  <a href="https://news.google.com/rss/articles/CBMi2gFBVV95cUxObThURU5jbFg5bWh6a01KNHpkNzBqeWVHanNsZUR5WEtJaXlaLWt2bXF6eVJha0F1bFEwMUt3UUdkZkVHNGtIeHpfVnZYNG92cm42bEszVXk2ckJTVEZBV3ZVdlRxYjFwUWEzbU1nQjJ3TXF1bUFxa0VocGpKbzV0RXEzYkhlVmN2aVl6bE9ycXQwLVV2NUQxdldVMnpEMkFMMFlTaUxHRU9MSHR0VGt0MGtxZHJHdXdyaTNYMFVTaUNoY1dwOTFVR05SYkVGN29IOHBNampjdnkwUQ?oc=5" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
+    MSN
+  </a>
+  <span></span>
+</div>
+
+</div>
 
 
-<a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxPQ1A1M3k4eFczUXFhX0xtX2pway1LZWQ5VXota3ZRUzlVS2xxYUZyak1fWWQyeDY1NVN4MVVJZFZwNEJxckg4NVlaaVpLZERiUUNtV1ZDMXdQSW9FXzBNZkVLTjEzQVRUS3ZXVXJEOHdob1VHcDMtVmRwNF9MeHZHSXIwV2pBSjZRY3loZE4zYzVVbXRzdlp4NWtlN2FqY3M5ZWhJS0MzcFd2NnVaZEg1OHhySlh4a2s?oc=5" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">Barclays Maintains Robinhood(HOOD.US) With Buy Rating, Maintains Target Price $82</h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">Barclays Maintains Robinhood(HOOD.US) With Buy Rating, Maintains Target Price $82 Moomoo</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
-    
-    <span>11h ago</span>
-    <span class="text-white/20">·</span>
-    <span>Moomoo</span>
-  </div>
-</a>
+<div class="item-card border border-white/10 rounded-xl px-5 py-4">
+  <h3 class="text-base font-medium text-white leading-snug">
+    <a href="https://news.google.com/rss/articles/CBMingFBVV95cUxQU3lGa3RETTNUaEhjVlFKal9DRmp6Q0NVeWk0NnVFbVR4dVdDdUNFbk1MM2lSdDJUQmxCaDdQZjhrcWNNSGhBZW1Veng0Q2p6VWoyNktxa3AyVHpmNlc4VUp2c0NNU05DUEVocTI0TUxQRERRblJ3dk94cU1yZEUzUTU2enM0Rjh4Z3Q4UjBnaTBIa3N3b0YtWC1qWno2dw?oc=5" target="_blank" rel="noopener" class="hover:underline">Robinhood Markets, Inc. Reports April 2026 Operating Data</a>
+  </h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-2">Robinhood Markets, Inc. Reports April 2026 Operating Data Moomoo</p>
+  
+<div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
+  
+  <span>yesterday</span>
+  <span class="text-white/20">·</span>
+  <a href="https://news.google.com/rss/articles/CBMingFBVV95cUxQU3lGa3RETTNUaEhjVlFKal9DRmp6Q0NVeWk0NnVFbVR4dVdDdUNFbk1MM2lSdDJUQmxCaDdQZjhrcWNNSGhBZW1Veng0Q2p6VWoyNktxa3AyVHpmNlc4VUp2c0NNU05DUEVocTI0TUxQRERRblJ3dk94cU1yZEUzUTU2enM0Rjh4Z3Q4UjBnaTBIa3N3b0YtWC1qWno2dw?oc=5" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
+    Moomoo
+  </a>
+  <span></span>
+</div>
+
+</div>
 
 
-<a href="https://news.google.com/rss/articles/CBMi2gFBVV95cUxObThURU5jbFg5bWh6a01KNHpkNzBqeWVHanNsZUR5WEtJaXlaLWt2bXF6eVJha0F1bFEwMUt3UUdkZkVHNGtIeHpfVnZYNG92cm42bEszVXk2ckJTVEZBV3ZVdlRxYjFwUWEzbU1nQjJ3TXF1bUFxa0VocGpKbzV0RXEzYkhlVmN2aVl6bE9ycXQwLVV2NUQxdldVMnpEMkFMMFlTaUxHRU9MSHR0VGt0MGtxZHJHdXdyaTNYMFVTaUNoY1dwOTFVR05SYkVGN29IOHBNampjdnkwUQ?oc=5" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">Robinhood sees significant YoY platform assets growth in April</h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">Robinhood sees significant YoY platform assets growth in April MSN</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
-    
-    <span>23h ago</span>
-    <span class="text-white/20">·</span>
-    <span>MSN</span>
-  </div>
-</a>
+<div class="item-card border border-white/10 rounded-xl px-5 py-4">
+  <h3 class="text-base font-medium text-white leading-snug">
+    <a href="https://news.google.com/rss/articles/CBMipAJBVV95cUxQOFlIQzdJbVc4Y244Tlh0TW1rNGc1Y3NvSjQxanNOVkNiOU1sRVhHV3dmYUROVGRMX2ZpV1QtOUk1TmJvai10am5sbmVkRkRPS3F5V3V6NEUtTTIyREQ3MWN1VFM3VzFNOHlkRGtIQWdHVmlDY3FFc3YwZENaRW5NczRwODkwUGtWQnRKMWdCeERNTzdTNUotWWZ4bjVHbzAwMXZUeGpmZmlfaVM0TmhYeWxxYXJDTnhlY2JiZjk1alhyVWdWRE1TdHhZYXJmbHFPdl9QOVhVUVpRNU02RWZRQm8zU2huenMtRVhTS21MOFg3ZS04bVRaN3RBOXBtc0lPZ0kzX19OVzhCQ0s4eTlzNG5hUkFRYkN4b0h4RXVETmx3YnhU?oc=5" target="_blank" rel="noopener" class="hover:underline">A Robinhood co-founder just raised $275 million to put AI data centers in orbit — and the real pitch isn&#x27;t the physics, it&#x27;s a seven-year waitlist nobody can fix on the ground</a>
+  </h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-2">A Robinhood co-founder just raised $275 million to put AI data centers in orbit — and the real pitch isn&#x27;t the physics, it&#x27;s a seven-year waitlist nobody can fix on the ground Space Daily</p>
+  
+<div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
+  
+  <span>yesterday</span>
+  <span class="text-white/20">·</span>
+  <a href="https://news.google.com/rss/articles/CBMipAJBVV95cUxQOFlIQzdJbVc4Y244Tlh0TW1rNGc1Y3NvSjQxanNOVkNiOU1sRVhHV3dmYUROVGRMX2ZpV1QtOUk1TmJvai10am5sbmVkRkRPS3F5V3V6NEUtTTIyREQ3MWN1VFM3VzFNOHlkRGtIQWdHVmlDY3FFc3YwZENaRW5NczRwODkwUGtWQnRKMWdCeERNTzdTNUotWWZ4bjVHbzAwMXZUeGpmZmlfaVM0TmhYeWxxYXJDTnhlY2JiZjk1alhyVWdWRE1TdHhZYXJmbHFPdl9QOVhVUVpRNU02RWZRQm8zU2huenMtRVhTS21MOFg3ZS04bVRaN3RBOXBtc0lPZ0kzX19OVzhCQ0s4eTlzNG5hUkFRYkN4b0h4RXVETmx3YnhU?oc=5" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
+    Space Daily
+  </a>
+  <span></span>
+</div>
+
+</div>
 
 
-<a href="https://news.google.com/rss/articles/CBMingFBVV95cUxQU3lGa3RETTNUaEhjVlFKal9DRmp6Q0NVeWk0NnVFbVR4dVdDdUNFbk1MM2lSdDJUQmxCaDdQZjhrcWNNSGhBZW1Veng0Q2p6VWoyNktxa3AyVHpmNlc4VUp2c0NNU05DUEVocTI0TUxQRERRblJ3dk94cU1yZEUzUTU2enM0Rjh4Z3Q4UjBnaTBIa3N3b0YtWC1qWno2dw?oc=5" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">Robinhood Markets, Inc. Reports April 2026 Operating Data</h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">Robinhood Markets, Inc. Reports April 2026 Operating Data Moomoo</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
-    
-    <span>yesterday</span>
-    <span class="text-white/20">·</span>
-    <span>Moomoo</span>
-  </div>
-</a>
+<div class="item-card border border-white/10 rounded-xl px-5 py-4">
+  <h3 class="text-base font-medium text-white leading-snug">
+    <a href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxOcUJXTXNlOGRPY2tJdHZyVlNwMDRlX0tnMG5WUFpXSEJ3SmRGc0x4aTA1QzJTV3EwREJvdmNGejJhaWhSS2N1TXNodU0zWUllZmF5MkJ2TkNxbkxlNUlsbV9CMEhEaGFGY3lkdmVldnZKRWFRV2hfanA4bnhXb1RmaGNxT0dIc1g3bHdCX1JKSG81VVA5dHd1UG9DNWU4aC1QQlh4LUhnU1JjZURBVlFYUXFFLWJ6WjFTNk5RdWwxeVhBTVBval8yVXRKa0c1T25wckpN?oc=5" target="_blank" rel="noopener" class="hover:underline">Robinhood Ventures confidentially files for a second fund</a>
+  </h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-2">Robinhood Ventures confidentially files for a second fund MSN</p>
+  
+<div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
+  
+  <span>2d ago</span>
+  <span class="text-white/20">·</span>
+  <a href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxOcUJXTXNlOGRPY2tJdHZyVlNwMDRlX0tnMG5WUFpXSEJ3SmRGc0x4aTA1QzJTV3EwREJvdmNGejJhaWhSS2N1TXNodU0zWUllZmF5MkJ2TkNxbkxlNUlsbV9CMEhEaGFGY3lkdmVldnZKRWFRV2hfanA4bnhXb1RmaGNxT0dIc1g3bHdCX1JKSG81VVA5dHd1UG9DNWU4aC1QQlh4LUhnU1JjZURBVlFYUXFFLWJ6WjFTNk5RdWwxeVhBTVBval8yVXRKa0c1T25wckpN?oc=5" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
+    MSN
+  </a>
+  <span></span>
+</div>
+
+</div>
 
 
-<a href="https://news.google.com/rss/articles/CBMipAJBVV95cUxQOFlIQzdJbVc4Y244Tlh0TW1rNGc1Y3NvSjQxanNOVkNiOU1sRVhHV3dmYUROVGRMX2ZpV1QtOUk1TmJvai10am5sbmVkRkRPS3F5V3V6NEUtTTIyREQ3MWN1VFM3VzFNOHlkRGtIQWdHVmlDY3FFc3YwZENaRW5NczRwODkwUGtWQnRKMWdCeERNTzdTNUotWWZ4bjVHbzAwMXZUeGpmZmlfaVM0TmhYeWxxYXJDTnhlY2JiZjk1alhyVWdWRE1TdHhZYXJmbHFPdl9QOVhVUVpRNU02RWZRQm8zU2huenMtRVhTS21MOFg3ZS04bVRaN3RBOXBtc0lPZ0kzX19OVzhCQ0s4eTlzNG5hUkFRYkN4b0h4RXVETmx3YnhU?oc=5" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">A Robinhood co-founder just raised $275 million to put AI data centers in orbit — and the real pitch isn&#x27;t the physics, it&#x27;s a seven-year waitlist nobody can fix on the ground</h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">A Robinhood co-founder just raised $275 million to put AI data centers in orbit — and the real pitch isn&#x27;t the physics, it&#x27;s a seven-year waitlist nobody can fix on the ground Space Daily</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
-    
-    <span>yesterday</span>
-    <span class="text-white/20">·</span>
-    <span>Space Daily</span>
-  </div>
-</a>
-
-
-<a href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxOcUJXTXNlOGRPY2tJdHZyVlNwMDRlX0tnMG5WUFpXSEJ3SmRGc0x4aTA1QzJTV3EwREJvdmNGejJhaWhSS2N1TXNodU0zWUllZmF5MkJ2TkNxbkxlNUlsbV9CMEhEaGFGY3lkdmVldnZKRWFRV2hfanA4bnhXb1RmaGNxT0dIc1g3bHdCX1JKSG81VVA5dHd1UG9DNWU4aC1QQlh4LUhnU1JjZURBVlFYUXFFLWJ6WjFTNk5RdWwxeVhBTVBval8yVXRKa0c1T25wckpN?oc=5" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">Robinhood Ventures confidentially files for a second fund</h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">Robinhood Ventures confidentially files for a second fund MSN</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
-    
-    <span>2d ago</span>
-    <span class="text-white/20">·</span>
-    <span>MSN</span>
-  </div>
-</a>
-
-
-<a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxOVDBwci1JY1JxdW1yMTM4WnRRX2FLbHZfdDRiS1pkUmd0QXY1ZE5pNjFia2lvcXBJdnUwQm13bWNZdjR3cXRfZkJ3ZG1OemV1LXRfa1ZJMTNCazhFX1JUQ2M4cXl0dFduMWNJVGJsWEVNVnNETXZwTDNLaTdRREZUSnlfeWZqTTBTWlFCbWt4VGJCMUJmQ0JqcUJ4SXdjUG5tODY1MFlleWpQRmhZbHJDdXpvUEljOV9PZ2lYZ0dQS0xtZGpfdFhfOUFB?oc=5" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">Robinhood files for second venture fund targeting early-stage startups</h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">Robinhood files for second venture fund targeting early-stage startups Yogonet</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
-    
-    <span>2d ago</span>
-    <span class="text-white/20">·</span>
-    <span>Yogonet</span>
-  </div>
-</a>
-
-
-<a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxNVlRQb3JLaUxuYW8xa1phMENuWktLc3FuVjFfd1JUT3dadzB4NTd3cmEyXzBrNFJqMkpBT3ZJVlRLa2lzcGtIZi1kQ3VNNExSUGZrUUFhdnpQRDFjYzljcldENUZvQUpyZEZFckdMZWZma2ZTQ3U4SFFZLThha0lNM2FiTmRvZ0l4dk80WHlTZjItM2E2QVVQTllnMmV6N2ZoMU9DbjhWZHR0eGlYQUFRdGpRMy1ublZuLWxNdw?oc=5" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">Robinhood’s Second Venture Fund Targets Early-Stage Private Companies</h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">Robinhood’s Second Venture Fund Targets Early-Stage Private Companies PYMNTS.com</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
-    
-    <span>2d ago</span>
-    <span class="text-white/20">·</span>
-    <span>PYMNTS.com</span>
-  </div>
-</a>
-
-
-<a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE1aXzhkcVQ2MTN6SGNZVndqczhGY2xQaFNNSnBWQ0EtYm1MVzFudGJtUFEyYUZkQnlyRjk2aVctV1RZNXJOeE5hZFhPNXhaY0VHcmdaWU5fd0NReTlPemFURDd6Z2s4cFhpNlhzMnVYY0M1TkJwLVE?oc=5" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">5 Things to Know About the Robinhood Gold Card</h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">5 Things to Know About the Robinhood Gold Card NerdWallet</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
-    
-    <span>2d ago</span>
-    <span class="text-white/20">·</span>
-    <span>NerdWallet</span>
-  </div>
-</a>
-
-
-<a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxPaDF4cjdRcWZaZUd4aG40eEpyNzZTOTNKM09yWmlhWFpSZFQyc2xMT1dSclVNcnFVcGNlVGZ6SjU0MWFXQXZGWlRMRWpyUDc5b2dnUW0tWXhIZHZwNHotR3dzZ00tUGwyZXM4LXNfMlpSaGtSc3B4R19uYUlucUUyNVBjYllENzZRRGZSMWs2VDNMWENoXzFmMg?oc=5" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">Exclusive: Robinhood preps for second public VC fund</h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">Exclusive: Robinhood preps for second public VC fund Axios</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
-    
-    <span>2d ago</span>
-    <span class="text-white/20">·</span>
-    <span>Axios</span>
-  </div>
-</a>
-
-
-<a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxQOUxnTE5XamxzMnV4aEo2YlBfZ3U0WFZjZW1XVkJJXzJPVHM1emVLb2FPbV9mbzFnc21KaVBDeU80b1NsSjhyWC1xenMyb3J3ZGZkdXRRUy1JVW5NRVhabzVKLW9ianNxQllKMkJjc3BRTkFMTUJrbkowTkFMRmtLTE5lMlN1ZUQ5ek1VZzNFdmRMa2tqVllZb2RiemQ4VHhlTVYzekZMSm1qYmQ4?oc=5" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">Robinhood to Launch Second Venture Fund Amid Continued AI Momentum</h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">Robinhood to Launch Second Venture Fund Amid Continued AI Momentum Finance Magnates</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
-    
-    <span>2d ago</span>
-    <span class="text-white/20">·</span>
-    <span>Finance Magnates</span>
-  </div>
-</a>
-
-
-<a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxQY2pmQTZtWHN3NG12UmI0dktfbmFfaVhjTGs2empTMXRqM3AtdGh6QVZ4aVY0MnpXM2h0Unh0Q3hTa1hjN0o4T2c5NlR5aFR0aFA2enQyRTcyanNUNXl6SmROXzNvVTJ1ZHE4T3JGREdnZHBRQ0lBUmZyNEt5TmdrYmhtYmZLaklPTWhtN0F5TUh0ZWJRVUJSWDlGa0MwdWQ2cExaZUdWOVUwZEdIYlJic2kzMDBnMXc2c0poRGdZakM2eTVkdzhLWmg0UWI2UQ?oc=5" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">Robinhood Files for Second Venture Fund RVII to Open Early-Stage AI Startup Investing to Retail</h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">Robinhood Files for Second Venture Fund RVII to Open Early-Stage AI Startup Investing to Retail AI Insider</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
-    
-    <span>2d ago</span>
-    <span class="text-white/20">·</span>
-    <span>AI Insider</span>
-  </div>
-</a>
-
-
-<a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxOMmxBMk53Ykg0XzJyNzBTcGQwb1JOYXJUVFNibjhrLWVSNWlacjFVMmpWcWRCSlcybFhVcFNpM3daVG1VYV8xRHltS2U2TnNrRnIzRUFWVEk5ZTdiVVJjZTJ1endKTk5pZnFQejVmY2p2WWltMWd1Q2QwYUVzS2daQkxzT1FTTWlkN0pmdWlka3cyeHVoTGw0eG1ucGh6SGozTDZZ?oc=5" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">Robinhood (HOOD) Stock; Surges Nearly 5% as Second Venture Fund Filing Emerges</h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">Robinhood (HOOD) Stock; Surges Nearly 5% as Second Venture Fund Filing Emerges CoinCentral</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
+<div class="item-card border border-white/10 rounded-xl px-5 py-4">
+  <h3 class="text-base font-medium text-white leading-snug">
+    <a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxOVDBwci1JY1JxdW1yMTM4WnRRX2FLbHZfdDRiS1pkUmd0QXY1ZE5pNjFia2lvcXBJdnUwQm13bWNZdjR3cXRfZkJ3ZG1OemV1LXRfa1ZJMTNCazhFX1JUQ2M4cXl0dFduMWNJVGJsWEVNVnNETXZwTDNLaTdRREZUSnlfeWZqTTBTWlFCbWt4VGJCMUJmQ0JqcUJ4SXdjUG5tODY1MFlleWpQRmhZbHJDdXpvUEljOV9PZ2lYZ0dQS0xtZGpfdFhfOUFB?oc=5" target="_blank" rel="noopener" class="hover:underline">Robinhood files for second venture fund targeting early-stage startups</a>
+  </h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-2">Robinhood files for second venture fund targeting early-stage startups Yogonet</p>
+  
+<div class="mt-3">
+  <div class="flex items-center gap-2 text-[11px] text-white/45 mb-2">
     
     <span>2d ago</span>
     <span class="text-white/20">·</span>
-    <span>CoinCentral</span>
+    <span class="brand-accent font-semibold">2 sources</span>
   </div>
-</a>
+  <ul class="text-[12px] space-y-1 ml-1 list-disc list-inside marker:text-white/30">
+    <li><a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxOVDBwci1JY1JxdW1yMTM4WnRRX2FLbHZfdDRiS1pkUmd0QXY1ZE5pNjFia2lvcXBJdnUwQm13bWNZdjR3cXRfZkJ3ZG1OemV1LXRfa1ZJMTNCazhFX1JUQ2M4cXl0dFduMWNJVGJsWEVNVnNETXZwTDNLaTdRREZUSnlfeWZqTTBTWlFCbWt4VGJCMUJmQ0JqcUJ4SXdjUG5tODY1MFlleWpQRmhZbHJDdXpvUEljOV9PZ2lYZ0dQS0xtZGpfdFhfOUFB?oc=5" target="_blank" rel="noopener" class="text-white/65 hover:text-white underline-offset-2 hover:underline">Yogonet</a></li><li><a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxNVlRQb3JLaUxuYW8xa1phMENuWktLc3FuVjFfd1JUT3dadzB4NTd3cmEyXzBrNFJqMkpBT3ZJVlRLa2lzcGtIZi1kQ3VNNExSUGZrUUFhdnpQRDFjYzljcldENUZvQUpyZEZFckdMZWZma2ZTQ3U4SFFZLThha0lNM2FiTmRvZ0l4dk80WHlTZjItM2E2QVVQTllnMmV6N2ZoMU9DbjhWZHR0eGlYQUFRdGpRMy1ublZuLWxNdw?oc=5" target="_blank" rel="noopener" class="text-white/65 hover:text-white underline-offset-2 hover:underline">PYMNTS.com</a></li>
+  </ul>
+</div>
+
+</div>
 
 
-<a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxQSWZCWkx3QXo3WDF4cmdmVTlhNUFXR3NJTmY2eG9fVVg4S3BPcGxyYkVndzliWFJQdVhPeVhaMTJESWpCanliVmV6bkdlNHRmbkpnNm4xNzliNE9FZDBwUlo3bThzM2JiQm1uREppWE1TNmNXU3ViT3VyQ0hCOFRzMHg4MVJPTW5JQ2c0dTc0ZTFpek45anBuMA?oc=5" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">Riding an AI rally, Robinhood preps second retail venture IPO</h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">Riding an AI rally, Robinhood preps second retail venture IPO The Tech Buzz</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
+<div class="item-card border border-white/10 rounded-xl px-5 py-4">
+  <h3 class="text-base font-medium text-white leading-snug">
+    <a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE1aXzhkcVQ2MTN6SGNZVndqczhGY2xQaFNNSnBWQ0EtYm1MVzFudGJtUFEyYUZkQnlyRjk2aVctV1RZNXJOeE5hZFhPNXhaY0VHcmdaWU5fd0NReTlPemFURDd6Z2s4cFhpNlhzMnVYY0M1TkJwLVE?oc=5" target="_blank" rel="noopener" class="hover:underline">5 Things to Know About the Robinhood Gold Card</a>
+  </h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-2">5 Things to Know About the Robinhood Gold Card NerdWallet</p>
+  
+<div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
+  
+  <span>2d ago</span>
+  <span class="text-white/20">·</span>
+  <a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE1aXzhkcVQ2MTN6SGNZVndqczhGY2xQaFNNSnBWQ0EtYm1MVzFudGJtUFEyYUZkQnlyRjk2aVctV1RZNXJOeE5hZFhPNXhaY0VHcmdaWU5fd0NReTlPemFURDd6Z2s4cFhpNlhzMnVYY0M1TkJwLVE?oc=5" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
+    NerdWallet
+  </a>
+  <span></span>
+</div>
+
+</div>
+
+
+<div class="item-card border border-white/10 rounded-xl px-5 py-4">
+  <h3 class="text-base font-medium text-white leading-snug">
+    <a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxPaDF4cjdRcWZaZUd4aG40eEpyNzZTOTNKM09yWmlhWFpSZFQyc2xMT1dSclVNcnFVcGNlVGZ6SjU0MWFXQXZGWlRMRWpyUDc5b2dnUW0tWXhIZHZwNHotR3dzZ00tUGwyZXM4LXNfMlpSaGtSc3B4R19uYUlucUUyNVBjYllENzZRRGZSMWs2VDNMWENoXzFmMg?oc=5" target="_blank" rel="noopener" class="hover:underline">Exclusive: Robinhood preps for second public VC fund</a>
+  </h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-2">Exclusive: Robinhood preps for second public VC fund Axios</p>
+  
+<div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
+  
+  <span>2d ago</span>
+  <span class="text-white/20">·</span>
+  <a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxPaDF4cjdRcWZaZUd4aG40eEpyNzZTOTNKM09yWmlhWFpSZFQyc2xMT1dSclVNcnFVcGNlVGZ6SjU0MWFXQXZGWlRMRWpyUDc5b2dnUW0tWXhIZHZwNHotR3dzZ00tUGwyZXM4LXNfMlpSaGtSc3B4R19uYUlucUUyNVBjYllENzZRRGZSMWs2VDNMWENoXzFmMg?oc=5" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
+    Axios
+  </a>
+  <span></span>
+</div>
+
+</div>
+
+
+<div class="item-card border border-white/10 rounded-xl px-5 py-4">
+  <h3 class="text-base font-medium text-white leading-snug">
+    <a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxQOUxnTE5XamxzMnV4aEo2YlBfZ3U0WFZjZW1XVkJJXzJPVHM1emVLb2FPbV9mbzFnc21KaVBDeU80b1NsSjhyWC1xenMyb3J3ZGZkdXRRUy1JVW5NRVhabzVKLW9ianNxQllKMkJjc3BRTkFMTUJrbkowTkFMRmtLTE5lMlN1ZUQ5ek1VZzNFdmRMa2tqVllZb2RiemQ4VHhlTVYzekZMSm1qYmQ4?oc=5" target="_blank" rel="noopener" class="hover:underline">Robinhood to Launch Second Venture Fund Amid Continued AI Momentum</a>
+  </h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-2">Robinhood to Launch Second Venture Fund Amid Continued AI Momentum Finance Magnates</p>
+  
+<div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
+  
+  <span>2d ago</span>
+  <span class="text-white/20">·</span>
+  <a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxQOUxnTE5XamxzMnV4aEo2YlBfZ3U0WFZjZW1XVkJJXzJPVHM1emVLb2FPbV9mbzFnc21KaVBDeU80b1NsSjhyWC1xenMyb3J3ZGZkdXRRUy1JVW5NRVhabzVKLW9ianNxQllKMkJjc3BRTkFMTUJrbkowTkFMRmtLTE5lMlN1ZUQ5ek1VZzNFdmRMa2tqVllZb2RiemQ4VHhlTVYzekZMSm1qYmQ4?oc=5" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
+    Finance Magnates
+  </a>
+  <span></span>
+</div>
+
+</div>
+
+
+<div class="item-card border border-white/10 rounded-xl px-5 py-4">
+  <h3 class="text-base font-medium text-white leading-snug">
+    <a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE5xMS0wd0xCTFM1cTRKWEIyWnBnTWJnUFJBdWlBV0RFQ085VkZsYkRvalI2dkdNUVU3Mk84VGIzZkRnY2oyWWpFaWhLalVEb0xRRmtZNkRHZGszNEtsWlV2SUhWclZxU1RtRnJfZ1NUZGVNaE9k?oc=5" target="_blank" rel="noopener" class="hover:underline">Robinhood Files for Second Venture Fund RVII to Open Early-Stage AI Startup Investing to Retail</a>
+  </h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-2">Robinhood Files for Second Venture Fund RVII to Open Early-Stage AI Startup Investing to Retail AI Insider</p>
+  
+<div class="mt-3">
+  <div class="flex items-center gap-2 text-[11px] text-white/45 mb-2">
     
     <span>2d ago</span>
     <span class="text-white/20">·</span>
-    <span>The Tech Buzz</span>
+    <span class="brand-accent font-semibold">2 sources</span>
   </div>
-</a>
+  <ul class="text-[12px] space-y-1 ml-1 list-disc list-inside marker:text-white/30">
+    <li><a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE5xMS0wd0xCTFM1cTRKWEIyWnBnTWJnUFJBdWlBV0RFQ085VkZsYkRvalI2dkdNUVU3Mk84VGIzZkRnY2oyWWpFaWhLalVEb0xRRmtZNkRHZGszNEtsWlV2SUhWclZxU1RtRnJfZ1NUZGVNaE9k?oc=5" target="_blank" rel="noopener" class="text-white/65 hover:text-white underline-offset-2 hover:underline">Crypto Briefing</a></li><li><a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxQY2pmQTZtWHN3NG12UmI0dktfbmFfaVhjTGs2empTMXRqM3AtdGh6QVZ4aVY0MnpXM2h0Unh0Q3hTa1hjN0o4T2c5NlR5aFR0aFA2enQyRTcyanNUNXl6SmROXzNvVTJ1ZHE4T3JGREdnZHBRQ0lBUmZyNEt5TmdrYmhtYmZLaklPTWhtN0F5TUh0ZWJRVUJSWDlGa0MwdWQ2cExaZUdWOVUwZEdIYlJic2kzMDBnMXc2c0poRGdZakM2eTVkdzhLWmg0UWI2UQ?oc=5" target="_blank" rel="noopener" class="text-white/65 hover:text-white underline-offset-2 hover:underline">AI Insider</a></li>
+  </ul>
+</div>
+
+</div>
 
 
-<a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxNbXpCMXhfaXFZWUI4S0V2LXZocV9NRm1rbVhaTk1lWnZ5Vkstb0hsYTRrSkxsdExkdURVLTctbWYzcWJleElZcXZTaF9VWVpadU9qQy03ZlFXWHNzYlJHSGRMOUYySUtvRmhhQ1lZOEU1bXhYekZTYmVRRjdUMlBUd3IySGdnd3lDQUVOUXBLX01nMTZPZUpWN0pwdw?oc=5" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">Riding an AI rally, Robinhood preps second retail venture IPO</h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">Riding an AI rally, Robinhood preps second retail venture IPO TechCrunch</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
+<div class="item-card border border-white/10 rounded-xl px-5 py-4">
+  <h3 class="text-base font-medium text-white leading-snug">
+    <a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxOMmxBMk53Ykg0XzJyNzBTcGQwb1JOYXJUVFNibjhrLWVSNWlacjFVMmpWcWRCSlcybFhVcFNpM3daVG1VYV8xRHltS2U2TnNrRnIzRUFWVEk5ZTdiVVJjZTJ1endKTk5pZnFQejVmY2p2WWltMWd1Q2QwYUVzS2daQkxzT1FTTWlkN0pmdWlka3cyeHVoTGw0eG1ucGh6SGozTDZZ?oc=5" target="_blank" rel="noopener" class="hover:underline">Robinhood (HOOD) Stock; Surges Nearly 5% as Second Venture Fund Filing Emerges</a>
+  </h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-2">Robinhood (HOOD) Stock; Surges Nearly 5% as Second Venture Fund Filing Emerges CoinCentral</p>
+  
+<div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
+  
+  <span>2d ago</span>
+  <span class="text-white/20">·</span>
+  <a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxOMmxBMk53Ykg0XzJyNzBTcGQwb1JOYXJUVFNibjhrLWVSNWlacjFVMmpWcWRCSlcybFhVcFNpM3daVG1VYV8xRHltS2U2TnNrRnIzRUFWVEk5ZTdiVVJjZTJ1endKTk5pZnFQejVmY2p2WWltMWd1Q2QwYUVzS2daQkxzT1FTTWlkN0pmdWlka3cyeHVoTGw0eG1ucGh6SGozTDZZ?oc=5" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
+    CoinCentral
+  </a>
+  <span></span>
+</div>
+
+</div>
+
+
+<div class="item-card border border-white/10 rounded-xl px-5 py-4">
+  <h3 class="text-base font-medium text-white leading-snug">
+    <a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxQSWZCWkx3QXo3WDF4cmdmVTlhNUFXR3NJTmY2eG9fVVg4S3BPcGxyYkVndzliWFJQdVhPeVhaMTJESWpCanliVmV6bkdlNHRmbkpnNm4xNzliNE9FZDBwUlo3bThzM2JiQm1uREppWE1TNmNXU3ViT3VyQ0hCOFRzMHg4MVJPTW5JQ2c0dTc0ZTFpek45anBuMA?oc=5" target="_blank" rel="noopener" class="hover:underline">Riding an AI rally, Robinhood preps second retail venture IPO</a>
+  </h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-2">Riding an AI rally, Robinhood preps second retail venture IPO The Tech Buzz</p>
+  
+<div class="mt-3">
+  <div class="flex items-center gap-2 text-[11px] text-white/45 mb-2">
     
     <span>2d ago</span>
     <span class="text-white/20">·</span>
-    <span>TechCrunch</span>
+    <span class="brand-accent font-semibold">2 sources</span>
   </div>
-</a>
+  <ul class="text-[12px] space-y-1 ml-1 list-disc list-inside marker:text-white/30">
+    <li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxQSWZCWkx3QXo3WDF4cmdmVTlhNUFXR3NJTmY2eG9fVVg4S3BPcGxyYkVndzliWFJQdVhPeVhaMTJESWpCanliVmV6bkdlNHRmbkpnNm4xNzliNE9FZDBwUlo3bThzM2JiQm1uREppWE1TNmNXU3ViT3VyQ0hCOFRzMHg4MVJPTW5JQ2c0dTc0ZTFpek45anBuMA?oc=5" target="_blank" rel="noopener" class="text-white/65 hover:text-white underline-offset-2 hover:underline">The Tech Buzz</a></li><li><a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxNbXpCMXhfaXFZWUI4S0V2LXZocV9NRm1rbVhaTk1lWnZ5Vkstb0hsYTRrSkxsdExkdURVLTctbWYzcWJleElZcXZTaF9VWVpadU9qQy03ZlFXWHNzYlJHSGRMOUYySUtvRmhhQ1lZOEU1bXhYekZTYmVRRjdUMlBUd3IySGdnd3lDQUVOUXBLX01nMTZPZUpWN0pwdw?oc=5" target="_blank" rel="noopener" class="text-white/65 hover:text-white underline-offset-2 hover:underline">TechCrunch</a></li>
+  </ul>
+</div>
+
+</div>
 
 
-<a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQaUUwdU04RHlwbWNPR1ZnQXlWdjRxeERwVTJib3dkTU4wLTBZYjNST19CUTJDVGpUNlR2VGFaQzVfbDY0VDVfbzZwMTA0a25kNmRnY1FCZTF2Q2Z1anF1WDFMZWZUODgwcW0zaXc4bUg0UXNERk5vNTg2bG5GWHNQS2NOenNoMGY1?oc=5" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">Robinhood traders bought the dip — and that one, that one, and that one</h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">Robinhood traders bought the dip — and that one, that one, and that one Sherwood News</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
-    
-    <span>3d ago</span>
-    <span class="text-white/20">·</span>
-    <span>Sherwood News</span>
-  </div>
-</a>
+<div class="item-card border border-white/10 rounded-xl px-5 py-4">
+  <h3 class="text-base font-medium text-white leading-snug">
+    <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQaUUwdU04RHlwbWNPR1ZnQXlWdjRxeERwVTJib3dkTU4wLTBZYjNST19CUTJDVGpUNlR2VGFaQzVfbDY0VDVfbzZwMTA0a25kNmRnY1FCZTF2Q2Z1anF1WDFMZWZUODgwcW0zaXc4bUg0UXNERk5vNTg2bG5GWHNQS2NOenNoMGY1?oc=5" target="_blank" rel="noopener" class="hover:underline">Robinhood traders bought the dip — and that one, that one, and that one</a>
+  </h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-2">Robinhood traders bought the dip — and that one, that one, and that one Sherwood News</p>
+  
+<div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
+  
+  <span>3d ago</span>
+  <span class="text-white/20">·</span>
+  <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQaUUwdU04RHlwbWNPR1ZnQXlWdjRxeERwVTJib3dkTU4wLTBZYjNST19CUTJDVGpUNlR2VGFaQzVfbDY0VDVfbzZwMTA0a25kNmRnY1FCZTF2Q2Z1anF1WDFMZWZUODgwcW0zaXc4bUg0UXNERk5vNTg2bG5GWHNQS2NOenNoMGY1?oc=5" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
+    Sherwood News
+  </a>
+  <span></span>
+</div>
+
+</div>
 
 
-<a href="https://www.sec.gov/Archives/edgar/data/1783879/000178387926000065/hood-20260507.htm" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">8-K Filing · 8-K<span class="text-[10px] uppercase tracking-widest text-amber-400/80 bg-amber-400/10 px-2 py-0.5 rounded ml-2">SEC Filing</span></h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">SEC 8-K filing by Robinhood on 2026-05-08.</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
-    
-    <span>6d ago</span>
-    <span class="text-white/20">·</span>
-    <span>SEC EDGAR</span>
-  </div>
-</a>
+<div class="item-card border border-white/10 rounded-xl px-5 py-4">
+  <h3 class="text-base font-medium text-white leading-snug">
+    <a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxOWEtFNGxDdVU1SmtpSloxOUJ2QlVtd1ROLUFkcm02dzI0cnFINHNwWElDelVpS0d1LWlHakVyazdjUHQtTkRLdmc1X1ZhRGlSSS03akdld2dya25sZjlVSV9HMXJLak5ZX29HZFhFc2JvaUpxQ1lqWWd4Q0dJbk1iS3JUNjk?oc=5" target="_blank" rel="noopener" class="hover:underline">Robinhood (HOOD) vs Charles Schwab (SCHW) 2026 Stock Guide</a>
+  </h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-2">Robinhood (HOOD) vs Charles Schwab (SCHW) 2026 Stock Guide Gotrade</p>
+  
+<div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
+  
+  <span>2026-05-07</span>
+  <span class="text-white/20">·</span>
+  <a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxOWEtFNGxDdVU1SmtpSloxOUJ2QlVtd1ROLUFkcm02dzI0cnFINHNwWElDelVpS0d1LWlHakVyazdjUHQtTkRLdmc1X1ZhRGlSSS03akdld2dya25sZjlVSV9HMXJLak5ZX29HZFhFc2JvaUpxQ1lqWWd4Q0dJbk1iS3JUNjk?oc=5" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
+    Gotrade
+  </a>
+  <span></span>
+</div>
+
+</div>
 
 
-<a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxOWEtFNGxDdVU1SmtpSloxOUJ2QlVtd1ROLUFkcm02dzI0cnFINHNwWElDelVpS0d1LWlHakVyazdjUHQtTkRLdmc1X1ZhRGlSSS03akdld2dya25sZjlVSV9HMXJLak5ZX29HZFhFc2JvaUpxQ1lqWWd4Q0dJbk1iS3JUNjk?oc=5" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">Robinhood (HOOD) vs Charles Schwab (SCHW) 2026 Stock Guide</h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">Robinhood (HOOD) vs Charles Schwab (SCHW) 2026 Stock Guide Gotrade</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
-    
-    <span>2026-05-07</span>
-    <span class="text-white/20">·</span>
-    <span>Gotrade</span>
-  </div>
-</a>
+<div class="item-card border border-white/10 rounded-xl px-5 py-4">
+  <h3 class="text-base font-medium text-white leading-snug">
+    <a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxOYUkwUVVCM0NoeWs5UXZuU21GbVJGbXduZzdSUkJ6QXdEeHNqdHZCUHdqM3RQejdvMXVrUmYycXBGZEthRTUyMjBpQ19tMndmMEgyejd4NjZLTU1UNGhydmEzaFFFbW9TTGh1dFE2TkMyZXEwMm1NY0FVWFhOdWN1NmNFaDZaSG96eTdSU212aWp3cEdISGFWVDVLdVpILVcwdXVnZWlVbENvUW8?oc=5" target="_blank" rel="noopener" class="hover:underline">Robinhood CEO issues bold outlook on prediction markets business</a>
+  </h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-2">Robinhood CEO issues bold outlook on prediction markets business thestreet.com</p>
+  
+<div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
+  
+  <span>2026-05-05</span>
+  <span class="text-white/20">·</span>
+  <a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxOYUkwUVVCM0NoeWs5UXZuU21GbVJGbXduZzdSUkJ6QXdEeHNqdHZCUHdqM3RQejdvMXVrUmYycXBGZEthRTUyMjBpQ19tMndmMEgyejd4NjZLTU1UNGhydmEzaFFFbW9TTGh1dFE2TkMyZXEwMm1NY0FVWFhOdWN1NmNFaDZaSG96eTdSU212aWp3cEdISGFWVDVLdVpILVcwdXVnZWlVbENvUW8?oc=5" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
+    thestreet.com
+  </a>
+  <span></span>
+</div>
 
-  </div>
+</div>
+
+    </div>
+  </section>
 </main>
 
 <footer class="border-t border-white/10 mt-16">
   <div class="max-w-7xl mx-auto px-6 py-8 text-center text-xs text-white/40">
-    Built and maintained weekly by <span class="brand-accent">VSCRL</span> · PR Pulse · Tracks 11 fintech competitors
+    Built and maintained weekly by <span class="brand-accent">VSCRL</span> · PR Pulse · Tracks Acorns + 11 fintech competitors
   </div>
 </footer>
 

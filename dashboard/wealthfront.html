@@ -17,7 +17,7 @@
   .item-card:hover { background-color: rgba(255,255,255,0.03); border-color: rgba(116, 201, 71, 0.3); }
   .brand-tile { transition: transform 0.15s ease, border-color 0.15s ease; }
   .brand-tile:hover { transform: translateY(-2px); border-color: #74C947; }
-  /* Why-pill attention animation (first-visit wiggle) */
+  /* Why-pill attention animation */
   @keyframes why-wiggle {
     0%, 100% { transform: translateX(0) scale(1); }
     10% { transform: translateX(-3px) scale(1.06); }
@@ -55,85 +55,58 @@
   </div>
 </header>
 
-<main class="max-w-4xl mx-auto px-6 py-10">
-  <div class="mb-8">
+<main class="max-w-4xl mx-auto px-6 py-10 space-y-10">
+  <div>
     <h1 class="text-3xl font-semibold text-white mb-2">Wealthfront</h1>
     <p class="text-sm text-white/50">
-      5 items in the last 14 days · newest first
+      1 item in the last 14 days · newest first
     </p>
   </div>
-  <div class="grid grid-cols-1 gap-3">
-    
-<a href="https://news.google.com/rss/articles/CBMi6gFBVV95cUxOUGg4UkkzM2ZBbDlJVG5ZSjJlNHpWOUkyZGx4QmZEVUJfNENHSFoyeFV1MjZHXzBtdVZfVkxLSzRpTEF6Z0Jwc3B2NDB0d0Zza3RMUTJYU0l2NVhOQ29MelYzRmhjNXdZUHZhZV9IeVdQcnV1aXctNU5oSzNMNkstMzFoMzBHVFdqbUdwNnpaR0tYNmstck9mMks0UGw2MWEzemU0cElCTmM2Q3FSNDNnQ1ltRlFsazR0M2hzZi1ZaEUzRnBoWW04bWtVMW0xbk5mU3ZzVTlZWXdrLU9VQVRpTmgwbmR2UUJrbkE?oc=5" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">Wealthfront to Announce Fiscal First Quarter 2027 Financial Results on June 4, 2026</h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">Wealthfront to Announce Fiscal First Quarter 2027 Financial Results on June 4, 2026 GlobeNewswire</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
-    
-    <span>just now</span>
-    <span class="text-white/20">·</span>
-    <span>GlobeNewswire</span>
-  </div>
-</a>
 
+  <section>
+    <div class="flex items-baseline gap-3 mb-4">
+      <h2 class="text-xl font-semibold text-white">Official PR</h2>
+      <span class="text-xs text-white/40">0 items</span>
+    </div>
+    <div class="grid grid-cols-1 gap-3">
+      <p class="text-white/50 text-sm">No official items in the last 14 days.</p>
+    </div>
+  </section>
 
-<a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxNQnJNRWxLMjdreEVrZnNPLTZ1ZGVYd1hqNC1MOEx6UUxyWTlBeEtFMlE5TkhyWkZJXzFKd09yY3ZhcEVuS19nRHFFSHE2WWg5eUxFcnFBN3NXWXhkdVJ2VzUwVVpiMF9FOXFXbzlxaDdnYmNrd1psN04zamFMZV9sTFNfRFlvS0FHU183ZFlET0tvZ1g4cUg0eWhPLWIwLUpvUW42dDRXWDM?oc=5" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">Fund Update: 508,777 $VUG Shares Added to Wealthfront Advisers LLC Portfolio</h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">Fund Update: 508,777 $VUG Shares Added to Wealthfront Advisers LLC Portfolio Moomoo</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
-    
-    <span>2026-05-05</span>
-    <span class="text-white/20">·</span>
-    <span>Moomoo</span>
-  </div>
-</a>
-
-
-<a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxORzRpUGhMVnBnUWk3ZVNseDRLMmhqQmk2WDdHSk5PNm1nRk5xRlhMa0JGRUtTT2ZtQ3NyV2Y2eUdhSWlGTVc3SlVKZ1FfX25EUU5mQUJJX19adlQyQkM0ZEM2RWxadzhRei0zOXlOYlJLRy0tRFktWG9TRHdDd3dNVDNXdUk1VUZRTExYSkU5NEktQzBnTU02Sm1QcVM3eHQtR2c?oc=5" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">Fund Update: Wealthfront Advisers LLC Just Disclosed New Holdings</h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">Fund Update: Wealthfront Advisers LLC Just Disclosed New Holdings Quiver Quantitative</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
+  <section>
+    <div class="flex items-baseline gap-3 mb-4">
+      <h2 class="text-xl font-semibold text-white">The Buzz</h2>
+      <span class="text-xs text-white/40">1 items</span>
+    </div>
+    <div class="grid grid-cols-1 gap-3">
+      
+<div class="item-card border border-white/10 rounded-xl px-5 py-4">
+  <h3 class="text-base font-medium text-white leading-snug">
+    <a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxORzRpUGhMVnBnUWk3ZVNseDRLMmhqQmk2WDdHSk5PNm1nRk5xRlhMa0JGRUtTT2ZtQ3NyV2Y2eUdhSWlGTVc3SlVKZ1FfX25EUU5mQUJJX19adlQyQkM0ZEM2RWxadzhRei0zOXlOYlJLRy0tRFktWG9TRHdDd3dNVDNXdUk1VUZRTExYSkU5NEktQzBnTU02Sm1QcVM3eHQtR2c?oc=5" target="_blank" rel="noopener" class="hover:underline">Fund Update: 508,777 $VUG shares added to Wealthfront Advisers LLC portfolio</a>
+  </h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-2">Fund Update: 508,777 $VUG shares added to Wealthfront Advisers LLC portfolio Quiver Quantitative</p>
+  
+<div class="mt-3">
+  <div class="flex items-center gap-2 text-[11px] text-white/45 mb-2">
     
     <span>2026-05-05</span>
     <span class="text-white/20">·</span>
-    <span>Quiver Quantitative</span>
+    <span class="brand-accent font-semibold">2 sources</span>
   </div>
-</a>
+  <ul class="text-[12px] space-y-1 ml-1 list-disc list-inside marker:text-white/30">
+    <li><a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxORzRpUGhMVnBnUWk3ZVNseDRLMmhqQmk2WDdHSk5PNm1nRk5xRlhMa0JGRUtTT2ZtQ3NyV2Y2eUdhSWlGTVc3SlVKZ1FfX25EUU5mQUJJX19adlQyQkM0ZEM2RWxadzhRei0zOXlOYlJLRy0tRFktWG9TRHdDd3dNVDNXdUk1VUZRTExYSkU5NEktQzBnTU02Sm1QcVM3eHQtR2c?oc=5" target="_blank" rel="noopener" class="text-white/65 hover:text-white underline-offset-2 hover:underline">Quiver Quantitative</a></li><li><a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxQVnhQX01zUUJHVlhyREpod0NDRGJKTTdhZks3ZlUzS3VIaWgyVzBOUWRxZVdEcGVoV2ptU3BYNzVRcUl0cEdnN0dQU2R2ZFk3Q2J6bUNNajJGejhiTzBHS3FYZ1pfNEtPYlZPRElnR3VzWjB3Y0g1UjhjdWR3WEFOM0d5dTZfQl95WkpVX01OZDdFc29tNVNLZDgwMjhDQXRxdHdYRnRkTkF5anJwQ2tDS2xuSHB4dw?oc=5" target="_blank" rel="noopener" class="text-white/65 hover:text-white underline-offset-2 hover:underline">Quiver Quantitative</a></li>
+  </ul>
+</div>
 
+</div>
 
-<a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxQVnhQX01zUUJHVlhyREpod0NDRGJKTTdhZks3ZlUzS3VIaWgyVzBOUWRxZVdEcGVoV2ptU3BYNzVRcUl0cEdnN0dQU2R2ZFk3Q2J6bUNNajJGejhiTzBHS3FYZ1pfNEtPYlZPRElnR3VzWjB3Y0g1UjhjdWR3WEFOM0d5dTZfQl95WkpVX01OZDdFc29tNVNLZDgwMjhDQXRxdHdYRnRkTkF5anJwQ2tDS2xuSHB4dw?oc=5" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">Fund Update: 508,777 $VUG shares added to Wealthfront Advisers LLC portfolio</h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">Fund Update: 508,777 $VUG shares added to Wealthfront Advisers LLC portfolio Quiver Quantitative</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
-    
-    <span>2026-05-05</span>
-    <span class="text-white/20">·</span>
-    <span>Quiver Quantitative</span>
-  </div>
-</a>
-
-
-<a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxNeDJ5bFZIaHZTVnZrUlFld1gtRGlSaW1EY0NmUDZ3NHhUV0d6YTc0czVYdHpxeWpEa244Ny1SZmFiVHpPdThjSUpYaUV5MjlGZlpfMVVsN3Q0SXhDMk9ZQkp3NlpocmFRSkxGZUhFYkFkTGhILTVocHJmU1dGRTlGems4UnRoQ0MtbTVxdG51cHR0VmQ3SWhYaEZFT3RQOEMtTTF4dkZKbjZFZVhiR1BzejhB?oc=5" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">Wells Fargo Maintains Wealthfront(WLTH.US) With Buy Rating, Raises Target Price to $13</h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">Wells Fargo Maintains Wealthfront(WLTH.US) With Buy Rating, Raises Target Price to $13 Moomoo</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
-    
-    <span>2026-05-04</span>
-    <span class="text-white/20">·</span>
-    <span>Moomoo</span>
-  </div>
-</a>
-
-  </div>
+    </div>
+  </section>
 </main>
 
 <footer class="border-t border-white/10 mt-16">
   <div class="max-w-7xl mx-auto px-6 py-8 text-center text-xs text-white/40">
-    Built and maintained weekly by <span class="brand-accent">VSCRL</span> · PR Pulse · Tracks 11 fintech competitors
+    Built and maintained weekly by <span class="brand-accent">VSCRL</span> · PR Pulse · Tracks Acorns + 11 fintech competitors
   </div>
 </footer>
 

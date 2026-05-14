@@ -40,8 +40,9 @@ DATA_PATH = ROOT / "data" / "current.json"
 
 sys.path.insert(0, str(ROOT))
 from pipeline.sources import (
-    BRANDS, SEC_CIKS, SEC_FORMS,
+    ALL_TRACKED, SEC_CIKS, SEC_FORMS,
     BLOCKED_PUBLISHERS, BLOCKED_TITLE_PATTERNS,
+    OFFICIAL_PR_PUBLISHERS,
     google_news_rss_url, sec_filings_url,
 )
 
@@ -51,6 +52,7 @@ from pipeline.sources import (
 # This catches Google News false-matches (e.g. a "Portland man sentenced" article
 # tagged to "Cash App" because the article mentions "cash app" in the body).
 BRAND_TITLE_TERMS = {
+    "Acorns":      ["acorns"],
     "Chime":       ["chime"],
     "Robinhood":   ["robinhood", "hood"],   # "HOOD" = ticker
     "Alinea":      ["alinea"],
@@ -63,6 +65,14 @@ BRAND_TITLE_TERMS = {
     "Polymarket":  ["polymarket"],
     "Chase":       ["chase", "jpmorgan", "jpm"],
 }
+
+
+def classify_official(item: dict) -> bool:
+    """True if the item is from an official PR source (SEC filing or PR wire)."""
+    if item.get("type") == "filing":
+        return True
+    publisher = (item.get("source") or "").lower()
+    return any(p in publisher for p in OFFICIAL_PR_PUBLISHERS)
 
 # SEC EDGAR requires a User-Agent identifying the requester per their fair-access policy.
 SEC_UA = "VSCRL acorns-pr-pulse (alec@vscrl.co)"
@@ -172,6 +182,15 @@ def fetch_google_news(brand: str, slug: str) -> list[dict]:
         except Exception:
             continue  # skip items without parseable dates
 
+        # Author extraction — feedparser surfaces author fields inconsistently across
+        # Google News output. Try a few possible keys.
+        author = entry.get("author") or ""
+        if not author:
+            authors_list = entry.get("authors") or []
+            if authors_list and isinstance(authors_list, list):
+                author = authors_list[0].get("name") if isinstance(authors_list[0], dict) else str(authors_list[0])
+        author = _clean_text(author) if author else ""
+
         items.append({
             "brand":   brand,
             "slug":    slug,
@@ -179,6 +198,7 @@ def fetch_google_news(brand: str, slug: str) -> list[dict]:
             "summary": _summary(entry.get("summary", "") or entry.get("description", "")),
             "url":     link,
             "source":  source_label,
+            "author":  author,
             "date":    dt.astimezone(timezone.utc).isoformat(),
             "type":    "news",
         })
@@ -226,6 +246,7 @@ def fetch_sec_filings(brand: str, slug: str) -> list[dict]:
             "summary": f"SEC {form} filing by {brand} on {dates[i]}.",
             "url":     filing_url,
             "source":  "SEC EDGAR",
+            "author":  "",
             "date":    dt.isoformat(),
             "type":    "filing",
         })
@@ -252,10 +273,15 @@ def filter_noise(items: list[dict]) -> list[dict]:
             dropped_title += 1
             continue
         # Relevance check: brand name (or an alias) must appear in the title.
-        terms = BRAND_TITLE_TERMS.get(item["brand"], [item["brand"].lower()])
-        if not any(term in title_lower for term in terms):
-            dropped_relevance += 1
-            continue
+        # EXCEPTION: skip this check entirely for Acorns (the subject) — Google News
+        # already disambiguates with the query's "(fintech OR investing OR app)" filter,
+        # and the PR team wants every Acorns mention surfaced, including roundup articles
+        # ("Best robo-advisors of 2026") whose titles don't name the brand.
+        if item["brand"] != "Acorns":
+            terms = BRAND_TITLE_TERMS.get(item["brand"], [item["brand"].lower()])
+            if not any(term in title_lower for term in terms):
+                dropped_relevance += 1
+                continue
         out.append(item)
     print(f"  noise filter: dropped {dropped_pub} publisher, {dropped_title} title pattern, {dropped_relevance} off-topic")
     return out
@@ -274,16 +300,167 @@ def dedupe(items: list[dict]) -> list[dict]:
     return out
 
 
+# Stopwords stripped before computing title similarity. Includes common English
+# function words + filler words common in headlines.
+_STOPWORDS = {
+    "the", "a", "an", "of", "in", "for", "on", "with", "to", "and", "or", "is",
+    "by", "at", "as", "be", "are", "was", "were", "this", "that", "from", "but",
+    "if", "not", "it", "its", "they", "their", "have", "has", "had", "will",
+    "new", "now", "today", "year", "after", "before", "over", "under", "into",
+}
+
+
+def _title_tokens(title: str, brand_aliases: list[str]) -> set[str]:
+    """Tokenize a title for similarity comparison. Lowercase, drop stopwords, drop
+    brand-name tokens (so 'Kalshi sues NM tribes' vs 'New Mexico tribes sue Kalshi'
+    don't both reduce to 'kalshi + tribes')."""
+    text = title.lower()
+    for alias in brand_aliases:
+        text = text.replace(alias, " ")
+    tokens = re.findall(r"[a-z0-9]+", text)
+    return {t for t in tokens if t not in _STOPWORDS and len(t) > 2}
+
+
+def group_similar(
+    items: list[dict],
+    title_threshold: float = 0.45,
+    combined_threshold: float = 0.35,
+    hours: int = 72,
+) -> list[dict]:
+    """Group items reporting the same story across multiple publishers.
+
+    Two items belong in the same group when:
+      - same brand
+      - filed within `hours` of each other
+      - EITHER title Jaccard >= title_threshold,
+        OR title+summary combined Jaccard >= combined_threshold (catches cases
+        where two headlines about the same event word things differently but the
+        summary lede mentions overlapping facts)
+
+    Each group becomes ONE consolidated item carrying a `sources` list of all the
+    original (publisher, url, author) tuples. Title becomes the longest title in
+    the group (most informative).
+    """
+    if not items:
+        return []
+    # Sort by date desc so the "primary" (first in group) is the most recent.
+    items = sorted(items, key=lambda x: x["date"], reverse=True)
+    used = [False] * len(items)
+    out: list[dict] = []
+
+    for i, item in enumerate(items):
+        if used[i]:
+            continue
+        used[i] = True
+        # Filing-type items are unique by URL already; don't group them.
+        if item.get("type") == "filing":
+            item["sources"] = [{"publisher": item.get("source", ""), "url": item["url"], "author": item.get("author", "")}]
+            out.append(item)
+            continue
+
+        aliases = BRAND_TITLE_TERMS.get(item["brand"], [item["brand"].lower()])
+        anchor_title_tokens = _title_tokens(item["title"], aliases)
+        anchor_full_tokens = _title_tokens(
+            item["title"] + " " + item.get("summary", ""), aliases
+        )
+        anchor_date = datetime.fromisoformat(item["date"])
+        group = [item]
+
+        for j in range(i + 1, len(items)):
+            if used[j]:
+                continue
+            other = items[j]
+            if other["brand"] != item["brand"]:
+                continue
+            if other.get("type") == "filing":
+                continue
+            other_date = datetime.fromisoformat(other["date"])
+            if abs((anchor_date - other_date).total_seconds()) > hours * 3600:
+                continue
+            other_title_tokens = _title_tokens(other["title"], aliases)
+            other_full_tokens = _title_tokens(
+                other["title"] + " " + other.get("summary", ""), aliases
+            )
+            title_jac = (
+                len(anchor_title_tokens & other_title_tokens)
+                / max(len(anchor_title_tokens | other_title_tokens), 1)
+            )
+            full_jac = (
+                len(anchor_full_tokens & other_full_tokens)
+                / max(len(anchor_full_tokens | other_full_tokens), 1)
+            )
+            if title_jac >= title_threshold or full_jac >= combined_threshold:
+                used[j] = True
+                group.append(other)
+
+        # Build the consolidated item. Use the longest title (most informative).
+        primary = max(group, key=lambda x: len(x["title"]))
+        sources = [
+            {"publisher": g.get("source", ""), "url": g["url"], "author": g.get("author", "")}
+            for g in group
+        ]
+        consolidated = {
+            **primary,
+            "sources": sources,
+            "group_size": len(group),
+        }
+        out.append(consolidated)
+
+    return out
+
+
 def filter_window(items: list[dict], days: int) -> list[dict]:
     """Drop items older than `days` from now."""
     cutoff = datetime.now(timezone.utc) - timedelta(days=days)
     return [i for i in items if datetime.fromisoformat(i["date"]) >= cutoff]
 
 
+def update_reporters_log(items: list[dict]) -> None:
+    """Maintain a running log of reporter bylines at data/reporters.json.
+    Each unique (author, publisher) pair tracks: first_seen, last_seen, brands
+    covered, total_count. Built up over time across weekly refreshes."""
+    log_path = ROOT / "data" / "reporters.json"
+    existing: dict = {}
+    if log_path.exists():
+        try:
+            existing = json.loads(log_path.read_text())
+        except Exception:
+            existing = {}
+
+    today_iso = datetime.now(timezone.utc).date().isoformat()
+    for item in items:
+        # SEC filings have no byline; skip.
+        if item.get("type") == "filing":
+            continue
+        # Each consolidated item may carry multiple sources after group_similar.
+        sources = item.get("sources") or [{"publisher": item.get("source", ""), "author": item.get("author", "")}]
+        for s in sources:
+            author = (s.get("author") or "").strip()
+            publisher = (s.get("publisher") or "").strip()
+            if not author or not publisher:
+                continue
+            key = f"{author} :: {publisher}"
+            row = existing.get(key, {
+                "author": author,
+                "publisher": publisher,
+                "first_seen": today_iso,
+                "brands": [],
+                "count": 0,
+            })
+            row["last_seen"] = today_iso
+            row["count"] = row.get("count", 0) + 1
+            if item["brand"] not in row["brands"]:
+                row["brands"] = sorted(set(row["brands"] + [item["brand"]]))
+            existing[key] = row
+
+    log_path.write_text(json.dumps(existing, indent=2, sort_keys=True))
+    print(f"\nReporter log: {len(existing)} unique (author, publisher) pairs at {log_path}")
+
+
 def main() -> None:
     all_items: list[dict] = []
-    print(f"Collecting PR items (last {WINDOW_DAYS} days) across {len(BRANDS)} brands...")
-    for brand, slug in BRANDS:
+    print(f"Collecting PR items (last {WINDOW_DAYS} days) across {len(ALL_TRACKED)} entities (1 subject + {len(ALL_TRACKED)-1} competitors)...")
+    for brand, slug in ALL_TRACKED:
         print(f"  · {brand}", end="", flush=True)
         news = fetch_google_news(brand, slug)
         sec = fetch_sec_filings(brand, slug)
@@ -296,9 +473,19 @@ def main() -> None:
     all_items = filter_noise(all_items)
     print(f"After noise filter: {len(all_items)}")
     all_items = dedupe(all_items)
-    print(f"After dedupe: {len(all_items)}")
+    print(f"After URL dedupe: {len(all_items)}")
     all_items = filter_window(all_items, WINDOW_DAYS)
     print(f"After {WINDOW_DAYS}-day window: {len(all_items)}")
+
+    # Group near-duplicate stories across publishers. Each consolidated item
+    # carries a `sources` list with all the (publisher, url, author) tuples.
+    before_grouping = len(all_items)
+    all_items = group_similar(all_items)
+    print(f"After similar-story grouping: {len(all_items)} (collapsed {before_grouping - len(all_items)} duplicates)")
+
+    # Mark each item as Official PR or Buzz (skip for filings — they're always Official).
+    for item in all_items:
+        item["is_official"] = classify_official(item)
 
     all_items.sort(key=lambda x: x["date"], reverse=True)
 
@@ -321,6 +508,9 @@ def main() -> None:
     DATA_PATH.parent.mkdir(parents=True, exist_ok=True)
     DATA_PATH.write_text(json.dumps(all_items, indent=2))
     print(f"\nWrote {DATA_PATH}")
+
+    # Persist the running reporter log so the dashboard can show top bylines over time.
+    update_reporters_log(all_items)
 
 
 if __name__ == "__main__":

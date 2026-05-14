@@ -17,7 +17,7 @@
   .item-card:hover { background-color: rgba(255,255,255,0.03); border-color: rgba(116, 201, 71, 0.3); }
   .brand-tile { transition: transform 0.15s ease, border-color 0.15s ease; }
   .brand-tile:hover { transform: translateY(-2px); border-color: #74C947; }
-  /* Why-pill attention animation (first-visit wiggle) */
+  /* Why-pill attention animation */
   @keyframes why-wiggle {
     0%, 100% { transform: translateX(0) scale(1); }
     10% { transform: translateX(-3px) scale(1.06); }
@@ -55,46 +55,75 @@
   </div>
 </header>
 
-<main class="max-w-4xl mx-auto px-6 py-10">
-  <div class="mb-8">
+<main class="max-w-4xl mx-auto px-6 py-10 space-y-10">
+  <div>
     <h1 class="text-3xl font-semibold text-white mb-2">Betterment</h1>
     <p class="text-sm text-white/50">
       2 items in the last 14 days · newest first
     </p>
   </div>
-  <div class="grid grid-cols-1 gap-3">
-    
-<a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQdEVsYUVva1VmLW9LSjBwbjdJd05zdF9IeEVacVp4XzNraGF5Ml9iUjlvVGxrTENqTUd5cGRMTTROclVRcU1Bbkwyam5JQVlXdUI1Y0FRU3dRV3RjYnNELVktaElwUm5lOHdBWFlQVjZCSkhOVERFdXNCVmJhYTFOdjMtek5fTUpH?oc=5" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">Betterment Review 2026</h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">Betterment Review 2026 WSJ</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
-    
-    <span>2026-05-07</span>
-    <span class="text-white/20">·</span>
-    <span>WSJ</span>
-  </div>
-</a>
+
+  <section>
+    <div class="flex items-baseline gap-3 mb-4">
+      <h2 class="text-xl font-semibold text-white">Official PR</h2>
+      <span class="text-xs text-white/40">0 items</span>
+    </div>
+    <div class="grid grid-cols-1 gap-3">
+      <p class="text-white/50 text-sm">No official items in the last 14 days.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="flex items-baseline gap-3 mb-4">
+      <h2 class="text-xl font-semibold text-white">The Buzz</h2>
+      <span class="text-xs text-white/40">2 items</span>
+    </div>
+    <div class="grid grid-cols-1 gap-3">
+      
+<div class="item-card border border-white/10 rounded-xl px-5 py-4">
+  <h3 class="text-base font-medium text-white leading-snug">
+    <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQdEVsYUVva1VmLW9LSjBwbjdJd05zdF9IeEVacVp4XzNraGF5Ml9iUjlvVGxrTENqTUd5cGRMTTROclVRcU1Bbkwyam5JQVlXdUI1Y0FRU3dRV3RjYnNELVktaElwUm5lOHdBWFlQVjZCSkhOVERFdXNCVmJhYTFOdjMtek5fTUpH?oc=5" target="_blank" rel="noopener" class="hover:underline">Betterment Review 2026</a>
+  </h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-2">Betterment Review 2026 WSJ</p>
+  
+<div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
+  
+  <span>2026-05-07</span>
+  <span class="text-white/20">·</span>
+  <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQdEVsYUVva1VmLW9LSjBwbjdJd05zdF9IeEVacVp4XzNraGF5Ml9iUjlvVGxrTENqTUd5cGRMTTROclVRcU1Bbkwyam5JQVlXdUI1Y0FRU3dRV3RjYnNELVktaElwUm5lOHdBWFlQVjZCSkhOVERFdXNCVmJhYTFOdjMtek5fTUpH?oc=5" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
+    WSJ
+  </a>
+  <span></span>
+</div>
+
+</div>
 
 
-<a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE56Z3RqYTgwcWd2VmhwTWRLNUE5OTV2U2hyRzNnV2xSM3BfcEtGaUw5Ui12bVBCOG5CM3FqN2JFa1JLQlVSemduMXdWeEVFTXlHTTc5cmhaRDdlMzFDeXppOWRfUU50Zw?oc=5" target="_blank" rel="noopener"
-   class="item-card block border border-white/10 rounded-xl px-5 py-4">
-  <h3 class="text-base font-medium text-white leading-snug">Betterment Review 2026: A Top-Tier Robo-Advisor Worth Considering</h3>
-  <p class="text-sm text-white/60 leading-relaxed mt-2 mb-3">Betterment Review 2026: A Top-Tier Robo-Advisor Worth Considering NerdWallet</p>
-  <div class="flex items-center gap-2 text-[11px] text-white/45 mt-2">
-    
-    <span>2026-05-05</span>
-    <span class="text-white/20">·</span>
-    <span>NerdWallet</span>
-  </div>
-</a>
+<div class="item-card border border-white/10 rounded-xl px-5 py-4">
+  <h3 class="text-base font-medium text-white leading-snug">
+    <a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE56Z3RqYTgwcWd2VmhwTWRLNUE5OTV2U2hyRzNnV2xSM3BfcEtGaUw5Ui12bVBCOG5CM3FqN2JFa1JLQlVSemduMXdWeEVFTXlHTTc5cmhaRDdlMzFDeXppOWRfUU50Zw?oc=5" target="_blank" rel="noopener" class="hover:underline">Betterment Review 2026: A Top-Tier Robo-Advisor Worth Considering</a>
+  </h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-2">Betterment Review 2026: A Top-Tier Robo-Advisor Worth Considering NerdWallet</p>
+  
+<div class="flex items-center gap-2 text-[11px] text-white/45 mt-3">
+  
+  <span>2026-05-05</span>
+  <span class="text-white/20">·</span>
+  <a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE56Z3RqYTgwcWd2VmhwTWRLNUE5OTV2U2hyRzNnV2xSM3BfcEtGaUw5Ui12bVBCOG5CM3FqN2JFa1JLQlVSemduMXdWeEVFTXlHTTc5cmhaRDdlMzFDeXppOWRfUU50Zw?oc=5" target="_blank" rel="noopener" class="hover:text-white/80 underline-offset-2 hover:underline">
+    NerdWallet
+  </a>
+  <span></span>
+</div>
 
-  </div>
+</div>
+
+    </div>
+  </section>
 </main>
 
 <footer class="border-t border-white/10 mt-16">
   <div class="max-w-7xl mx-auto px-6 py-8 text-center text-xs text-white/40">
-    Built and maintained weekly by <span class="brand-accent">VSCRL</span> · PR Pulse · Tracks 11 fintech competitors
+    Built and maintained weekly by <span class="brand-accent">VSCRL</span> · PR Pulse · Tracks Acorns + 11 fintech competitors
   </div>
 </footer>
 

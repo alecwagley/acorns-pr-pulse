@@ -23,7 +23,11 @@ use the two source types above.
 """
 from __future__ import annotations
 
-# Display name → slug (used for URL paths + CSS classes)
+# The subject: tracked separately, rendered in its own "Acorns in the News" section
+# at the top of the dashboard. Same data shape, same collection, separate section.
+SUBJECT = ("Acorns", "acorns")
+
+# Competitors — display name → slug (used for URL paths + CSS classes)
 BRANDS = [
     ("Chime",       "chime"),
     ("Robinhood",   "robinhood"),
@@ -37,6 +41,29 @@ BRANDS = [
     ("Polymarket",  "polymarket"),
     ("Chase",       "chase"),
 ]
+
+# Everything we collect (subject + competitors). Order matters for the collector
+# loop but display order is handled by the generator.
+ALL_TRACKED = [SUBJECT] + BRANDS
+
+# Publishers that count as "Official PR" — PR distribution wires, company newsrooms,
+# and the SEC. Anything not in this set falls under "The Buzz" (tech press, analyst
+# commentary, news coverage). Case-insensitive substring match (same convention as
+# BLOCKED_PUBLISHERS).
+OFFICIAL_PR_PUBLISHERS = {
+    "globenewswire",         # PR wire
+    "pr newswire",           # PR wire
+    "prnewswire",            # PR wire (no space variant)
+    "businesswire",          # PR wire
+    "business wire",         # PR wire (with space)
+    "cision",                # PR wire / press release distribution
+    "sec edgar",             # SEC filings (set by our collector for filing items)
+    "accesswire",            # PR wire
+    "newsfile",              # PR wire
+    "ein presswire",         # PR wire
+    "ein newsdesk",          # PR wire
+    "newswire",              # generic catch
+}
 
 # SEC CIKs for the 4 publicly-traded entities (10-digit zero-padded).
 # Used to hit https://data.sec.gov/submissions/CIK{cik}.json for recent filings.
@@ -57,6 +84,7 @@ SEC_CIKS = {
 #   - For brands owned by larger entities (Cash App / Block, Chase / JPMorgan),
 #     query both names so we catch coverage filed under the parent.
 GOOGLE_NEWS_QUERIES = {
+    "Acorns":      '"Acorns" (fintech OR investing OR app)',
     "Chime":       '"Chime" (fintech OR banking OR neobank)',
     "Robinhood":   '"Robinhood" (fintech OR investing OR brokerage OR HOOD)',
     "Alinea":      '"Alinea" (investing OR fintech)',
@@ -138,6 +166,11 @@ BLOCKED_TITLE_PATTERNS = [
     "etf weekly",
     "should you buy",
     "is now a good time",
+    "(6 photos)",            # "Buying X Accounts: A Comprehensive (6 Photos)" SEO spam
+    "(4 photos)",
+    "buying cash app",       # crypto/payment account spam
+    "buy verified",          # account-sale spam
+    "for sale",              # account-sale spam
 ]
 
 # SEC filing forms worth surfacing. 8-K = material events (the gold). 10-Q/10-K
