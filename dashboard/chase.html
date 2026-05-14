@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chase · Acorns PR Pulse</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  body { background: #0F0F11; color: #F5F5F4; font-family: 'Inter', sans-serif; }
+  .brand-accent { color: #74C947; }
+  .bg-brand-accent { background-color: #74C947; }
+  .border-brand-accent { border-color: #74C947; }
+  .item-card { transition: background-color 0.15s ease, border-color 0.15s ease; }
+  .item-card:hover { background-color: rgba(255,255,255,0.03); border-color: rgba(116, 201, 71, 0.3); }
+  .brand-tile { transition: transform 0.15s ease, border-color 0.15s ease; }
+  .brand-tile:hover { transform: translateY(-2px); border-color: #74C947; }
+  /* Why-pill attention animation (first-visit wiggle) */
+  @keyframes why-wiggle {
+    0%, 100% { transform: translateX(0) scale(1); }
+    10% { transform: translateX(-3px) scale(1.06); }
+    20% { transform: translateX(3px) scale(1.06); }
+    30% { transform: translateX(-3px) scale(1.06); }
+    40% { transform: translateX(3px) scale(1.06); }
+    50% { transform: translateX(-2px) scale(1.04); }
+    60% { transform: translateX(2px) scale(1.04); }
+    70%, 90% { transform: translateX(0) scale(1.02); }
+  }
+  @keyframes why-pulse-ring {
+    0% { box-shadow: 0 0 0 0 rgba(116, 201, 71, 0.5); }
+    70% { box-shadow: 0 0 0 12px rgba(116, 201, 71, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(116, 201, 71, 0); }
+  }
+  .why-attention {
+    animation: why-wiggle 1.1s ease-in-out 0.6s 3, why-pulse-ring 1.6s ease-out 0.6s 4;
+  }
+</style>
+</head>
+<body class="min-h-screen">
+
+<header class="border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+    <div class="flex items-center gap-4">
+      <a href="index.html" class="flex items-center gap-4">
+        <img src="assets/vscrl-wordmark.png" alt="VSCRL" class="h-10 w-auto" />
+        <div class="text-white/40 font-light text-xl">×</div>
+        <img src="assets/acorns-logo.svg" alt="Acorns" class="h-7 w-auto" />
+      </a>
+      <span class="text-white/30 mx-2">/</span>
+      <span class="text-sm uppercase tracking-widest text-white/70 font-semibold">Chase</span>
+    </div>
+    <a href="index.html" class="text-xs text-white/50 hover:text-white/80 transition">← Back to overview</a>
+  </div>
+</header>
+
+<main class="max-w-4xl mx-auto px-6 py-10">
+  <div class="mb-8">
+    <h1 class="text-3xl font-semibold text-white mb-2">Chase</h1>
+    <p class="text-sm text-white/50">
+      33 items in the last 14 days · newest first
+    </p>
+  </div>
+  <div class="grid grid-cols-1 gap-3">
+    
+<a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxOdGNqdFJHX29jM3BWQlFMSTl3MUVCQndRem4tc1Y3cUFJNl9YYVRsVFhYcFpSM3hOdHJfSUpaT001VXFVakZaT256VWVlb3pTUllPQVVuWGQ0UUhTQzh6Q3ktbTJ6NnNZQzlza21zVDdta0duTEpCN1BEeEhXeF93R3FjVERNYnJKMGo1d01za1F4VEFYUVp2bncwcERicVZCLThZWEZNWVlJVmdzd3VCd002b0VTWHBTRG5xVUJkTQ?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>5h ago</span>
+    <span class="text-white/20">·</span>
+    <span>AD HOC NEWS</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">JPMorgan Chase &amp; Co. stock (US46625H1005): Strong Q4 earnings and Intact stake increase</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">JPMorgan Chase &amp; Co. stock (US46625H1005): Strong Q4 earnings and Intact stake increase &amp;nbsp;&amp;nbsp; AD HOC NEWS</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxQVDlNNTlGTExWdExLR0plSlR1VWZqYnZWUjBVdktpcV9yeV80WUczeVhkeXJsT2JBWUh3NWhwV1I4RkVMSm1mU3RvWEVKQTczcXhaQmZ5NlM0LWhDb1dmRzl3UFZHS3pCd0I4czBJRFRBTktnWGdIcEloZlNxWXVoNkZzMENEOW1ReXcySVVwVXZiVFVEVzQ0R25GNHRTU3ZLbkVwVA?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>9h ago</span>
+    <span class="text-white/20">·</span>
+    <span>The Business Journals</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Houston could be focal point for JPMorgan Chase’s $1.5 trillion security and resiliency initiative</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Houston could be focal point for JPMorgan Chase’s $1.5 trillion security and resiliency initiative &amp;nbsp;&amp;nbsp; The Business Journals</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMixwFBVV95cUxOUXA0akpYdFQ4WmFtOEstaW1WQTNRMHlWTE0zSWV0QlEyNmZ2bnRZcC1pdWZxOW9wY0VYRlFsczE1LVFXQnhQbkJEbU9hTFB0S0pxam4yWEZwR0VES0c5UzQzZVlzVEMzS3UzeUIxd185MGM3N0lhRENqNEhaRm13Vzg1Xzlaa3FYckRWLVJWck90TnZ0ZzZxUV9ta1BOSVN3Zmo5dzZMRXRiRGZrM1ZCUTJ1OGZGRjI5dzRlaG1pM0FrMmp4SDJ3?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>12h ago</span>
+    <span class="text-white/20">·</span>
+    <span>Press &amp; Sun-Bulletin</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Vestal Denny&#x27;s to be demolished, making way for Chase Bank</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Vestal Denny&#x27;s to be demolished, making way for Chase Bank &amp;nbsp;&amp;nbsp; Press &amp; Sun-Bulletin</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMi7gFBVV95cUxOS1ZyNzFCb3JicDRZb3d6TTlocHozbm53WlhKckFfc2djMWNXVTBQYjk4WU9TeU5vcC03UEJ5cjdMQmwwUzJBYW40TTEwNzBQOHpzcGlzQ1N5UXBEdFBKbmszZWFSU1hUS3plY1BkSzlJaHJtcW9iQTdVek1DdjJ4emw3WEs3NlRCRWU3b184QXdNQWNTZTFlX0FKaDl0Z2FBM1lscndSaXBOLWV1czI2bEhjR3JtYVRPY2EwTDdDMnQ0ZUVCN0Z0cFVOcHNNRGdqSXplUnRNamtudnY5WXRyYlNsRVl1b083Ukw5cndB?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>19h ago</span>
+    <span class="text-white/20">·</span>
+    <span>The Asian Banker</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Bank of America, JPMorgan Chase and Citi rank as the world&#x27;s best corporate, investment and wholesale banks</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Bank of America, JPMorgan Chase and Citi rank as the world&#x27;s best corporate, investment and wholesale banks &amp;nbsp;&amp;nbsp; The Asian Banker</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE1xbFN4WUUxS0g0WWhlVGVfcHFYX1ZkbjJPdldSNEkxamJ4UzFrN3hlN3dJcE1xeVRKN1VsYU9zLVRzRVlvaDZVZWtVMUNuSWdFY1AzeTdyZmRKWkdUNVdPandlR0hiMktfbVZnbUhkaGV0dGVFM3c?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>23h ago</span>
+    <span class="text-white/20">·</span>
+    <span>thestreet.com</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">How many employees does JPMorgan Chase have in 2026? Its workforce, locations, and layoffs explained</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">How many employees does JPMorgan Chase have in 2026? Its workforce, locations, and layoffs explained &amp;nbsp;&amp;nbsp; thestreet.com</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxPZWlCOHh2NzdaWDR6c2xCci16cTRLRFVCUTd6QzB3RHVWNDlwWlg3UVg2NmJjMVJsNTc4bUJuVGJEbmcxa0FSakJqMWh2ZWw1LW9iNzV2RDFTTXE2WFlFQ0FnQkZ4VnBPaWZzRWFFYi1mZ2h4OW5ocnpMaWlLVWxxNGJodHptbzdORi04YktUNGU3QnEtcXJGQ0hn?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>yesterday</span>
+    <span class="text-white/20">·</span>
+    <span>StreetInsider</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Guarantor: JPMorgan Chase &amp; Co.</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Guarantor: JPMorgan Chase &amp; Co. &amp;nbsp;&amp;nbsp; StreetInsider</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxOUDhycDFkUk5mRENhU2prV1VNbG9uaVlqLUV6dUFpc3QtdG9fT19Xd25YczFFWlF3dy0tTUJpT3RNTFJjMzVSUko5elVWZ1BDWElsR3VITnZPOW16UXJSNUFDR2JQalZuaVZ5VHpZd29EalZoNk1zQXpCV09VR2xFNVk0dDRmay1YUW1EQmtKUVp6cnJwMWFiZlJB?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>yesterday</span>
+    <span class="text-white/20">·</span>
+    <span>StreetInsider</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Guarantor: JPMorgan Chase &amp; Co.</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Guarantor: JPMorgan Chase &amp; Co. &amp;nbsp;&amp;nbsp; StreetInsider</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxNd1liQkNXNEhYa0hyUlNEUzQweUtIWGE3dERNYXpnSFRadmVxWElxZVQ0eEFXVTZOZE9Xal91aFdCNzhKbUxkTjRzbm5XQndTcUhzOXJ1bmlOQ1hjX3VXblZuRG5OSW9pQ2YydzhkSUdIVjNOTXdlOWNHZWxXQm5VUVF6VlpTcXVvdVVQdTZSeU51bk1HYkRBSmJn?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>yesterday</span>
+    <span class="text-white/20">·</span>
+    <span>StreetInsider</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Guarantor: JPMorgan Chase &amp; Co.</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Guarantor: JPMorgan Chase &amp; Co. &amp;nbsp;&amp;nbsp; StreetInsider</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxQcHlzam45OHltSDNEdnFsVjZDcTZZczFVSFhDTno0Z0ZCSjNodjZMenZrOHI5MnJJRnNQaGVSTXdpYl9qcFNfNzFYcHlSYzU2ajZwdkhxMDJqRUs1UURrRFJzSHVaQnE0bXp4WEJPUTlvNjBiUnJYMW1RbWR3dF8tUHVBdDNUR2hzNHlDV0hUZzlxQzlSQlhKWWRR?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>yesterday</span>
+    <span class="text-white/20">·</span>
+    <span>StreetInsider</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Guarantor: JPMorgan Chase &amp; Co.</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Guarantor: JPMorgan Chase &amp; Co. &amp;nbsp;&amp;nbsp; StreetInsider</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxPMERNbUFjU0ZqdXJVQUtUNWM0cjlVWHh3YVRmaWpRYS1VWVNZd2xlX2VkUmJXVDRCMU5PRlpoT0xGc3NjcVUycFFQdTRJZE1IcWtYQTBjUm9SdTlwZXBaUEo5b0dFemJGdmtIZDZhWWMyNGpBMzdtcjZDVnY4Y1UzeGt0TzhwTFBFdy0wX3Y0Z1ZOeXNwVVJiNHVB?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>yesterday</span>
+    <span class="text-white/20">·</span>
+    <span>StreetInsider</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Guarantor: JPMorgan Chase &amp; Co.</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Guarantor: JPMorgan Chase &amp; Co. &amp;nbsp;&amp;nbsp; StreetInsider</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxQMEUyT0ZGci1tNGZySWI1eC1iM3VuY2RvdTFtVU55RFlHQUhtaFVVb0VoaDJpMlM1TEgyQWU2bVdMVWR1OGZGbW9VWkxsbi1UaWo0amVqME5VbC11OVVxUUU5U3RhYzF6VVNxRGwyOFV6VEhaSlNXRG5VOTJtem9jM1Q4UFdlUHIzWGFWN1FRbkxuZjdBLWc?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>yesterday</span>
+    <span class="text-white/20">·</span>
+    <span>Kalkine Media</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Why Is JPMorgan Chase Stock Trending Right Now</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Why Is JPMorgan Chase Stock Trending Right Now &amp;nbsp;&amp;nbsp; Kalkine Media</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxPT2VxWXJ0RTRmbERpdW1rY1FiRjBJbDBNRy1NRVJYRnd0YTNwMW1rd3NKbHd1WWVkNkpHMG9CVWFVODBsMmNsNzlJdTBzcWZhbXV6TE9iMkRCZDlJY0pJNFdwTm91S0E1VDhsR2J1TmdfMmh4RWdYMmpSZ2pfRVk3UjR0QWt3VGNkU3dYZHlFTUZKUVRIWmx2U1RUaUgwQ1R1VTJZZ2FpbnZkXzVUbHc?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>yesterday</span>
+    <span class="text-white/20">·</span>
+    <span>Dallas News</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Q&amp;A: JPMorgan leaders talk selling Scotiabank on Dallas, the AI boom (and bubble) and more</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Q&amp;amp;A: JPMorgan leaders talk selling Scotiabank on Dallas, the AI boom (and bubble) and more &amp;nbsp;&amp;nbsp; Dallas News</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxOX0ZsRFBSU1RLdDJNcHJ4Y3J6aGxCMU9KeDFXcWJPODcwN3NDN2haZHpuZF9BV2tVcUw1ckcyd3N1b1h1S1Z6aHVTU1hBRjRVWlhPUll3NlpWY0EwYmRYdFRYNXBMdkNicDJlOHRNTnduaEpFczdjNm1tdHVlZ2Y4UTF2WmgxZk9kUF9wYXRiN0xrek9wUUYxcXBPX3ZDWXRmS1Frbjg4dXRvS3A5ZTc1aA?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>yesterday</span>
+    <span class="text-white/20">·</span>
+    <span>GuruFocus</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">JPMorgan Chase (JPM) Announces Senior Role Reshuffle in Investme</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">JPMorgan Chase (JPM) Announces Senior Role Reshuffle in Investme &amp;nbsp;&amp;nbsp; GuruFocus</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxNZjg2UFpENW5ZWjJ3cTg0dnNUZF9XZGJHcnRXcGF4clRoQVhXbklCN1pFeXp2U1VjS0U2cDlCQUtQR1ZOUmNiZnF5ZmdBd3F1UGs3LW1zaURycmc0NDk3N3pQLXdLV1JFUF9xZmJrY2pHMUR2TDBsRnc1ODVva1Q0WTVOelJSaGQ5ai1JODhUaFZIcklDbUpiSTk1Njl5Z0h2eU9NWUd4Q0NLUEFxeTE1VmZIUQ?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>yesterday</span>
+    <span class="text-white/20">·</span>
+    <span>GuruFocus</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">JPM, JPMorgan Chase Restructures Investment Banking Division for Efficiency</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">JPM, JPMorgan Chase Restructures Investment Banking Division for Efficiency &amp;nbsp;&amp;nbsp; GuruFocus</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxPV0d4QUxMX2ZkczkxLXJFY0pEc2ZDdy1EQ05DZWtJVVJPNWF0Tks4VldPRFBqYTRzeGtXSTBzU0p5Qk9wOWhLNWFCM0VmbXpMZVJHb19ubmFEZm9PNzdjQlJpSWhabG12LXJuNFRMdUtEQUVaWUxuQmtZYWFJNXZpWU1Za1M?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>yesterday</span>
+    <span class="text-white/20">·</span>
+    <span>Financial Times</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">JPMorgan reshuffles investment bank chiefs amid wider shake-up</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">JPMorgan reshuffles investment bank chiefs amid wider shake-up &amp;nbsp;&amp;nbsp; Financial Times</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxNeHpRU0tkNndaWVNwLUNfeGxiYUk1a2k3d3pNRU53WWZyUWFTLXdXcHAzdHBpbzNkYTRVQzh2VWlFX3BnV0xHOGxkb1dJUUJLOWdSdnJNd3pCbTg0Q09sZkJYRFlvcGFhUUdLNW5yc0ZZcnJPakg3MXQ2MTU0b2pqU2UwbHZqV2Vw?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>yesterday</span>
+    <span class="text-white/20">·</span>
+    <span>National Urban League</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">JPMorgan Chase Investing Millions in Central Ohio to Aid Workforce</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">JPMorgan Chase Investing Millions in Central Ohio to Aid Workforce &amp;nbsp;&amp;nbsp; National Urban League</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMi1gFBVV95cUxOSlpLSkF0NmFINjY4VDg4YTh1eWZDaS1uazYzWndNMHFXSmNnN2twc3lJVWNWdnJlQjRqdW1mQmhaaFpRWmxyM3BQendhdEtVZS0xSXFXUGFUNmI5bXpVbXQzVG5Pa2Vpa0VxdzE5QTFFalljSDdycUlxR1pMN1NqVHlvbFpiaWxuakMtUnpCTVQ0MEtYZGxTR1NtUWpZb09RMFJyYTF5LTRYcEVSU2tOdWlFbDJKVGREUzZQaVZzTXB5TGVacXhDMHFWOTB1Zkd2bUdqUFZn?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>2d ago</span>
+    <span class="text-white/20">·</span>
+    <span>foreignpolicyjournal.com</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">JPMorgan Chase [NYSE: JPM] Explores Deeper Crypto Push With New Spot and Derivatives Products</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">JPMorgan Chase [NYSE: JPM] Explores Deeper Crypto Push With New Spot and Derivatives Products &amp;nbsp;&amp;nbsp; foreignpolicyjournal.com</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxOWDcyUDluQ3d0LWh1RVdZM3JKUGpoT2pqSUprRm9kVlhUZTFYTzM3NmU0ekh2WUg1LUx6d0o5X3lWS044bTRqUWFrM1VvUXlMWXlYdjJxYkNxOVN3Y21lZzl1dzlQMTVnNG1MS3Y3bzFlU1A4X3Q3ajRodjJzMEhnaUwtMUtwRUpVcVJrUm5TdWdiWm1NZnBwSEp3?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>2d ago</span>
+    <span class="text-white/20">·</span>
+    <span>StreetInsider</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Guarantor: JPMorgan Chase &amp; Co.</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Guarantor: JPMorgan Chase &amp; Co. &amp;nbsp;&amp;nbsp; StreetInsider</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxPUzV0azdwcFB6el9yeE03QWo3c1d2NXVxem5MNm1NWEY4Y2d5WjNNQVZKMk52NF9zeWhfY1g3NXZ5cXRwaXdkZmgzOExWRzhRb2xZNGptQmNsajlPMW9ueHZ2WDZZYXh1cVl6MkVNbG91cW5pcHpPUVJrdTdCbG96TkRTV3ZSWkN6MVRGQ0k5aTVPaHllckRrbGlB?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>2d ago</span>
+    <span class="text-white/20">·</span>
+    <span>StreetInsider</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Guarantor: JPMorgan Chase &amp; Co.</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Guarantor: JPMorgan Chase &amp; Co. &amp;nbsp;&amp;nbsp; StreetInsider</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxNT0R2anE1dlZxdWlVOEM5YjF6a3otVmxocGFWYVdtM05sTC10TjJOVWFNRVA0MkFsaUczdHpIakdHYWE3cVFuNnloV1pqaUdSZmJOQVNLUnpjZ250MWlvcHBuVHg4bzY4U3Q0OFdYTU5hU2NOdnVVdF81ZzVpekJXMG1yLURuWkExdExBQVRfdFUzMGJ5eUgwN0Z3?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>2d ago</span>
+    <span class="text-white/20">·</span>
+    <span>StreetInsider</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Guarantor: JPMorgan Chase &amp; Co.</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Guarantor: JPMorgan Chase &amp; Co. &amp;nbsp;&amp;nbsp; StreetInsider</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxNcDI0Z0dYckJsLVBKcXQ2S00wdVNVLTc1cnpaQXd1T0dTaHBpTDVNU1plMjVRYW1ZTElBaDFBZTBJWEwySmxseVFaa3VwbWxTQUZ1RUlKVHloWVVaRnByTDM1YlFLdC1zZnlRQThrWTNKVV9DOUs5SzVXRTJ5RjVsekUyREppRUVVS2hOb25TTVlWdlhrd0ZGbE1R?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>2d ago</span>
+    <span class="text-white/20">·</span>
+    <span>StreetInsider</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Guarantor: JPMorgan Chase &amp; Co.</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Guarantor: JPMorgan Chase &amp; Co. &amp;nbsp;&amp;nbsp; StreetInsider</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMi_AFBVV95cUxNYV9GRXRNS2l6dVVyRHVYblNZVmtTMnMxMHpoc3BxckV2RDBHUFRlNWNNOWRaWG9ZcmpYaXk2azc1YVZPR2U5UkZSRmlhcUtmdmNaVVRLV1cxZnA1Vk5pX2dJVnpKUTd0RHlFU0NpdURwY3UwSjlLNzJ3V1NrOElIaXNhZkltNDNuV1JPdzZ3YUtlS09zZUtpeEVWNGNHSjdtY3VDdmF2b2l1MEhocWNjZFJFRHFpdjI1UzQ3QW9ma19GRlBkMnV5NU1Wb2RHVUVfN2dBTVRpcFZqYUNHMDVhT19tbnBfVkJMU2lEYW81QTFKY1k1SzJCN0hOX3Y?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>2d ago</span>
+    <span class="text-white/20">·</span>
+    <span>WRGB</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Comer requests interview with former JPMorgan Chase executive in Epstein probe</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Comer requests interview with former JPMorgan Chase executive in Epstein probe &amp;nbsp;&amp;nbsp; WRGB</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMizwFBVV95cUxQNVBCNkJSUktTNlZDbDNELS0wOXVMUTFia2wxNWhXSVdhZF93MkFLTkp5djJPN011SEtwYS1ib0FYVXlIbjF2RFkzejRVSWU2UGlsWTRpd0JLS3QzVlJNdEIzZC1MYUtMMkNzWmJqWEQySVg5OXE1bElOdDlIVGhMeU9jcUFIaXpiTkFnQXM0OVBYc3dwTFd2anBjRzhrOThKV1VtN1ZYUUtEMjREZFE1RUh4dVg1NVItWmFZcENOc21wa3N5RC1hOWd0ZUNuR1k?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>2d ago</span>
+    <span class="text-white/20">·</span>
+    <span>StreetInsider</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Form FWP JPMorgan Chase Financial Filed by: JPMorgan Chase Financial Co. LLC</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Form FWP JPMorgan Chase Financial Filed by: JPMorgan Chase Financial Co. LLC &amp;nbsp;&amp;nbsp; StreetInsider</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxPZWswcEdDUzQ1WE9Tem91TVQwWU9idG5hX2pYYWNyblBuYTRKeDJoQ0liRktha1BZSXdWamVNWndiNzV5NUlsODBBbXFLYjJWZGl1LUV3Zk44ZUZod3NnOUdLeUc1SngyZ3ViMUhUMnAtVnNLMDBLY01Ic1Z5WVhBRmVGcUNQOW1md2tCZkpYTDFNbmJQZ1Zuakx3?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>2d ago</span>
+    <span class="text-white/20">·</span>
+    <span>StreetInsider</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Guarantor: JPMorgan Chase &amp; Co.</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Guarantor: JPMorgan Chase &amp; Co. &amp;nbsp;&amp;nbsp; StreetInsider</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxQWnZYaEVHXzBFSWYySm81LXFmbDhGSE9jWW44N2xtc3lUcmFlcEd4YjVlZ0ZBV2I5anRROVRaWmZXaHZZd3NrMnpkZkNVM3VESmFKV0tXMWF3c1RSSHk0RGltRFhBd2IxeGFtVkhWQ055WXloOHJ4M3RjdnRKeEdxUFZxakpfZ1ZPS2plamdQblZpOGZKNTBTWThR?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>2d ago</span>
+    <span class="text-white/20">·</span>
+    <span>StreetInsider</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Guarantor: JPMorgan Chase &amp; Co.</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Guarantor: JPMorgan Chase &amp; Co. &amp;nbsp;&amp;nbsp; StreetInsider</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxQY05DZXY5SEpCa3BpOEFoTGlJNlRoUTFvOERUSEdJb0NoS2NxUldzY1VxMjEtWWpPQ0NOWlR1MHd2bXVZcWZGbFcxN3hxdmFBeEUzS3R4akxVN0d2ZUx3UmdoT05oamJqR3Jlakd4YkdZRk5Kb1NxdTVObmZCR3oyeVVWTXVMOC1sbFNuM2h5UWVGYVFHXzQ1dWphYmNhOHNRaWc?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>2d ago</span>
+    <span class="text-white/20">·</span>
+    <span>Kalkine Media</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Why Is JPMorgan Chase Stock in Focus Across Wall Street</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Why Is JPMorgan Chase Stock in Focus Across Wall Street &amp;nbsp;&amp;nbsp; Kalkine Media</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxNS3N2QlJRMEdhTEktb2h1THdvWmVBM21TVTl3SDJzWE1sYjdFVk1mZXNBaVhDZlpSV2VFNUFOSXBZUDA3MUUyamIxRkpneGNiZXM0NElxRHd6SUJ0SThWWGdPVmx4MkpuQzBkZ25vTThwZk5Xdl80R00ySGxfbkxXbkhlTUk0dkhvMFBBSzlUazN3WDls?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>2d ago</span>
+    <span class="text-white/20">·</span>
+    <span>The Business Journals</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Chase to open first branches outside Twin Cities metro with Rochester expansion</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Chase to open first branches outside Twin Cities metro with Rochester expansion &amp;nbsp;&amp;nbsp; The Business Journals</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxOMnVyejVwamY2YnlQNTcxejItY05kSjExWkZNY1U5VFNXdG5WVEpmdnVLZnRWTGx0QVhPbGdJbElUYVBmTTl4OGt0ZVFUVklVUjk5bHFYd3Jnc2tKX0Jvc2NxNTJ5TDY1S2c5dEJfQ190SmI0S3NVY0VoZFNERmQ0eDgtbm5IU3pKanNPUkw2cWo0ZnZTNnFMUEp3?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>3d ago</span>
+    <span class="text-white/20">·</span>
+    <span>StreetInsider</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Guarantor: JPMorgan Chase &amp; Co.</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Guarantor: JPMorgan Chase &amp; Co. &amp;nbsp;&amp;nbsp; StreetInsider</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxQX1lXbnRBV2Fwbi1CSU1Rb1Z0S1NhOXo2RjFjNzJ1U2tSQzlEVmdjTm5yR1ZUb1VCQ29UcGZTcklPRE9TUm1yRTJ5NjFURlNkQmtjX2RmcVpVX0o4Tlo3LUFWZUZRMVdTMjhvS0FRa25LQVg1TkNYOXhERFkxcTd5SkNyMWFEclhVVFR2Y1JVZ9IBlAFBVV95cUxQSmMtaUwtWk9YNFhXc1B4TFdQd0Z2YVROUWl2OG5EQjVYYmxBaGxkMmlFNUl6Yl83T2x3dms3bWI2Zy1QUHE2RU9kc1BBSjI2Z1QwMG5qOE42TVFpTmJBY2FfTjBlMUF6b3o3MmZtd21HTFF5UkJZNmNnaXdIdjNSeGNmOHF0V093eF8zcFJMWVdWcGdL?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>3d ago</span>
+    <span class="text-white/20">·</span>
+    <span>CNBC</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">JPMorgan Chase-led bank group reins in credit line to troubled KKR private credit fund as losses mount</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">JPMorgan Chase-led bank group reins in credit line to troubled KKR private credit fund as losses mount &amp;nbsp;&amp;nbsp; CNBC</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxPREFoRUt6Q2MwWWtYeHppWDQxb1V0d3ZqWld6bzZWaEhVdzFNWDFWSFNiTFFRQVVFRWdTV0pkRURoZFlHZ08wUFFTMDctOFBqRFlfcmNmQ2x2SEx0aHhGTDRUOUVMSWx0WTRnQXBMcVBudkVfZEhXaS1nMHlXSWpHOFIyY0ZVODJnLWxTYjVWMWprWXJ1Y0VtX1Z3?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>3d ago</span>
+    <span class="text-white/20">·</span>
+    <span>StreetInsider</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Guarantor: JPMorgan Chase &amp; Co.</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Guarantor: JPMorgan Chase &amp; Co. &amp;nbsp;&amp;nbsp; StreetInsider</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMid0FVX3lxTFBOQjQtdHJBdC11VVIxZU1yNUYtWFlVbjZ2X3dqVWwzVE1ERUJDbEs1SzhmQWxwaHkwY3BnV0tCMEZoMXFFYVFPY2hDSktINjNkWFlSYkVsY3MtU1lYdkotQnBGdThMNVR5aklldVo4bUdmX1NvMHpn?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>4d ago</span>
+    <span class="text-white/20">·</span>
+    <span>TIKR.com</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Can JPMorgan Chase Stock Reach $400 in 2026?</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Can JPMorgan Chase Stock Reach $400 in 2026? &amp;nbsp;&amp;nbsp; TIKR.com</p>
+</a>
+
+
+<a href="https://www.sec.gov/Archives/edgar/data/19617/000119312526211978/d903351d8k.htm" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>2026-05-07</span>
+    <span class="text-white/20">·</span>
+    <span>SEC EDGAR</span>
+    <span class="text-[10px] uppercase tracking-widest text-amber-400/80 bg-amber-400/10 px-2 py-0.5 rounded">SEC Filing</span>
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">8-K Filing · 8-K</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">SEC 8-K filing by Chase on 2026-05-07.</p>
+</a>
+
+
+<a href="https://www.sec.gov/Archives/edgar/data/19617/000162828026029344/jpm-20260331.htm" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>2026-05-01</span>
+    <span class="text-white/20">·</span>
+    <span>SEC EDGAR</span>
+    <span class="text-[10px] uppercase tracking-widest text-amber-400/80 bg-amber-400/10 px-2 py-0.5 rounded">SEC Filing</span>
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">10-Q Filing · 10-Q</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">SEC 10-Q filing by Chase on 2026-05-01.</p>
+</a>
+
+  </div>
+</main>
+
+<footer class="border-t border-white/10 mt-16">
+  <div class="max-w-7xl mx-auto px-6 py-8 text-center text-xs text-white/40">
+    Built and maintained weekly by <span class="brand-accent">VSCRL</span> · PR Pulse · Tracks 11 fintech competitors
+  </div>
+</footer>
+
+<script>
+  function toggleWhy() {
+    var b = document.getElementById('why-banner');
+    var p = document.getElementById('why-pill');
+    if (!b || !p) return;
+    b.classList.toggle('hidden');
+    p.classList.remove('why-attention');
+  }
+  function dismissWhy() {
+    var b = document.getElementById('why-banner');
+    var p = document.getElementById('why-pill');
+    if (b) b.classList.add('hidden');
+    if (p) p.classList.remove('why-attention');
+    try { localStorage.setItem('vscrl-pr-pulse-why-seen', '1'); } catch(e) {}
+  }
+  try {
+    if (!localStorage.getItem('vscrl-pr-pulse-why-seen')) {
+      var b = document.getElementById('why-banner');
+      var p = document.getElementById('why-pill');
+      if (b) b.classList.remove('hidden');
+      if (p) p.classList.add('why-attention');
+      localStorage.setItem('vscrl-pr-pulse-why-seen', '1');
+    }
+  } catch(e) {}
+</script>
+</body>
+</html>

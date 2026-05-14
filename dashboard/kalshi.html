@@ -1,0 +1,759 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kalshi · Acorns PR Pulse</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  body { background: #0F0F11; color: #F5F5F4; font-family: 'Inter', sans-serif; }
+  .brand-accent { color: #74C947; }
+  .bg-brand-accent { background-color: #74C947; }
+  .border-brand-accent { border-color: #74C947; }
+  .item-card { transition: background-color 0.15s ease, border-color 0.15s ease; }
+  .item-card:hover { background-color: rgba(255,255,255,0.03); border-color: rgba(116, 201, 71, 0.3); }
+  .brand-tile { transition: transform 0.15s ease, border-color 0.15s ease; }
+  .brand-tile:hover { transform: translateY(-2px); border-color: #74C947; }
+  /* Why-pill attention animation (first-visit wiggle) */
+  @keyframes why-wiggle {
+    0%, 100% { transform: translateX(0) scale(1); }
+    10% { transform: translateX(-3px) scale(1.06); }
+    20% { transform: translateX(3px) scale(1.06); }
+    30% { transform: translateX(-3px) scale(1.06); }
+    40% { transform: translateX(3px) scale(1.06); }
+    50% { transform: translateX(-2px) scale(1.04); }
+    60% { transform: translateX(2px) scale(1.04); }
+    70%, 90% { transform: translateX(0) scale(1.02); }
+  }
+  @keyframes why-pulse-ring {
+    0% { box-shadow: 0 0 0 0 rgba(116, 201, 71, 0.5); }
+    70% { box-shadow: 0 0 0 12px rgba(116, 201, 71, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(116, 201, 71, 0); }
+  }
+  .why-attention {
+    animation: why-wiggle 1.1s ease-in-out 0.6s 3, why-pulse-ring 1.6s ease-out 0.6s 4;
+  }
+</style>
+</head>
+<body class="min-h-screen">
+
+<header class="border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+    <div class="flex items-center gap-4">
+      <a href="index.html" class="flex items-center gap-4">
+        <img src="assets/vscrl-wordmark.png" alt="VSCRL" class="h-10 w-auto" />
+        <div class="text-white/40 font-light text-xl">×</div>
+        <img src="assets/acorns-logo.svg" alt="Acorns" class="h-7 w-auto" />
+      </a>
+      <span class="text-white/30 mx-2">/</span>
+      <span class="text-sm uppercase tracking-widest text-white/70 font-semibold">Kalshi</span>
+    </div>
+    <a href="index.html" class="text-xs text-white/50 hover:text-white/80 transition">← Back to overview</a>
+  </div>
+</header>
+
+<main class="max-w-4xl mx-auto px-6 py-10">
+  <div class="mb-8">
+    <h1 class="text-3xl font-semibold text-white mb-2">Kalshi</h1>
+    <p class="text-sm text-white/50">
+      47 items in the last 14 days · newest first
+    </p>
+  </div>
+  <div class="grid grid-cols-1 gap-3">
+    
+<a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxQUFZYMHdyX0tsYWZLZXZqUXp4TktzV0lxdXBPLVVBZkMwV0IybVlEWkQ5ZkQxTk91VHpmS2p4NjdJQnFPLWpULUlZTTE1REdkWnhpTW9tdDEzbXRVMjBmRVFuQVZxbHRsSDl4S2llal8xalVKV3dIN20tR0p2Mk8wM1N5bm56TllhRzhjajBodTd1X1o2bDQyc1lnQUw0S0xialFYa3ItdmUtQUNWRUxHNmdjRVJQdm10X2c?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>just now</span>
+    <span class="text-white/20">·</span>
+    <span>KFOX</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Four New Mexico tribes sue Kalshi, alleging illegal online sports betting on tribal lands</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Four New Mexico tribes sue Kalshi, alleging illegal online sports betting on tribal lands &amp;nbsp;&amp;nbsp; KFOX</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxPcWVvbzV6M0lRZjNmandaQmxDQWp1MHpqN0RKWkdNcGlFZGFWR2cwX20xVVBNX1NMbWJCeFQzdjhESjNfcV9SWExMRnZWZVVwRDl2OVNDRHB5bk1ZMDhvcFJydktlZ1UtVGdPTDFuejFoTnppNm9KRlRvMkVMZDMtOXUyYlRZZjRoNjhhMEttVWxkeUhZQ0ZudkVvRi05aHN3Y3lJUHpBbVEwd1U?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>just now</span>
+    <span class="text-white/20">·</span>
+    <span>SILive.com</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Yankees vs. Mets: Kalshi markets and preview of the Subway Series</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Yankees vs. Mets: Kalshi markets and preview of the Subway Series &amp;nbsp;&amp;nbsp; SILive.com</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMiywFBVV95cUxQVkhZYWJaWDZqeWRSWkhyRjV3bm8xYmU1bC15bENGTlcxZTY4alJPMlJCMzE2Q2ZSbEVEUl9GYlBLTk1WU1VPbVR0NXFMVnF2NVZoUDRVVnpFbU90aGhONzNGREZDWVRoWE1aSVY4aWk1aExIMFJSQUtEN3Zjd084MGdxQS1ycUN1ZWpjNlNQbHhVczVZbXJtcjZIdENId2RiZ01VeTNlY29VeUV2WGQya2RHM2NSWHFycy1SVUt0OTFMQUZWZUpta0lTTQ?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>just now</span>
+    <span class="text-white/20">·</span>
+    <span>Sports Illustrated</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">The Kalshi Market Predicts a Stanley Cup Collision Course Between These Two Teams</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">The Kalshi Market Predicts a Stanley Cup Collision Course Between These Two Teams &amp;nbsp;&amp;nbsp; Sports Illustrated</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxQTGNGbnpvUlU4MlBVa29UTkpIcUJmVGZxeElPcjFqYVl0dXBiSFdhV3BTTDRzeF9UWk9yN2E0ZHd2N09mYkRNU21xbU1HS1g0WDNKLUJiQ3RrbTBfVmZ3YjFCeklIbnI3LWpiZ1VLQldmNkFfYS02TkloczktZ1Z5ZVM3RDdtM2Q2SGRLTGcwOHhBbmJCRG52SE44V3lCcmVwRUlNWnlqTFlrQ2JKWnRfOEJ6WGdwY25XT3hISHI3Z1k0WUJWdE04UE93?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>2h ago</span>
+    <span class="text-white/20">·</span>
+    <span>Sports Illustrated</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">The War on Kalshi Just Escalated: Minnesota’s Felony Push May Reach Supreme Court</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">The War on Kalshi Just Escalated: Minnesota’s Felony Push May Reach Supreme Court &amp;nbsp;&amp;nbsp; Sports Illustrated</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxQVHRDTjYyeFpIb0gzcWlvaVFzRi1ReWZHaV9hRWJOYTZKU21OUkFFd0RSV0dBVjVCdmZpb3VKbmFGczV1bld6a2JBdTlNT2pCNmlaSDdEQjBxX29mQUpUeG5RWDJ0NUNpV1hTRlFYTHo0RmpFY21TVTVxZC1yNlRpNzJPellGcFF0QjFROA?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>3h ago</span>
+    <span class="text-white/20">·</span>
+    <span>Yahoo</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">New Mexico Tribes Sue Kalshi, Alleging Illegal Sports Betting</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">New Mexico Tribes Sue Kalshi, Alleging Illegal Sports Betting &amp;nbsp;&amp;nbsp; Yahoo</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxNMEZfV3RYTmpmSDdPVDFqcC11R3htcmdleTllazlaLWhUYjRTVlJOMWpRaGN4M0hzRmVacWkxendkYm5WbDFLY1k0eTY0VVhtZHc0NF93Z2JNU3NtUXZ2amlfZWdBbkRHaEQ2ekZpY3ZlWjQ4d20zRS1MWDFVTzZtU0VsaDVOWUNFSzJBSmdieVB1c0VlS3RybnFfd29ZUlp2N2Q2Q0pLRzdGcWNUcUE?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>3h ago</span>
+    <span class="text-white/20">·</span>
+    <span>Coinspot.io</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Polymarket Volumes Fall for the First Time Since August, Kalshi Keeps Growing</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Polymarket Volumes Fall for the First Time Since August, Kalshi Keeps Growing &amp;nbsp;&amp;nbsp; Coinspot.io</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMi0gFBVV95cUxPQlNNTU56VGlSWVJJa1VGUk5ONC05WFNLNUpvY1o4QXpKTEh2MVdmdEtjWWl5eW5jQ1hQWmlQWEZaQktITWhVbnNrajNoM2Y4RFZEOWZxV2MxVVNHb2FsYXE2ME55d3Mwd1QzUXNvbkY1V3dMSkF0ZmdYZW42UjUySHJ1NURvSlgybDgwUmQ1aEc5bUZvSkxlMFlveUg0d2dXa2lkcXBZQmhFTFVnU1JTeGxBaFVVN25KR3pOVW02RWgyZVI5VVNkR2JmZVJMa0k4T3c?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>3h ago</span>
+    <span class="text-white/20">·</span>
+    <span>europeangaming.eu</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Kalshi signs multi-year naming rights deal with Madison Square Garden</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Kalshi signs multi-year naming rights deal with Madison Square Garden &amp;nbsp;&amp;nbsp; europeangaming.eu</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxPVmJ1Qk1ZZ3JOQXVZcGpLSy1KNXgzaUhidTJWblVjVHdJV3ZFcVUwNmVzQmM0aW5sR2lXcExNNUNfcS1NR0RtYzZ0S1VDSkI2bEd4c1AtNS1MMTJTVTZ2OFVYS0wwa096VnBxb09LeTUtMmVCazFuM0ltMHhXQWQ3OHpJSTk4YXRFcmNTREd1dHlVRHQ5RlpPMmtJTmZkY25sU255ekxGWEx6b1oyRkRrdDY3bWxiSWVC?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>3h ago</span>
+    <span class="text-white/20">·</span>
+    <span>CDC Gaming</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Kalshi’s true betting handle obscured, but it may have caught up to DraftKings and FanDuel</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Kalshi’s true betting handle obscured, but it may have caught up to DraftKings and FanDuel &amp;nbsp;&amp;nbsp; CDC Gaming</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxQUzBMeU1wX0NWSS1NVm0zcHlJMzU5aWNLNjVLMmMzcENhZTg3U3diM3lsQy1qaHQ5akd5OFhqeWpvOGExLTZ1cF9UeTNJdjVfTEhVRHRYSG5zcjh5RGQ2TkVobldlR3dDTDNpZTIyeFluZV9wOGZ6Ulc2eU1GeGM4ZmRia1ZCUE5ud01KZ3pMT1d4V2RWZjBrR0ktYmFaUUdRN1JSUQ?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>3h ago</span>
+    <span class="text-white/20">·</span>
+    <span>DeFi Rate</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Interactive Brokers Expands Prediction Markets with Kalshi, CME Group Integration</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Interactive Brokers Expands Prediction Markets with Kalshi, CME Group Integration &amp;nbsp;&amp;nbsp; DeFi Rate</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxQV0Z0M2hReVg5blM4MXVWWkI3VUc1cDA0bnNkMXZ5RnJ4M0dRSkhUNDRLSi1UNXJtRnFTTFVQd1JKdXplWGJfbHZRNHRHRzg3elJlcGg5QmQyanZJVGc1aGwtSFVJMWpxaTJETGxkcmNNelF1TnJ3N2RydlgzWXZTejZubFVsSGNTNEM2b1VKb3ItWTJ5YXdwaUV6d29jY2VNZEUxejV5SWFWOVhWYnBKMGRGOV91OTREU1NHeFBFdHMwOWs?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>3h ago</span>
+    <span class="text-white/20">·</span>
+    <span>Bloomberg.com</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">DraftKings Gets Rare Sell Rating as Kalshi, Polymarket Threaten Growth</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">DraftKings Gets Rare Sell Rating as Kalshi, Polymarket Threaten Growth &amp;nbsp;&amp;nbsp; Bloomberg.com</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxQNnpMU1ctc3p1YnVrU2FISWs4V19ncDBwN1hVSmxqT2NMY281YkNiUjA3aFhPd3BQcTVUUjNIZkZOQk1wclRENzRpT2JjbVY1RW5KN1F2RzM5NWtJb25wUUpJbUpLVFJzMmNaUGxsdnV3Y2JMa1lUMFN0aUhEOHFTVXJtM2F1UGdHRkVxT1lMd21nc3k2RG1WY2EtSUxCZVVJT0UwWW45bUY2NzFVdFhVYg?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>4h ago</span>
+    <span class="text-white/20">·</span>
+    <span>Sports Illustrated</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Why Kalshi Traders Are All In on the USA in World Cup Group D</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Why Kalshi Traders Are All In on the USA in World Cup Group D &amp;nbsp;&amp;nbsp; Sports Illustrated</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxQbE5tMTZjNnliQ3JSNlZuSUZINkYybDBsV2JhYjk5SnFQMGFVTnpqWC05QjY2N0xSM0dsRnowZ0hhdmY1UWFWVWVoTUhodXZhejZfMW5oNkNBTi1ObDhhaHp2VU5tWUhwbUI1bk1BQ1RKRUlMODhRWTJETHRMRnBDaFBINUVBYU5ib3VvOGFsaFBLazdfaWU5LU9XRQ?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>4h ago</span>
+    <span class="text-white/20">·</span>
+    <span>Deadspin</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Four New Mexico Tribes File Suit Against Kalshi</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Four New Mexico Tribes File Suit Against Kalshi &amp;nbsp;&amp;nbsp; Deadspin</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMicEFVX3lxTFBDMGNON0VFS2tlTFg1Z29NVzlzUjJkcUt2MzFSam9QVDdGaEdTWmhueGRWck5fTnBtcEFXaWtDb1ZYYTVQSU8weXNaTk4wYWpnRmQzeWE5RXdrOTlES3UzSjN4NjFtMktQSm1rZzNvNTM?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>4h ago</span>
+    <span class="text-white/20">·</span>
+    <span>KOB.com</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">New Mexico tribes sue Kalshi</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">New Mexico tribes sue Kalshi &amp;nbsp;&amp;nbsp; KOB.com</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMingFBVV95cUxOaUhEc2dZeENkOWZZNU5SdjdQTVdfNm56UnZwVUI4MDRQUmlqekxjTWd5Q1Y4LWhkbU9SX19UR1daR2diVm9OSWJ3RkJ0eVVuZmQtOUJPT0pGNEtoUlFubi0yN2NGeElVVHM3WVQ0Q3hKbjFZdjhzb0lsWk5rOVVHLUltREw1X0pBVFhGMnpmWWhlRzVpd21yRkFDV3pyUQ?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>5h ago</span>
+    <span class="text-white/20">·</span>
+    <span>ForkLog</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Interactive Brokers Unites Kalshi, CME, and ForecastEx on a Single Platform</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Interactive Brokers Unites Kalshi, CME, and ForecastEx on a Single Platform &amp;nbsp;&amp;nbsp; ForkLog</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxOT3hGejBUclRQd1d2bm5fajRPOUFXdFVnT2NZOGRDMWFLTzUtSjJPdjdzZXByc3V0SXlPUzR5NWZGS1ZOdTBxSkpWSDZfeE0xRjVGdFRiai1tb1FOakZrZlNnSjJ3X1BVZkdhdzZNUWJnek1iTGtLUWp6ZTRfdlJTSHFCalZfV3drX0FuTWpoSGE3UUp6eWpWMXRYbw?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>5h ago</span>
+    <span class="text-white/20">·</span>
+    <span>Crypto Briefing</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Interactive Brokers launches multi-venue prediction market platform featuring Kalshi, CME and ForecastEx</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Interactive Brokers launches multi-venue prediction market platform featuring Kalshi, CME and ForecastEx &amp;nbsp;&amp;nbsp; Crypto Briefing</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMi-AFBVV95cUxPUVd0TXN6MUFEU21hNE5iTjBJQXZEeE92aEFKMjB4N0JXUWF1aUJ0bGFkUG5peHNkcGd4ckhGMzRDX3hoLUZfY0lENjJ4MFZGbmFXaXBIWVlDSktSS20wemhkUlZFcEVyUjk3aktjWmtYbHJXaDdkV3Q4aFIyd1RmclExRlNXUHZqOTFINmZ4Q3BzRWFPOXgzVE5NVFMyTWlrTk1rTmxaYk1XeTUtSlh6SGplWFM2anZISGNxdVNpYzZmZWxsM1REU2R1SmZ3cUFXVzh0ZW90b0d1UnI2LVdiRWpxaVVtWTMySHR6MEx1UVVIWWdOTkRpMA?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>5h ago</span>
+    <span class="text-white/20">·</span>
+    <span>FX News Group</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Interactive Brokers launches unified interface for trading prediction markets across Kalshi, CME Group, and ForecastEx</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Interactive Brokers launches unified interface for trading prediction markets across Kalshi, CME Group, and ForecastEx &amp;nbsp;&amp;nbsp; FX News Group</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxORFkzY1psREh2bUR1eE5udWJGVzJMZWo0bkRJeG56MVUtZ2wtemdaYmNyZV9KLVk0UVExdmgxUXlVYU5pVVQ1UXhJc0lrX2VZTXRveEVWWU14d1NjSlkteThQUG5wR3Q5SXgzMDUyN0p5aDNjWWJib1F4ZTZZNGM0U1FadlFNc0p2MVgyLVRPb3k4WVFwalFTaXl6bU41bVJKdTZLNkQ5U1YzbE9rdDlDLVlxMW4yUQ?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>6h ago</span>
+    <span class="text-white/20">·</span>
+    <span>Bloomberg.com</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Virtu Starts Trading on Kalshi as Event Bets Draw in Wall Street</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Virtu Starts Trading on Kalshi as Event Bets Draw in Wall Street &amp;nbsp;&amp;nbsp; Bloomberg.com</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxPWkV3eXhUZzE1WU1BdTNsRi1fblZGb1FHR05LTi1vekNJSThXdEQ0OWlrVE9NM29Gc244YVd2SEV3dE1nUm9STU13Q1Y4azF2eTNycGVZbk1MMnM2YWpCZ0JYSlR4NDhzMXg4OVF6RHZpdHV6RHotN3hxX3RPbWphUUF4UmZXZUdSR05jZzhsYld2N1A3eTU4VXh5X05rZzc3WVdZX05RWWt5NUlpS25taEEzcGNodlE?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>6h ago</span>
+    <span class="text-white/20">·</span>
+    <span>Sports Betting Dime</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">CFTC Has Voice Heard in Kalshi vs. Ohio Sports Event Contract Lawsuit</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">CFTC Has Voice Heard in Kalshi vs. Ohio Sports Event Contract Lawsuit &amp;nbsp;&amp;nbsp; Sports Betting Dime</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMipwJBVV95cUxOS3NSSlhTOURGVXZXQk9pRkhGT2RXUDhGbmVuNW4xeGFVWG43MFdwbU4tZkduOEFqU3g0SEctMnpjUWFHT1U4LUFWelVEYkQ0UmloMWtpdUVvUWM3ZUhIbVBMbzJCTy1vV0hXaHBCZEx1eTdJaElUYnRuTldaYlhnU19WMk56Y2dHWEpBYlBzcm5wOXdFSTZjeGlTQW1yN2VkQlJqUk00REktemlDa1lDeFhUR0NrbFdXb2FHWG1IQUNnWlA3TFVQcmR4VWtObm9WWHZYaFBjV2p0aEZtTWdWTHZJXzY2TG9uQVl0cnRhUzlQRThZQ0ppSDJOVFBmYnBlTUFaUlA2SlpEZEphTEgyRWZrOTYyaHRWdGlGdUhId2ZFeS1uamtv?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>6h ago</span>
+    <span class="text-white/20">·</span>
+    <span>The Joplin Globe</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Interactive Brokers Expands Prediction Markets, Unifying Access to Kalshi, CME Group, and ForecastEx</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Interactive Brokers Expands Prediction Markets, Unifying Access to Kalshi, CME Group, and ForecastEx &amp;nbsp;&amp;nbsp; The Joplin Globe</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxQa3BTd0dfR1p3RTdZY25iQ2J5VnVTS0o3ZDhRM05WaGxobmZhZzE1Qmc5bG0wQXBrOVpKWG5tckF6b1g0eGU5cTdqVUtCTjJfblg2MGt1QmJlUlRMeXB6TFotZE5TZ0F0Y0FqY3ZPS1I3b1E3amxYTXd3X1o2UUp4b0dCaVJrZ2hjUEFkZzc1SnZpLVkzam5hXzZuT1ZrSXlta0JCZHEwYWRZeHVHamc1anJHQQ?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>7h ago</span>
+    <span class="text-white/20">·</span>
+    <span>DeFi Rate</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">2026 PGA Championship Odds: Outrights, Round Leaders, and Combos at Kalshi and Polymarket</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">2026 PGA Championship Odds: Outrights, Round Leaders, and Combos at Kalshi and Polymarket &amp;nbsp;&amp;nbsp; DeFi Rate</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxOM0tEYTVxWk12V3BwUFRPNzNfWXFBd0F5aHFTS1ptaVpnOVlaY0I3Z0Z3ZTdRWEVET29jUTBTWXFjdmZYai1kd2Nfb0FTcENuX2t4YXNNdS1UQlFsd2lhcDJWQkZJWjItRzY2RzRReTJTRlNkb1cwTU84enVZZFhfZ182UUxobFNlLU1iWFhHU29xX3dZWjNZSURiQlVxb0JmSGNmTzhtRDltWnN4RF9jU0dYX2tZR1VhRlE?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>7h ago</span>
+    <span class="text-white/20">·</span>
+    <span>Casino.org</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Kalshi Is Making a Boatload of Money on Parlays</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Kalshi Is Making a Boatload of Money on Parlays &amp;nbsp;&amp;nbsp; Casino.org</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxPVFZaZk9wUW1YMENMRUJRN2NqWUlNMEFGdVJpelRDQVR2cGlQc3ZQZ0F3Xy1QWXRiTFNJQnJ6bDFCbFE5dkU2OHVTeU9DY2d6c09BclBhZVUtTk9kMlNMemNYWnhpd29NNWRoNVpTNjIyQ1dMZUVKMnNGMFBua2lZWkxlaWZQNmlrS1JqUHBqVnY1amdzTHVtcjg2TnJBRDhiZnJUUUJpY2VpR000aHhOazUwR0RWWkp0MlE?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>8h ago</span>
+    <span class="text-white/20">·</span>
+    <span>World Casino News</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">New Mexico Tribes Challenge Kalshi Over Sports Betting in Federal Lawsuit</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">New Mexico Tribes Challenge Kalshi Over Sports Betting in Federal Lawsuit &amp;nbsp;&amp;nbsp; World Casino News</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxNaHI2SVlybkFBaExldmY1Z2Q0NmFFV2I1R2F1VDdheUdHRGJ4QjFTNW5SUy1CLU0zTjZaV1FpUlQwUm1JYXpPa3pWQURvVkxBVWlMdWk5RWN4a3hxOFZrZmFkZGVLYThza0V1bkhYWHN5RkJWbXNILWprdW5PWG1kb0M3NGdkb3hyZUJVazA5RlpKTnc?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>14h ago</span>
+    <span class="text-white/20">·</span>
+    <span>Casino.org</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Cathie Wood’s ARK Boosts Kalshi Stake in Recent Funding Round</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Cathie Wood’s ARK Boosts Kalshi Stake in Recent Funding Round &amp;nbsp;&amp;nbsp; Casino.org</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMiiAJBVV95cUxNdkd2ZkRMWDdVbklZc1dsaUh0alRJUEJzenBTSTdnQ0xmUzlpNkhQZ00teGxrai02RGJqTVZ3TjhEWUZKSl9hSnhPTGRvU0JjZ3BSbjZCRmV1dlBHQWp2TVA2OVpGaTluRnBMOXUwMm5kNkRjcnRKMzA3eWdsRUJfeGtjU1ZhaHdtTGc0UDVzV3lCT3F0VGwyZFB0VEhmX2xXZ1Zsc2hHd0tVX1B5ZFduZDNhMXVUX05jY2JDWEgyRHlfbDZqbjBtY3VRUElHd1JpY1dMd28tazhNQmMwUXZfN0J4ZHpjSEhDVFlJRElxSUdOSFpaaEZPOWRWYUVoeDVsMm1YWVVMeWc?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>16h ago</span>
+    <span class="text-white/20">·</span>
+    <span>Santa Fe New Mexican</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Four New Mexico tribes accuse Kalshi of illegal sports betting on their lands</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Four New Mexico tribes accuse Kalshi of illegal sports betting on their lands &amp;nbsp;&amp;nbsp; Santa Fe New Mexican</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxQV1BSdzFoMzctRldYekIyTERXa2F4UjFXU2tRZ0EzMExMZ0VCbnNlSlQ4WlFSVTg5VFdSRFBwZHliSDdEcjRvdUpXbkxZc1RmSEo5eVNSelJVLUw2YldhdXVZMjZ0NGF0aWNySDdpTnBCdzBqN3YyaWxtMlBBQjlwSWZKSVBqWnZFMGlZMTFxSUhXZXdjSGZlcjlFRFFBZDBwMk1TdkFQR250MjNXYzBPRHNPY193Yjd6bUpEYQ?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>21h ago</span>
+    <span class="text-white/20">·</span>
+    <span>CDC Gaming</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">New Mexico pueblos sue Kalshi, alleging prediction market violates tribal gaming sovereignty</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">New Mexico pueblos sue Kalshi, alleging prediction market violates tribal gaming sovereignty &amp;nbsp;&amp;nbsp; CDC Gaming</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxPZVJuUEY5YXBSX3BtdnhaLTQ1XzA5b3EyMXJDV0xXcjlEd2hlUzk1eXgzckxRZGludDNwMFI3WHJodVV6T1JjVGEwMzNXUjQ1TFlVZXRvc2VaTVB4NkpvMVpxNWhyRE1QbjZ3RmRnc2drQUVkWFpMS0liNjl0Qjl3ajlZSFM1ZlFCTVl6T1hkY3RkVEVUbURuZnVZeWotQXFlTzF3c2FYX2ZpamhQbWRtSUwtQzVXck0tVGtiWkRhaU94djjSAcgBQVVfeXFMTWRkajJYYXRleU9SRzQ0VUlvel9HalE1NmxQYWpzaGJ6T0lwTk1jbEp6bmprOXBJQkwxajVXSEZ5UDkwOW9uVk5CN1p6ekFzRDRRMUVCNHA0Y0Y3Y0U2ZWJvaU5yajlGWjRDbHJjYWpSUXA1WWFub3FQb01CZVNySkVaYUtUV3ZGTXRETEpZX3lDVi1OZUttejJfNXVkbmtrUUVQeERQYVQ5aW1teWxqOXUzalVsSGZyMTNMZWJNN0x6dzE1LWxjMkE?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>22h ago</span>
+    <span class="text-white/20">·</span>
+    <span>KRQE</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Pueblos and tribe sue Kalshi, says their online sports betting is illegal on tribal land</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Pueblos and tribe sue Kalshi, says their online sports betting is illegal on tribal land &amp;nbsp;&amp;nbsp; KRQE</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxNMTVHSlhDZ3l2ZUFsa0FvSUV4MjNHSzNlSEpuTmlOc21pMUxCNG5LSEpNelotR1Z3bGFad2todHVITERZUUlEZ3pUaUNiaXk5TDNDeExCUU5rNDFoWWtnM05kY0ljMzh4MjNUZzJOMlp4V2wwcGZqZXVrTm5ucXEzSmVwWkJfc0dNYm5UT09STUo5NG85bVRaRURRY3RWRVUxWnlCTVZTb20xOGdyem1ZS3RFbEVUb3lSdEJkLUhXYkNtZw?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>22h ago</span>
+    <span class="text-white/20">·</span>
+    <span>KRQE</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Pueblos and tribe sue Kalshi, says their online sports betting is illegal on tribal land</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Pueblos and tribe sue Kalshi, says their online sports betting is illegal on tribal land &amp;nbsp;&amp;nbsp; KRQE</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMi5AFBVV95cUxQSzQ3eXNlVFhJYlNHOE42b1hpUkMwR1ZCekJXSWFTMUJWbl9qSFZzbGlkLUNES1Z6cHNoOUlsQm1SNi01NmUxWVdGM2VaSjdTWFZianU2b2lxSy1PT1VnVjVTYzZFNVhOVWJIcEtkREZubTRIT2E4S0FtWFpnbnhhbEc3Z19QZjFBVVZnT1ZOUzFmbmhGc1d6ZVU4UmZ5cnNEc3FDMXM0NlY2LVRaQXdWc3NsLWcwUXBRQjZDMlBhdTAyWkVyY3E5Um01RzJ1VjBuZl9TOFB5MHZpRVZZU3B4bm8zNno?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>23h ago</span>
+    <span class="text-white/20">·</span>
+    <span>Sports Illustrated</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Cavaliers vs Pistons Game 5 Tonight: What the Kalshi Market Says About Who Takes Control of the Series</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Cavaliers vs Pistons Game 5 Tonight: What the Kalshi Market Says About Who Takes Control of the Series &amp;nbsp;&amp;nbsp; Sports Illustrated</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxOOXlOQ1RtMzdPRzZxNDU3dUM3bnJGTi12UWR5LW9qNmZPT0lKOTJvQUZob1BtS012YlpNWnZjTkRxV2VnamJZTkV5U24tbS1HUXlzVFZ6YmViRkktQUJzd19GWmRZd0YtNFF6SzFPbTJYd3duRUZHbWkxQnZOUGg3TFd2aUw3RW90bmU5a3dTMXF4NmNXTVB0WXVmTmx6OWRNeUtQNldaVGl3QTlzOWNmZU0xOTIxb1FhcUgyMGRSZXNHUQ?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>yesterday</span>
+    <span class="text-white/20">·</span>
+    <span>Source New Mexico</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">New Mexico pueblos sue Kalshi, alleging prediction market violates tribal gaming sovereignty</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">New Mexico pueblos sue Kalshi, alleging prediction market violates tribal gaming sovereignty &amp;nbsp;&amp;nbsp; Source New Mexico</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMi-wFBVV95cUxPbGl2T3IwRjlMRC0tOG12UTM2WEhKb19lRG9TSHlFQ2lqT0doeFVfWnZmcm9RdWVYdGpjbmoxRU9tNV9ZLWFZQjk5d2hXSlNYODRyNjlPelNScWlnbkxkZXp4Vl8ySU45a2xfMEpwWjVrajJLWFBNazg2Znc5dEpBTXdSYk5yZ0ctcHBxN3FFSmpLYjJwY0Y2U3dYRkF0c2Y2YlotS1NGZ0l3elV5MHg5RmFTQ1dQQ1FGeEozVnp2QzJMaTZ5UWtYMFEzQV9LeTEwd2d4UFNjTnB1WmFzMHczQUFPR1FHS1k3YjNlVUJpQzV6U1dOcC1lVHZhaw?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>yesterday</span>
+    <span class="text-white/20">·</span>
+    <span>Forbes</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">A Swap By Any Other Name: The Third Circuit Sides With Kalshi In High-Stakes Fight Over Who Regulates Prediction Markets</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">A Swap By Any Other Name: The Third Circuit Sides With Kalshi In High-Stakes Fight Over Who Regulates Prediction Markets &amp;nbsp;&amp;nbsp; Forbes</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxNLTQwNzlTSThSTFJXY1hQRndlMGZObHpJdDFpUkxldHZobXZPb2hrV3hKdDNEOFViT3FXa3dxVzQwZ0lWR1dzOTZMYXNkTS1GcmZMQzFoekwyM1JDYW5YNjJwR3dRN0dBNDRreHJEdmdOYU5ic1JOT3FMcW1tdWtqWS1WOXlFbXlTaC1GdWZPRWRTRk9qaWg2Ykg1YWZUNEpfckJ4Y1hLd1BsR1ZUVGJpUFFwSnMwNzlsUnpMdw?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>yesterday</span>
+    <span class="text-white/20">·</span>
+    <span>Albuquerque Journal</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">New Mexico tribes sue Kalshi, alleging illegal sports betting on tribal lands</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">New Mexico tribes sue Kalshi, alleging illegal sports betting on tribal lands &amp;nbsp;&amp;nbsp; Albuquerque Journal</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxPWjdtZVlOT3NyYXpRUDZ6dTZRMklzYTBCaXdqdHJvbEVqREl0NnRJVTgxeEVsRy1iZHdvVmhvaXV2MF9kMkNvYm45X25KVGwxenh5WUNRRE9YMXNKSnJ2TGVwRGYyQW5pdFlteVliczMtY3YyUkZNR2lKaDhXOHVBaUtGS050X080Mi1WdmVSelJjend0TFhZbGdrQkRNTWxoSEsyeDhpODA?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>yesterday</span>
+    <span class="text-white/20">·</span>
+    <span>Sportico.com</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Kalshi Retail Bettors Have Lost $100M+ on Parlays This Year</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Kalshi Retail Bettors Have Lost $100M+ on Parlays This Year &amp;nbsp;&amp;nbsp; Sportico.com</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMi7gFBVV95cUxOcF9jUWNqdGpJcDJtalVhMTd2YVM2b3VSdTlkTGNVX0UtYVVQRFJwVEs2NnBZTlZablc2LW9uNmtSeDRZOWJVLWl5by04b2NYbV9xLWdtX1pmbGE1WjdGZ2ZlZkYyTGxSclJTbGZYQmgzY0RISmQzVlJ2dUptUzZpY3l3bmlETkhyUmVualYwVU11VUZJekZxLU5UN0g3Y2N5NHEydUk0bDFwc19kUERQSGRDemprZjluVkNvSFNUYm80WTFmaGZRRXZvR2Z5TXMzT0xVNXg3eXdHU0RuYkJyMTkxM3JndTNRMU1CMlpR?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>yesterday</span>
+    <span class="text-white/20">·</span>
+    <span>Sports Illustrated</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">The Difference Between Kalshi vs Polymarket: What US Traders Actually Need to Know in 2026</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">The Difference Between Kalshi vs Polymarket: What US Traders Actually Need to Know in 2026 &amp;nbsp;&amp;nbsp; Sports Illustrated</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxQX1VWVEYtWXN5ekFkQXE0bzZQRzBELUd3RWFRNG42b1ROZm9CRjloVEJFQTZyeU8tYmo1WElEWTVMNjh5eTlYYkUxbENyX1Fac3EtQjdhMlROeFdWTmdFVmZoSEMxX3VyWUNWbFhfQUxSLVN3RHFsS0lvLVdva3A3Vk5NY3lfbnU2MU0yLVRjY19kd2Z3NkxGU1Q5bUJ5SmJrS0ZtMDdXSkU4TEhzTnlZeTdzRUUzS0xnWWtLUkRfdGtjT2No?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>yesterday</span>
+    <span class="text-white/20">·</span>
+    <span>Yogonet</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">CFTC backs Kalshi in Ohio appeal over prediction market oversight</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">CFTC backs Kalshi in Ohio appeal over prediction market oversight &amp;nbsp;&amp;nbsp; Yogonet</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMie0FVX3lxTE8tdVQtTW1FRFJfSGd5anBQY3NRSE5zbDZrZG1ncDNZc2hvcS1xc1RZcFBKbFYwdEludEdyR2VWTUo1NkVNY2JvMUVWY1BiclpHMXR2NDdLSndiQkhRT0hhUS0zSDZIQ29QUTJTUExsU0VPMHlaWW5ucW9wZw?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>yesterday</span>
+    <span class="text-white/20">·</span>
+    <span>Kalshi</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">After April&#x27;s hot CPI print, Kalshi traders forecast 2026 inflation to peak at 4.8%</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">After April&#x27;s hot CPI print, Kalshi traders forecast 2026 inflation to peak at 4.8% &amp;nbsp;&amp;nbsp; Kalshi</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMif0FVX3lxTE9HbjB4Q2JSU1N6Ul9xX0xQYTJTX1d6SGRzZm12WFltMkxsQ09rZk1RRHF1cDM1SlMxbERWM3Zvbk14M2x2UmR5bUU2VGdkS2tTbmVhRkhOeDNtdWNEWUVVaXNzTzRpMmZfbnRucGM4VEZIeTA3QUZBSUJHWWhDQmM?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>yesterday</span>
+    <span class="text-white/20">·</span>
+    <span>OCNJ Daily</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Kalshi Betting Review: Why It&#x27;s The Best App For Election Betting</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Kalshi Betting Review: Why It&#x27;s The Best App For Election Betting &amp;nbsp;&amp;nbsp; OCNJ Daily</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQODR0N1MtTDk4NzVOOGtoaWRGc2JwamJaemdJbXA0eUNJVWp4b3BrTmZiXzNxMTFTV1Bxb2FPNWs2RTZRSVdjd21lMm9GM2x3ZXp4SGdDQkgwS1FKY2h1MC1odk5tRk1CZXFva3NsNExmZFNGWExzU0hCMTBibWgzZHl3Y04yX1VM?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>2d ago</span>
+    <span class="text-white/20">·</span>
+    <span>Courthouse News</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Kentuckians sue Kalshi to recover gambling losses</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Kentuckians sue Kalshi to recover gambling losses &amp;nbsp;&amp;nbsp; Courthouse News</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxQS3U3bVMtUDM0NDJyY2QzblZTdklsRGJHbzR3RFdKZU5halpBb3RCSXJ1ODlaMjVjU2hMVVZKeXlmUm9sMFZyeVUyT1FQbkttTXM3b0xhNndJdHN0U1hZNjlFcDh6LVZWNGxjeS1sZXNLR2tjdFJQaTlOQXViQmpMZ1pTLXg0bEg4T3hrOXRTZnhpMTBIMl9OeUpUMFBsNnM5UnZjWDgyTzFINndDUzYxbi14dS05ZWpMTlRySm9xWQ?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>2d ago</span>
+    <span class="text-white/20">·</span>
+    <span>Sports Illustrated</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Why the Kalshi Lawsuits Say More About Market Disruption Than Wrongdoing</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Why the Kalshi Lawsuits Say More About Market Disruption Than Wrongdoing &amp;nbsp;&amp;nbsp; Sports Illustrated</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxPMXM4TnV2UXYxM0NpTXBBY2VSUzB2UGNpZjRuUElBQ3gtLWhQU3c5QnljMUMwQ1U5ekhqUmVDS09meEVDb19QV25iMFpwZDNPU0tkOGUzazl6M2tlby1VS3lOb1gxVVNRNEJYY2VJTWdxeFpzN0g4d3pZd1JkU2tLTS1JTnI?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>2d ago</span>
+    <span class="text-white/20">·</span>
+    <span>Barron&#x27;s</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Kalshi Hires Veteran Regulator as Prediction Market Scrutiny Mounts</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Kalshi Hires Veteran Regulator as Prediction Market Scrutiny Mounts &amp;nbsp;&amp;nbsp; Barron&#x27;s</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE16STVqUzFTRU96Y1J6TXRSY2VCTW1tSHpmWUpWMTgyMVljdi1TTjZadTNhTF9JV2ZwVUJ3cUNKZnJmc2xFMzFTcm1JYmxCNWpKR2xIbTVYNk1jQzQ?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>2d ago</span>
+    <span class="text-white/20">·</span>
+    <span>NEXT.io</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Why Kalshi Odds Don’t Exist: Understanding Trading Yes-Or-No Contracts On Events</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Why Kalshi Odds Don’t Exist: Understanding Trading Yes-Or-No Contracts On Events &amp;nbsp;&amp;nbsp; NEXT.io</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxOZnl5YWFfYzhsbjJ5ZF95OEtOUVBHWUhUaGNLTDVaQUtadUhjbWd0dW8yYmxtRkFjY3Q3Qkdfcmw1Z2FZWDBUMzdwa0JKdU5ydUZ3TUx6cUh0WVVHd3NaRVpMQjIzSWFlZmdEUDVXOG5qMlRGUHFiZkJ2czk1MG5CRjhmUjZKUVV0SlMzeEVKYmVIQkdnLU5hemp1YTVmTG1PM3VmWnpubExaXy1peWtGZG1uS2hrZkZoWmc?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>3d ago</span>
+    <span class="text-white/20">·</span>
+    <span>KUNC</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">As Colorado debates sports betting reform, Kalshi operates outside state rules</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">As Colorado debates sports betting reform, Kalshi operates outside state rules &amp;nbsp;&amp;nbsp; KUNC</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMi1gFBVV95cUxQdThaUzN1d19BOFROSHJvSHhiYVJDRk9JN2t4a2xVSVhhdy1wVlNSbjc2ZDFJY2o5YURjdGZ6SlFtUTVyMlcxYVgwSXRnYmNkeHBUdU9QX1ZLT0d0TXJVdGRjZFEyUi1lZEJ2VXp0WW90NWNobFFPYUVpbmQ3UlNSaWZXSE9TVWJFRndUR29yZmFFSXloM29GelVKSzBmVmxiWUx1RFVqd09oNHM1VTByT1NvamFpcU41QkgyWWEzeXZUMEpKUjRGSHNDNHhGTkV3R1ZSU3Bn?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>4d ago</span>
+    <span class="text-white/20">·</span>
+    <span>Akron Beacon Journal</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Keep Kalshi, prediction markets away from CNN, CNBC, other news | Letters</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Keep Kalshi, prediction markets away from CNN, CNBC, other news | Letters &amp;nbsp;&amp;nbsp; Akron Beacon Journal</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMi9wFBVV95cUxNOTBSald1eXFoSGlGWGt4UjVXTEI4dmRSRmh4UEthbnE2WEZRaXhNR2NYTXNiN3VGZU1oV1ZaamtSTC1LTWl2alQxSklpLVJlY1dKREFtWjd5MlBWTWgyT3U1S0ZzYS1ZN1VwdUxyMWlfMjMwV0JKSmJGbUxPelR2MWlKQktDWDAzeFRGcUswVzA0U29jXzJJSWtIV01qOFcxWHRQekxMLUZtSk8xN2l6VVJhWTJTVFR5eF91N1RpNGFlZEkzVzFfV3E3RjlkYXZxVS03VU1kUnV0dnpQU19lQ2N4cS1SNUxBcVRDdzVGdEptaGpqNHM4?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>6d ago</span>
+    <span class="text-white/20">·</span>
+    <span>Madison Square Garden Entertainment Corp.</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Kalshi And Madison Square Garden Announce Multi-Year Partnership, Naming Kalshi An Official Prediction Market Partner Of The Garden</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Kalshi And Madison Square Garden Announce Multi-Year Partnership, Naming Kalshi An Official Prediction Market Partner Of The Garden &amp;nbsp;&amp;nbsp; Madison Square Garden Entertainment Corp.</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxPYkQ4NV9sX0h0dk0wWlpfa0gyamJBV2JTMUpSNWJKcWgxOV9ia3pGOVg0NWJzMkFaNW9EVC1IVF9TZ3gxa1hZSWJ4bHA5TXdORTJpVTAtNTFDMXo2czZpMUpaSG5MVUhEU1NjenhBT0VmVFAyOV94LWtqOW9zUkVKcW9ZOVUta2Q5X2k5Rg?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>6d ago</span>
+    <span class="text-white/20">·</span>
+    <span>Fast Company</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Kalshi’s $22 billion problem</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Kalshi’s $22 billion problem &amp;nbsp;&amp;nbsp; Fast Company</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQSXhlTjJwekM4Y0JRSnBfek5YUVJZdU9KN21RR0cyT2dQSWRqUjB5TXRNSkR0S2treFVSdjhlVnd0Z3VVM3BpZTFwZUlUd2VqYW92V1hic1VaakVTbjZ4bDNYb0daUVJhQmMwMk1ueE9RZkpvaXZHdDRma09KemRrZ0pLMzBWRjBl?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>6d ago</span>
+    <span class="text-white/20">·</span>
+    <span>Colorado Public Radio</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">As Colorado debates sports betting reform, Kalshi operates outside state rules</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">As Colorado debates sports betting reform, Kalshi operates outside state rules &amp;nbsp;&amp;nbsp; Colorado Public Radio</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxQTG9zLXB3RkVTM2lzMGp2UEhMdmY3bG1MWUthT0xRUEJoZ2NNVjV3d084bU1wbzZSbUdLTHN3eTUtZ3Y2MVltbmJqRWVuTjNFX0VfNjdnbGtjYkNyckRiYThTZHZOS0JfcWtRTWptYURjc1FicHl3SEZBamkzMDJhbWUzTjJwRy10QXlkRm15bnBzbEJU?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>2026-05-07</span>
+    <span class="text-white/20">·</span>
+    <span>The New York Times</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Why Investors Are Still Betting Big on Kalshi</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Why Investors Are Still Betting Big on Kalshi &amp;nbsp;&amp;nbsp; The New York Times</p>
+</a>
+
+
+<a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxNRm1fc0JmcmNCbmF6TktEM0J3SndXazJFdUswdTNDYk8xQjR4dTFabTgtOXUyVThjVWs0UVdaYUV1OE1xWU1FRUo3S2t4NXlqTGJPek1hSzlTeWIwWEs1bmlnY1VXOUpqV1hNaGJ5T1gtRHBfVmlmN25xZ3dLaGxXajNJdldHbGNiRmZfd1Vn?oc=5" target="_blank" rel="noopener"
+   class="item-card block border border-white/10 rounded-xl px-5 py-4">
+  <div class="flex items-center gap-3 text-[11px] text-white/50 mb-2">
+    
+    <span>2026-05-07</span>
+    <span class="text-white/20">·</span>
+    <span>The New York Times</span>
+    
+  </div>
+  <h3 class="text-base font-medium text-white leading-snug">Kalshi, the Prediction Market, Is Now Valued at $22 Billion</h3>
+  <p class="text-sm text-white/60 leading-relaxed mt-1">Kalshi, the Prediction Market, Is Now Valued at $22 Billion &amp;nbsp;&amp;nbsp; The New York Times</p>
+</a>
+
+  </div>
+</main>
+
+<footer class="border-t border-white/10 mt-16">
+  <div class="max-w-7xl mx-auto px-6 py-8 text-center text-xs text-white/40">
+    Built and maintained weekly by <span class="brand-accent">VSCRL</span> · PR Pulse · Tracks 11 fintech competitors
+  </div>
+</footer>
+
+<script>
+  function toggleWhy() {
+    var b = document.getElementById('why-banner');
+    var p = document.getElementById('why-pill');
+    if (!b || !p) return;
+    b.classList.toggle('hidden');
+    p.classList.remove('why-attention');
+  }
+  function dismissWhy() {
+    var b = document.getElementById('why-banner');
+    var p = document.getElementById('why-pill');
+    if (b) b.classList.add('hidden');
+    if (p) p.classList.remove('why-attention');
+    try { localStorage.setItem('vscrl-pr-pulse-why-seen', '1'); } catch(e) {}
+  }
+  try {
+    if (!localStorage.getItem('vscrl-pr-pulse-why-seen')) {
+      var b = document.getElementById('why-banner');
+      var p = document.getElementById('why-pill');
+      if (b) b.classList.remove('hidden');
+      if (p) p.classList.add('why-attention');
+      localStorage.setItem('vscrl-pr-pulse-why-seen', '1');
+    }
+  } catch(e) {}
+</script>
+</body>
+</html>
