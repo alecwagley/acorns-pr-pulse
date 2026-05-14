@@ -18,7 +18,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "negative"
+    "sentiment": "positive"
   },
   {
     "brand": "Polymarket",
@@ -142,7 +142,7 @@
     ],
     "group_size": 1,
     "is_official": true,
-    "sentiment": "positive"
+    "sentiment": "neutral"
   },
   {
     "brand": "Polymarket",
@@ -187,27 +187,6 @@
     "sentiment": "neutral"
   },
   {
-    "brand": "Robinhood",
-    "slug": "robinhood",
-    "title": "Why Robinhood (HOOD) Stock Is Up Today",
-    "summary": "Detailed price information for Robinhood Markets Inc Cl A (HOOD-Q) from The Globe and Mail including charting and trades.",
-    "url": "https://www.theglobeandmail.com/investing/markets/stocks/HOOD/pressreleases/1940340/why-robinhood-hood-stock-is-up-today/",
-    "source": "The Globe and Mail",
-    "author": "",
-    "date": "2026-05-14T18:56:23+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "The Globe and Mail",
-        "url": "https://www.theglobeandmail.com/investing/markets/stocks/HOOD/pressreleases/1940340/why-robinhood-hood-stock-is-up-today/",
-        "author": ""
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "neutral"
-  },
-  {
     "brand": "Kalshi",
     "slug": "kalshi",
     "title": "The War on Kalshi Just Escalated: Minnesota\u2019s Felony Push May Reach Supreme Court",
@@ -226,7 +205,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "positive"
+    "sentiment": "negative"
   },
   {
     "brand": "Kalshi",
@@ -294,7 +273,7 @@
     ],
     "group_size": 2,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "negative"
   },
   {
     "brand": "Kalshi",
@@ -315,7 +294,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "positive"
   },
   {
     "brand": "Kalshi",
@@ -384,26 +363,21 @@
     "brand": "Polymarket",
     "slug": "polymarket",
     "title": "Polymarket Named Official Prediction Market Partner of Serie A in the U.S.",
-    "summary": "NEW YORK--(BUSINESS WIRE)--May 14, 2026",
-    "url": "https://www.bdtonline.com/sports/national_sports/polymarket-named-official-prediction-market-partner-of-serie-a-in-the-u-s/article_9fde9e71-07a8-522a-b207-5da6f0c5c0c2.html",
-    "source": "Bluefield Daily Telegraph",
+    "summary": "Polymarket Named Official Prediction Market Partner of Serie A in the U.S. Business Wire",
+    "url": "https://www.businesswire.com/news/home/20260513833232/en/Polymarket-Named-Official-Prediction-Market-Partner-of-Serie-A-in-the-U.S.",
+    "source": "Business Wire",
     "author": "",
-    "date": "2026-05-14T16:00:15+00:00",
+    "date": "2026-05-14T16:00:00+00:00",
     "type": "news",
     "sources": [
-      {
-        "publisher": "Bluefield Daily Telegraph",
-        "url": "https://www.bdtonline.com/sports/national_sports/polymarket-named-official-prediction-market-partner-of-serie-a-in-the-u-s/article_9fde9e71-07a8-522a-b207-5da6f0c5c0c2.html",
-        "author": ""
-      },
       {
         "publisher": "Business Wire",
         "url": "https://www.businesswire.com/news/home/20260513833232/en/Polymarket-Named-Official-Prediction-Market-Partner-of-Serie-A-in-the-U.S.",
         "author": ""
       }
     ],
-    "group_size": 2,
-    "is_official": false,
+    "group_size": 1,
+    "is_official": true,
     "sentiment": "neutral"
   },
   {
@@ -451,7 +425,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "positive"
   },
   {
     "brand": "Robinhood",
@@ -489,14 +463,9 @@
         "publisher": "Front Office Sports",
         "url": "https://frontofficesports.com/polymarkets-soccer-spree-continues-with-serie-a-deal/",
         "author": ""
-      },
-      {
-        "publisher": "Yahoo Sports",
-        "url": "https://sports.yahoo.com/articles/polymarket-soccer-spree-continues-serie-152113463.html",
-        "author": ""
       }
     ],
-    "group_size": 2,
+    "group_size": 1,
     "is_official": false,
     "sentiment": "positive"
   },
@@ -571,7 +540,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "negative"
+    "sentiment": "positive"
   },
   {
     "brand": "Polymarket",
@@ -592,7 +561,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "positive"
   },
   {
     "brand": "Kalshi",
@@ -634,7 +603,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "negative"
   },
   {
     "brand": "Polymarket",
@@ -655,7 +624,7 @@
     ],
     "group_size": 1,
     "is_official": true,
-    "sentiment": "neutral"
+    "sentiment": "positive"
   },
   {
     "brand": "Chase",
@@ -676,7 +645,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "positive"
   },
   {
     "brand": "Robinhood",
@@ -697,7 +666,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "positive"
   },
   {
     "brand": "Robinhood",
@@ -718,7 +687,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "positive"
   },
   {
     "brand": "Chase",
@@ -738,32 +707,6 @@
       }
     ],
     "group_size": 1,
-    "is_official": false,
-    "sentiment": "neutral"
-  },
-  {
-    "brand": "Polymarket",
-    "slug": "polymarket",
-    "title": "Polymarket Copy Trade Platform Poly Syncer Launches Non-Custodial Wallet Mirroring Engine",
-    "summary": "Sweden 14th May 2026 Poly Syncer accessible at www polysyncer com has opened general availability of its Polymarket copy trading engine a non custodial execution platform that automatically replicates the on chain positions of the most consistently profitable Polymarket wallets ...",
-    "url": "https://www.openpr.com/news/4513360/polymarket-copy-trade-platform-poly-syncer-launches",
-    "source": "openPR.com",
-    "author": "",
-    "date": "2026-05-14T08:30:05+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "openPR.com",
-        "url": "https://www.openpr.com/news/4513672/polymarket-copy-trade-poly-syncer-debuts-non-custodial",
-        "author": ""
-      },
-      {
-        "publisher": "openPR.com",
-        "url": "https://www.openpr.com/news/4513360/polymarket-copy-trade-platform-poly-syncer-launches",
-        "author": ""
-      }
-    ],
-    "group_size": 2,
     "is_official": false,
     "sentiment": "positive"
   },
@@ -807,7 +750,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "negative"
   },
   {
     "brand": "Kalshi",
@@ -849,28 +792,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "negative"
-  },
-  {
-    "brand": "Polymarket",
-    "slug": "polymarket",
-    "title": "Kalshi crushes Polymarket as predictive markets explode",
-    "summary": "While Kalshi swallows billions like an endgame boss, Polymarket now attracts much less innocent looks. Between troubling military bets, accounts appearing from nowhere, and speculative algorithms, predictive markets suddenly resemble a toxic mix between Wall Street, underground casino, and digital war room.",
-    "url": "https://www.cointribune.com/en/kalshi-surpasses-polymarket-for-the-second-consecutive-month-with-14-8b-volume-in-april/",
-    "source": "Cointribune",
-    "author": "",
-    "date": "2026-05-14T06:20:00+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "Cointribune",
-        "url": "https://www.cointribune.com/en/kalshi-surpasses-polymarket-for-the-second-consecutive-month-with-14-8b-volume-in-april/",
-        "author": ""
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "positive"
   },
   {
     "brand": "Polymarket",
@@ -886,6 +808,27 @@
       {
         "publisher": "Yeni Safak English",
         "url": "https://en.yenisafak.com/world/polymarket-faces-scrutiny-over-suspected-insider-betting-activity-3718264",
+        "author": ""
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "negative"
+  },
+  {
+    "brand": "Polymarket",
+    "slug": "polymarket",
+    "title": "Polymarket's trading volume in April decreased by 8.9% month-on-month, while competitors like Kalshi gained market share",
+    "summary": "According to Cointelegraph, the trading volume of the prediction market platform Polymarket saw a month-on-month decline in April, dropping about 8.9% compared to March, marking the first monthly decline since last August.",
+    "url": "https://www.chaincatcher.com/en/article/2264652",
+    "source": "\u94fe\u6355\u624bChainCatcher",
+    "author": "",
+    "date": "2026-05-14T02:56:32+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "\u94fe\u6355\u624bChainCatcher",
+        "url": "https://www.chaincatcher.com/en/article/2264652",
         "author": ""
       }
     ],
@@ -912,7 +855,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "negative"
+    "sentiment": "neutral"
   },
   {
     "brand": "Chase",
@@ -1187,7 +1130,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "positive"
   },
   {
     "brand": "Kalshi",
@@ -1208,7 +1151,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "negative"
   },
   {
     "brand": "Kalshi",
@@ -1245,27 +1188,6 @@
       {
         "publisher": "Yogonet",
         "url": "https://www.yogonet.com/international/news/2026/05/13/120394-cftc-backs-kalshi-in-ohio-appeal-over-prediction-market-oversight",
-        "author": ""
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "neutral"
-  },
-  {
-    "brand": "Robinhood",
-    "slug": "robinhood",
-    "title": "A Robinhood co-founder just raised $275 million to put AI data centers in orbit \u2014 and the real pitch isn't the physics, it's a seven-year waitlist nobody can fix on the ground",
-    "summary": "Cowboy Space Corp. has raised $275 million in Series B funding to build orbital data centers powered by sunlight and launched on a rocket the company is designing itself. The round signals investor appetite for a thesis that has moved from science-fiction adjacent to venture-fundable in roughly eighteen months: if\u2026",
-    "url": "https://spacedaily.com/sd-n-a-robinhood-co-founder-just-raised-275-million-to-put-ai-data-centers-in-orbit-and-the-real-pitch-isnt-the-physics-its-a-seven-year-waitlist-nobody-can-fix-on-the-ground/",
-    "source": "Space Daily",
-    "author": "",
-    "date": "2026-05-13T13:55:44+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "Space Daily",
-        "url": "https://spacedaily.com/sd-n-a-robinhood-co-founder-just-raised-275-million-to-put-ai-data-centers-in-orbit-and-the-real-pitch-isnt-the-physics-its-a-seven-year-waitlist-nobody-can-fix-on-the-ground/",
         "author": ""
       }
     ],
@@ -1313,7 +1235,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "positive"
   },
   {
     "brand": "Chase",
@@ -1334,7 +1256,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "positive"
+    "sentiment": "neutral"
   },
   {
     "brand": "Chase",
@@ -1502,7 +1424,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "positive"
   },
   {
     "brand": "Robinhood",
@@ -1523,7 +1445,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "positive"
   },
   {
     "brand": "Polymarket",
@@ -1544,7 +1466,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "negative"
   },
   {
     "brand": "SoFi",
@@ -1568,40 +1490,19 @@
     "sentiment": "positive"
   },
   {
-    "brand": "Kalshi",
-    "slug": "kalshi",
-    "title": "Kentuckians sue Kalshi to recover gambling losses",
-    "summary": "The lead plaintiff says the futures markets provided by the New York-based company are nothing more than unregulated and unlicensed gambling.",
-    "url": "https://www.courthousenews.com/kentuckians-sue-kalshi-to-recover-gambling-losses/",
-    "source": "Courthouse News",
-    "author": "",
-    "date": "2026-05-12T17:29:46+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "Courthouse News",
-        "url": "https://www.courthousenews.com/kentuckians-sue-kalshi-to-recover-gambling-losses/",
-        "author": ""
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "negative"
-  },
-  {
     "brand": "Chase",
     "slug": "chase",
     "title": "Comer requests interview with former JPMorgan Chase executive in Epstein probe",
     "summary": "House Oversight and Government Reform Committee Chair James Comer requested an interview with former JPMorgan Chase executive Jes Staley in the panel's probe.",
-    "url": "https://cbs6albany.com/news/nation-world/comer-requests-interview-with-former-jpmorgan-chase-executive-in-epstein-probe-jes-staley-jamie-dimon-house-oversight-committee",
-    "source": "WRGB",
+    "url": "https://komonews.com/news/nation-world/comer-requests-interview-with-former-jpmorgan-chase-executive-in-epstein-probe-jes-staley-jamie-dimon-house-oversight-committee",
+    "source": "KOMO",
     "author": "",
-    "date": "2026-05-12T17:02:58+00:00",
+    "date": "2026-05-12T16:59:16+00:00",
     "type": "news",
     "sources": [
       {
-        "publisher": "WRGB",
-        "url": "https://cbs6albany.com/news/nation-world/comer-requests-interview-with-former-jpmorgan-chase-executive-in-epstein-probe-jes-staley-jamie-dimon-house-oversight-committee",
+        "publisher": "KOMO",
+        "url": "https://komonews.com/news/nation-world/comer-requests-interview-with-former-jpmorgan-chase-executive-in-epstein-probe-jes-staley-jamie-dimon-house-oversight-committee",
         "author": ""
       }
     ],
@@ -1649,7 +1550,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "negative"
+    "sentiment": "positive"
   },
   {
     "brand": "Robinhood",
@@ -1670,7 +1571,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "positive"
   },
   {
     "brand": "SoFi",
@@ -1691,7 +1592,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "negative"
+    "sentiment": "positive"
   },
   {
     "brand": "Kalshi",
@@ -1712,7 +1613,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "negative"
+    "sentiment": "neutral"
   },
   {
     "brand": "Robinhood",
@@ -1957,7 +1858,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "positive"
   },
   {
     "brand": "Chase",
@@ -1978,7 +1879,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "negative"
+    "sentiment": "neutral"
   },
   {
     "brand": "Polymarket",
@@ -1999,7 +1900,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "negative"
   },
   {
     "brand": "Polymarket",
@@ -2020,7 +1921,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "positive"
+    "sentiment": "negative"
   },
   {
     "brand": "Kalshi",
@@ -2041,7 +1942,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "negative"
   },
   {
     "brand": "Chase",
@@ -2125,7 +2026,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "positive"
+    "sentiment": "negative"
   },
   {
     "brand": "Chase",
@@ -2146,7 +2047,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "positive"
   },
   {
     "brand": "SoFi",
@@ -2167,28 +2068,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
-  },
-  {
-    "brand": "Robinhood",
-    "slug": "robinhood",
-    "title": "Robinhood Review + COMPLETE Step-By-Step Tutorial + Pros And Cons (DoH4UocDzW)",
-    "summary": "Robinhood Review + COMPLETE Step-By-Step Tutorial + Pros And Cons (DoH4UocDzW) Fathom Journal",
-    "url": "https://fathomjournal.org/2ca9e204smm/bd6299e3-Iw1EHyhULCIACwU.html",
-    "source": "Fathom Journal",
-    "author": "",
-    "date": "2026-05-10T03:54:30+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "Fathom Journal",
-        "url": "https://fathomjournal.org/2ca9e204smm/bd6299e3-Iw1EHyhULCIACwU.html",
-        "author": ""
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "positive"
   },
   {
     "brand": "Polymarket",
@@ -2209,28 +2089,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
-  },
-  {
-    "brand": "Chime",
-    "slug": "chime",
-    "title": "Chime Is A Hidden Gem In Fintech! #Chime #fintech (pLoXQW1gf2)",
-    "summary": "Chime Is A Hidden Gem In Fintech! #Chime #fintech (pLoXQW1gf2) Fathom Journal",
-    "url": "https://fathomjournal.org/bfc0e085smm/d6ac88c5-57YxvfLWE0s.html",
-    "source": "Fathom Journal",
-    "author": "",
-    "date": "2026-05-09T07:57:21+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "Fathom Journal",
-        "url": "https://fathomjournal.org/bfc0e085smm/d6ac88c5-57YxvfLWE0s.html",
-        "author": ""
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "negative"
   },
   {
     "brand": "Kalshi",
@@ -2275,27 +2134,6 @@
     "sentiment": "positive"
   },
   {
-    "brand": "Chime",
-    "slug": "chime",
-    "title": "How Chime overcame trust challenges when deploying its AI agent",
-    "summary": "How Chime overcame trust challenges when deploying its AI agent Customer Experience Dive",
-    "url": "https://www.customerexperiencedive.com/news/how-chime-overcame-trust-challenges-deploying-ai-agent-jade/819651/",
-    "source": "Customer Experience Dive",
-    "author": "",
-    "date": "2026-05-08T13:04:02+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "Customer Experience Dive",
-        "url": "https://www.customerexperiencedive.com/news/how-chime-overcame-trust-challenges-deploying-ai-agent-jade/819651/",
-        "author": ""
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "neutral"
-  },
-  {
     "brand": "Cash App",
     "slug": "cash-app",
     "title": "Block earnings beat driven by Cash App and Square strength",
@@ -2335,7 +2173,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "negative"
   },
   {
     "brand": "Kalshi",
@@ -2356,7 +2194,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "negative"
   },
   {
     "brand": "Cash App",
@@ -2439,7 +2277,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "positive"
   },
   {
     "brand": "Cash App",
@@ -2477,9 +2315,14 @@
         "publisher": "Reuters",
         "url": "https://www.reuters.com/business/block-quarterly-profit-jumps-resilient-consumer-spending-2026-05-07/",
         "author": ""
+      },
+      {
+        "publisher": "CNA",
+        "url": "https://www.channelnewsasia.com/business/block-raises-annual-gross-profit-outlook-cash-app-stands-out-6108096",
+        "author": ""
       }
     ],
-    "group_size": 1,
+    "group_size": 2,
     "is_official": false,
     "sentiment": "positive"
   },
@@ -2502,7 +2345,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "positive"
+    "sentiment": "neutral"
   },
   {
     "brand": "Polymarket",
@@ -2523,7 +2366,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "negative"
   },
   {
     "brand": "Kalshi",
@@ -2565,7 +2408,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "positive"
   },
   {
     "brand": "Betterment",
@@ -2611,8 +2454,8 @@
   {
     "brand": "Cash App",
     "slug": "cash-app",
-    "title": "Earnings release / financial results \u00b7 8-K Filing",
-    "summary": "SEC 8-K filing by Cash App on 2026-05-07. Earnings release / financial results",
+    "title": "Earnings release / financial results, Financial statements / exhibits \u00b7 8-K Filing",
+    "summary": "SEC 8-K filing by Cash App on 2026-05-07. Earnings release / financial results, Financial statements / exhibits",
     "url": "https://www.sec.gov/Archives/edgar/data/1512673/000119312526212032/d132441d8k.htm",
     "source": "SEC EDGAR",
     "author": "",
@@ -2651,8 +2494,8 @@
   {
     "brand": "Chase",
     "slug": "chase",
-    "title": "Material event \u00b7 8-K Filing",
-    "summary": "SEC 8-K filing by Chase on 2026-05-07. Material event",
+    "title": "Modified rights of security holders, Amended charter or bylaws, Other material event (+ 1 more) \u00b7 8-K Filing",
+    "summary": "SEC 8-K filing by Chase on 2026-05-07. Modified rights of security holders, Amended charter or bylaws, Other material event (+ 1 more)",
     "url": "https://www.sec.gov/Archives/edgar/data/19617/000119312526211978/d903351d8k.htm",
     "source": "SEC EDGAR",
     "author": "",
@@ -2692,27 +2535,6 @@
   {
     "brand": "Chime",
     "slug": "chime",
-    "title": "Chime hits GAAP profitability in Q1",
-    "summary": "The neobank reported a 25% year-over-year increase in revenue for the quarter ended March 31, with active users jumping 19% to 10.2 million. The company also raised its full-year 2026 guidance and authorized a $200 million share repurchase program.",
-    "url": "https://www.americanbanker.com/payments/news/chime-hits-gaap-profitability-in-q1",
-    "source": "American Banker",
-    "author": "",
-    "date": "2026-05-06T21:03:00+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "American Banker",
-        "url": "https://www.americanbanker.com/payments/news/chime-hits-gaap-profitability-in-q1",
-        "author": ""
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "positive"
-  },
-  {
-    "brand": "Chime",
-    "slug": "chime",
     "title": "Chime reports maiden quarterly profit on resilient consumer spending",
     "summary": "Chime reports maiden quarterly profit on resilient consumer spending Reuters",
     "url": "https://www.reuters.com/technology/chime-banks-resilient-consumer-spending-post-maiden-quarterly-bottom-line-2026-05-06/",
@@ -2729,7 +2551,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "positive"
   },
   {
     "brand": "Cash App",
@@ -2750,7 +2572,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "positive"
+    "sentiment": "neutral"
   },
   {
     "brand": "Acorns",
@@ -2813,7 +2635,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "positive"
+    "sentiment": "neutral"
   },
   {
     "brand": "Wealthfront",
@@ -2860,7 +2682,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "positive"
+    "sentiment": "neutral"
   },
   {
     "brand": "Chime",
@@ -2876,6 +2698,27 @@
       {
         "publisher": "NerdWallet",
         "url": "https://www.nerdwallet.com/credit-cards/reviews/chime-credit-builder",
+        "author": ""
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "neutral"
+  },
+  {
+    "brand": "Robinhood",
+    "slug": "robinhood",
+    "title": "Robinhood CEO issues bold outlook on prediction markets business",
+    "summary": "Robinhood CEO issues bold outlook on prediction markets business thestreet.com",
+    "url": "https://www.thestreet.com/investing/stocks/robinhood-ceo-issues-bold-outlook-on-prediction-markets-business",
+    "source": "thestreet.com",
+    "author": "",
+    "date": "2026-05-05T07:00:00+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "thestreet.com",
+        "url": "https://www.thestreet.com/investing/stocks/robinhood-ceo-issues-bold-outlook-on-prediction-markets-business",
         "author": ""
       }
     ],
@@ -2902,7 +2745,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "negative"
   },
   {
     "brand": "Betterment",
@@ -2944,7 +2787,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "negative"
   },
   {
     "brand": "Chime",
@@ -2970,8 +2813,8 @@
   {
     "brand": "Cash App",
     "slug": "cash-app",
-    "title": "Material event \u00b7 8-K Filing",
-    "summary": "SEC 8-K filing by Cash App on 2026-05-04. Material event",
+    "title": "Leadership change (officers / directors) \u00b7 8-K Filing",
+    "summary": "SEC 8-K filing by Cash App on 2026-05-04. Leadership change (officers / directors)",
     "url": "https://www.sec.gov/Archives/edgar/data/1512673/000119312526204101/d112286d8k.htm",
     "source": "SEC EDGAR",
     "author": "",
@@ -3027,7 +2870,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "negative"
   },
   {
     "brand": "Chase",

@@ -101,17 +101,18 @@ def _classify_one_llm(client, item: dict) -> tuple[str, str]:
 
 
 def classify_all_llm(items: list[dict], cache: dict) -> int:
-    """Classify every item in `items` using the Claude API. Cached items
-    skipped. Updates each item in place with item['sentiment']. Returns
-    the count of NEW classifications made this run."""
-    from anthropic import Anthropic
+    """Apply cached sentiment labels to items in place. If ANTHROPIC_API_KEY is
+    set, also fire LLM classification for items not in cache. Returns the count
+    of NEW LLM classifications made this run (0 if no API key, even though
+    cached items still get their labels applied).
 
-    api_key = os.environ.get("ANTHROPIC_API_KEY")
-    if not api_key:
-        return 0  # caller falls back to heuristic
-    client = Anthropic(api_key=api_key)
-
-    # Apply cached labels first; collect items needing classification.
+    Cache application happens UNCONDITIONALLY — that's the whole point of the
+    cache. The API-key check only gates whether we hit Anthropic for items we
+    don't already know about.
+    """
+    # 1. Apply cached labels first (unconditional). Items without a cache entry
+    #    are collected as `pending` for either LLM classification or heuristic
+    #    fallback in the caller.
     pending = []
     for item in items:
         key = item.get("url", "") or item.get("title", "")
@@ -122,6 +123,15 @@ def classify_all_llm(items: list[dict], cache: dict) -> int:
 
     if not pending:
         return 0
+
+    # 2. If no API key, return without LLM classification — caller will heuristic-
+    #    classify the still-pending items.
+    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    if not api_key:
+        return 0
+
+    from anthropic import Anthropic
+    client = Anthropic(api_key=api_key)
 
     new_count = 0
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as pool:
@@ -145,11 +155,40 @@ def classify_all_llm(items: list[dict], cache: dict) -> int:
 
 # Imported lazily to avoid hard dependency on sources during testing.
 def _heuristic(text: str) -> str:
+    """Keyword-list sentiment with light negation handling. Not bulletproof; the
+    LLM path is preferred when ANTHROPIC_API_KEY is set."""
     from pipeline.sources import SENTIMENT_POSITIVE, SENTIMENT_NEGATIVE
+    import re as _re
     lower = text.lower()
-    pos = sum(1 for w in SENTIMENT_POSITIVE if w in lower)
-    neg = sum(1 for w in SENTIMENT_NEGATIVE if w in lower)
-    if pos == neg:
+
+    # Tokenize so we can do negation lookback. Split on word boundaries.
+    tokens = _re.findall(r"[a-z']+", lower)
+
+    NEGATORS = {"not", "no", "never", "without", "fails", "failed", "failing",
+                "denies", "denied", "refused", "refuses"}
+
+    def is_negated(idx: int) -> bool:
+        """Look back up to 3 tokens for a negator."""
+        for k in range(max(0, idx - 3), idx):
+            if tokens[k] in NEGATORS:
+                return True
+        return False
+
+    pos = neg = 0
+    for i, tok in enumerate(tokens):
+        if tok in SENTIMENT_POSITIVE:
+            if is_negated(i):
+                neg += 1   # "fails to grow" → negative
+            else:
+                pos += 1
+        elif tok in SENTIMENT_NEGATIVE:
+            if is_negated(i):
+                pos += 1   # "no losses" → positive
+            else:
+                neg += 1
+
+    # Margin threshold — small differences land in neutral to avoid jitter.
+    if abs(pos - neg) < 1:
         return "neutral"
     return "positive" if pos > neg else "negative"
 

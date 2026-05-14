@@ -360,52 +360,31 @@ def _save_tldr_cache(cache: dict) -> None:
     SEC_TLDR_CACHE_PATH.write_text(json.dumps(cache, indent=2, sort_keys=True))
 
 
-def fetch_8k_tldr(filing_url: str, cache: dict) -> str:
-    """Fetch an 8-K's cover page and extract a plain-English TLDR from its Item codes.
+def items_string_to_tldr(items_str: str) -> str:
+    """Convert a comma-separated SEC items string ('3.03,5.03,8.01') to a
+    plain-English TLDR using the SEC_8K_ITEMS mapping.
 
-    Returns a short comma-joined description like "Earnings release / financial results,
-    Other material event" — or empty string if extraction fails. Cached by URL since
-    SEC filings are immutable.
+    The SEC submissions JSON exposes the items field directly per filing, so we
+    don't need to fetch + parse the filing HTML. Earlier versions of this code
+    did HTML scraping; that's gone now.
     """
-    if filing_url in cache:
-        return cache[filing_url]
-
-    try:
-        resp = httpx.get(filing_url, headers={"User-Agent": SEC_UA}, timeout=20.0, follow_redirects=True)
-        resp.raise_for_status()
-        text = resp.text
-    except Exception as e:
-        print(f"  ! TLDR fetch failed for {filing_url}: {e}", file=sys.stderr)
-        cache[filing_url] = ""
+    if not items_str:
         return ""
-
-    # 8-K cover pages contain headings like "Item 5.02 Departure of Directors..."
-    # We extract every "Item N.NN" code that appears and map to plain English.
-    # Most 8-Ks list 2-4 items; some only have one.
-    item_codes = re.findall(r"Item\s+(\d+\.\d+)", text)
-    # Dedupe preserving order
-    seen = set()
-    unique_codes = []
-    for code in item_codes:
-        if code not in seen:
-            seen.add(code)
-            unique_codes.append(code)
-
-    descriptions = [SEC_8K_ITEMS[code] for code in unique_codes if code in SEC_8K_ITEMS]
-    tldr = ", ".join(descriptions[:3])  # cap at 3 items so the TLDR stays scannable
+    codes = [c.strip() for c in items_str.split(",") if c.strip()]
+    descriptions = [SEC_8K_ITEMS[c] for c in codes if c in SEC_8K_ITEMS]
+    if not descriptions:
+        return ""
+    tldr = ", ".join(descriptions[:3])
     if len(descriptions) > 3:
         tldr += f" (+ {len(descriptions) - 3} more)"
-
-    cache[filing_url] = tldr
     return tldr
 
 
 def fetch_sec_filings(brand: str, slug: str, tldr_cache: dict, window_cutoff: datetime) -> list[dict]:
     """Fetch recent SEC filings for a public brand. Returns 8-K / 10-Q / 10-K items.
 
-    For 8-Ks (the high-signal material-events filings), fetches the cover page and
-    extracts a plain-English TLDR from the Item codes. Cached per-URL since filings
-    are immutable.
+    For 8-Ks, uses the per-filing `items` field from the submissions JSON to
+    build a plain-English TLDR (no HTML scrape needed).
     """
     url = sec_filings_url(brand)
     if not url:
@@ -425,6 +404,7 @@ def fetch_sec_filings(brand: str, slug: str, tldr_cache: dict, window_cutoff: da
     accession_numbers = recent.get("accessionNumber", [])
     primary_docs = recent.get("primaryDocument", [])
     descriptions = recent.get("primaryDocDescription", [])
+    item_codes_list = recent.get("items", [""] * len(forms))
     cik = SEC_CIKS[brand].lstrip("0")
 
     # Plain-English labels for the major form types (used as a fallback TLDR
@@ -455,11 +435,13 @@ def fetch_sec_filings(brand: str, slug: str, tldr_cache: dict, window_cutoff: da
         filing_url = f"https://www.sec.gov/Archives/edgar/data/{cik}/{acc}/{doc}"
         primary_desc = descriptions[i] if i < len(descriptions) else ""
 
-        # Build the TLDR. For 8-Ks, parse item codes. For other forms, use the
-        # static label. Fall back to the primaryDocDescription field if available.
+        # Build the TLDR. For 8-Ks, use the items field from the submissions
+        # JSON (comma-separated item codes like "3.03,5.03,8.01"). For other
+        # forms, use the static form label.
         tldr = ""
         if form in ("8-K", "8-K/A"):
-            tldr = fetch_8k_tldr(filing_url, tldr_cache)
+            items_str = item_codes_list[i] if i < len(item_codes_list) else ""
+            tldr = items_string_to_tldr(items_str)
         if not tldr:
             tldr = FORM_LABELS.get(form, "")
         if not tldr and primary_desc and primary_desc.upper() != f"FORM {form}":
