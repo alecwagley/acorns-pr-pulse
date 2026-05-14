@@ -275,15 +275,110 @@ def _save_og_cache(cache: dict) -> None:
     OG_CACHE_PATH.write_text(json.dumps(cache, indent=2, sort_keys=True))
 
 
-def fetch_og_summary(url: str, cache: dict) -> str:
-    """Fetch an article and extract an OG / meta description for use as the card
-    summary. Falls back to first <p> text. Cached forever by URL.
+def _extract_ld_author(node) -> str:
+    """Pull a plausible author name out of a parsed JSON-LD node.
+    JSON-LD shapes are inconsistent: author can be a string, a dict, or a list
+    of either. Returns the first string we can recover, or empty."""
+    if not node:
+        return ""
+    if isinstance(node, list):
+        for n in node:
+            v = _extract_ld_author(n)
+            if v:
+                return v
+        return ""
+    if isinstance(node, dict):
+        author = node.get("author")
+        if isinstance(author, str):
+            return author
+        if isinstance(author, dict):
+            return author.get("name") or ""
+        if isinstance(author, list):
+            for a in author:
+                if isinstance(a, str) and a:
+                    return a
+                if isinstance(a, dict) and a.get("name"):
+                    return a["name"]
+    return ""
 
-    Returns empty string if the fetch fails or no description is found; the
-    caller falls back to the RSS-provided summary in that case.
+
+_GENERIC_BYLINE_TOKENS = {
+    "staff", "newsroom", "editorial", "editor", "admin", "contributor",
+    "reuters", "associated press", "ap", "bloomberg news",
+    "business wire", "pr newswire", "globe newswire", "accesswire",
+    "marketwatch", "investor's business daily", "ibd", "pymnts",
+    "yahoo finance", "yahoo", "the motley fool", "motley fool",
+}
+
+# Junk characters that suggest the byline came from an unrendered template,
+# JSON blob, or HTML fragment rather than a real person's name.
+_JUNK_BYLINE_CHARS = set("${}[]<>|\\")
+
+def _publisher_aliases(publisher: str) -> set:
+    """Return lowercase variants of a publisher name to compare against."""
+    if not publisher:
+        return set()
+    p = publisher.strip().lower()
+    out = {p}
+    for suffix in (".com", ".net", ".org", ".co", ".io"):
+        if p.endswith(suffix):
+            out.add(p[:-len(suffix)])
+    if p.startswith("the "):
+        out.add(p[4:])
+    return out
+
+def _is_real_byline(author: str, publisher: str = "") -> bool:
+    """Filter junk bylines. Returns False for empty, generic staff labels,
+    URLs, template fragments, publisher echoes, or all-caps section names."""
+    if not author:
+        return False
+    a = author.strip()
+    if a.startswith(("http://", "https://", "/")):
+        return False
+    if len(a) < 3 or len(a) > 80:
+        return False
+    if any(c in _JUNK_BYLINE_CHARS for c in a):
+        return False
+    low = a.lower()
+    if any(tok == low or low.startswith(tok + " ") or low.endswith(" " + tok) for tok in _GENERIC_BYLINE_TOKENS):
+        return False
+    pub_aliases = _publisher_aliases(publisher)
+    if low in pub_aliases:
+        return False
+    # Mostly-uppercase strings (>=70% capitals among letter chars) are almost
+    # always section headers or publication names (e.g. "COMPLETE iGAMING"),
+    # not a person's name.
+    letters_only = re.sub(r"[^A-Za-z]", "", a)
+    if len(letters_only) > 4:
+        upper_ratio = sum(1 for c in letters_only if c.isupper()) / len(letters_only)
+        if upper_ratio >= 0.7:
+            return False
+    return True
+
+
+def fetch_og_meta(url: str, cache: dict, publisher: str = "") -> dict:
+    """Fetch an article and extract both an OG description and a byline.
+
+    Cache shape: {url: {"summary": str, "author": str, "_v": 2}}
+    Legacy entries (plain strings from older runs) are migrated to the dict
+    shape with author="" so the next collect run refetches them once to
+    backfill byline data, then sets _v=2 to settle them.
+
+    Returns the cached dict on hit, or fresh metadata on miss / migration.
+    Caller reads ["summary"] and ["author"] off the result.
     """
-    if url in cache:
-        return cache[url]
+    entry = cache.get(url)
+    # Legacy string entries — re-fetch this run to extract byline, keep
+    # existing summary if the new fetch doesn't return one.
+    if isinstance(entry, str):
+        legacy_summary = entry
+        entry = {"summary": legacy_summary, "author": "", "_v": 1}
+    needs_fetch = (entry is None) or (entry.get("_v", 0) < 2)
+    if not needs_fetch:
+        return entry
+
+    legacy_summary = (entry or {}).get("summary", "")
+
     try:
         resp = httpx.get(
             url,
@@ -292,15 +387,15 @@ def fetch_og_summary(url: str, cache: dict) -> str:
             follow_redirects=True,
         )
         if resp.status_code != 200:
-            cache[url] = ""
-            return ""
+            cache[url] = {"summary": legacy_summary, "author": "", "_v": 2}
+            return cache[url]
         html_text = resp.text
     except Exception:
-        cache[url] = ""
-        return ""
+        cache[url] = {"summary": legacy_summary, "author": "", "_v": 2}
+        return cache[url]
 
+    # --- Summary extraction (unchanged logic) ---
     desc = ""
-    # 1. Try og:description (most outlets set this; quality is usually high).
     m = re.search(
         r'<meta\s+property=["\']og:description["\']\s+content=["\']([^"\']+)["\']',
         html_text, re.IGNORECASE,
@@ -308,7 +403,6 @@ def fetch_og_summary(url: str, cache: dict) -> str:
     if m:
         desc = m.group(1)
     if not desc:
-        # 2. Try standard meta description.
         m = re.search(
             r'<meta\s+name=["\']description["\']\s+content=["\']([^"\']+)["\']',
             html_text, re.IGNORECASE,
@@ -316,17 +410,61 @@ def fetch_og_summary(url: str, cache: dict) -> str:
         if m:
             desc = m.group(1)
     if not desc:
-        # 3. Fall back to first <p>.
         m = re.search(r"<p[^>]*>([^<]{40,})</p>", html_text)
         if m:
             desc = m.group(1)
-
     desc = _clean_text(desc)
-    # Cap so a single card doesn't dominate.
     if len(desc) > 320:
         desc = desc[:317].rsplit(" ", 1)[0] + "…"
-    cache[url] = desc
-    return desc
+    # Don't lose a previously-cached summary if this fetch returned nothing.
+    if not desc and legacy_summary:
+        desc = legacy_summary
+
+    # --- Byline extraction (new) ---
+    author = ""
+    # 1. <meta name="author">
+    m = re.search(
+        r'<meta\s+name=["\']author["\']\s+content=["\']([^"\']+)["\']',
+        html_text, re.IGNORECASE,
+    )
+    if m:
+        author = m.group(1)
+    # 2. <meta property="article:author">
+    if not author:
+        m = re.search(
+            r'<meta\s+property=["\']article:author["\']\s+content=["\']([^"\']+)["\']',
+            html_text, re.IGNORECASE,
+        )
+        if m:
+            author = m.group(1)
+    # 3. JSON-LD <script type="application/ld+json">
+    if not author:
+        for block in re.findall(
+            r'<script[^>]*type=["\']application/ld\+json["\'][^>]*>([\s\S]*?)</script>',
+            html_text, re.IGNORECASE,
+        ):
+            try:
+                data = json.loads(block.strip())
+                cand = _extract_ld_author(data)
+                if cand:
+                    author = cand
+                    break
+            except Exception:
+                continue
+    # JSON-LD can return non-string author values; coerce defensively.
+    if not isinstance(author, str):
+        author = ""
+    author = _clean_text(author)
+    if not _is_real_byline(author, publisher):
+        author = ""
+
+    cache[url] = {"summary": desc, "author": author, "_v": 2}
+    return cache[url]
+
+
+def fetch_og_summary(url: str, cache: dict) -> str:
+    """Back-compat wrapper. Prefer fetch_og_meta for new callers."""
+    return fetch_og_meta(url, cache).get("summary", "")
 
 
 def classify_sentiment(text: str) -> str:
@@ -672,6 +810,13 @@ def update_reporters_log(items: list[dict]) -> None:
         except Exception:
             existing = {}
 
+    # Drop any pre-existing log rows that no longer pass the current filter
+    # (filter rules tighten over time; stale junk shouldn't be grandfathered).
+    existing = {
+        k: v for k, v in existing.items()
+        if _is_real_byline(v.get("author", ""), v.get("publisher", ""))
+    }
+
     today_iso = datetime.now(timezone.utc).date().isoformat()
     for item in items:
         # SEC filings have no byline; skip.
@@ -684,16 +829,31 @@ def update_reporters_log(items: list[dict]) -> None:
             publisher = (s.get("publisher") or "").strip()
             if not author or not publisher:
                 continue
+            # Final guard: ditch junk bylines, publisher echoes, wire services,
+            # template fragments, etc. that may have slipped through cached
+            # entries written by earlier filter versions.
+            if not _is_real_byline(author, publisher):
+                continue
             key = f"{author} :: {publisher}"
             row = existing.get(key, {
                 "author": author,
                 "publisher": publisher,
                 "first_seen": today_iso,
                 "brands": [],
+                "urls": [],
                 "count": 0,
             })
             row["last_seen"] = today_iso
-            row["count"] = row.get("count", 0) + 1
+            # Dedupe by URL so daily refreshes don't double-count the same
+            # article when it stays inside the 14-day window across multiple
+            # runs. urls is the authoritative count; the legacy `count` key
+            # is kept in sync for any older consumers.
+            src_url = (s.get("url") or "").strip()
+            urls = set(row.get("urls", []))
+            if src_url and src_url not in urls:
+                urls.add(src_url)
+            row["urls"] = sorted(urls)
+            row["count"] = len(row["urls"])
             if item["brand"] not in row["brands"]:
                 row["brands"] = sorted(set(row["brands"] + [item["brand"]]))
             existing[key] = row
@@ -776,14 +936,30 @@ def main() -> None:
         url = item.get("url", "")
         if not url:
             continue
-        was_cached = url in og_cache
-        og_desc = fetch_og_summary(url, og_cache)
+        cached_entry = og_cache.get(url)
+        # "Was this entry already a v2 dict before this call?" — if so we won't
+        # be hitting the network. Anything else (missing or legacy string)
+        # means we'll fetch.
+        already_settled = isinstance(cached_entry, dict) and cached_entry.get("_v", 0) >= 2
+        og_meta = fetch_og_meta(url, og_cache, publisher=item.get("source", ""))
+        og_desc = og_meta.get("summary", "")
+        og_author = og_meta.get("author", "")
+        # Re-validate against the current filter — cache entries written by
+        # older runs may have stored values that the latest filter rejects.
+        if og_author and not _is_real_byline(og_author, item.get("source", "")):
+            og_author = ""
         if og_desc and og_desc.lower() != item.get("title", "").lower():
             # Only replace summary if the OG description differs from the title
             # (some sites set OG description to the title verbatim — useless).
             item["summary"] = og_desc
-            if not was_cached:
-                fetched_count += 1
+        if og_author and not item.get("author"):
+            item["author"] = og_author
+            # Mirror onto the matching source entry so the reporter log picks it up.
+            for src in item.get("sources", []):
+                if src.get("url") == url and not src.get("author"):
+                    src["author"] = og_author
+        if not already_settled:
+            fetched_count += 1
     _save_og_cache(og_cache)
     print(f"  OG cache: {len(og_cache)} entries (saved, {fetched_count} new fetches this run)")
 
