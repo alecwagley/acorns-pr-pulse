@@ -428,7 +428,7 @@ def render_brand_chip(brand: str, slug: str, count: int, active: bool = False) -
     count_str = f' <span class="text-white/40">{count}</span>' if count else ' <span class="text-white/25">0</span>'
     return (
         f'<button type="button" class="{cls}" data-brand-filter="{escape(slug)}" '
-        f'onclick="filterBuzz(this, \'{escape(slug)}\')">{escape(brand)}{count_str}</button>'
+        f'onclick="setBrandFilter(this, \'{escape(slug)}\')">{escape(brand)}{count_str}</button>'
     )
 
 
