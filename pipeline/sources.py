@@ -137,6 +137,44 @@ BLOCKED_PUBLISHERS = {
     "techstock",             # algorithmic
 }
 
+# Tier-1 publishers: the high-leverage outlets a PR team cares about most.
+# Stories from these get a visible badge on the dashboard so eyeballs hit them
+# first. Match is lowercased substring against the item's `source` field, so
+# both "Reuters" and "reuters.com" hit. Keep this conservative — every name
+# added dilutes the signal. Add only outlets the team would actively pitch.
+TIER_1_PUBLISHERS = {
+    "reuters",
+    "bloomberg",
+    "the wall street journal",
+    "wsj",
+    "the new york times",
+    "nytimes",
+    "associated press",
+    "ap news",
+    "apnews",
+    "cnbc",
+    "financial times",
+    "ft.com",
+    "the washington post",
+    "axios",
+    "forbes",
+    "fortune",
+    "barron",
+    "business insider",
+    "techcrunch",
+    "the information",
+}
+
+
+def is_tier_1(publisher: str) -> bool:
+    """Return True if the publisher matches a Tier-1 outlet. Case-insensitive
+    substring match against TIER_1_PUBLISHERS so domain forms and full-name
+    forms both hit."""
+    if not publisher:
+        return False
+    p = publisher.lower()
+    return any(t in p for t in TIER_1_PUBLISHERS)
+
 # Title-keyword patterns to drop. Case-insensitive substring match.
 # Targets affiliate promo-code spam (huge volume for prediction markets) and
 # stock-data noise (options-volume scrapers, price-action recaps).

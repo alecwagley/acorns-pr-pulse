@@ -27,10 +27,11 @@ from string import Template
 ROOT = Path(__file__).resolve().parent.parent
 DATA_PATH = ROOT / "data" / "current.json"
 REPORTERS_PATH = ROOT / "data" / "reporters.json"
+NARRATIVES_PATH = ROOT / "data" / "narratives.json"
 DASHBOARD = ROOT / "dashboard"
 
 sys.path.insert(0, str(ROOT))
-from pipeline.sources import SUBJECT, BRANDS, ALL_TRACKED
+from pipeline.sources import SUBJECT, BRANDS, ALL_TRACKED, is_tier_1
 
 ACCENT_HEX = "#74C947"
 
@@ -315,6 +316,16 @@ def render_item(item: dict, *, show_brand: bool = False) -> str:
         )
     # Each badge gets whitespace-nowrap so its contents stay together when it wraps.
     badges: list[str] = []
+    # Tier-1 badge fires when any source on the item is from a high-leverage
+    # outlet (Reuters / Bloomberg / WSJ / NYT / AP / CNBC / FT / etc.)
+    item_publishers = [s.get("publisher", "") for s in (item.get("sources") or [])]
+    item_publishers.append(item.get("source", ""))
+    if any(is_tier_1(p) for p in item_publishers):
+        badges.append(
+            '<span class="inline-block whitespace-nowrap text-[10px] uppercase tracking-widest '
+            'text-yellow-300 bg-yellow-300/10 border border-yellow-300/40 px-2 py-0.5 rounded">'
+            '★ Tier 1</span>'
+        )
     if item.get("type") == "filing":
         badges.append(
             '<span class="inline-block whitespace-nowrap text-[10px] uppercase tracking-widest '
@@ -525,6 +536,70 @@ def render_reporter_row(row: dict) -> str:
 """
 
 
+def render_narrative_card(brand: str, narrative: dict, story_count: int) -> str:
+    """Render one Narrative card for a brand: theme + 2-sentence summary +
+    optional watch flag. Narrative content is written daily by the routine
+    based on actual headlines, not algorithmic guessing."""
+    theme = narrative.get("theme", "")
+    summary = narrative.get("summary", "")
+    watch = narrative.get("watch", "")
+    is_subject = (brand == SUBJECT[0])
+    brand_class = "brand-accent" if is_subject else "text-white"
+    border_class = "border-brand-accent/40" if is_subject else "border-white/10"
+    watch_html = ""
+    if watch:
+        watch_html = (
+            '<div class="mt-3 flex items-start gap-2 text-[11px] text-amber-300/90 '
+            'bg-amber-400/[0.06] border border-amber-400/20 rounded px-2 py-1.5">'
+            '<span class="shrink-0">⚠</span>'
+            f'<span class="leading-snug">{escape(watch)}</span>'
+            '</div>'
+        )
+    theme_html = ""
+    if theme:
+        theme_html = (
+            '<div class="text-[10px] uppercase tracking-widest text-white/45 mb-2">'
+            f'{escape(theme)}</div>'
+        )
+    return f"""
+<div class="bg-white/[0.02] border {border_class} rounded-xl p-4 flex flex-col">
+  <div class="flex items-baseline justify-between mb-2">
+    <div class="{brand_class} font-semibold">{escape(brand)}</div>
+    <div class="text-xs text-white/40 tabular-nums">{story_count} {"story" if story_count == 1 else "stories"}</div>
+  </div>
+  {theme_html}
+  <p class="text-sm text-white/75 leading-relaxed">{escape(summary)}</p>
+  {watch_html}
+</div>
+"""
+
+
+def render_pitching_card(row: dict) -> str:
+    """Render one Pitching Target tile: reporter who covers competitors but
+    has zero Acorns coverage in the window."""
+    brands = row.get("brands", [])
+    brand_chips = " ".join(
+        f'<span class="text-[10px] uppercase tracking-widest text-white/60 '
+        f'bg-white/[0.04] border border-white/10 px-1.5 py-0.5 rounded">'
+        f'{escape(b)}</span>'
+        for b in brands
+    )
+    n = row.get("count", 0)
+    story_word = "story" if n == 1 else "stories"
+    return f"""
+<div class="bg-white/[0.02] border border-white/10 rounded-xl p-4 hover:border-white/25 transition">
+  <div class="text-white font-semibold leading-tight">{escape(row.get('author', ''))}</div>
+  <div class="text-xs text-white/55 mt-1">{escape(row.get('publisher', ''))}</div>
+  <div class="text-[11px] text-white/45 mt-2">
+    {n} {story_word} on
+  </div>
+  <div class="flex flex-wrap gap-1 mt-2">
+    {brand_chips}
+  </div>
+</div>
+"""
+
+
 def render_index(
     *,
     acorns_items: list[dict],
@@ -532,6 +607,7 @@ def render_index(
     buzz_items: list[dict],
     by_brand: dict,
     reporters_top: list[dict],
+    pitching_targets: list[dict],
     refresh_date: str,
 ) -> str:
     head = Template(PAGE_HEAD).substitute(title="Acorns PR Pulse · VSCRL", accent=ACCENT_HEX)
@@ -586,6 +662,41 @@ def render_index(
 
     mentions_chart_html = render_mentions_chart(by_brand, refresh_date)
 
+    # Per-brand narrative cards (read from data/narratives.json — written daily
+    # by the routine, optional file).
+    narratives_html = ""
+    if NARRATIVES_PATH.exists():
+        try:
+            narr = json.loads(NARRATIVES_PATH.read_text())
+            brand_narratives = narr.get("brands", {})
+            cards = []
+            # Subject first, then competitors in descending mention-volume order
+            # so the most newsworthy brands lead the scan.
+            ordered = [SUBJECT[0]] + sorted(
+                [b for b, _ in BRANDS],
+                key=lambda b: -len(by_brand.get(b, [])),
+            )
+            for b in ordered:
+                if b in brand_narratives and brand_narratives[b].get("summary"):
+                    cards.append(render_narrative_card(
+                        b, brand_narratives[b], len(by_brand.get(b, []))
+                    ))
+            if cards:
+                narratives_html = f"""
+<section>
+  <div class="flex items-baseline gap-3 mb-3">
+    <h2 class="text-2xl font-semibold text-white">This Week's Story</h2>
+    <span class="text-xs text-white/40">Per-brand narrative · refreshed {escape(narr.get('refresh_date', refresh_date))}</span>
+  </div>
+  <p class="text-sm text-white/55 mb-5 max-w-3xl">What's actually happening for each brand in the news this week. Counts tell you volume, but these tell you the story shape — themes, sentiment direction, things worth your attention.</p>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+    {chr(10).join(cards)}
+  </div>
+</section>
+"""
+        except Exception as e:
+            print(f"  ! narratives.json unreadable: {e}")
+
     reporters_html = ""
     if reporters_top:
         rows = "\n".join(render_reporter_row(r) for r in reporters_top)
@@ -607,10 +718,27 @@ def render_index(
     else:
         reporters_html = '<p class="text-white/50 text-sm">No bylined coverage in the feed yet. This list fills in over time as feeds with author data come in.</p>'
 
+    # Pitching list: reporters who cover competitors but not Acorns yet.
+    if pitching_targets:
+        pitching_cards = "\n".join(render_pitching_card(r) for r in pitching_targets)
+        pitching_html = f"""
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+  {pitching_cards}
+</div>
+"""
+    else:
+        pitching_html = (
+            '<p class="text-white/50 text-sm">No pitching targets yet. As more byline data fills in, '
+            'reporters covering competitors without yet writing about Acorns will appear here.</p>'
+        )
+
     body = f"""
 <main class="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10 space-y-10 sm:space-y-12">
 
-  <!-- 1. Mention Volume (chart) at top for at-a-glance overview -->
+  <!-- 1. This Week's Story (per-brand narrative cards) -->
+  {narratives_html}
+
+  <!-- 2. Mention Volume (chart) for at-a-glance volume + sentiment -->
   {mentions_chart_html}
 
   <!-- 2. Acorns in the News -->
@@ -661,7 +789,17 @@ def render_index(
     <p id="buzz-empty" class="hidden text-white/50 text-sm mt-4">No items for this brand in the last 14 days.</p>
   </section>
 
-  <!-- 5. Top Reporters (running) -->
+  <!-- 5. Pitch list — reporters covering competitors who haven't written about Acorns yet -->
+  <section>
+    <div class="flex items-baseline gap-3 mb-2">
+      <h2 class="text-2xl font-semibold text-white">Pitch List</h2>
+      <span class="text-xs text-white/40">{len(pitching_targets)} reporters · covering competitors but not yet Acorns</span>
+    </div>
+    <p class="text-sm text-white/55 mb-5 max-w-3xl">These journalists wrote about your competitors in the last 14 days but have no Acorns coverage in the running log. They already care about this space. Multi-brand coverage at the top — those are the most pitchable.</p>
+    {pitching_html}
+  </section>
+
+  <!-- 6. Top Reporters (running) -->
   <section>
     <div class="flex items-baseline gap-3 mb-5">
       <h2 class="text-2xl font-semibold text-white">Top Reporters</h2>
@@ -753,14 +891,30 @@ def main() -> None:
 
     # Top reporters from running log.
     reporters_top: list[dict] = []
+    pitching_targets: list[dict] = []
     if REPORTERS_PATH.exists():
         try:
             reporters_log = json.loads(REPORTERS_PATH.read_text())
+            all_reporters = list(reporters_log.values())
             reporters_top = sorted(
-                reporters_log.values(),
+                all_reporters,
                 key=lambda r: r.get("count", 0),
                 reverse=True,
             )[:TOP_REPORTERS_LIMIT]
+            # Pitching targets: reporters who covered competitors but NOT
+            # Acorns yet. Sorted by (multi-brand coverage first, then count)
+            # so journalists already writing across several fintechs surface
+            # at the top — those are the most pitchable.
+            subject = SUBJECT[0]
+            pitching_targets = sorted(
+                [
+                    r for r in all_reporters
+                    if subject not in r.get("brands", [])
+                    and r.get("brands")
+                ],
+                key=lambda r: (len(r.get("brands", [])), r.get("count", 0)),
+                reverse=True,
+            )[:24]
         except Exception as e:
             print(f"  ! reporters log unreadable: {e}")
 
@@ -773,6 +927,7 @@ def main() -> None:
         buzz_items=buzz_items,
         by_brand=by_brand,
         reporters_top=reporters_top,
+        pitching_targets=pitching_targets,
         refresh_date=refresh_date,
     ))
     print(f"  → dashboard/index.html · Acorns:{len(acorns_items)} Official:{len(official_items)} Buzz:{len(buzz_items)} Reporters:{len(reporters_top)}")

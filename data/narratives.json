@@ -1,0 +1,65 @@
+{
+  "refresh_date": "2026-05-14",
+  "brands": {
+    "Acorns": {
+      "theme": "Quiet news week",
+      "summary": "Acorns is barely in the news this period (2 stories). One positive roundup naming Acorns in the best robo-advisors of May, one neutral Q&A on whether you can pick individual stocks. No earned-media drumbeat right now.",
+      "watch": "Coverage volume is far below competitors. A proactive story angle could land easily — the space is wide open."
+    },
+    "Kalshi": {
+      "theme": "Regulatory pressure + sports betting growth",
+      "summary": "Kalshi is everywhere this week (34 stories), but the story has two faces. Sports betting markets (NBA, Subway Series, even a Drake album guest-list market) are driving volume, while a federal lawsuit from four New Mexico tribes alleging illegal online sports betting on tribal lands is the dominant negative thread.",
+      "watch": "Negative coverage is concentrated. The tribal lawsuit hit 7 outlets simultaneously — a real legal exposure story for a PR team to track."
+    },
+    "Polymarket": {
+      "theme": "Moral panic + DraftKings disruption",
+      "summary": "Polymarket coverage is more negative than positive (14 negative vs 7 positive). Esquire ran 'The Polymarket Has Turned America into a Deadly Casino,' the Israel/Iran war-betting angle is recurring, and Bloomberg covered Polymarket and Kalshi as the reason DraftKings just got a rare sell rating.",
+      "watch": "Tone is hardening against prediction markets writ large — Kalshi gets pulled into the same narrative."
+    },
+    "Chase": {
+      "theme": "New HQ + earnings cadence",
+      "summary": "JPMorgan Chase coverage is the broad-bank story shape: the new NYC headquarters tower opening, CEO transition speculation, and benchmark earnings analysis. Mostly neutral coverage with positive analyst notes, low negative volume.",
+      "watch": ""
+    },
+    "Robinhood": {
+      "theme": "Crypto + second venture fund",
+      "summary": "The dominant Robinhood thread is a new SEC filing for a second venture fund and continued crypto positioning. Coverage is mostly positive (8 pos, 5 neutral, 0 negative) — analysts framing them as more resilient than Coinbase among multi-asset platforms.",
+      "watch": ""
+    },
+    "Cash App": {
+      "theme": "Scam warnings + product chatter",
+      "summary": "Cash App coverage skews positive on product usage but carries a recurring negative thread: local-news warnings about Cash App scams targeting consumers. Block's earnings remain the backbone.",
+      "watch": "Scam warnings hit local TV repeatedly — could erode trust signals over time."
+    },
+    "SoFi": {
+      "theme": "Growth story dominant",
+      "summary": "SoFi coverage is heavily positive (7 of 8 stories). Analyst upgrades, member growth metrics, and lending-segment commentary lead the buzz. No negative coverage in the window.",
+      "watch": ""
+    },
+    "Chime": {
+      "theme": "Mixed — IPO follow-on + complaints",
+      "summary": "Chime coverage is split. Positive thread is IPO/secondary trading and neobank growth analysis. Negative thread is the recurring customer-complaint angle around account freezes and customer service.",
+      "watch": ""
+    },
+    "Wealthfront": {
+      "theme": "Earnings cadence",
+      "summary": "Two stories, both neutral — fiscal Q1 2027 earnings date announcement plus a robo-advisor roundup. Quiet news cycle.",
+      "watch": ""
+    },
+    "Betterment": {
+      "theme": "Robo-advisor roundups",
+      "summary": "Two stories, both light coverage in robo-advisor 'best of' lists. Sentiment positive but volume low.",
+      "watch": ""
+    },
+    "Greenlight": {
+      "theme": "Light coverage",
+      "summary": "One story this period — a positive mention in a financial-literacy roundup for kids. Below the news radar.",
+      "watch": ""
+    },
+    "Alinea": {
+      "theme": "Off the radar",
+      "summary": "No press coverage in the last 14 days. Either pre-stealth, or actively avoiding media — worth a manual check.",
+      "watch": ""
+    }
+  }
+}
