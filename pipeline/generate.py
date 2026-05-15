@@ -536,10 +536,11 @@ def render_reporter_row(row: dict) -> str:
 """
 
 
-def render_narrative_card(brand: str, narrative: dict, story_count: int) -> str:
+def render_narrative_card(brand: str, slug: str, narrative: dict, story_count: int) -> str:
     """Render one Narrative card for a brand: theme + 2-sentence summary +
-    optional watch flag. Narrative content is written daily by the routine
-    based on actual headlines, not algorithmic guessing."""
+    optional watch flag. Clicking the card filters The Buzz to that brand
+    and scrolls down to it (Acorns scrolls to its own section). Narrative
+    content is written daily by the routine based on actual headlines."""
     theme = narrative.get("theme", "")
     summary = narrative.get("summary", "")
     watch = narrative.get("watch", "")
@@ -562,9 +563,13 @@ def render_narrative_card(brand: str, narrative: dict, story_count: int) -> str:
             f'{escape(theme)}</div>'
         )
     return f"""
-<div class="bg-white/[0.02] border {border_class} rounded-xl p-4 flex flex-col">
+<div onclick="chartSegmentClick('{escape(slug)}', 'all')"
+     class="bg-white/[0.02] border {border_class} rounded-xl p-4 flex flex-col cursor-pointer hover:border-white/30 hover:bg-white/[0.04] transition">
   <div class="flex items-baseline justify-between mb-2">
-    <div class="{brand_class} font-semibold">{escape(brand)}</div>
+    <div class="{brand_class} font-semibold flex items-center gap-1.5">
+      {escape(brand)}
+      <span class="text-white/30 text-xs">›</span>
+    </div>
     <div class="text-xs text-white/40 tabular-nums">{story_count} {"story" if story_count == 1 else "stories"}</div>
   </div>
   {theme_html}
@@ -672,6 +677,7 @@ def render_index(
             cards = []
             # Subject first, then competitors in descending mention-volume order
             # so the most newsworthy brands lead the scan.
+            slug_by_brand = {b: s for b, s in ([SUBJECT] + BRANDS)}
             ordered = [SUBJECT[0]] + sorted(
                 [b for b, _ in BRANDS],
                 key=lambda b: -len(by_brand.get(b, [])),
@@ -679,7 +685,7 @@ def render_index(
             for b in ordered:
                 if b in brand_narratives and brand_narratives[b].get("summary"):
                     cards.append(render_narrative_card(
-                        b, brand_narratives[b], len(by_brand.get(b, []))
+                        b, slug_by_brand.get(b, ""), brand_narratives[b], len(by_brand.get(b, []))
                     ))
             if cards:
                 narratives_html = f"""
@@ -735,11 +741,11 @@ def render_index(
     body = f"""
 <main class="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10 space-y-10 sm:space-y-12">
 
-  <!-- 1. This Week's Story (per-brand narrative cards) -->
-  {narratives_html}
-
-  <!-- 2. Mention Volume (chart) for at-a-glance volume + sentiment -->
+  <!-- 1. Mention Volume (chart) for at-a-glance volume + sentiment -->
   {mentions_chart_html}
+
+  <!-- 2. This Week's Story (per-brand narrative cards) -->
+  {narratives_html}
 
   <!-- 2. Acorns in the News -->
   <section id="acorns-news-section">
