@@ -61,19 +61,6 @@ if [[ -n "${ANTHROPIC_API_KEY:-}" ]]; then
   echo "✓ ANTHROPIC_API_KEY set on GitHub Actions (LLM sentiment enabled)"
 fi
 
-# 2b. GitHub Actions secrets for Gmail SMTP (daily email-to-Jinny step).
-if [[ -n "${GMAIL_USER:-}" && -n "${GMAIL_APP_PASSWORD:-}" ]]; then
-  gh secret set GMAIL_USER --repo "$GH_OWNER/$REPO_NAME" --body "$GMAIL_USER"
-  gh secret set GMAIL_APP_PASSWORD --repo "$GH_OWNER/$REPO_NAME" --body "$GMAIL_APP_PASSWORD"
-  echo "✓ GMAIL_USER + GMAIL_APP_PASSWORD set (daily email enabled)"
-else
-  echo "⚠ GMAIL_USER and/or GMAIL_APP_PASSWORD missing from secrets.env. Daily email won't send."
-  echo "  To enable: 1) generate an app password at https://myaccount.google.com/apppasswords"
-  echo "             2) add to ~/.config/vscrl/secrets.env:"
-  echo "                GMAIL_USER=alec@vscrl.co"
-  echo "                GMAIL_APP_PASSWORD=xxxx xxxx xxxx xxxx"
-  echo "             3) re-run this script"
-fi
 
 # 2c. Slack webhook for failure alerts.
 if [[ -n "${SLACK_WEBHOOK_URL:-}" ]]; then

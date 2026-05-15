@@ -44,12 +44,6 @@ jobs:
             git push
           fi
 
-      - name: Send daily email to Jinny
-        env:
-          GMAIL_USER: ${{ secrets.GMAIL_USER }}
-          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
-        run: python3 pipeline/notify.py
-
       - name: Slack alert on failure
         if: failure()
         env:
