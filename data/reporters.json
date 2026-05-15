@@ -1,15 +1,15 @@
 {
-  "AA Sful :: Moomoo": {
-    "author": "AA Sful",
+  "Alex Donaldson :: Sportcal": {
+    "author": "Alex Donaldson",
     "brands": [
-      "Robinhood"
+      "Polymarket"
     ],
     "count": 1,
-    "first_seen": "2026-05-14",
-    "last_seen": "2026-05-14",
-    "publisher": "Moomoo",
+    "first_seen": "2026-05-15",
+    "last_seen": "2026-05-15",
+    "publisher": "Sportcal",
     "urls": [
-      "https://www.moomoo.com/community/feed/6th-week-of-trading-hood-updated-116573799841798"
+      "https://www.sportcal.com/sponsorship/serie-a-sponsorship-sees-polymarket-continue-its-european-soccer-push/"
     ]
   },
   "Anna Rogers :: Mother Jones": {
@@ -19,7 +19,7 @@
     ],
     "count": 1,
     "first_seen": "2026-05-14",
-    "last_seen": "2026-05-14",
+    "last_seen": "2026-05-15",
     "publisher": "Mother Jones",
     "urls": [
       "https://www.motherjones.com/politics/2026/05/polymarket-prediction-market-hantavirus-pandemic-epidemic-betting/"
@@ -32,7 +32,7 @@
     ],
     "count": 1,
     "first_seen": "2026-05-14",
-    "last_seen": "2026-05-14",
+    "last_seen": "2026-05-15",
     "publisher": "FOX 26 Houston",
     "urls": [
       "https://www.fox26houston.com/news/ex-hoa-general-manager-accused-using-bank-card-amazon-cashapp-personal-bills"
@@ -45,7 +45,7 @@
     ],
     "count": 1,
     "first_seen": "2026-05-14",
-    "last_seen": "2026-05-14",
+    "last_seen": "2026-05-15",
     "publisher": "Front Office Sports",
     "urls": [
       "https://frontofficesports.com/polymarkets-soccer-spree-continues-with-serie-a-deal/"
@@ -58,7 +58,7 @@
     ],
     "count": 1,
     "first_seen": "2026-05-14",
-    "last_seen": "2026-05-14",
+    "last_seen": "2026-05-15",
     "publisher": "Forbes",
     "urls": [
       "https://www.forbes.com/sites/maglaw/2026/05/13/a-swap-by-any-other-name-the-third-circuit-sides-with-kalshi-in-high-stakes-fight-over-who-regulates-prediction-markets/"
@@ -71,10 +71,23 @@
     ],
     "count": 1,
     "first_seen": "2026-05-14",
-    "last_seen": "2026-05-14",
+    "last_seen": "2026-05-15",
     "publisher": "Esquire",
     "urls": [
       "https://www.esquire.com/news-politics/politics/a71311005/polymarket-bets-israel-iran-war-casino/"
+    ]
+  },
+  "Chavdar Vasilev :: Gambling Insider": {
+    "author": "Chavdar Vasilev",
+    "brands": [
+      "Kalshi"
+    ],
+    "count": 1,
+    "first_seen": "2026-05-15",
+    "last_seen": "2026-05-15",
+    "publisher": "Gambling Insider",
+    "urls": [
+      "https://www.gamblinginsider.com/news/160385/kalshi-new-york-prediction-market-cases-related-consolidation"
     ]
   },
   "Cheryle Shepstone :: DeFi Rate": {
@@ -90,6 +103,32 @@
       "https://defirate.com/news/2026-pga-championship-odds-outrights-round-leaders-and-combos-at-kalshi-and-polymarket/"
     ]
   },
+  "Cormac Dodd cdodd@sfnewmexican.com :: Santa Fe New Mexican": {
+    "author": "Cormac Dodd cdodd@sfnewmexican.com",
+    "brands": [
+      "Kalshi"
+    ],
+    "count": 1,
+    "first_seen": "2026-05-15",
+    "last_seen": "2026-05-15",
+    "publisher": "Santa Fe New Mexican",
+    "urls": [
+      "https://www.santafenewmexican.com/news/local_news/four-new-mexico-tribes-accuse-kalshi-of-illegal-sports-betting-on-their-lands/article_d5ce19f0-e615-44d6-b54b-d674b85323ff.html"
+    ]
+  },
+  "Craig Dudek :: sportingnews.com": {
+    "author": "Craig Dudek",
+    "brands": [
+      "Kalshi"
+    ],
+    "count": 1,
+    "first_seen": "2026-05-15",
+    "last_seen": "2026-05-15",
+    "publisher": "sportingnews.com",
+    "urls": [
+      "https://www.sportingnews.com/us/predictions-markets/news/pistons-vs-cavs-prediction-game-6-use-kalshi-trade-nba-playoffs/4cd8a4f7c362fb64aa5f9db0"
+    ]
+  },
   "Dan Bernstein,Lev Akabas :: Sportico.com": {
     "author": "Dan Bernstein,Lev Akabas",
     "brands": [
@@ -97,7 +136,7 @@
     ],
     "count": 1,
     "first_seen": "2026-05-14",
-    "last_seen": "2026-05-14",
+    "last_seen": "2026-05-15",
     "publisher": "Sportico.com",
     "urls": [
       "https://www.sportico.com/business/sports-betting/2026/kalshi-parlays-retail-bettor-losses-rfq-1234894471/"
@@ -110,7 +149,7 @@
     ],
     "count": 2,
     "first_seen": "2026-05-14",
-    "last_seen": "2026-05-14",
+    "last_seen": "2026-05-15",
     "publisher": "Kalshi",
     "urls": [
       "https://news.kalshi.com/p/april-cpi-2026-inflation-peak-forecast-kalshi",
@@ -124,7 +163,7 @@
     ],
     "count": 1,
     "first_seen": "2026-05-14",
-    "last_seen": "2026-05-14",
+    "last_seen": "2026-05-15",
     "publisher": "Sherwood News",
     "urls": [
       "https://sherwood.news/markets/robinhood-traders-bought-the-dip-entrypoint-launch/"
@@ -143,6 +182,19 @@
       "https://www.casino.org/news/kalshi-claims-it-isnt-a-sportsbook-but-has-made-35-million-in-parlay-fees-this-year-alone/"
     ]
   },
+  "Earnest Horn :: Bettors Insider": {
+    "author": "Earnest Horn",
+    "brands": [
+      "Polymarket"
+    ],
+    "count": 1,
+    "first_seen": "2026-05-15",
+    "last_seen": "2026-05-15",
+    "publisher": "Bettors Insider",
+    "urls": [
+      "https://bettorsinsider.com/news/2026/05/15/polymarket-named-exclusive-u-s-prediction-market-partner-of-serie-a-in-third-major-soccer-deal-of-2026/"
+    ]
+  },
   "Elizabeth Gravier :: CNBC": {
     "author": "Elizabeth Gravier",
     "brands": [
@@ -150,7 +202,7 @@
     ],
     "count": 1,
     "first_seen": "2026-05-14",
-    "last_seen": "2026-05-14",
+    "last_seen": "2026-05-15",
     "publisher": "CNBC",
     "urls": [
       "https://www.cnbc.com/select/best-robo-advisors/"
@@ -163,7 +215,7 @@
     ],
     "count": 1,
     "first_seen": "2026-05-14",
-    "last_seen": "2026-05-14",
+    "last_seen": "2026-05-15",
     "publisher": "Proactive financial news",
     "urls": [
       "https://www.proactiveinvestors.com/companies/news/1091985/block-earnings-beat-driven-by-cash-app-and-square-strength-1091985.html"
@@ -176,7 +228,7 @@
     ],
     "count": 1,
     "first_seen": "2026-05-14",
-    "last_seen": "2026-05-14",
+    "last_seen": "2026-05-15",
     "publisher": "TIKR.com",
     "urls": [
       "https://www.tikr.com/blog/can-jpmorgan-chase-stock-reach-400-in-2026"
@@ -189,7 +241,7 @@
     ],
     "count": 1,
     "first_seen": "2026-05-14",
-    "last_seen": "2026-05-14",
+    "last_seen": "2026-05-15",
     "publisher": "CNBC",
     "urls": [
       "https://www.cnbc.com/2026/05/11/kkr-private-credit-fund-fsk-jpmorgan-chase-credit.html"
@@ -202,10 +254,23 @@
     ],
     "count": 1,
     "first_seen": "2026-05-14",
-    "last_seen": "2026-05-14",
+    "last_seen": "2026-05-15",
     "publisher": "CDC Gaming",
     "urls": [
       "https://cdcgaming.com/brief/kalshis-true-betting-handle-obscured-but-it-may-have-caught-up-to-draftkings-and-fanduel/"
+    ]
+  },
+  "Jae :: PANews": {
+    "author": "Jae",
+    "brands": [
+      "Chase"
+    ],
+    "count": 1,
+    "first_seen": "2026-05-15",
+    "last_seen": "2026-05-15",
+    "publisher": "PANews",
+    "urls": [
+      "https://www.panewslab.com/en/articles/019e2b05-60b1-764a-b6e3-8be94dd2667c"
     ]
   },
   "James Dargan :: AI Insider": {
@@ -215,10 +280,36 @@
     ],
     "count": 1,
     "first_seen": "2026-05-14",
-    "last_seen": "2026-05-14",
+    "last_seen": "2026-05-15",
     "publisher": "AI Insider",
     "urls": [
       "https://theaiinsider.tech/2026/05/12/robinhood-files-for-second-venture-fund-rvii-to-open-early-stage-ai-startup-investing-to-retail/"
+    ]
+  },
+  "Joel Leon :: Bloomberg.com": {
+    "author": "Joel Leon",
+    "brands": [
+      "Kalshi"
+    ],
+    "count": 1,
+    "first_seen": "2026-05-15",
+    "last_seen": "2026-05-15",
+    "publisher": "Bloomberg.com",
+    "urls": [
+      "https://www.bloomberg.com/news/articles/2026-05-14/draftkings-dkng-gets-rare-sell-rating-as-kalshi-polymarket-threaten-growth"
+    ]
+  },
+  "Jonathan Impemba :: Fantasy Alarm": {
+    "author": "Jonathan Impemba",
+    "brands": [
+      "Polymarket"
+    ],
+    "count": 1,
+    "first_seen": "2026-05-15",
+    "last_seen": "2026-05-15",
+    "publisher": "Fantasy Alarm",
+    "urls": [
+      "https://www.fantasyalarm.com/articles/nba/best-bets/polymarket-prediction-market-nba-picks-today-best-predictions-friday-5-15/190098"
     ]
   },
   "Jori Negin-Shecter :: Yahoo Sports": {
@@ -254,7 +345,7 @@
     ],
     "count": 1,
     "first_seen": "2026-05-14",
-    "last_seen": "2026-05-14",
+    "last_seen": "2026-05-15",
     "publisher": "FinanceBuzz",
     "urls": [
       "https://financebuzz.com/chime-vs-varo"
@@ -267,7 +358,7 @@
     ],
     "count": 1,
     "first_seen": "2026-05-14",
-    "last_seen": "2026-05-14",
+    "last_seen": "2026-05-15",
     "publisher": "FinanceBuzz",
     "urls": [
       "https://financebuzz.com/best-online-banks-like-chime"
@@ -280,7 +371,7 @@
     ],
     "count": 1,
     "first_seen": "2026-05-14",
-    "last_seen": "2026-05-14",
+    "last_seen": "2026-05-15",
     "publisher": "Bloomberg.com",
     "urls": [
       "https://www.bloomberg.com/news/articles/2026-05-14/virtu-starts-trading-on-kalshi-as-event-bets-draw-in-wall-street"
@@ -297,6 +388,21 @@
     "publisher": "openPR.com",
     "urls": [
       "https://www.openpr.com/news/4513360/polymarket-copy-trade-platform-poly-syncer-launches"
+    ]
+  },
+  "Kio Dawson :: gamingintelligence.com": {
+    "author": "Kio Dawson",
+    "brands": [
+      "Kalshi",
+      "Polymarket"
+    ],
+    "count": 2,
+    "first_seen": "2026-05-15",
+    "last_seen": "2026-05-15",
+    "publisher": "gamingintelligence.com",
+    "urls": [
+      "https://www.gamingintelligence.com/marketing/230624-kalshi-becomes-madison-square-gardens-official-prediction-market-partner/",
+      "https://www.gamingintelligence.com/marketing/230667-polymarket-unveiled-as-regional-prediction-market-partner-for-italys-serie-a/"
     ]
   },
   "Lauren Ashcraft :: eMarketer": {
@@ -319,7 +425,7 @@
     ],
     "count": 1,
     "first_seen": "2026-05-14",
-    "last_seen": "2026-05-14",
+    "last_seen": "2026-05-15",
     "publisher": "FinanceBuzz",
     "urls": [
       "https://financebuzz.com/chime-card-review"
@@ -332,7 +438,7 @@
     ],
     "count": 1,
     "first_seen": "2026-05-14",
-    "last_seen": "2026-05-14",
+    "last_seen": "2026-05-15",
     "publisher": "marketscreener.com",
     "urls": [
       "https://www.marketscreener.com/news/block-sees-faster-growth-margin-expansion-as-momentum-improves-across-square-cash-app-morgan-stan-ce7f5bdbdc88f524"
@@ -345,10 +451,23 @@
     ],
     "count": 1,
     "first_seen": "2026-05-14",
-    "last_seen": "2026-05-14",
+    "last_seen": "2026-05-15",
     "publisher": "FX News Group",
     "urls": [
       "https://fxnewsgroup.com/forex-news/retail-forex/interactive-brokers-launches-unified-interface-for-trading-prediction-markets-across-kalshi-cme-group-and-forecastex/"
+    ]
+  },
+  "Marilyn Upchurch :: KRQE": {
+    "author": "Marilyn Upchurch",
+    "brands": [
+      "Kalshi"
+    ],
+    "count": 1,
+    "first_seen": "2026-05-15",
+    "last_seen": "2026-05-15",
+    "publisher": "KRQE",
+    "urls": [
+      "https://www.krqe.com/news/new-mexico/pueblos-and-tribe-sue-kalshi-says-their-online-sports-betting-is-illegal-on-tribal-land/"
     ]
   },
   "Matt Norton :: ndsmcobserver.com": {
@@ -371,7 +490,7 @@
     ],
     "count": 1,
     "first_seen": "2026-05-14",
-    "last_seen": "2026-05-14",
+    "last_seen": "2026-05-15",
     "publisher": "Quiver Quantitative",
     "urls": [
       "https://www.quiverquant.com/news/Trump+Discloses+Large+Stock+Purchases+in+Nvidia%2C+Robinhood%2C+Palantir+and+Other+Tech+Firms"
@@ -384,23 +503,10 @@
     ],
     "count": 1,
     "first_seen": "2026-05-14",
-    "last_seen": "2026-05-14",
+    "last_seen": "2026-05-15",
     "publisher": "WSJ",
     "urls": [
       "https://www.wsj.com/buyside/personal-finance/financial-advisors/betterment-review"
-    ]
-  },
-  "Neptune Digital Assets Corp :: TMX Newsfile": {
-    "author": "Neptune Digital Assets Corp",
-    "brands": [
-      "Polymarket"
-    ],
-    "count": 1,
-    "first_seen": "2026-05-14",
-    "last_seen": "2026-05-14",
-    "publisher": "TMX Newsfile",
-    "urls": [
-      "https://www.newsfilecorp.com/release/297384/Neptune-Establishes-Position-in-Polymarket-Expanding-Exposure-to-Blockchain-Financial-Platforms"
     ]
   },
   "Newton Kitonga :: CoinCentral": {
@@ -410,7 +516,7 @@
     ],
     "count": 1,
     "first_seen": "2026-05-14",
-    "last_seen": "2026-05-14",
+    "last_seen": "2026-05-15",
     "publisher": "CoinCentral",
     "urls": [
       "https://coincentral.com/robinhood-hood-stock-surges-nearly-5-percent-second-venture-fund-filing-rvii/"
@@ -421,12 +527,13 @@
     "brands": [
       "Kalshi"
     ],
-    "count": 6,
+    "count": 7,
     "first_seen": "2026-05-14",
-    "last_seen": "2026-05-14",
+    "last_seen": "2026-05-15",
     "publisher": "Sports Illustrated",
     "urls": [
       "https://www.si.com/betting/prediction-market/nba/cavaliers-vs-pistons-game-5-tonight-what-the-kalshi-market-says-about-who-takes-control-of-the-series",
+      "https://www.si.com/betting/prediction-market/news/here-s-what-the-kalshi-traders-are-saying-about-who-will-lead-the-pga-championship-after-round-1",
       "https://www.si.com/betting/prediction-market/news/the-kalshi-market-predicts-a-stanley-cup-collision-course-between-these-two-teams",
       "https://www.si.com/betting/prediction-market/news/the-war-on-kalshi-just-escalated-minnesota-s-felony-push-may-reach-supreme-court",
       "https://www.si.com/betting/prediction-market/news/why-kalshi-traders-are-all-in-on-the-usa-in-world-cup-group-d",
@@ -434,17 +541,56 @@
       "https://www.si.com/betting/prediction-market/prediction-markets-101/the-difference-between-kalshi-vs-polymarket-what-us-traders-actually-need-to-know-in-2026"
     ]
   },
-  "Paul Ugbede Godwin :: Tekedia": {
-    "author": "Paul Ugbede Godwin",
+  "Patrick Lohmann :: Source New Mexico": {
+    "author": "Patrick Lohmann",
+    "brands": [
+      "Kalshi"
+    ],
+    "count": 1,
+    "first_seen": "2026-05-15",
+    "last_seen": "2026-05-15",
+    "publisher": "Source New Mexico",
+    "urls": [
+      "https://sourcenm.com/2026/05/13/new-mexico-pueblos-sue-kalshi-alleging-prediction-market-violates-tribal-gaming-sovereignty/"
+    ]
+  },
+  "Quiver DiscussionTracker :: Quiver Quantitative": {
+    "author": "Quiver DiscussionTracker",
     "brands": [
       "Robinhood"
     ],
     "count": 1,
-    "first_seen": "2026-05-14",
-    "last_seen": "2026-05-14",
-    "publisher": "Tekedia",
+    "first_seen": "2026-05-15",
+    "last_seen": "2026-05-15",
+    "publisher": "Quiver Quantitative",
     "urls": [
-      "https://www.tekedia.com/strategys-strc-instrument-accumulates-2000-btc-as-robinhood-seeks-sec-filing-for-a-second-venture-funds/"
+      "https://www.quiverquant.com/news/Robinhood+Stock+%28HOOD%29+Opinions+on+Recent+Technical+Bounce"
+    ]
+  },
+  "Quiver FundTracker :: Quiver Quantitative": {
+    "author": "Quiver FundTracker",
+    "brands": [
+      "Wealthfront"
+    ],
+    "count": 1,
+    "first_seen": "2026-05-15",
+    "last_seen": "2026-05-15",
+    "publisher": "Quiver Quantitative",
+    "urls": [
+      "https://www.quiverquant.com/news/Fund+Update%3A+508%2C777+%24VUG+shares+added+to+Wealthfront+Advisers+LLC+portfolio"
+    ]
+  },
+  "Redaktion ad-hoc-news.de :: AD HOC NEWS": {
+    "author": "Redaktion ad-hoc-news.de",
+    "brands": [
+      "Chase"
+    ],
+    "count": 1,
+    "first_seen": "2026-05-15",
+    "last_seen": "2026-05-15",
+    "publisher": "AD HOC NEWS",
+    "urls": [
+      "https://www.ad-hoc-news.de/boerse/news/ueberblick/jpmorgan-chase-and-co-stock-us46625h1005-high-yield-structured-notes/69342909"
     ]
   },
   "Rexielyn Diaz :: TIKR.com": {
@@ -473,6 +619,45 @@
     "urls": [
       "https://www.sportsbettingdime.com/news/betting/cftc-has-voice-heard-in-kalshi-vs-ohio-sports-event-contract-lawsuit/",
       "https://www.sportsbettingdime.com/news/betting/no-more-waitlist-for-u-s-polymarket-users/"
+    ]
+  },
+  "Sam Daodu :: 24/7 Wall St.": {
+    "author": "Sam Daodu",
+    "brands": [
+      "Polymarket"
+    ],
+    "count": 1,
+    "first_seen": "2026-05-15",
+    "last_seen": "2026-05-15",
+    "publisher": "24/7 Wall St.",
+    "urls": [
+      "https://247wallst.com/investing/2026/05/15/why-polymarket-now-gives-strategy-82-odds-of-selling-bitcoin-btc-this-year/"
+    ]
+  },
+  "Sasha Richie, Charlotte Kramon :: Dallas News": {
+    "author": "Sasha Richie, Charlotte Kramon",
+    "brands": [
+      "Chase"
+    ],
+    "count": 1,
+    "first_seen": "2026-05-15",
+    "last_seen": "2026-05-15",
+    "publisher": "Dallas News",
+    "urls": [
+      "https://www.dallasnews.com/business/banking/article/q-a-jpmorgan-leaders-talk-selling-scotiabank-22255592.php"
+    ]
+  },
+  "Silvia Pavlof :: GamblingNews": {
+    "author": "Silvia Pavlof",
+    "brands": [
+      "Polymarket"
+    ],
+    "count": 1,
+    "first_seen": "2026-05-15",
+    "last_seen": "2026-05-15",
+    "publisher": "GamblingNews",
+    "urls": [
+      "https://www.gamblingnews.com/news/polymarket-rolls-out-us-ios-app-after-months-long-wait/"
     ]
   },
   "Source NM :: CDC Gaming": {
@@ -508,23 +693,10 @@
     ],
     "count": 1,
     "first_seen": "2026-05-14",
-    "last_seen": "2026-05-14",
+    "last_seen": "2026-05-15",
     "publisher": "24/7 Wall St.",
     "urls": [
       "https://247wallst.com/investing/2026/05/11/what-happens-to-jpmorgan-chase-if-jamie-dimon-steps-down/"
-    ]
-  },
-  "Unknown :: The Globe and Mail": {
-    "author": "Unknown",
-    "brands": [
-      "Chime"
-    ],
-    "count": 1,
-    "first_seen": "2026-05-14",
-    "last_seen": "2026-05-14",
-    "publisher": "The Globe and Mail",
-    "urls": [
-      "https://www.theglobeandmail.com/investing/markets/stocks/CHYM/pressreleases/1786868/chime-delivers-first-gaap-profit-and-raises-2026-outlook/"
     ]
   },
   "Valerie Cross :: DeFi Rate": {
@@ -540,17 +712,17 @@
       "https://defirate.com/news/kalshi-sets-weekly-high-4-1b-volume-polymarket-slides/"
     ]
   },
-  "Wealthfront Corporation :: GlobeNewswire": {
-    "author": "Wealthfront Corporation",
+  "Will Payne :: mynews4.com": {
+    "author": "Will Payne",
     "brands": [
-      "Wealthfront"
+      "Kalshi"
     ],
     "count": 1,
-    "first_seen": "2026-05-14",
-    "last_seen": "2026-05-14",
-    "publisher": "GlobeNewswire",
+    "first_seen": "2026-05-15",
+    "last_seen": "2026-05-15",
+    "publisher": "mynews4.com",
     "urls": [
-      "https://www.globenewswire.com/news-release/2026/05/14/3295333/0/en/wealthfront-to-announce-fiscal-first-quarter-2027-financial-results-on-june-4-2026.html"
+      "https://mynews4.com/news/local/whats-next-for-prediction-markets-in-nevada-after-kalshi-ban"
     ]
   },
   "Yeni \u015eafak Gazetecilik A.\u015e. :: Yeni Safak English": {

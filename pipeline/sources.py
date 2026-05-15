@@ -84,7 +84,7 @@ SEC_CIKS = {
 #   - For brands owned by larger entities (Cash App / Block, Chase / JPMorgan),
 #     query both names so we catch coverage filed under the parent.
 GOOGLE_NEWS_QUERIES = {
-    "Acorns":      '"Acorns" (fintech OR investing OR app)',
+    "Acorns":      '"Acorns" (fintech OR investing OR "robo-advisor" OR app OR "micro-investing" OR "Noah Kerner" OR "Acorns Early" OR "Acorns Later" OR "Acorns Gold" OR "Round-Ups" OR "Mighty Oak" OR subscription OR "savings app")',
     "Chime":       '"Chime" (fintech OR banking OR neobank)',
     "Robinhood":   '"Robinhood" (fintech OR investing OR brokerage OR HOOD)',
     "Alinea":      '"Alinea" (investing OR fintech)',
@@ -174,6 +174,31 @@ def is_tier_1(publisher: str) -> bool:
         return False
     p = publisher.lower()
     return any(t in p for t in TIER_1_PUBLISHERS)
+
+
+# Non-journalism sources. A "byline" from these is not a pitchable journalist:
+# PR wires emit company names, broker community feeds emit usernames, content
+# platforms emit contributors. Used to keep the Pitch List and Top Reporters
+# list clean — these never enter the reporter log. Distinct from
+# BLOCKED_PUBLISHERS (which drops the whole article); a wire press release is
+# still legitimate coverage to show, you just can't pitch "GlobeNewswire".
+NON_JOURNALISM_PUBLISHERS = {
+    "globenewswire", "globe newswire", "pr newswire", "prnewswire",
+    "business wire", "businesswire", "accesswire", "newsfile", "prweb",
+    "ein presswire", "einpresswire", "issuewire", "send2press",
+    "moomoo", "futu", "stocktwits", "reddit", "youtube", "tradingview",
+    "seeking alpha", "tipranks", "simply wall st", "simplywall",
+    "marketbeat", "tekedia", "medium.com", "substack",
+}
+
+
+def is_journalism(publisher: str) -> bool:
+    """False for PR wires, broker community feeds, and content platforms whose
+    'authors' aren't pitchable journalists. Case-insensitive substring match."""
+    if not publisher:
+        return False
+    p = publisher.lower()
+    return not any(n in p for n in NON_JOURNALISM_PUBLISHERS)
 
 # Title-keyword patterns to drop. Case-insensitive substring match.
 # Targets affiliate promo-code spam (huge volume for prediction markets) and

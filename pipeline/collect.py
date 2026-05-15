@@ -46,6 +46,7 @@ from pipeline.sources import (
     OFFICIAL_PR_PUBLISHERS,
     SENTIMENT_POSITIVE, SENTIMENT_NEGATIVE,
     google_news_rss_url, sec_filings_url,
+    is_journalism,
 )
 
 # Cache of fetched 8-K TLDRs, keyed by filing URL. Persisted to disk so weekly
@@ -308,6 +309,7 @@ _GENERIC_BYLINE_TOKENS = {
     "business wire", "pr newswire", "globe newswire", "accesswire",
     "marketwatch", "investor's business daily", "ibd", "pymnts",
     "yahoo finance", "yahoo", "the motley fool", "motley fool",
+    "unknown", "n/a", "na", "anonymous", "guest", "team",
 }
 
 # Junk characters that suggest the byline came from an unrendered template,
@@ -815,6 +817,7 @@ def update_reporters_log(items: list[dict]) -> None:
     existing = {
         k: v for k, v in existing.items()
         if _is_real_byline(v.get("author", ""), v.get("publisher", ""))
+        and is_journalism(v.get("publisher", ""))
     }
 
     today_iso = datetime.now(timezone.utc).date().isoformat()
@@ -831,8 +834,12 @@ def update_reporters_log(items: list[dict]) -> None:
                 continue
             # Final guard: ditch junk bylines, publisher echoes, wire services,
             # template fragments, etc. that may have slipped through cached
-            # entries written by earlier filter versions.
+            # entries written by earlier filter versions. Also drop
+            # non-journalism sources (PR wires, broker community feeds) since
+            # their "authors" are not pitchable journalists.
             if not _is_real_byline(author, publisher):
+                continue
+            if not is_journalism(publisher):
                 continue
             key = f"{author} :: {publisher}"
             row = existing.get(key, {

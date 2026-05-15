@@ -19,6 +19,7 @@ from __future__ import annotations
 import json
 import sys
 from collections import defaultdict
+from urllib.parse import quote_plus
 from datetime import datetime, timezone
 from html import escape
 from pathlib import Path
@@ -591,15 +592,40 @@ def render_pitching_card(row: dict) -> str:
     )
     n = row.get("count", 0)
     story_word = "story" if n == 1 else "stories"
+    author = row.get("author", "")
+    publisher = row.get("publisher", "")
+
+    # Action links so this is a finished pitch list, not just a name.
+    # 1. "See coverage" → a recent article they wrote (sample of their beat).
+    # 2. "Find contact" → prefilled Google search for their email/socials.
+    urls = row.get("urls", [])
+    coverage_link = ""
+    if urls:
+        coverage_link = (
+            f'<a href="{escape(urls[0])}" target="_blank" rel="noopener" '
+            f'class="text-[11px] text-white/55 hover:text-white underline-offset-2 hover:underline">'
+            f'See coverage ↗</a>'
+        )
+    contact_q = quote_plus(f'"{author}" {publisher} email OR twitter OR contact')
+    contact_link = (
+        f'<a href="https://www.google.com/search?q={contact_q}" target="_blank" '
+        f'rel="noopener" class="text-[11px] text-[#74C947] hover:underline '
+        f'underline-offset-2">Find contact ↗</a>'
+    )
+
     return f"""
-<div class="bg-white/[0.02] border border-white/10 rounded-xl p-4 hover:border-white/25 transition">
-  <div class="text-white font-semibold leading-tight">{escape(row.get('author', ''))}</div>
-  <div class="text-xs text-white/55 mt-1">{escape(row.get('publisher', ''))}</div>
+<div class="bg-white/[0.02] border border-white/10 rounded-xl p-4 hover:border-white/25 transition flex flex-col">
+  <div class="text-white font-semibold leading-tight">{escape(author)}</div>
+  <div class="text-xs text-white/55 mt-1">{escape(publisher)}</div>
   <div class="text-[11px] text-white/45 mt-2">
-    {n} {story_word} on
+    {n} competitor {story_word} on
   </div>
   <div class="flex flex-wrap gap-1 mt-2">
     {brand_chips}
+  </div>
+  <div class="flex items-center gap-3 mt-3 pt-3 border-t border-white/5">
+    {contact_link}
+    {coverage_link}
   </div>
 </div>
 """
@@ -912,11 +938,16 @@ def main() -> None:
             # so journalists already writing across several fintechs surface
             # at the top — those are the most pitchable.
             subject = SUBJECT[0]
+            # Brand-owned newsrooms (publisher == a tracked brand, e.g. a
+            # Kalshi byline on "Kalshi") are owned media, not pitchable
+            # outside journalists — exclude them from the pitch list.
+            tracked_names = {b.lower() for b, _ in ([SUBJECT] + BRANDS)}
             pitching_targets = sorted(
                 [
                     r for r in all_reporters
                     if subject not in r.get("brands", [])
                     and r.get("brands")
+                    and r.get("publisher", "").strip().lower() not in tracked_names
                 ],
                 key=lambda r: (len(r.get("brands", [])), r.get("count", 0)),
                 reverse=True,

@@ -1,66 +1,40 @@
 [
   {
-    "brand": "Chase",
-    "slug": "chase",
-    "title": "Where is JPMorgan Chase\u2019s headquarters? Inside the banking giant\u2019s new NYC tower",
-    "summary": "Where is JPMorgan Chase\u2019s headquarters? Inside the banking giant\u2019s new NYC tower thestreet.com",
-    "url": "https://www.thestreet.com/investing/stocks/jpmorgan-chase-headquarters",
-    "source": "thestreet.com",
+    "brand": "Kalshi",
+    "slug": "kalshi",
+    "title": "Ho-Chunk lawsuit against Kalshi, online gambling can move forward",
+    "summary": "Judge William Conley for the U.S. District Court in Green Bay denied Kalshi, Inc.\u2019s motion to dismiss the lawsuit against it by the Ho-Chunk Nation, in part, on May 11.",
+    "url": "https://www.jsonline.com/story/news/local/wisconsin/2026/05/15/ho-chunk-lawsuit-against-kalshi-online-gambling-can-move-forward/90099049007/",
+    "source": "Milwaukee Journal Sentinel",
     "author": "",
-    "date": "2026-05-14T22:35:33+00:00",
+    "date": "2026-05-15T17:26:00+00:00",
     "type": "news",
     "sources": [
       {
-        "publisher": "thestreet.com",
-        "url": "https://www.thestreet.com/investing/stocks/jpmorgan-chase-headquarters",
+        "publisher": "Milwaukee Journal Sentinel",
+        "url": "https://www.jsonline.com/story/news/local/wisconsin/2026/05/15/ho-chunk-lawsuit-against-kalshi-online-gambling-can-move-forward/90099049007/",
         "author": ""
       }
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "negative"
   },
   {
     "brand": "Kalshi",
     "slug": "kalshi",
-    "title": "DraftKings gets rare sell rating as Kalshi, Polymarket threaten growth",
-    "summary": "The risks loom even though DraftKings rolled out its own prediction market app in December, said analyst Charlie Muir-Sands in a note to clients.",
-    "url": "https://www.bostonglobe.com/2026/05/14/business/draftkings-sell-rating-kalshi-polymarket/",
-    "source": "The Boston Globe",
-    "author": "",
-    "date": "2026-05-14T22:06:29+00:00",
+    "title": "Pistons vs Cavs prediction for Game 6: Use Kalshi to trade on NBA Playoffs",
+    "summary": "Follow this expert Pistons vs Cavs prediction for Game 6 to trade on the NBA Playoffs with Kalshi.",
+    "url": "https://www.sportingnews.com/us/predictions-markets/news/pistons-vs-cavs-prediction-game-6-use-kalshi-trade-nba-playoffs/4cd8a4f7c362fb64aa5f9db0",
+    "source": "sportingnews.com",
+    "author": "Craig Dudek",
+    "date": "2026-05-15T17:11:23+00:00",
     "type": "news",
     "sources": [
       {
-        "publisher": "The Boston Globe",
-        "url": "https://www.bostonglobe.com/2026/05/14/business/draftkings-sell-rating-kalshi-polymarket/",
-        "author": ""
-      },
-      {
-        "publisher": "Bloomberg.com",
-        "url": "https://www.bloomberg.com/news/articles/2026-05-14/draftkings-dkng-gets-rare-sell-rating-as-kalshi-polymarket-threaten-growth",
-        "author": ""
-      }
-    ],
-    "group_size": 2,
-    "is_official": false,
-    "sentiment": "positive"
-  },
-  {
-    "brand": "Kalshi",
-    "slug": "kalshi",
-    "title": "\"ICEMAN\" Odds: Kalshi Traders Predict Who Will Be Featured on Drake's New Album",
-    "summary": "Central Cee leads at 80%, with Future close behind at 77%",
-    "url": "https://news.kalshi.com/p/iceman-odds-drake-album-featured-guest-artists",
-    "source": "Kalshi",
-    "author": "Danny Gallagher",
-    "date": "2026-05-14T21:54:30+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "Kalshi",
-        "url": "https://news.kalshi.com/p/iceman-odds-drake-album-featured-guest-artists",
-        "author": "Danny Gallagher"
+        "publisher": "sportingnews.com",
+        "url": "https://www.sportingnews.com/us/predictions-markets/news/pistons-vs-cavs-prediction-game-6-use-kalshi-trade-nba-playoffs/4cd8a4f7c362fb64aa5f9db0",
+        "author": "Craig Dudek"
       }
     ],
     "group_size": 1,
@@ -70,132 +44,39 @@
   {
     "brand": "Polymarket",
     "slug": "polymarket",
-    "title": "The Polymarket Has Turned America into a Deadly Casino",
-    "summary": "Basketball players used to go to jail just for betting on games. Now we\u2019re all getting rich for betting on Israeli missile strikes.",
-    "url": "https://www.esquire.com/news-politics/politics/a71311005/polymarket-bets-israel-iran-war-casino/",
-    "source": "Esquire",
-    "author": "Charles P. Pierce",
-    "date": "2026-05-14T21:31:00+00:00",
+    "title": "Why Polymarket Now Gives Strategy 82% Odds of Selling Bitcoin (BTC) This Year",
+    "summary": "Polymarket odds surge as traders price a possible Strategy Bitcoin (BTC) sale tied to dividend and balance-sheet pressure.",
+    "url": "https://247wallst.com/investing/2026/05/15/why-polymarket-now-gives-strategy-82-odds-of-selling-bitcoin-btc-this-year/",
+    "source": "24/7 Wall St.",
+    "author": "Sam Daodu",
+    "date": "2026-05-15T16:25:32+00:00",
     "type": "news",
     "sources": [
       {
-        "publisher": "Esquire",
-        "url": "https://www.esquire.com/news-politics/politics/a71311005/polymarket-bets-israel-iran-war-casino/",
-        "author": "Charles P. Pierce"
+        "publisher": "24/7 Wall St.",
+        "url": "https://247wallst.com/investing/2026/05/15/why-polymarket-now-gives-strategy-82-odds-of-selling-bitcoin-btc-this-year/",
+        "author": "Sam Daodu"
       }
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "negative"
-  },
-  {
-    "brand": "Kalshi",
-    "slug": "kalshi",
-    "title": "Four New Mexico tribes sue Kalshi, alleging illegal online sports betting on tribal lands",
-    "summary": "Four New Mexico tribal governments have filed a federal lawsuit against prediction-market platform Kalshi, accusing the company of operating illegal online spor",
-    "url": "https://kfoxtv.com/news/local/four-new-mexico-tribes-sue-kalshi-alleging-illegal-online-sports-betting-on-tribal-lands",
-    "source": "KFOX",
-    "author": "",
-    "date": "2026-05-14T20:32:13+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "KFOX",
-        "url": "https://kfoxtv.com/news/local/four-new-mexico-tribes-sue-kalshi-alleging-illegal-online-sports-betting-on-tribal-lands",
-        "author": ""
-      },
-      {
-        "publisher": "Yahoo",
-        "url": "https://www.yahoo.com/news/articles/mexico-tribes-sue-kalshi-alleging-180300163.html",
-        "author": ""
-      },
-      {
-        "publisher": "KOB.com",
-        "url": "https://www.kob.com/news/top-news/new-mexico-tribes-sue-kalshi/",
-        "author": ""
-      },
-      {
-        "publisher": "World Casino News",
-        "url": "https://news.worldcasinodirectory.com/new-mexico-tribes-challenge-kalshi-over-sports-betting-in-federal-lawsuit-122788",
-        "author": ""
-      },
-      {
-        "publisher": "Santa Fe New Mexican",
-        "url": "https://www.santafenewmexican.com/news/local_news/four-new-mexico-tribes-accuse-kalshi-of-illegal-sports-betting-on-their-lands/article_d5ce19f0-e615-44d6-b54b-d674b85323ff.html",
-        "author": ""
-      },
-      {
-        "publisher": "KRQE",
-        "url": "https://www.krqe.com/news/new-mexico/pueblos-and-tribe-sue-kalshi-says-their-online-sports-betting-is-illegal-on-tribal-land/",
-        "author": ""
-      },
-      {
-        "publisher": "Albuquerque Journal",
-        "url": "https://www.abqjournal.com/business/new-mexico-tribes-sue-kalshi-alleging-illegal-sports-betting-on-tribal-lands/3041695",
-        "author": ""
-      }
-    ],
-    "group_size": 7,
-    "is_official": false,
-    "sentiment": "negative"
-  },
-  {
-    "brand": "Kalshi",
-    "slug": "kalshi",
-    "title": "Yankees vs. Mets: Kalshi markets and preview of the Subway Series",
-    "summary": "Yankees vs. Mets: Kalshi markets and preview of the Subway Series SILive.com",
-    "url": "https://www.silive.com/betting/2026/05/yankees-vs-mets-kalshi-markets-and-preview-of-the-subway-series.html",
-    "source": "SILive.com",
-    "author": "",
-    "date": "2026-05-14T20:30:00+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "SILive.com",
-        "url": "https://www.silive.com/betting/2026/05/yankees-vs-mets-kalshi-markets-and-preview-of-the-subway-series.html",
-        "author": ""
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "neutral"
-  },
-  {
-    "brand": "Wealthfront",
-    "slug": "wealthfront",
-    "title": "Wealthfront to Announce Fiscal First Quarter 2027 Financial Results on June 4, 2026",
-    "summary": "PALO ALTO, Calif., May 14, 2026 (GLOBE NEWSWIRE) -- Wealthfront Corporation (Nasdaq: WLTH), a tech-driven financial platform helping digital natives turn...",
-    "url": "https://www.globenewswire.com/news-release/2026/05/14/3295333/0/en/wealthfront-to-announce-fiscal-first-quarter-2027-financial-results-on-june-4-2026.html",
-    "source": "GlobeNewswire",
-    "author": "Wealthfront Corporation",
-    "date": "2026-05-14T20:05:00+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "GlobeNewswire",
-        "url": "https://www.globenewswire.com/news-release/2026/05/14/3295333/0/en/wealthfront-to-announce-fiscal-first-quarter-2027-financial-results-on-june-4-2026.html",
-        "author": "Wealthfront Corporation"
-      }
-    ],
-    "group_size": 1,
-    "is_official": true,
     "sentiment": "neutral"
   },
   {
     "brand": "Robinhood",
     "slug": "robinhood",
-    "title": "Strategy\u2019s STRC Instrument Accumulates 2000 BTC As Robinhood Seeks SEC Filing for a Second Venture Funds",
-    "summary": "The convergence of institutional finance and digital assets continues to accelerate, and two recent developments highlight how traditional capital markets are increasingly embracing crypto-native financial structures. Strategy announced that its STRC instrument has accumulated more than 2,000 BTC worth of\u2026",
-    "url": "https://www.tekedia.com/strategys-strc-instrument-accumulates-2000-btc-as-robinhood-seeks-sec-filing-for-a-second-venture-funds/",
-    "source": "Tekedia",
-    "author": "Paul Ugbede Godwin",
-    "date": "2026-05-14T19:42:41+00:00",
+    "title": "Coinbase, Robinhood Stocks Lose Momentum After Big Crypto Bill Win",
+    "summary": "Coinbase, Robinhood Stocks Lose Momentum After Big Crypto Bill Win Barron's",
+    "url": "https://www.barrons.com/articles/coinbase-robinhood-stocks-crypto-clarity-bill-59670529",
+    "source": "Barron's",
+    "author": "",
+    "date": "2026-05-15T15:28:00+00:00",
     "type": "news",
     "sources": [
       {
-        "publisher": "Tekedia",
-        "url": "https://www.tekedia.com/strategys-strc-instrument-accumulates-2000-btc-as-robinhood-seeks-sec-filing-for-a-second-venture-funds/",
-        "author": "Paul Ugbede Godwin"
+        "publisher": "Barron's",
+        "url": "https://www.barrons.com/articles/coinbase-robinhood-stocks-crypto-clarity-bill-59670529",
+        "author": ""
       }
     ],
     "group_size": 1,
@@ -205,18 +86,102 @@
   {
     "brand": "Polymarket",
     "slug": "polymarket",
-    "title": "Polymarket Named Italian Serie A's Exclusive Prediction Market in US",
-    "summary": "Polymarket continues to build relationships with major soccer properties as anticipation grows for the 2026 FIFA World Cup in North America.",
-    "url": "https://sports.yahoo.com/articles/polymarket-named-italian-serie-exclusive-190900210.html",
-    "source": "Yahoo Sports",
-    "author": "Jori Negin-Shecter",
-    "date": "2026-05-14T19:09:00+00:00",
+    "title": "Polymarket\u2019s CFTC talks are really about who gets to price reality in public",
+    "summary": "Polymarket's push to lift its CFTC ban is not just a venue story; it's a fight over whether \"reality markets\" on war, pandemics and macro become a regulated.",
+    "url": "https://crypto.news/polymarkets-cftc-talks-are-really-about-who-gets-to-price-reality-in-public/",
+    "source": "crypto.news",
+    "author": "",
+    "date": "2026-05-15T15:00:00+00:00",
     "type": "news",
     "sources": [
       {
-        "publisher": "Yahoo Sports",
-        "url": "https://sports.yahoo.com/articles/polymarket-named-italian-serie-exclusive-190900210.html",
-        "author": "Jori Negin-Shecter"
+        "publisher": "crypto.news",
+        "url": "https://crypto.news/polymarkets-cftc-talks-are-really-about-who-gets-to-price-reality-in-public/",
+        "author": ""
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "neutral"
+  },
+  {
+    "brand": "Robinhood",
+    "slug": "robinhood",
+    "title": "Robinhood Shares Gain on Higher April 2026 Equity & Options DATs",
+    "summary": "HOOD rises 5.2% after April data shows higher equity and options trading, with platform assets surging 49% year over year to $345.4 billion.",
+    "url": "https://www.zacks.com/stock/news/2922064/robinhood-shares-gain-on-higher-april-2026-equity-options-dats",
+    "source": "Zacks Investment Research",
+    "author": "",
+    "date": "2026-05-15T14:32:34+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "Zacks Investment Research",
+        "url": "https://www.zacks.com/stock/news/2922064/robinhood-shares-gain-on-higher-april-2026-equity-options-dats",
+        "author": ""
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "neutral"
+  },
+  {
+    "brand": "Robinhood",
+    "slug": "robinhood",
+    "title": "Robinhood Stock (HOOD) Opinions on Recent Technical Bounce",
+    "summary": "Technical bounce fuels optimism: Social media traders spotlight Robinhood's rebound from the $60 sup",
+    "url": "https://www.quiverquant.com/news/Robinhood+Stock+%28HOOD%29+Opinions+on+Recent+Technical+Bounce",
+    "source": "Quiver Quantitative",
+    "author": "Quiver DiscussionTracker",
+    "date": "2026-05-15T14:13:00+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "Quiver Quantitative",
+        "url": "https://www.quiverquant.com/news/Robinhood+Stock+%28HOOD%29+Opinions+on+Recent+Technical+Bounce",
+        "author": "Quiver DiscussionTracker"
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "neutral"
+  },
+  {
+    "brand": "Chase",
+    "slug": "chase",
+    "title": "JPMorgan Chase & Co. stock (US46625H1005): High-yield structured notes and strong Q4 earnings in foc",
+    "summary": "JPMorgan Chase & Co. has filed new high-yield callable notes while investors are still digesting its",
+    "url": "https://www.ad-hoc-news.de/boerse/news/ueberblick/jpmorgan-chase-and-co-stock-us46625h1005-high-yield-structured-notes/69342909",
+    "source": "AD HOC NEWS",
+    "author": "Redaktion ad-hoc-news.de",
+    "date": "2026-05-15T14:01:46+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "AD HOC NEWS",
+        "url": "https://www.ad-hoc-news.de/boerse/news/ueberblick/jpmorgan-chase-and-co-stock-us46625h1005-high-yield-structured-notes/69342909",
+        "author": "Redaktion ad-hoc-news.de"
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "neutral"
+  },
+  {
+    "brand": "Polymarket",
+    "slug": "polymarket",
+    "title": "Polymarket Prediction Market NBA Picks Today: Best Predictions For Friday, 5/15",
+    "summary": "Explore the best Polymarket prediction market NBA picks for today, May 15, 2026. High-confidence NBA predictions and value plays for the playoff double-header.",
+    "url": "https://www.fantasyalarm.com/articles/nba/best-bets/polymarket-prediction-market-nba-picks-today-best-predictions-friday-5-15/190098",
+    "source": "Fantasy Alarm",
+    "author": "Jonathan Impemba",
+    "date": "2026-05-15T13:06:41+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "Fantasy Alarm",
+        "url": "https://www.fantasyalarm.com/articles/nba/best-bets/polymarket-prediction-market-nba-picks-today-best-predictions-friday-5-15/190098",
+        "author": "Jonathan Impemba"
       }
     ],
     "group_size": 1,
@@ -224,20 +189,41 @@
     "sentiment": "positive"
   },
   {
-    "brand": "Kalshi",
-    "slug": "kalshi",
-    "title": "The Kalshi Market Predicts a Stanley Cup Collision Course Between These Two Teams",
-    "summary": "Two teams have been flawless. The rest of the field is playing for second place. The race is down to just 6 teams.",
-    "url": "https://www.si.com/betting/prediction-market/news/the-kalshi-market-predicts-a-stanley-cup-collision-course-between-these-two-teams",
-    "source": "Sports Illustrated",
-    "author": "Parker Loverich",
-    "date": "2026-05-14T19:06:36+00:00",
+    "brand": "Robinhood",
+    "slug": "robinhood",
+    "title": "Needham Maintains Robinhood(HOOD.US) With Buy Rating, Maintains Target Price $85",
+    "summary": "Needham Maintains Robinhood(HOOD.US) With Buy Rating, Maintains Target Price $85 Moomoo",
+    "url": "https://www.moomoo.com/news/post/70097877/needham-maintains-robinhood-hoodus-with-buy-rating-maintains-target-price",
+    "source": "Moomoo",
+    "author": "",
+    "date": "2026-05-15T12:47:49+00:00",
     "type": "news",
     "sources": [
       {
-        "publisher": "Sports Illustrated",
-        "url": "https://www.si.com/betting/prediction-market/news/the-kalshi-market-predicts-a-stanley-cup-collision-course-between-these-two-teams",
-        "author": "Parker Loverich"
+        "publisher": "Moomoo",
+        "url": "https://www.moomoo.com/news/post/70097877/needham-maintains-robinhood-hoodus-with-buy-rating-maintains-target-price",
+        "author": ""
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "neutral"
+  },
+  {
+    "brand": "Chase",
+    "slug": "chase",
+    "title": "Taylor Wimpey plc JPMorgan Chase & Co - holding(s) in company",
+    "summary": "Taylor Wimpey plc: Taylor Wimpey plc JPMorgan Chase & Co - holding in company ...",
+    "url": "https://www.marketscreener.com/news/taylor-wimpey-plc-jpmorgan-chase-co-holding-s-in-company-ce7f5bd2d18df224",
+    "source": "marketscreener.com",
+    "author": "",
+    "date": "2026-05-15T12:42:51+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "marketscreener.com",
+        "url": "https://www.marketscreener.com/news/taylor-wimpey-plc-jpmorgan-chase-co-holding-s-in-company-ce7f5bd2d18df224",
+        "author": ""
       }
     ],
     "group_size": 1,
@@ -247,107 +233,133 @@
   {
     "brand": "Kalshi",
     "slug": "kalshi",
-    "title": "The War on Kalshi Just Escalated: Minnesota\u2019s Felony Push May Reach Supreme Court",
-    "summary": "A sweeping public safety bill passed both chambers of Minnesota's legislature this week. The state could become the first in the country to ban Kalshi.",
-    "url": "https://www.si.com/betting/prediction-market/news/the-war-on-kalshi-just-escalated-minnesota-s-felony-push-may-reach-supreme-court",
-    "source": "Sports Illustrated",
-    "author": "Parker Loverich",
-    "date": "2026-05-14T18:36:29+00:00",
+    "title": "Kalshi Pushes to Tie New York Prediction Market Cases Together as AG Alleges \u201cGamesmanship\u201d",
+    "summary": "Kalshi is attempting to tie several major New York prediction market cases before a single federal judge. New York regulators have pushed back, accusing the com",
+    "url": "https://www.gamblinginsider.com/news/160385/kalshi-new-york-prediction-market-cases-related-consolidation",
+    "source": "Gambling Insider",
+    "author": "Chavdar Vasilev",
+    "date": "2026-05-15T12:39:11+00:00",
     "type": "news",
     "sources": [
       {
-        "publisher": "Sports Illustrated",
-        "url": "https://www.si.com/betting/prediction-market/news/the-war-on-kalshi-just-escalated-minnesota-s-felony-push-may-reach-supreme-court",
-        "author": "Parker Loverich"
+        "publisher": "Gambling Insider",
+        "url": "https://www.gamblinginsider.com/news/160385/kalshi-new-york-prediction-market-cases-related-consolidation",
+        "author": "Chavdar Vasilev"
       }
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "negative"
-  },
-  {
-    "brand": "Kalshi",
-    "slug": "kalshi",
-    "title": "Polymarket Volumes Fall for the First Time Since August, Kalshi Keeps Growing",
-    "summary": "Polymarket trading volume fell for the first time since August, while Kalshi keeps growing. Prediction markets are entering a phase of tough competition.",
-    "url": "https://coinspot.io/en/analysis/polymarket-volumes-fall-for-the-first-time-since-august-kalshi-keeps-growing/",
-    "source": "Coinspot.io",
-    "author": "",
-    "date": "2026-05-14T17:53:17+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "Coinspot.io",
-        "url": "https://coinspot.io/en/analysis/polymarket-volumes-fall-for-the-first-time-since-august-kalshi-keeps-growing/",
-        "author": ""
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "positive"
-  },
-  {
-    "brand": "Kalshi",
-    "slug": "kalshi",
-    "title": "Kalshi signs multi-year naming rights deal with Madison Square Garden",
-    "summary": "Kalshi signs multi-year naming rights deal with Madison Square Garden europeangaming.eu",
-    "url": "https://europeangaming.eu/portal/press-releases/2026/05/14/204248/kalshi-signs-multi-year-naming-rights-deal-with-madison-square-garden/",
-    "source": "europeangaming.eu",
-    "author": "",
-    "date": "2026-05-14T17:43:52+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "europeangaming.eu",
-        "url": "https://europeangaming.eu/portal/press-releases/2026/05/14/204248/kalshi-signs-multi-year-naming-rights-deal-with-madison-square-garden/",
-        "author": ""
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "positive"
+    "sentiment": "neutral"
   },
   {
     "brand": "Polymarket",
     "slug": "polymarket",
-    "title": "Polymarket trading volume falls for first time in eight months",
-    "summary": "Prediction market Polymarket has recorded its first monthly decline in trading volume since August, with technical issues and growing competition with rival Kal",
-    "url": "https://cdcgaming.com/brief/polymarket-trading-volume-falls-for-first-time-in-eight-months/",
-    "source": "CDC Gaming",
-    "author": "",
-    "date": "2026-05-14T17:32:52+00:00",
+    "title": "Polymarket unveiled as regional prediction market partner for Italy\u2019s Serie A",
+    "summary": "Polymarket has been named as the official and exclusive prediction market partner of Italian football league Serie A in the United States",
+    "url": "https://www.gamingintelligence.com/marketing/230667-polymarket-unveiled-as-regional-prediction-market-partner-for-italys-serie-a/",
+    "source": "gamingintelligence.com",
+    "author": "Kio Dawson",
+    "date": "2026-05-15T12:19:14+00:00",
     "type": "news",
     "sources": [
       {
-        "publisher": "CDC Gaming",
-        "url": "https://cdcgaming.com/brief/polymarket-trading-volume-falls-for-first-time-in-eight-months/",
+        "publisher": "gamingintelligence.com",
+        "url": "https://www.gamingintelligence.com/marketing/230667-polymarket-unveiled-as-regional-prediction-market-partner-for-italys-serie-a/",
+        "author": "Kio Dawson"
+      },
+      {
+        "publisher": "The Lufkin Daily News",
+        "url": "https://lufkindailynews.com/anpa/polymarket-named-official-prediction-market-partner-of-serie-a-in-the-u-s/article_924505c6-850c-50f3-8130-926b01f64910.html",
         "author": ""
       },
       {
-        "publisher": "Bloomberg.com",
-        "url": "https://www.bloomberg.com/news/articles/2026-05-13/polymarket-trading-volume-declines-for-first-time-since-august",
+        "publisher": "Business Wire",
+        "url": "https://www.businesswire.com/news/home/20260513833232/en/Polymarket-Named-Official-Prediction-Market-Partner-of-Serie-A-in-the-U.S.",
         "author": ""
       }
     ],
-    "group_size": 2,
+    "group_size": 3,
+    "is_official": false,
+    "sentiment": "positive"
+  },
+  {
+    "brand": "Chase",
+    "slug": "chase",
+    "title": "When a man sues a woman: Legal questions swirl in salacious JPMorgan sex harassment case",
+    "summary": "When a man sues a woman: Legal questions swirl in salacious JPMorgan sex harassment case Reuters",
+    "url": "https://www.reuters.com/legal/government/when-man-sues-woman-legal-questions-swirl-salacious-jpmorgan-sex-harassment-case-2026-05-15/",
+    "source": "Reuters",
+    "author": "",
+    "date": "2026-05-15T12:05:03+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "Reuters",
+        "url": "https://www.reuters.com/legal/government/when-man-sues-woman-legal-questions-swirl-salacious-jpmorgan-sex-harassment-case-2026-05-15/",
+        "author": ""
+      }
+    ],
+    "group_size": 1,
     "is_official": false,
     "sentiment": "negative"
   },
   {
-    "brand": "Kalshi",
-    "slug": "kalshi",
-    "title": "Kalshi\u2019s true betting handle obscured, but it may have caught up to DraftKings and FanDuel",
-    "summary": "While the true level of retail betting handle on Kalshi remains somewhat obscured, the prediction market is likely catching up to the sportsbook giants this qua",
-    "url": "https://cdcgaming.com/brief/kalshis-true-betting-handle-obscured-but-it-may-have-caught-up-to-draftkings-and-fanduel/",
-    "source": "CDC Gaming",
-    "author": "InGame",
-    "date": "2026-05-14T17:29:30+00:00",
+    "brand": "Robinhood",
+    "slug": "robinhood",
+    "title": "The Robinhood co-founder just filed plans for 20,000 satellites \u2014 and the real bet isn't space, it's that grid interconnect queues have broken AI infrastructure on Earth",
+    "summary": "Cowboy Space, the orbital infrastructure startup founded by Robinhood co-founder Baiju Bhatt, has asked the Federal Communications Commission for permission to deploy up to 20,000 satellites carrying data center hardware in low Earth orbit. The constellation, named Stampede, would be one of the largest\u2026",
+    "url": "https://spacedaily.com/sd-n-the-robinhood-co-founder-just-filed-plans-for-20-000-satellites-and-the-real-bet-isnt-space-its-that-grid-interconnect-queues-have-broken-ai-infrastructure-on-earth/",
+    "source": "Space Daily",
+    "author": "",
+    "date": "2026-05-15T11:05:11+00:00",
     "type": "news",
     "sources": [
       {
-        "publisher": "CDC Gaming",
-        "url": "https://cdcgaming.com/brief/kalshis-true-betting-handle-obscured-but-it-may-have-caught-up-to-draftkings-and-fanduel/",
-        "author": "InGame"
+        "publisher": "Space Daily",
+        "url": "https://spacedaily.com/sd-n-the-robinhood-co-founder-just-filed-plans-for-20-000-satellites-and-the-real-bet-isnt-space-its-that-grid-interconnect-queues-have-broken-ai-infrastructure-on-earth/",
+        "author": ""
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "neutral"
+  },
+  {
+    "brand": "Chase",
+    "slug": "chase",
+    "title": "RWA Weekly: The Clarity Bill Passes Senate Committee Review; BlackRock, JPMorgan Chase, and Other Wall Street Giants Accelerate the Launch of Tokenized Financial Products",
+    "summary": "The total market capitalization of RWA on-chain exceeded $31.4 billion, with a 6.75% increase in holders; the US CLARITY Act was passed by the Senate committee, accelerating global regulation; BlackRock and JPMorgan Chase launched tokenized money market funds, and the stablecoin ecosystem is accelerating its shift\u2026",
+    "url": "https://www.panewslab.com/en/articles/019e2b05-60b1-764a-b6e3-8be94dd2667c",
+    "source": "PANews",
+    "author": "Jae",
+    "date": "2026-05-15T10:50:45+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "PANews",
+        "url": "https://www.panewslab.com/en/articles/019e2b05-60b1-764a-b6e3-8be94dd2667c",
+        "author": "Jae"
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "positive"
+  },
+  {
+    "brand": "Polymarket",
+    "slug": "polymarket",
+    "title": "Serie A sponsorship sees Polymarket continue its European soccer push",
+    "summary": "Polymarket will serve as the exclusive official prediction market partner of the Italian top-flight in the US market.",
+    "url": "https://www.sportcal.com/sponsorship/serie-a-sponsorship-sees-polymarket-continue-its-european-soccer-push/",
+    "source": "Sportcal",
+    "author": "Alex Donaldson",
+    "date": "2026-05-15T10:43:07+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "Sportcal",
+        "url": "https://www.sportcal.com/sponsorship/serie-a-sponsorship-sees-polymarket-continue-its-european-soccer-push/",
+        "author": "Alex Donaldson"
       }
     ],
     "group_size": 1,
@@ -359,15 +371,30 @@
     "slug": "chase",
     "title": "Guarantor: JPMorgan Chase & Co.",
     "summary": "Guarantor: JPMorgan Chase & Co. StreetInsider",
-    "url": "https://www.streetinsider.com/SEC+Filings/Form+424B2+JPMORGAN+CHASE+%26amp%3B+CO/26493079.html",
+    "url": "https://www.streetinsider.com/SEC+Filings/Form+424B2+JPMORGAN+CHASE+%26amp%3B+CO/26498341.html",
     "source": "StreetInsider",
     "author": "",
-    "date": "2026-05-14T17:09:30+00:00",
+    "date": "2026-05-15T10:16:12+00:00",
     "type": "news",
     "sources": [
       {
         "publisher": "StreetInsider",
-        "url": "https://www.streetinsider.com/SEC+Filings/Form+424B2+JPMORGAN+CHASE+%26amp%3B+CO/26493267.html",
+        "url": "https://www.streetinsider.com/SEC+Filings/Form+424B2+JPMORGAN+CHASE+%26amp%3B+CO/26498341.html",
+        "author": ""
+      },
+      {
+        "publisher": "StreetInsider",
+        "url": "https://www.streetinsider.com/SEC+Filings/Form+424B2+JPMORGAN+CHASE+%26amp%3B+CO/26493693.html",
+        "author": ""
+      },
+      {
+        "publisher": "StreetInsider",
+        "url": "https://www.streetinsider.com/SEC+Filings/Form+424B2+JPMORGAN+CHASE+%26amp%3B+CO/26493655.html",
+        "author": ""
+      },
+      {
+        "publisher": "StreetInsider",
+        "url": "https://www.streetinsider.com/SEC+Filings/Form+424B2+JPMORGAN+CHASE+%26amp%3B+CO/26493599.html",
         "author": ""
       },
       {
@@ -431,9 +458,370 @@
         "author": ""
       }
     ],
-    "group_size": 13,
+    "group_size": 16,
     "is_official": false,
     "sentiment": "neutral"
+  },
+  {
+    "brand": "Polymarket",
+    "slug": "polymarket",
+    "title": "Polymarket signs deal with Serie A USA ahead of World Cup",
+    "summary": "Polymarket has signed a multi-year agreement with Serie A USA to become the league\u2019s official and exclusive prediction market partner in the US",
+    "url": "https://sbcnews.co.uk/sport-business/football/2026/05/15/polymarket-signs-serie-a-usa-deal/",
+    "source": "sbcnews.co.uk",
+    "author": "",
+    "date": "2026-05-15T09:29:48+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "sbcnews.co.uk",
+        "url": "https://sbcnews.co.uk/sport-business/football/2026/05/15/polymarket-signs-serie-a-usa-deal/",
+        "author": ""
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "positive"
+  },
+  {
+    "brand": "Kalshi",
+    "slug": "kalshi",
+    "title": "Kalshi becomes Madison Square Garden\u2019s official prediction market partner",
+    "summary": "Kalshi has been named as the first official prediction market partner of Madison Square Garden, the multi-purpose indoor arena in New York City",
+    "url": "https://www.gamingintelligence.com/marketing/230624-kalshi-becomes-madison-square-gardens-official-prediction-market-partner/",
+    "source": "gamingintelligence.com",
+    "author": "Kio Dawson",
+    "date": "2026-05-15T08:29:01+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "gamingintelligence.com",
+        "url": "https://www.gamingintelligence.com/marketing/230624-kalshi-becomes-madison-square-gardens-official-prediction-market-partner/",
+        "author": "Kio Dawson"
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "positive"
+  },
+  {
+    "brand": "Chase",
+    "slug": "chase",
+    "title": "JPMorgan Hikes Taiex Bull-Case Target to 50,000 on AI Buildout",
+    "summary": "JPMorgan Hikes Taiex Bull-Case Target to 50,000 on AI Buildout Bloomberg.com",
+    "url": "https://www.bloomberg.com/news/articles/2026-05-15/jpmorgan-hikes-taiex-bull-case-target-to-50-000-on-ai-buildout",
+    "source": "Bloomberg.com",
+    "author": "",
+    "date": "2026-05-15T02:17:00+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "Bloomberg.com",
+        "url": "https://www.bloomberg.com/news/articles/2026-05-15/jpmorgan-hikes-taiex-bull-case-target-to-50-000-on-ai-buildout",
+        "author": ""
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "neutral"
+  },
+  {
+    "brand": "Kalshi",
+    "slug": "kalshi",
+    "title": "Four New Mexico tribes sue Kalshi, alleging illegal online sports betting on tribal lands",
+    "summary": "Four New Mexico tribal governments have filed a federal lawsuit against prediction-market platform Kalshi, accusing the company of operating illegal online spor",
+    "url": "https://kfoxtv.com/news/local/four-new-mexico-tribes-sue-kalshi-alleging-illegal-online-sports-betting-on-tribal-lands",
+    "source": "KFOX",
+    "author": "",
+    "date": "2026-05-15T02:14:26+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "gamingintelligence.com",
+        "url": "https://www.gamingintelligence.com/legal/230657-new-mexico-tribes-sue-kalshi-over-sports-contracts/",
+        "author": ""
+      },
+      {
+        "publisher": "KFOX",
+        "url": "https://kfoxtv.com/news/local/four-new-mexico-tribes-sue-kalshi-alleging-illegal-online-sports-betting-on-tribal-lands",
+        "author": ""
+      },
+      {
+        "publisher": "KOB.com",
+        "url": "https://www.kob.com/news/top-news/new-mexico-tribes-sue-kalshi/",
+        "author": ""
+      },
+      {
+        "publisher": "Albuquerque Journal",
+        "url": "https://www.abqjournal.com/business/new-mexico-tribes-sue-kalshi-alleging-illegal-sports-betting-on-tribal-lands/3041695",
+        "author": ""
+      }
+    ],
+    "group_size": 4,
+    "is_official": false,
+    "sentiment": "negative"
+  },
+  {
+    "brand": "Kalshi",
+    "slug": "kalshi",
+    "title": "Interactive Brokers launches unified interface for trading prediction markets across Kalshi, CME Group, and ForecastEx",
+    "summary": "Interactive Brokers today announced the launch of a first-of-its-kind unified interface for trading prediction markets across Kalshi, CME Group, and ForecastEx.",
+    "url": "https://fxnewsgroup.com/forex-news/retail-forex/interactive-brokers-launches-unified-interface-for-trading-prediction-markets-across-kalshi-cme-group-and-forecastex/",
+    "source": "FX News Group",
+    "author": "Maria Nikolova",
+    "date": "2026-05-14T23:16:59+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "FX News Group",
+        "url": "https://fxnewsgroup.com/forex-news/retail-forex/interactive-brokers-launches-unified-interface-for-trading-prediction-markets-across-kalshi-cme-group-and-forecastex/",
+        "author": "Maria Nikolova"
+      },
+      {
+        "publisher": "Crypto Briefing",
+        "url": "https://cryptobriefing.com/interactive-brokers-launches-cross-venue-prediction-market-platform/",
+        "author": ""
+      }
+    ],
+    "group_size": 2,
+    "is_official": false,
+    "sentiment": "positive"
+  },
+  {
+    "brand": "Kalshi",
+    "slug": "kalshi",
+    "title": "Kalshi Gets Margin Trading Clearance for Professional Clients",
+    "summary": "Margin trading allows investors to enter positions using less capital than the full value of a trade.",
+    "url": "https://coinmarketcap.com/academy/article/kalshi-gets-margin-trading-clearance-for-professional-clients",
+    "source": "CoinMarketCap",
+    "author": "",
+    "date": "2026-05-14T23:11:35+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "CoinMarketCap",
+        "url": "https://coinmarketcap.com/academy/article/kalshi-gets-margin-trading-clearance-for-professional-clients",
+        "author": ""
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "neutral"
+  },
+  {
+    "brand": "Chase",
+    "slug": "chase",
+    "title": "Where is JPMorgan Chase\u2019s headquarters? Inside the banking giant\u2019s new NYC tower",
+    "summary": "Where is JPMorgan Chase\u2019s headquarters? Inside the banking giant\u2019s new NYC tower thestreet.com",
+    "url": "https://www.thestreet.com/investing/stocks/jpmorgan-chase-headquarters",
+    "source": "thestreet.com",
+    "author": "",
+    "date": "2026-05-14T22:35:33+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "thestreet.com",
+        "url": "https://www.thestreet.com/investing/stocks/jpmorgan-chase-headquarters",
+        "author": ""
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "neutral"
+  },
+  {
+    "brand": "Kalshi",
+    "slug": "kalshi",
+    "title": "\"ICEMAN\" odds: Kalshi traders predict who will be featured on Drake's new album",
+    "summary": "Central Cee leads at 80%, with Future close behind at 77%",
+    "url": "https://news.kalshi.com/p/iceman-odds-drake-album-featured-guest-artists",
+    "source": "Kalshi",
+    "author": "Danny Gallagher",
+    "date": "2026-05-14T21:54:30+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "Kalshi",
+        "url": "https://news.kalshi.com/p/iceman-odds-drake-album-featured-guest-artists",
+        "author": "Danny Gallagher"
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "neutral"
+  },
+  {
+    "brand": "Polymarket",
+    "slug": "polymarket",
+    "title": "The Polymarket Has Turned America into a Deadly Casino",
+    "summary": "Basketball players used to go to jail just for betting on games. Now we\u2019re all getting rich for betting on Israeli missile strikes.",
+    "url": "https://www.esquire.com/news-politics/politics/a71311005/polymarket-bets-israel-iran-war-casino/",
+    "source": "Esquire",
+    "author": "Charles P. Pierce",
+    "date": "2026-05-14T21:31:00+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "Esquire",
+        "url": "https://www.esquire.com/news-politics/politics/a71311005/polymarket-bets-israel-iran-war-casino/",
+        "author": "Charles P. Pierce"
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "negative"
+  },
+  {
+    "brand": "Kalshi",
+    "slug": "kalshi",
+    "title": "Yankees vs. Mets: Kalshi markets and preview of the Subway Series",
+    "summary": "Yankees vs. Mets: Kalshi markets and preview of the Subway Series SILive.com",
+    "url": "https://www.silive.com/betting/2026/05/yankees-vs-mets-kalshi-markets-and-preview-of-the-subway-series.html",
+    "source": "SILive.com",
+    "author": "",
+    "date": "2026-05-14T20:30:00+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "SILive.com",
+        "url": "https://www.silive.com/betting/2026/05/yankees-vs-mets-kalshi-markets-and-preview-of-the-subway-series.html",
+        "author": ""
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "neutral"
+  },
+  {
+    "brand": "Kalshi",
+    "slug": "kalshi",
+    "title": "The Kalshi Market Predicts a Stanley Cup Collision Course Between These Two Teams",
+    "summary": "Two teams have been flawless. The rest of the field is playing for second place. The race is down to just 6 teams.",
+    "url": "https://www.si.com/betting/prediction-market/news/the-kalshi-market-predicts-a-stanley-cup-collision-course-between-these-two-teams",
+    "source": "Sports Illustrated",
+    "author": "Parker Loverich",
+    "date": "2026-05-14T19:06:36+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/betting/prediction-market/news/the-kalshi-market-predicts-a-stanley-cup-collision-course-between-these-two-teams",
+        "author": "Parker Loverich"
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "neutral"
+  },
+  {
+    "brand": "Kalshi",
+    "slug": "kalshi",
+    "title": "The War on Kalshi Just Escalated: Minnesota\u2019s Felony Push May Reach Supreme Court",
+    "summary": "A sweeping public safety bill passed both chambers of Minnesota's legislature this week. The state could become the first in the country to ban Kalshi.",
+    "url": "https://www.si.com/betting/prediction-market/news/the-war-on-kalshi-just-escalated-minnesota-s-felony-push-may-reach-supreme-court",
+    "source": "Sports Illustrated",
+    "author": "Parker Loverich",
+    "date": "2026-05-14T18:36:29+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/betting/prediction-market/news/the-war-on-kalshi-just-escalated-minnesota-s-felony-push-may-reach-supreme-court",
+        "author": "Parker Loverich"
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "negative"
+  },
+  {
+    "brand": "Polymarket",
+    "slug": "polymarket",
+    "title": "Polymarket trading volume falls for first time in eight months",
+    "summary": "Prediction market Polymarket has recorded its first monthly decline in trading volume since August, with technical issues and growing competition with rival Kal",
+    "url": "https://cdcgaming.com/brief/polymarket-trading-volume-falls-for-first-time-in-eight-months/",
+    "source": "CDC Gaming",
+    "author": "",
+    "date": "2026-05-14T17:32:52+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "CDC Gaming",
+        "url": "https://cdcgaming.com/brief/polymarket-trading-volume-falls-for-first-time-in-eight-months/",
+        "author": ""
+      },
+      {
+        "publisher": "Bloomberg.com",
+        "url": "https://www.bloomberg.com/news/articles/2026-05-13/polymarket-trading-volume-declines-for-first-time-since-august",
+        "author": ""
+      }
+    ],
+    "group_size": 2,
+    "is_official": false,
+    "sentiment": "negative"
+  },
+  {
+    "brand": "Polymarket",
+    "slug": "polymarket",
+    "title": "DraftKings gets rare sell rating as Kalshi, Polymarket threaten growth",
+    "summary": "The risks loom even though DraftKings rolled out its own prediction market app in December, said analyst Charlie Muir-Sands in a note to clients.",
+    "url": "https://www.bostonglobe.com/2026/05/14/business/draftkings-sell-rating-kalshi-polymarket/",
+    "source": "The Boston Globe",
+    "author": "",
+    "date": "2026-05-14T17:32:00+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "The Boston Globe",
+        "url": "https://www.bostonglobe.com/2026/05/14/business/draftkings-sell-rating-kalshi-polymarket/",
+        "author": ""
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "positive"
+  },
+  {
+    "brand": "Kalshi",
+    "slug": "kalshi",
+    "title": "Kalshi\u2019s true betting handle obscured, but it may have caught up to DraftKings and FanDuel",
+    "summary": "While the true level of retail betting handle on Kalshi remains somewhat obscured, the prediction market is likely catching up to the sportsbook giants this qua",
+    "url": "https://cdcgaming.com/brief/kalshis-true-betting-handle-obscured-but-it-may-have-caught-up-to-draftkings-and-fanduel/",
+    "source": "CDC Gaming",
+    "author": "InGame",
+    "date": "2026-05-14T17:29:30+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "CDC Gaming",
+        "url": "https://cdcgaming.com/brief/kalshis-true-betting-handle-obscured-but-it-may-have-caught-up-to-draftkings-and-fanduel/",
+        "author": "InGame"
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "positive"
+  },
+  {
+    "brand": "Kalshi",
+    "slug": "kalshi",
+    "title": "DraftKings Gets Rare Sell Rating as Kalshi, Polymarket Threaten Growth",
+    "summary": "The rapid expansion of sports prediction markets is hurting DraftKings Inc., according to the stock\u2019s only bear on Wall Street.",
+    "url": "https://www.bloomberg.com/news/articles/2026-05-14/draftkings-dkng-gets-rare-sell-rating-as-kalshi-polymarket-threaten-growth",
+    "source": "Bloomberg.com",
+    "author": "Joel Leon",
+    "date": "2026-05-14T17:05:46+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "Bloomberg.com",
+        "url": "https://www.bloomberg.com/news/articles/2026-05-14/draftkings-dkng-gets-rare-sell-rating-as-kalshi-polymarket-threaten-growth",
+        "author": "Joel Leon"
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "positive"
   },
   {
     "brand": "Kalshi",
@@ -476,27 +864,6 @@
     "group_size": 1,
     "is_official": false,
     "sentiment": "neutral"
-  },
-  {
-    "brand": "Polymarket",
-    "slug": "polymarket",
-    "title": "Polymarket Named Official Prediction Market Partner of Serie A in the U.S.",
-    "summary": "Polymarket Named Official Prediction Market Partner of Serie A in the U.S. Business Wire",
-    "url": "https://www.businesswire.com/news/home/20260513833232/en/Polymarket-Named-Official-Prediction-Market-Partner-of-Serie-A-in-the-U.S.",
-    "source": "Business Wire",
-    "author": "",
-    "date": "2026-05-14T16:00:00+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "Business Wire",
-        "url": "https://www.businesswire.com/news/home/20260513833232/en/Polymarket-Named-Official-Prediction-Market-Partner-of-Serie-A-in-the-U.S.",
-        "author": ""
-      }
-    ],
-    "group_size": 1,
-    "is_official": true,
-    "sentiment": "positive"
   },
   {
     "brand": "Robinhood",
@@ -543,42 +910,6 @@
   {
     "brand": "Kalshi",
     "slug": "kalshi",
-    "title": "Interactive Brokers launches unified interface for trading prediction markets across Kalshi, CME Group, and ForecastEx",
-    "summary": "Interactive Brokers today announced the launch of a first-of-its-kind unified interface for trading prediction markets across Kalshi, CME Group, and ForecastEx.",
-    "url": "https://fxnewsgroup.com/forex-news/retail-forex/interactive-brokers-launches-unified-interface-for-trading-prediction-markets-across-kalshi-cme-group-and-forecastex/",
-    "source": "FX News Group",
-    "author": "Maria Nikolova",
-    "date": "2026-05-14T15:14:41+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "MSN",
-        "url": "https://www.msn.com/en-us/money/technology/interactive-brokers-launches-unified-interface-for-trading-on-kalshi-cme-forecastex/ar-AA23cxxk?ocid=finance-verthp-feeds",
-        "author": ""
-      },
-      {
-        "publisher": "ForkLog",
-        "url": "https://forklog.com/en/interactive-brokers-unites-kalshi-cme-and-forecastex-on-a-single-platform/",
-        "author": ""
-      },
-      {
-        "publisher": "Crypto Briefing",
-        "url": "https://cryptobriefing.com/interactive-brokers-launches-cross-venue-prediction-market-platform/",
-        "author": ""
-      },
-      {
-        "publisher": "FX News Group",
-        "url": "https://fxnewsgroup.com/forex-news/retail-forex/interactive-brokers-launches-unified-interface-for-trading-prediction-markets-across-kalshi-cme-group-and-forecastex/",
-        "author": "Maria Nikolova"
-      }
-    ],
-    "group_size": 4,
-    "is_official": false,
-    "sentiment": "positive"
-  },
-  {
-    "brand": "Kalshi",
-    "slug": "kalshi",
     "title": "Virtu Starts Trading on Kalshi as Event Bets Draw in Wall Street",
     "summary": "Virtu Financial is joining a small but growing list of institutional market-making firms trading on prediction markets, according to people familiar with the matter.",
     "url": "https://www.bloomberg.com/news/articles/2026-05-14/virtu-starts-trading-on-kalshi-as-event-bets-draw-in-wall-street",
@@ -594,53 +925,6 @@
       }
     ],
     "group_size": 1,
-    "is_official": false,
-    "sentiment": "positive"
-  },
-  {
-    "brand": "Kalshi",
-    "slug": "kalshi",
-    "title": "CFTC Has Voice Heard in Kalshi vs. Ohio Sports Event Contract Lawsuit",
-    "summary": "The Commodity Futures Trading Commission has filed an amicus brief in support of Kalshi in its sports event contract lawsuit against Ohio.",
-    "url": "https://www.sportsbettingdime.com/news/betting/cftc-has-voice-heard-in-kalshi-vs-ohio-sports-event-contract-lawsuit/",
-    "source": "Sports Betting Dime",
-    "author": "Robert Linnehan",
-    "date": "2026-05-14T14:52:00+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "Sports Betting Dime",
-        "url": "https://www.sportsbettingdime.com/news/betting/cftc-has-voice-heard-in-kalshi-vs-ohio-sports-event-contract-lawsuit/",
-        "author": "Robert Linnehan"
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "positive"
-  },
-  {
-    "brand": "Kalshi",
-    "slug": "kalshi",
-    "title": "Interactive Brokers Expands Prediction Markets, Unifying Access to Kalshi, CME Group, and ForecastEx",
-    "summary": "GREENWICH, Conn.--(BUSINESS WIRE)--May 14, 2026",
-    "url": "https://www.joplinglobe.com/region/national_business/interactive-brokers-expands-prediction-markets-unifying-access-to-kalshi-cme-group-and-forecastex/article_7b79a70b-df95-5da3-8aa8-a749f39dddc5.html",
-    "source": "The Joplin Globe",
-    "author": "",
-    "date": "2026-05-14T14:08:07+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "DeFi Rate",
-        "url": "https://defirate.com/news/interactive-brokers-expands-prediction-markets-kalshi-cme-group-integration/",
-        "author": ""
-      },
-      {
-        "publisher": "The Joplin Globe",
-        "url": "https://www.joplinglobe.com/region/national_business/interactive-brokers-expands-prediction-markets-unifying-access-to-kalshi-cme-group-and-forecastex/article_7b79a70b-df95-5da3-8aa8-a749f39dddc5.html",
-        "author": ""
-      }
-    ],
-    "group_size": 2,
     "is_official": false,
     "sentiment": "positive"
   },
@@ -666,41 +950,20 @@
     "sentiment": "positive"
   },
   {
-    "brand": "Kalshi",
-    "slug": "kalshi",
-    "title": "2026 PGA Championship Odds: Outrights, Round Leaders, and Combos at Kalshi and Polymarket",
-    "summary": "Kalshi had nearly $130 million in live 2026 PGA Championship-related volume by Day 1, with the outright winner market alone above $110 million. Scottie Scheffler remains the favorite across all prediction markets.",
-    "url": "https://defirate.com/news/2026-pga-championship-odds-outrights-round-leaders-and-combos-at-kalshi-and-polymarket/",
-    "source": "DeFi Rate",
-    "author": "Cheryle Shepstone",
-    "date": "2026-05-14T13:38:23+00:00",
+    "brand": "Chime",
+    "slug": "chime",
+    "title": "Chime Finally Turns Profitable\u2014But Risks Remain",
+    "summary": "Detailed price information for Bank of America Corp (BAC-N) from The Globe and Mail including charting and trades.",
+    "url": "https://www.theglobeandmail.com/investing/markets/stocks/BAC/pressreleases/1958791/chime-finally-turns-profitablebut-risks-remain/",
+    "source": "The Globe and Mail",
+    "author": "",
+    "date": "2026-05-14T14:05:00+00:00",
     "type": "news",
     "sources": [
       {
-        "publisher": "DeFi Rate",
-        "url": "https://defirate.com/news/2026-pga-championship-odds-outrights-round-leaders-and-combos-at-kalshi-and-polymarket/",
-        "author": "Cheryle Shepstone"
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "neutral"
-  },
-  {
-    "brand": "Kalshi",
-    "slug": "kalshi",
-    "title": "Kalshi Is Making a Boatload of Money on Parlays",
-    "summary": "Kalshi refutes claims that the prediction market is operating as an unlicensed sportsbook by facilitating sports event contract trading.",
-    "url": "https://www.casino.org/news/kalshi-claims-it-isnt-a-sportsbook-but-has-made-35-million-in-parlay-fees-this-year-alone/",
-    "source": "Casino.org",
-    "author": "Devin O'Connor",
-    "date": "2026-05-14T13:34:25+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "Casino.org",
-        "url": "https://www.casino.org/news/kalshi-claims-it-isnt-a-sportsbook-but-has-made-35-million-in-parlay-fees-this-year-alone/",
-        "author": "Devin O'Connor"
+        "publisher": "The Globe and Mail",
+        "url": "https://www.theglobeandmail.com/investing/markets/stocks/BAC/pressreleases/1958791/chime-finally-turns-profitablebut-risks-remain/",
+        "author": ""
       }
     ],
     "group_size": 1,
@@ -750,48 +1013,6 @@
     "sentiment": "positive"
   },
   {
-    "brand": "Robinhood",
-    "slug": "robinhood",
-    "title": "Bear Market Earnings Comparison: Pure Crypto Exchanges vs. Multi-Asset Platforms\u2014Robinhood Is More Resilient Than Coinbase",
-    "summary": "Bear Market Earnings Comparison: Pure Crypto Exchanges vs. Multi-Asset Platforms\u2014Robinhood Is More Resilient Than Coinbase \u6df1\u6f6eTechFlow",
-    "url": "https://m.techflowpost.com/en-US/article/31578",
-    "source": "\u6df1\u6f6eTechFlow",
-    "author": "",
-    "date": "2026-05-14T10:23:59+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "\u6df1\u6f6eTechFlow",
-        "url": "https://m.techflowpost.com/en-US/article/31578",
-        "author": ""
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "positive"
-  },
-  {
-    "brand": "Robinhood",
-    "slug": "robinhood",
-    "title": "Barclays Maintains Robinhood(HOOD.US) With Buy Rating, Maintains Target Price $82",
-    "summary": "Barclays Maintains Robinhood(HOOD.US) With Buy Rating, Maintains Target Price $82 Moomoo",
-    "url": "https://www.moomoo.com/news/post/70000254/barclays-maintains-robinhood-hoodus-with-buy-rating-maintains-target-price",
-    "source": "Moomoo",
-    "author": "",
-    "date": "2026-05-14T09:46:42+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "Moomoo",
-        "url": "https://www.moomoo.com/news/post/70000254/barclays-maintains-robinhood-hoodus-with-buy-rating-maintains-target-price",
-        "author": ""
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "positive"
-  },
-  {
     "brand": "Chase",
     "slug": "chase",
     "title": "Vestal Denny's to be demolished, making way for Chase Bank",
@@ -815,112 +1036,70 @@
   {
     "brand": "Polymarket",
     "slug": "polymarket",
-    "title": "Polymarket Copy Trade Platform Poly Syncer Launches Non-Custodial Wallet Mirroring Engine",
-    "summary": "Sweden 14th May 2026 Poly Syncer accessible at www polysyncer com has opened general availability of its Polymarket copy trading engine a non custodial execution platform that automatically replicates the on chain positions of the most consistently profitable Polymarket wallets ...",
-    "url": "https://www.openpr.com/news/4513360/polymarket-copy-trade-platform-poly-syncer-launches",
-    "source": "openPR.com",
-    "author": "King Newswire",
-    "date": "2026-05-14T08:30:05+00:00",
+    "title": "Polymarket Rolls out US iOS App after Months-Long Wait",
+    "summary": "Prediction market platform Polymarket has officially opened up its US exchange to iOS users without requiring invitation codes after a long rollout",
+    "url": "https://www.gamblingnews.com/news/polymarket-rolls-out-us-ios-app-after-months-long-wait/",
+    "source": "GamblingNews",
+    "author": "Silvia Pavlof",
+    "date": "2026-05-14T08:09:49+00:00",
     "type": "news",
     "sources": [
       {
-        "publisher": "openPR.com",
-        "url": "https://www.openpr.com/news/4513672/polymarket-copy-trade-poly-syncer-debuts-non-custodial",
-        "author": ""
-      },
-      {
-        "publisher": "openPR.com",
-        "url": "https://www.openpr.com/news/4513360/polymarket-copy-trade-platform-poly-syncer-launches",
-        "author": "King Newswire"
+        "publisher": "GamblingNews",
+        "url": "https://www.gamblingnews.com/news/polymarket-rolls-out-us-ios-app-after-months-long-wait/",
+        "author": "Silvia Pavlof"
       }
     ],
-    "group_size": 2,
+    "group_size": 1,
     "is_official": false,
     "sentiment": "neutral"
   },
   {
-    "brand": "Polymarket",
-    "slug": "polymarket",
-    "title": "Polymarket turns TV plotlines into tradable bets as Euphoria market stirs scrutiny",
-    "summary": "Polymarket turns TV plotlines into tradable bets as Euphoria market stirs scrutiny The Cryptonomist",
-    "url": "https://en.cryptonomist.ch/2026/05/14/polymarket-entertainment-prediction-markets-euphoria/",
-    "source": "The Cryptonomist",
-    "author": "",
-    "date": "2026-05-14T07:38:50+00:00",
+    "brand": "Kalshi",
+    "slug": "kalshi",
+    "title": "Four New Mexico tribes accuse Kalshi of illegal sports betting on their lands",
+    "summary": "Kalshi has maintained its platform is a financial marketplace, where users engage in \"swaps,\" and not a gambling operation.",
+    "url": "https://www.santafenewmexican.com/news/local_news/four-new-mexico-tribes-accuse-kalshi-of-illegal-sports-betting-on-their-lands/article_d5ce19f0-e615-44d6-b54b-d674b85323ff.html",
+    "source": "Santa Fe New Mexican",
+    "author": "Cormac Dodd cdodd@sfnewmexican.com",
+    "date": "2026-05-14T05:00:00+00:00",
     "type": "news",
     "sources": [
       {
-        "publisher": "The Cryptonomist",
-        "url": "https://en.cryptonomist.ch/2026/05/14/polymarket-entertainment-prediction-markets-euphoria/",
+        "publisher": "World Casino News",
+        "url": "https://news.worldcasinodirectory.com/new-mexico-tribes-challenge-kalshi-over-sports-betting-in-federal-lawsuit-122788",
         "author": ""
+      },
+      {
+        "publisher": "Santa Fe New Mexican",
+        "url": "https://www.santafenewmexican.com/news/local_news/four-new-mexico-tribes-accuse-kalshi-of-illegal-sports-betting-on-their-lands/article_d5ce19f0-e615-44d6-b54b-d674b85323ff.html",
+        "author": "Cormac Dodd cdodd@sfnewmexican.com"
       }
     ],
-    "group_size": 1,
+    "group_size": 2,
     "is_official": false,
     "sentiment": "negative"
   },
   {
-    "brand": "Polymarket",
-    "slug": "polymarket",
-    "title": "Should Polymarket and Kalshi Allow You to Bet on a Crisis?",
-    "summary": "Should Polymarket and Kalshi Allow You to Bet on a Crisis? WSJ",
-    "url": "https://www.wsj.com/opinion/should-polymarket-and-kalshi-allow-you-to-bet-on-a-crisis-4d9dcb39",
-    "source": "WSJ",
-    "author": "",
-    "date": "2026-05-14T07:38:07+00:00",
+    "brand": "Kalshi",
+    "slug": "kalshi",
+    "title": "What's next for prediction markets in Nevada after Kalshi ban?",
+    "summary": "Your phone, TV commercials, and casinos. You can't escape it... For many here in the silver state...Nats: taking out gambling slipSports gambling is a way of li",
+    "url": "https://mynews4.com/news/local/whats-next-for-prediction-markets-in-nevada-after-kalshi-ban",
+    "source": "mynews4.com",
+    "author": "Will Payne",
+    "date": "2026-05-14T03:28:42+00:00",
     "type": "news",
     "sources": [
       {
-        "publisher": "WSJ",
-        "url": "https://www.wsj.com/opinion/should-polymarket-and-kalshi-allow-you-to-bet-on-a-crisis-4d9dcb39",
-        "author": ""
+        "publisher": "mynews4.com",
+        "url": "https://mynews4.com/news/local/whats-next-for-prediction-markets-in-nevada-after-kalshi-ban",
+        "author": "Will Payne"
       }
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "negative"
-  },
-  {
-    "brand": "Polymarket",
-    "slug": "polymarket",
-    "title": "Polymarket Drops Waitlist, Goes Live in US for Select Users",
-    "summary": "Polymarket Drops Waitlist, Goes Live in US for Select Users.",
-    "url": "https://www.casino.org/news/polymarket-drops-waitlist-goes-live-in-us-for-select-users/",
-    "source": "Casino.org",
-    "author": "Todd Shriber",
-    "date": "2026-05-14T06:51:35+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "Casino.org",
-        "url": "https://www.casino.org/news/polymarket-drops-waitlist-goes-live-in-us-for-select-users/",
-        "author": "Todd Shriber"
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "positive"
-  },
-  {
-    "brand": "Polymarket",
-    "slug": "polymarket",
-    "title": "Polymarket faces scrutiny over suspected insider betting activity",
-    "summary": "A growing number of unusually successful wagers on prediction market platform Polymarket has intensified concerns over possible insider trading tied to geopolitical and military events, according to a report by The New York Times.",
-    "url": "https://en.yenisafak.com/world/polymarket-faces-scrutiny-over-suspected-insider-betting-activity-3718264",
-    "source": "Yeni Safak English",
-    "author": "Yeni \u015eafak Gazetecilik A.\u015e.",
-    "date": "2026-05-14T06:08:54+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "Yeni Safak English",
-        "url": "https://en.yenisafak.com/world/polymarket-faces-scrutiny-over-suspected-insider-betting-activity-3718264",
-        "author": "Yeni \u015eafak Gazetecilik A.\u015e."
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "negative"
+    "sentiment": "neutral"
   },
   {
     "brand": "Chase",
@@ -946,49 +1125,23 @@
   {
     "brand": "Kalshi",
     "slug": "kalshi",
-    "title": "New Mexico pueblos sue Kalshi, alleging prediction market violates tribal gaming sovereignty",
-    "summary": "Three New Mexico pueblos and one tribe on Tuesday sued the prediction market platform Kalshi, alleging the app enables sports gambling on tribal land and, in do",
-    "url": "https://cdcgaming.com/brief/new-mexico-pueblos-sue-kalshi-alleging-prediction-market-violates-tribal-gaming-sovereignty/",
-    "source": "CDC Gaming",
-    "author": "Source NM",
-    "date": "2026-05-13T23:19:53+00:00",
+    "title": "Pueblos and tribe sue Kalshi, says their online sports betting is illegal on tribal land",
+    "summary": "NEW MEXICO (KRQE) \u2013 Tribal groups in New Mexico claim a popular online betting company is stepping on their toes and operating illegally on tribal lands. Now, they\u2019re asking the courts to ste\u2026",
+    "url": "https://www.krqe.com/news/new-mexico/pueblos-and-tribe-sue-kalshi-says-their-online-sports-betting-is-illegal-on-tribal-land/",
+    "source": "KRQE",
+    "author": "Marilyn Upchurch",
+    "date": "2026-05-13T22:54:43+00:00",
     "type": "news",
     "sources": [
       {
-        "publisher": "CDC Gaming",
-        "url": "https://cdcgaming.com/brief/new-mexico-pueblos-sue-kalshi-alleging-prediction-market-violates-tribal-gaming-sovereignty/",
-        "author": "Source NM"
-      },
-      {
-        "publisher": "Source New Mexico",
-        "url": "https://sourcenm.com/2026/05/13/new-mexico-pueblos-sue-kalshi-alleging-prediction-market-violates-tribal-gaming-sovereignty/",
-        "author": ""
-      }
-    ],
-    "group_size": 2,
-    "is_official": false,
-    "sentiment": "negative"
-  },
-  {
-    "brand": "Polymarket",
-    "slug": "polymarket",
-    "title": "Which character will die in 'Euphoria'? Polymarket bettors think they know\u2014and maybe some actually do",
-    "summary": "Which character will die in 'Euphoria'? Polymarket bettors think they know\u2014and maybe some actually do Fast Company",
-    "url": "https://www.fastcompany.com/91541745/which-euphoria-character-will-die-do-polymarket-bettors-know",
-    "source": "Fast Company",
-    "author": "",
-    "date": "2026-05-13T21:23:41+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "Fast Company",
-        "url": "https://www.fastcompany.com/91541745/which-euphoria-character-will-die-do-polymarket-bettors-know",
-        "author": ""
+        "publisher": "KRQE",
+        "url": "https://www.krqe.com/news/new-mexico/pueblos-and-tribe-sue-kalshi-says-their-online-sports-betting-is-illegal-on-tribal-land/",
+        "author": "Marilyn Upchurch"
       }
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "negative"
   },
   {
     "brand": "Kalshi",
@@ -1031,6 +1184,48 @@
     "group_size": 1,
     "is_official": false,
     "sentiment": "negative"
+  },
+  {
+    "brand": "Kalshi",
+    "slug": "kalshi",
+    "title": "New Mexico pueblos sue Kalshi, alleging prediction market violates tribal gaming sovereignty",
+    "summary": "The Pojoaque, Sandia and Isleta pueblos and Mescalero Apache Tribe say Kalshi is illegally allowing sports betting on tribal land.",
+    "url": "https://sourcenm.com/2026/05/13/new-mexico-pueblos-sue-kalshi-alleging-prediction-market-violates-tribal-gaming-sovereignty/",
+    "source": "Source New Mexico",
+    "author": "Patrick Lohmann",
+    "date": "2026-05-13T21:03:50+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "Source New Mexico",
+        "url": "https://sourcenm.com/2026/05/13/new-mexico-pueblos-sue-kalshi-alleging-prediction-market-violates-tribal-gaming-sovereignty/",
+        "author": "Patrick Lohmann"
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "negative"
+  },
+  {
+    "brand": "Kalshi",
+    "slug": "kalshi",
+    "title": "Here's what the Kalshi Traders are Saying About Who Will Lead the PGA Championship After Round 1",
+    "summary": "With a loaded 156 man field, who gets off to quick start Thursday? It only takes one strong round to position yourself well for the weekend.",
+    "url": "https://www.si.com/betting/prediction-market/news/here-s-what-the-kalshi-traders-are-saying-about-who-will-lead-the-pga-championship-after-round-1",
+    "source": "Sports Illustrated",
+    "author": "Parker Loverich",
+    "date": "2026-05-13T20:28:37+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "Sports Illustrated",
+        "url": "https://www.si.com/betting/prediction-market/news/here-s-what-the-kalshi-traders-are-saying-about-who-will-lead-the-pga-championship-after-round-1",
+        "author": "Parker Loverich"
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "Robinhood",
@@ -1159,6 +1354,27 @@
     "sentiment": "neutral"
   },
   {
+    "brand": "Chase",
+    "slug": "chase",
+    "title": "JPMorgan reshuffles investment bank chiefs amid wider shake-up",
+    "summary": "JPMorgan reshuffles investment bank chiefs amid wider shake-up Financial Times",
+    "url": "https://www.ft.com/content/113ddfa2-7322-45f2-ac10-59bb1b302444?syn-25a6b1a6=1",
+    "source": "Financial Times",
+    "author": "",
+    "date": "2026-05-13T15:19:34+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "Financial Times",
+        "url": "https://www.ft.com/content/113ddfa2-7322-45f2-ac10-59bb1b302444?syn-25a6b1a6=1",
+        "author": ""
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "neutral"
+  },
+  {
     "brand": "Kalshi",
     "slug": "kalshi",
     "title": "CFTC backs Kalshi in Ohio appeal over prediction market oversight",
@@ -1180,61 +1396,19 @@
     "sentiment": "positive"
   },
   {
-    "brand": "Chase",
-    "slug": "chase",
-    "title": "Why Is JPMorgan Chase Stock Trending Right Now",
-    "summary": "JPMorgan Chase discussions centered on digital finance expansion, enterprise banking operations, trading activity, and banking modernization themes connected with broader United States market benchmarks.",
-    "url": "https://kalkinemedia.com/us/stocks/financial/why-is-jpmorgan-chase-stock-trending-right-now",
-    "source": "Kalkine Media",
+    "brand": "SoFi",
+    "slug": "sofi",
+    "title": "SoFi Unlimited 2% Credit Card Review: Solid Cash Back for SoFi Customers",
+    "summary": "Instantly receive your free credit score and credit report card online. Free credit tools to track and optimize your credit score. No credit card needed & no hidden fees",
+    "url": "https://www.creditkarma.com/credit-cards/insights/sofi-unlimited-credit-card",
+    "source": "Credit Karma",
     "author": "",
-    "date": "2026-05-13T13:42:00+00:00",
+    "date": "2026-05-13T12:20:24+00:00",
     "type": "news",
     "sources": [
       {
-        "publisher": "Kalkine Media",
-        "url": "https://kalkinemedia.com/us/stocks/financial/why-is-jpmorgan-chase-stock-trending-right-now",
-        "author": ""
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "neutral"
-  },
-  {
-    "brand": "Polymarket",
-    "slug": "polymarket",
-    "title": "No More Waitlist For U.S. Polymarket Users",
-    "summary": "Polymarket recently opened up its prediction market platform to all U.S. customers, doing away with its waitlist.",
-    "url": "https://www.sportsbettingdime.com/news/betting/no-more-waitlist-for-u-s-polymarket-users/",
-    "source": "Sports Betting Dime",
-    "author": "Robert Linnehan",
-    "date": "2026-05-13T13:04:00+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "Sports Betting Dime",
-        "url": "https://www.sportsbettingdime.com/news/betting/no-more-waitlist-for-u-s-polymarket-users/",
-        "author": "Robert Linnehan"
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "positive"
-  },
-  {
-    "brand": "Chase",
-    "slug": "chase",
-    "title": "JPMorgan Chase (JPM) Announces Senior Role Reshuffle in Investme",
-    "summary": "JPMorgan Chase (JPM) Announces Senior Role Reshuffle in Investme GuruFocus",
-    "url": "https://www.gurufocus.com/news/8854598/jpmorgan-chase-jpm-announces-senior-role-reshuffle-in-investment-banking",
-    "source": "GuruFocus",
-    "author": "",
-    "date": "2026-05-13T06:50:42+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "GuruFocus",
-        "url": "https://www.gurufocus.com/news/8854598/jpmorgan-chase-jpm-announces-senior-role-reshuffle-in-investment-banking",
+        "publisher": "Credit Karma",
+        "url": "https://www.creditkarma.com/credit-cards/insights/sofi-unlimited-credit-card",
         "author": ""
       }
     ],
@@ -1245,17 +1419,38 @@
   {
     "brand": "Chase",
     "slug": "chase",
-    "title": "JPM, JPMorgan Chase Restructures Investment Banking Division for Efficiency",
-    "summary": "JPM, JPMorgan Chase Restructures Investment Banking Division for Efficiency GuruFocus",
-    "url": "https://www.gurufocus.com/news/8854594/jpm-jpmorgan-chase-restructures-investment-banking-division-for-efficiency",
-    "source": "GuruFocus",
-    "author": "",
-    "date": "2026-05-13T06:00:31+00:00",
+    "title": "Q&A: JPMorgan leaders talk selling Scotiabank on Dallas, the AI boom (and bubble) and more",
+    "summary": "JPMorgan Chase leaders John Simmons and Belen Garren spoke with The Dallas Morning News about artificial intelligence, Dallas' finance boom, and more topics impacting North Texas.",
+    "url": "https://www.dallasnews.com/business/banking/article/q-a-jpmorgan-leaders-talk-selling-scotiabank-22255592.php",
+    "source": "Dallas News",
+    "author": "Sasha Richie, Charlotte Kramon",
+    "date": "2026-05-13T11:04:41+00:00",
     "type": "news",
     "sources": [
       {
-        "publisher": "GuruFocus",
-        "url": "https://www.gurufocus.com/news/8854594/jpm-jpmorgan-chase-restructures-investment-banking-division-for-efficiency",
+        "publisher": "Dallas News",
+        "url": "https://www.dallasnews.com/business/banking/article/q-a-jpmorgan-leaders-talk-selling-scotiabank-22255592.php",
+        "author": "Sasha Richie, Charlotte Kramon"
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "neutral"
+  },
+  {
+    "brand": "Chase",
+    "slug": "chase",
+    "title": "JPMorgan Chase & Co. | History, Acquisitions, & Modern Structure",
+    "summary": "JPMorgan Chase & Co. is an American multinational banking and financial services company formed through...",
+    "url": "https://www.britannica.com/money/JPMorgan-Chase-and-Co",
+    "source": "Britannica",
+    "author": "",
+    "date": "2026-05-13T07:39:00+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "Britannica",
+        "url": "https://www.britannica.com/money/JPMorgan-Chase-and-Co",
         "author": ""
       }
     ],
@@ -1283,27 +1478,6 @@
     "group_size": 1,
     "is_official": false,
     "sentiment": "positive"
-  },
-  {
-    "brand": "Chase",
-    "slug": "chase",
-    "title": "JPMorgan reshuffles investment bank chiefs amid wider shake-up",
-    "summary": "JPMorgan reshuffles investment bank chiefs amid wider shake-up Financial Times",
-    "url": "https://www.ft.com/content/113ddfa2-7322-45f2-ac10-59bb1b302444?syn-25a6b1a6=1",
-    "source": "Financial Times",
-    "author": "",
-    "date": "2026-05-13T03:44:46+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "Financial Times",
-        "url": "https://www.ft.com/content/113ddfa2-7322-45f2-ac10-59bb1b302444?syn-25a6b1a6=1",
-        "author": ""
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "neutral"
   },
   {
     "brand": "Kalshi",
@@ -1392,6 +1566,27 @@
   {
     "brand": "Robinhood",
     "slug": "robinhood",
+    "title": "Robinhood Markets, Inc. to Present at the J.P. Morgan Global Technology, Media and Communications Conference on May 19, 2026",
+    "summary": "Robinhood Markets, Inc. to Present at the J.P. Morgan Global Technology, Media and Communications Conference on May 19, 2026 Moomoo",
+    "url": "https://www.moomoo.com/news/post/69857862/robinhood-markets-inc-to-present-at-the-jp-morgan-global",
+    "source": "Moomoo",
+    "author": "",
+    "date": "2026-05-12T20:05:00+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "Moomoo",
+        "url": "https://www.moomoo.com/news/post/69857862/robinhood-markets-inc-to-present-at-the-jp-morgan-global",
+        "author": ""
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "neutral"
+  },
+  {
+    "brand": "Robinhood",
+    "slug": "robinhood",
     "title": "Robinhood Ventures confidentially files for a second fund",
     "summary": "Robinhood Ventures confidentially files for a second fund MSN",
     "url": "https://www.msn.com/en-us/money/topstocks/robinhood-ventures-confidentially-files-for-a-second-fund/ar-AA231FGt?ocid=finance-verthp-feeds",
@@ -1457,42 +1652,21 @@
     "slug": "chase",
     "title": "Comer requests interview with former JPMorgan Chase executive in Epstein probe",
     "summary": "House Oversight and Government Reform Committee Chair James Comer requested an interview with former JPMorgan Chase executive Jes Staley in the panel's probe.",
-    "url": "https://13wham.com/news/nation-world/comer-requests-interview-with-former-jpmorgan-chase-executive-in-epstein-probe-jes-staley-jamie-dimon-house-oversight-committee",
-    "source": "13wham.com",
+    "url": "https://cbs2iowa.com/news/nation-world/comer-requests-interview-with-former-jpmorgan-chase-executive-in-epstein-probe-jes-staley-jamie-dimon-house-oversight-committee",
+    "source": "KGAN",
     "author": "",
     "date": "2026-05-12T17:02:03+00:00",
     "type": "news",
     "sources": [
       {
-        "publisher": "13wham.com",
-        "url": "https://13wham.com/news/nation-world/comer-requests-interview-with-former-jpmorgan-chase-executive-in-epstein-probe-jes-staley-jamie-dimon-house-oversight-committee",
+        "publisher": "KGAN",
+        "url": "https://cbs2iowa.com/news/nation-world/comer-requests-interview-with-former-jpmorgan-chase-executive-in-epstein-probe-jes-staley-jamie-dimon-house-oversight-committee",
         "author": ""
       }
     ],
     "group_size": 1,
     "is_official": false,
     "sentiment": "negative"
-  },
-  {
-    "brand": "Chase",
-    "slug": "chase",
-    "title": "Form FWP JPMorgan Chase Financial Filed by: JPMorgan Chase Financial Co. LLC",
-    "summary": "Form FWP JPMorgan Chase Financial Filed by: JPMorgan Chase Financial Co. LLC StreetInsider",
-    "url": "https://www.streetinsider.com/SEC+Filings/Form+FWP+JPMorgan+Chase+Financial+Filed+by%3A+JPMorgan+Chase+Financial+Co.+LLC/26476188.html",
-    "source": "StreetInsider",
-    "author": "",
-    "date": "2026-05-12T16:33:08+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "StreetInsider",
-        "url": "https://www.streetinsider.com/SEC+Filings/Form+FWP+JPMorgan+Chase+Financial+Filed+by%3A+JPMorgan+Chase+Financial+Co.+LLC/26476188.html",
-        "author": ""
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "neutral"
   },
   {
     "brand": "Kalshi",
@@ -1719,27 +1893,6 @@
     "sentiment": "negative"
   },
   {
-    "brand": "Polymarket",
-    "slug": "polymarket",
-    "title": "Extended Polymarket code \u201cCUSE\u201d updates $20 bonus for Rousey vs. Carano this weekend",
-    "summary": "Extended Polymarket code \u201cCUSE\u201d updates $20 bonus for Rousey vs. Carano this weekend Syracuse.com",
-    "url": "https://www.syracuse.com/betting/2026/05/extended-polymarket-code-cuse-updates-20-bonus-for-rousey-vs-carano-this-weekend.html",
-    "source": "Syracuse.com",
-    "author": "",
-    "date": "2026-05-12T01:50:00+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "Syracuse.com",
-        "url": "https://www.syracuse.com/betting/2026/05/extended-polymarket-code-cuse-updates-20-bonus-for-rousey-vs-carano-this-weekend.html",
-        "author": ""
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "neutral"
-  },
-  {
     "brand": "SoFi",
     "slug": "sofi",
     "title": "SoFi acquires UK fintech PrimaryBid to expand retail access in capital markets.",
@@ -1784,23 +1937,23 @@
   {
     "brand": "Chase",
     "slug": "chase",
-    "title": "Chase to open first branches outside Twin Cities metro with Rochester expansion",
-    "summary": "Chase to open first branches outside Twin Cities metro with Rochester expansion The Business Journals",
-    "url": "https://www.bizjournals.com/twincities/news/2026/05/11/chase-bank-rochester-expansion.html",
-    "source": "The Business Journals",
+    "title": "JPMorgan Chase lends $400M for AT&T\u2019s Plano headquarters",
+    "summary": "JPMorgan Chase will provide a construction loan to developer KDC for AT&T\u2019s upcoming Plano office.",
+    "url": "https://therealdeal.com/texas/2026/05/11/jpmorgan-chase-provides-400m-loan-for-atts-next-hq/",
+    "source": "The Real Deal",
     "author": "",
-    "date": "2026-05-11T21:49:00+00:00",
+    "date": "2026-05-11T22:08:00+00:00",
     "type": "news",
     "sources": [
       {
-        "publisher": "The Business Journals",
-        "url": "https://www.bizjournals.com/twincities/news/2026/05/11/chase-bank-rochester-expansion.html",
+        "publisher": "The Real Deal",
+        "url": "https://therealdeal.com/texas/2026/05/11/jpmorgan-chase-provides-400m-loan-for-atts-next-hq/",
         "author": ""
       }
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "positive"
+    "sentiment": "neutral"
   },
   {
     "brand": "SoFi",
@@ -1824,28 +1977,23 @@
     "sentiment": "positive"
   },
   {
-    "brand": "Chase",
-    "slug": "chase",
-    "title": "Guarantor: JPMorgan Chase & Co.",
-    "summary": "Guarantor: JPMorgan Chase & Co. StreetInsider",
-    "url": "https://www.streetinsider.com/SEC+Filings/Form+424B2+JPMORGAN+CHASE+%26amp%3B+CO/26467381.html",
-    "source": "StreetInsider",
+    "brand": "Robinhood",
+    "slug": "robinhood",
+    "title": "Anchorage is stepping back from Robinhood and Kraken-backed stablecoin group",
+    "summary": "Anchorage is stepping back from Robinhood and Kraken-backed stablecoin group CoinDesk",
+    "url": "https://www.coindesk.com/business/2026/05/11/anchorage-is-stepping-back-from-robinhood-and-kraken-backed-stablecoin-group",
+    "source": "CoinDesk",
     "author": "",
-    "date": "2026-05-11T16:11:15+00:00",
+    "date": "2026-05-11T16:30:50+00:00",
     "type": "news",
     "sources": [
       {
-        "publisher": "StreetInsider",
-        "url": "https://www.streetinsider.com/SEC+Filings/Form+424B2+JPMORGAN+CHASE+%26amp%3B+CO/26467381.html",
-        "author": ""
-      },
-      {
-        "publisher": "StreetInsider",
-        "url": "https://www.streetinsider.com/SEC+Filings/Form+424B2+JPMORGAN+CHASE+%26amp%3B+CO/26467112.html",
+        "publisher": "CoinDesk",
+        "url": "https://www.coindesk.com/business/2026/05/11/anchorage-is-stepping-back-from-robinhood-and-kraken-backed-stablecoin-group",
         "author": ""
       }
     ],
-    "group_size": 2,
+    "group_size": 1,
     "is_official": false,
     "sentiment": "neutral"
   },
@@ -1869,48 +2017,6 @@
     "group_size": 1,
     "is_official": false,
     "sentiment": "neutral"
-  },
-  {
-    "brand": "Polymarket",
-    "slug": "polymarket",
-    "title": "Kalshi Sets Weekly High $4.1B Volume as Polymarket Continues Slide to $1.6B",
-    "summary": "Kalshi hit a record $4.13B in weekly notional volume, up 8.5% WoW, while Polymarket fell 6.2% to $1.60B. Kalshi now holds 72.1% of combined volume.",
-    "url": "https://defirate.com/news/kalshi-sets-weekly-high-4-1b-volume-polymarket-slides/",
-    "source": "DeFi Rate",
-    "author": "Valerie Cross",
-    "date": "2026-05-11T15:21:30+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "DeFi Rate",
-        "url": "https://defirate.com/news/kalshi-sets-weekly-high-4-1b-volume-polymarket-slides/",
-        "author": "Valerie Cross"
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "negative"
-  },
-  {
-    "brand": "Polymarket",
-    "slug": "polymarket",
-    "title": "Polymarket\u2019s Panama Headquarters Raises Questions Over Offshore Betting Empire",
-    "summary": "Polymarket\u2019s Panama Headquarters Raises Questions Over Offshore Betting Empire The Tico Times",
-    "url": "https://ticotimes.net/2026/05/11/polymarkets-panama-headquarters-raises-questions-over-offshore-betting-empire",
-    "source": "The Tico Times",
-    "author": "",
-    "date": "2026-05-11T15:19:00+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "The Tico Times",
-        "url": "https://ticotimes.net/2026/05/11/polymarkets-panama-headquarters-raises-questions-over-offshore-betting-empire",
-        "author": ""
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "negative"
   },
   {
     "brand": "Kalshi",
@@ -2018,6 +2124,48 @@
     "sentiment": "negative"
   },
   {
+    "brand": "Kalshi",
+    "slug": "kalshi",
+    "title": "Kalshi Review: is Kalshi Legit For Prediction Markets?",
+    "summary": "Kalshi Review | Is Kalshi Legit for Prediction Markets? \u2714\ufe0f Detailed Analysis of Kalshi as a Prediction Market Platform in May 2026 \u2714\ufe0f",
+    "url": "https://deadspin.com/prediction-markets/kalshi/",
+    "source": "Deadspin",
+    "author": "",
+    "date": "2026-05-10T07:00:00+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "Deadspin",
+        "url": "https://deadspin.com/prediction-markets/kalshi/",
+        "author": ""
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "neutral"
+  },
+  {
+    "brand": "Polymarket",
+    "slug": "polymarket",
+    "title": "Polymarket New Markets (Monthly)",
+    "summary": "Polymarket New Markets (Monthly) The Block",
+    "url": "https://www.theblock.co/data/decentralized-finance/prediction-markets/polymarket-new-markets-monthly",
+    "source": "The Block",
+    "author": "",
+    "date": "2026-05-10T07:00:00+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "The Block",
+        "url": "https://www.theblock.co/data/decentralized-finance/prediction-markets/polymarket-new-markets-monthly",
+        "author": ""
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "neutral"
+  },
+  {
     "brand": "Chase",
     "slug": "chase",
     "title": "Can JPMorgan Chase Stock Reach $400 in 2026?",
@@ -2032,27 +2180,6 @@
         "publisher": "TIKR.com",
         "url": "https://www.tikr.com/blog/can-jpmorgan-chase-stock-reach-400-in-2026",
         "author": "Gian Estrada"
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "positive"
-  },
-  {
-    "brand": "SoFi",
-    "slug": "sofi",
-    "title": "SoFi's Galileo integration: A key engine behind its fintech expansion",
-    "summary": "SoFi's Galileo integration: A key engine behind its fintech expansion MSN",
-    "url": "https://www.msn.com/en-us/money/general/sofi-s-galileo-integration-a-key-engine-behind-its-fintech-expansion/ar-AA1Zyliw?ocid=BingNewsVerp&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
-    "source": "MSN",
-    "author": "",
-    "date": "2026-05-10T04:35:11+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "MSN",
-        "url": "https://www.msn.com/en-us/money/general/sofi-s-galileo-integration-a-key-engine-behind-its-fintech-expansion/ar-AA1Zyliw?ocid=BingNewsVerp&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
-        "author": ""
       }
     ],
     "group_size": 1,
@@ -2102,30 +2229,25 @@
     "sentiment": "positive"
   },
   {
-    "brand": "Kalshi",
-    "slug": "kalshi",
-    "title": "Kalshi And Madison Square Garden Announce Multi-Year Partnership, Naming Kalshi An Official Prediction Market Partner Of The Garden",
-    "summary": "Sixth-Floor Concourse At MSG To Be Renamed The Kalshi Concourse As Part Of Partnership NEW YORK (May 8, 2026) \u2013 Kalshi, the world\u2019s largest prediction",
-    "url": "https://www.msgentertainment.com/kalshi-and-madison-square-garden-announce-multi-year-partnership-naming-kalshi-an-official-prediction-market-partner-of-the-garden/",
-    "source": "Madison Square Garden Entertainment Corp.",
-    "author": "izzy weitzen",
-    "date": "2026-05-08T18:49:05+00:00",
+    "brand": "Polymarket",
+    "slug": "polymarket",
+    "title": "The Polymarket betting pool wants to cash in on hantavirus",
+    "summary": "The Polymarket betting pool wants to cash in on hantavirus Fast Company",
+    "url": "https://www.fastcompany.com/91539342/the-polymarket-betting-pool-wants-to-cash-in-on-hantavirus",
+    "source": "Fast Company",
+    "author": "",
+    "date": "2026-05-08T21:27:19+00:00",
     "type": "news",
     "sources": [
       {
-        "publisher": "Madison Square Garden Entertainment Corp.",
-        "url": "https://www.msgentertainment.com/kalshi-and-madison-square-garden-announce-multi-year-partnership-naming-kalshi-an-official-prediction-market-partner-of-the-garden/",
-        "author": "izzy weitzen"
-      },
-      {
-        "publisher": "Kalshi",
-        "url": "https://news.kalshi.com/p/kalshi-madison-square-garden-partnership",
+        "publisher": "Fast Company",
+        "url": "https://www.fastcompany.com/91539342/the-polymarket-betting-pool-wants-to-cash-in-on-hantavirus",
         "author": ""
       }
     ],
-    "group_size": 2,
+    "group_size": 1,
     "is_official": false,
-    "sentiment": "positive"
+    "sentiment": "neutral"
   },
   {
     "brand": "Cash App",
@@ -2233,27 +2355,6 @@
     "sentiment": "positive"
   },
   {
-    "brand": "Cash App",
-    "slug": "cash-app",
-    "title": "Block Expands Cash App Into AI-Powered Lending Hub",
-    "summary": "PYMNTS reports that Block used its first post-restructuring quarter to foreground artificial intelligence across **Cash App** and **Square**. The earnings call was the company's first since sweeping organizational restructuring and staff reductions earlier this year, PYMNTS reports. During the quarter Block raised\u2026",
-    "url": "https://letsdatascience.com/news/block-expands-cash-app-into-ai-powered-lending-hub-567cbeb3",
-    "source": "Let's Data Science",
-    "author": "",
-    "date": "2026-05-08T00:53:01+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "Let's Data Science",
-        "url": "https://letsdatascience.com/news/block-expands-cash-app-into-ai-powered-lending-hub-567cbeb3",
-        "author": ""
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "positive"
-  },
-  {
     "brand": "Robinhood",
     "slug": "robinhood",
     "title": "Leadership change (officers / directors) \u00b7 8-K Filing",
@@ -2272,205 +2373,6 @@
     ],
     "is_official": true,
     "sentiment": "neutral"
-  },
-  {
-    "brand": "Cash App",
-    "slug": "cash-app",
-    "title": "Block Lifted Its 2026 Outlook As Cash App Kept Delivering",
-    "summary": "Block Lifted Its 2026 Outlook As Cash App Kept Delivering Finimize",
-    "url": "https://finimize.com/content/block-lifted-its-2026-outlook-as-cash-app-kept-delivering",
-    "source": "Finimize",
-    "author": "",
-    "date": "2026-05-07T23:44:22+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "Finimize",
-        "url": "https://finimize.com/content/block-lifted-its-2026-outlook-as-cash-app-kept-delivering",
-        "author": ""
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "positive"
-  },
-  {
-    "brand": "Cash App",
-    "slug": "cash-app",
-    "title": "Block Raises Its 2026 Outlook As Cash App Keeps Growing",
-    "summary": "Block Raises Its 2026 Outlook As Cash App Keeps Growing Finimize",
-    "url": "https://finimize.com/content/block-raises-its-2026-outlook-as-cash-app-keeps-growing",
-    "source": "Finimize",
-    "author": "",
-    "date": "2026-05-07T23:34:21+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "Finimize",
-        "url": "https://finimize.com/content/block-raises-its-2026-outlook-as-cash-app-keeps-growing",
-        "author": ""
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "positive"
-  },
-  {
-    "brand": "Cash App",
-    "slug": "cash-app",
-    "title": "Block raises annual gross profit outlook as Cash App stands out",
-    "summary": "Block raises annual gross profit outlook as Cash App stands out Reuters",
-    "url": "https://www.reuters.com/business/block-quarterly-profit-jumps-resilient-consumer-spending-2026-05-07/",
-    "source": "Reuters",
-    "author": "",
-    "date": "2026-05-07T22:28:56+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "Reuters",
-        "url": "https://www.reuters.com/business/block-quarterly-profit-jumps-resilient-consumer-spending-2026-05-07/",
-        "author": ""
-      },
-      {
-        "publisher": "CNA",
-        "url": "https://www.channelnewsasia.com/business/block-raises-annual-gross-profit-outlook-cash-app-stands-out-6108096",
-        "author": ""
-      }
-    ],
-    "group_size": 2,
-    "is_official": false,
-    "sentiment": "positive"
-  },
-  {
-    "brand": "Polymarket",
-    "slug": "polymarket",
-    "title": "Polymarket | Founding, Growth, Investors, & Top Prediction Markets",
-    "summary": "Polymarket is a blockchain-based prediction market platform that allows users to speculate on the outcome...",
-    "url": "https://www.britannica.com/money/Polymarket",
-    "source": "Britannica",
-    "author": "",
-    "date": "2026-05-07T21:23:00+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "Britannica",
-        "url": "https://www.britannica.com/money/Polymarket",
-        "author": ""
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "neutral"
-  },
-  {
-    "brand": "Chime",
-    "slug": "chime",
-    "title": "Chime Delivers First GAAP Profit and Raises 2026 Outlook",
-    "summary": "Detailed price information for Chime Financial Inc Cl A (CHYM-Q) from The Globe and Mail including charting and trades.",
-    "url": "https://www.theglobeandmail.com/investing/markets/stocks/CHYM/pressreleases/1786868/chime-delivers-first-gaap-profit-and-raises-2026-outlook/",
-    "source": "The Globe and Mail",
-    "author": "Unknown",
-    "date": "2026-05-07T21:12:00+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "The Globe and Mail",
-        "url": "https://www.theglobeandmail.com/investing/markets/stocks/CHYM/pressreleases/1786868/chime-delivers-first-gaap-profit-and-raises-2026-outlook/",
-        "author": "Unknown"
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "positive"
-  },
-  {
-    "brand": "Chime",
-    "slug": "chime",
-    "title": "Chime reaches GAAP profitability in Q1",
-    "summary": "Account holder growth and engagement drove its first profitable quarter. Read online",
-    "url": "https://www.emarketer.com/content/chime-gaap-profitability-account-holder-growth-q1",
-    "source": "eMarketer",
-    "author": "Lauren Ashcraft",
-    "date": "2026-05-07T18:10:14+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "eMarketer",
-        "url": "https://www.emarketer.com/content/chime-gaap-profitability-account-holder-growth-q1",
-        "author": "Lauren Ashcraft"
-      },
-      {
-        "publisher": "American Banker",
-        "url": "https://www.americanbanker.com/payments/news/chime-hits-gaap-profitability-in-q1",
-        "author": ""
-      }
-    ],
-    "group_size": 2,
-    "is_official": false,
-    "sentiment": "positive"
-  },
-  {
-    "brand": "Polymarket",
-    "slug": "polymarket",
-    "title": "Polymarket anonymity must end",
-    "summary": "Polymarket anonymity must end Financial Times",
-    "url": "https://www.ft.com/content/c4612f76-49a2-478a-b755-bee9d6106db7",
-    "source": "Financial Times",
-    "author": "",
-    "date": "2026-05-07T16:39:45+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "Financial Times",
-        "url": "https://www.ft.com/content/c4612f76-49a2-478a-b755-bee9d6106db7",
-        "author": ""
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "negative"
-  },
-  {
-    "brand": "Kalshi",
-    "slug": "kalshi",
-    "title": "Why Investors Are Still Betting Big on Kalshi",
-    "summary": "The popular prediction market platform has just raised a new funding round that values it at $22 billion, double what it was worth in December.",
-    "url": "https://www.nytimes.com/2026/05/07/business/dealbook/kalshi-funding-prediction-market.html",
-    "source": "The New York Times",
-    "author": "",
-    "date": "2026-05-07T12:14:42+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "The New York Times",
-        "url": "https://www.nytimes.com/2026/05/07/business/dealbook/kalshi-funding-prediction-market.html",
-        "author": ""
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "positive"
-  },
-  {
-    "brand": "Kalshi",
-    "slug": "kalshi",
-    "title": "Kalshi, the Prediction Market, Is Now Valued at $22 Billion",
-    "summary": "Kalshi, the Prediction Market, Is Now Valued at $22 Billion The New York Times",
-    "url": "https://www.nytimes.com/2026/05/07/business/dealbook/kalshi-fundraise-22-billion.html",
-    "source": "The New York Times",
-    "author": "",
-    "date": "2026-05-07T12:08:02+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "The New York Times",
-        "url": "https://www.nytimes.com/2026/05/07/business/dealbook/kalshi-fundraise-22-billion.html",
-        "author": ""
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "positive"
   },
   {
     "brand": "Betterment",
@@ -2492,6 +2394,90 @@
     "group_size": 1,
     "is_official": false,
     "sentiment": "neutral"
+  },
+  {
+    "brand": "Kalshi",
+    "slug": "kalshi",
+    "title": "Kalshi, the Prediction Market, Is Now Valued at $22 Billion",
+    "summary": "Kalshi, the Prediction Market, Is Now Valued at $22 Billion The New York Times",
+    "url": "https://www.nytimes.com/2026/05/07/business/dealbook/kalshi-fundraise-22-billion.html",
+    "source": "The New York Times",
+    "author": "",
+    "date": "2026-05-07T07:00:00+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "The New York Times",
+        "url": "https://www.nytimes.com/2026/05/07/business/dealbook/kalshi-fundraise-22-billion.html",
+        "author": ""
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "positive"
+  },
+  {
+    "brand": "Kalshi",
+    "slug": "kalshi",
+    "title": "Why Investors Are Still Betting Big on Kalshi",
+    "summary": "The popular prediction market platform has just raised a new funding round that values it at $22 billion, double what it was worth in December.",
+    "url": "https://www.nytimes.com/2026/05/07/business/dealbook/kalshi-funding-prediction-market.html",
+    "source": "The New York Times",
+    "author": "",
+    "date": "2026-05-07T07:00:00+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "The New York Times",
+        "url": "https://www.nytimes.com/2026/05/07/business/dealbook/kalshi-funding-prediction-market.html",
+        "author": ""
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "positive"
+  },
+  {
+    "brand": "Polymarket",
+    "slug": "polymarket",
+    "title": "Polymarket | Founding, Growth, Investors, & Top Prediction Markets",
+    "summary": "Polymarket is a blockchain-based prediction market platform that allows users to speculate on the outcome...",
+    "url": "https://www.britannica.com/money/Polymarket",
+    "source": "Britannica",
+    "author": "",
+    "date": "2026-05-07T07:00:00+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "Britannica",
+        "url": "https://www.britannica.com/money/Polymarket",
+        "author": ""
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "neutral"
+  },
+  {
+    "brand": "Polymarket",
+    "slug": "polymarket",
+    "title": "Polymarket anonymity must end",
+    "summary": "Polymarket anonymity must end Financial Times",
+    "url": "https://www.ft.com/content/c4612f76-49a2-478a-b755-bee9d6106db7",
+    "source": "Financial Times",
+    "author": "",
+    "date": "2026-05-07T07:00:00+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "Financial Times",
+        "url": "https://www.ft.com/content/c4612f76-49a2-478a-b755-bee9d6106db7",
+        "author": ""
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "negative"
   },
   {
     "brand": "Cash App",
@@ -2597,17 +2583,17 @@
   {
     "brand": "Chime",
     "slug": "chime",
-    "title": "Chime reports maiden quarterly profit on resilient consumer spending",
-    "summary": "Chime reports maiden quarterly profit on resilient consumer spending Reuters",
-    "url": "https://www.reuters.com/technology/chime-banks-resilient-consumer-spending-post-maiden-quarterly-bottom-line-2026-05-06/",
-    "source": "Reuters",
+    "title": "Chime hits GAAP profitability in Q1",
+    "summary": "The neobank reported a 25% year-over-year increase in revenue for the quarter ended March 31, with active users jumping 19% to 10.2 million. The company also raised its full-year 2026 guidance and authorized a $200 million share repurchase program.",
+    "url": "https://www.americanbanker.com/payments/news/chime-hits-gaap-profitability-in-q1",
+    "source": "American Banker",
     "author": "",
-    "date": "2026-05-06T20:43:50+00:00",
+    "date": "2026-05-06T21:03:00+00:00",
     "type": "news",
     "sources": [
       {
-        "publisher": "Reuters",
-        "url": "https://www.reuters.com/technology/chime-banks-resilient-consumer-spending-post-maiden-quarterly-bottom-line-2026-05-06/",
+        "publisher": "American Banker",
+        "url": "https://www.americanbanker.com/payments/news/chime-hits-gaap-profitability-in-q1",
         "author": ""
       }
     ],
@@ -2681,6 +2667,27 @@
   {
     "brand": "Chime",
     "slug": "chime",
+    "title": "Chime reports maiden quarterly profit on resilient consumer spending",
+    "summary": "Chime reports maiden quarterly profit on resilient consumer spending Reuters",
+    "url": "https://www.reuters.com/technology/chime-banks-resilient-consumer-spending-post-maiden-quarterly-bottom-line-2026-05-06/",
+    "source": "Reuters",
+    "author": "",
+    "date": "2026-05-06T07:00:00+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "Reuters",
+        "url": "https://www.reuters.com/technology/chime-banks-resilient-consumer-spending-post-maiden-quarterly-bottom-line-2026-05-06/",
+        "author": ""
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "positive"
+  },
+  {
+    "brand": "Chime",
+    "slug": "chime",
     "title": "Online Banking Like Chime [2026]: 7 Alternatives for More Features",
     "summary": "As much as we like Chime, it's not the only company doing what it's doing. Here are seven banks like Chime and why they might beat the fintech in our eyes.",
     "url": "https://financebuzz.com/best-online-banks-like-chime",
@@ -2702,19 +2709,14 @@
   {
     "brand": "Wealthfront",
     "slug": "wealthfront",
-    "title": "Fund Update: 508,777 $VUG Shares Added to Wealthfront Advisers LLC Portfolio",
-    "summary": "Fund Update: 508,777 $VUG Shares Added to Wealthfront Advisers LLC Portfolio Moomoo",
-    "url": "https://www.moomoo.com/news/post/69442729/fund-update-508777-vug-shares-added-to-wealthfront-advisers-llc",
-    "source": "Moomoo",
-    "author": "",
-    "date": "2026-05-05T21:23:13+00:00",
+    "title": "Fund Update: 508,777 $VUG shares added to Wealthfront Advisers LLC portfolio",
+    "summary": "Wealthfront Advisers LLC has added 508,777 shares of $VUG to their portfolio, per a new SEC 13F fili",
+    "url": "https://www.quiverquant.com/news/Fund+Update%3A+508%2C777+%24VUG+shares+added+to+Wealthfront+Advisers+LLC+portfolio",
+    "source": "Quiver Quantitative",
+    "author": "Quiver FundTracker",
+    "date": "2026-05-05T07:00:00+00:00",
     "type": "news",
     "sources": [
-      {
-        "publisher": "Moomoo",
-        "url": "https://www.moomoo.com/news/post/69442729/fund-update-508777-vug-shares-added-to-wealthfront-advisers-llc",
-        "author": ""
-      },
       {
         "publisher": "Quiver Quantitative",
         "url": "https://www.quiverquant.com/news/Fund+Update%3A+Wealthfront+Advisers+LLC+Just+Disclosed+New+Holdings",
@@ -2723,10 +2725,10 @@
       {
         "publisher": "Quiver Quantitative",
         "url": "https://www.quiverquant.com/news/Fund+Update%3A+508%2C777+%24VUG+shares+added+to+Wealthfront+Advisers+LLC+portfolio",
-        "author": ""
+        "author": "Quiver FundTracker"
       }
     ],
-    "group_size": 3,
+    "group_size": 2,
     "is_official": false,
     "sentiment": "neutral"
   },
@@ -2794,27 +2796,6 @@
     "sentiment": "negative"
   },
   {
-    "brand": "Betterment",
-    "slug": "betterment",
-    "title": "Betterment Review 2026: A Top-Tier Robo-Advisor Worth Considering",
-    "summary": "Betterment\u2019s goal-oriented tools and helpful tax strategies should appeal to investors of all types. Access to human advisors is available with the Premium plan.",
-    "url": "https://www.nerdwallet.com/investing/reviews/betterment",
-    "source": "NerdWallet",
-    "author": "June Sham",
-    "date": "2026-05-05T07:00:00+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "NerdWallet",
-        "url": "https://www.nerdwallet.com/investing/reviews/betterment",
-        "author": "June Sham"
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "positive"
-  },
-  {
     "brand": "Polymarket",
     "slug": "polymarket",
     "title": "NPR went looking for Polymarket's Panama headquarters. It's elusive",
@@ -2828,6 +2809,27 @@
       {
         "publisher": "NPR",
         "url": "https://www.npr.org/2026/05/05/nx-s1-5807918/polymarket-panama-prediction-market",
+        "author": ""
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "negative"
+  },
+  {
+    "brand": "Polymarket",
+    "slug": "polymarket",
+    "title": "Should Polymarket and Kalshi Allow You to Bet on a Crisis?",
+    "summary": "Should Polymarket and Kalshi Allow You to Bet on a Crisis? WSJ",
+    "url": "https://www.wsj.com/opinion/should-polymarket-and-kalshi-allow-you-to-bet-on-a-crisis-4d9dcb39",
+    "source": "WSJ",
+    "author": "",
+    "date": "2026-05-05T07:00:00+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "WSJ",
+        "url": "https://www.wsj.com/opinion/should-polymarket-and-kalshi-allow-you-to-bet-on-a-crisis-4d9dcb39",
         "author": ""
       }
     ],
@@ -2917,67 +2919,5 @@
     "group_size": 1,
     "is_official": false,
     "sentiment": "positive"
-  },
-  {
-    "brand": "SoFi",
-    "slug": "sofi",
-    "title": "SOFI Stock Dropped 14% After Record Earnings. Here\u2019s What Comes Next in 2026",
-    "summary": "Here\u2019s why SoFi Technologies stock fell over 14% this week despite reporting record Q1 revenue of $1.1 billion and a 134% jump in net income.",
-    "url": "https://www.tikr.com/blog/sofi-stock-dropped-14-after-record-earnings-heres-what-comes-next-in-2026",
-    "source": "TIKR.com",
-    "author": "Rexielyn Diaz",
-    "date": "2026-05-01T07:00:00+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "TIKR.com",
-        "url": "https://www.tikr.com/blog/sofi-stock-dropped-14-after-record-earnings-heres-what-comes-next-in-2026",
-        "author": "Rexielyn Diaz"
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "neutral"
-  },
-  {
-    "brand": "Polymarket",
-    "slug": "polymarket",
-    "title": "Is the Polymarket party over?",
-    "summary": "Are prediction markets here to stay, or will they keep their semi-niche user base of crypto bros on X monitoring the situation?",
-    "url": "https://www.ndsmcobserver.com/article/2026/05/is-the-polymarket-party-over",
-    "source": "ndsmcobserver.com",
-    "author": "Matt Norton",
-    "date": "2026-05-01T07:00:00+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "ndsmcobserver.com",
-        "url": "https://www.ndsmcobserver.com/article/2026/05/is-the-polymarket-party-over",
-        "author": "Matt Norton"
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "negative"
-  },
-  {
-    "brand": "Chase",
-    "slug": "chase",
-    "title": "Quarterly report \u00b7 10-Q Filing",
-    "summary": "SEC 10-Q filing by Chase on 2026-05-01. Quarterly report",
-    "url": "https://www.sec.gov/Archives/edgar/data/19617/000162828026029344/jpm-20260331.htm",
-    "source": "SEC EDGAR",
-    "author": "",
-    "date": "2026-05-01T00:00:00+00:00",
-    "type": "filing",
-    "sources": [
-      {
-        "publisher": "SEC EDGAR",
-        "url": "https://www.sec.gov/Archives/edgar/data/19617/000162828026029344/jpm-20260331.htm",
-        "author": ""
-      }
-    ],
-    "is_official": true,
-    "sentiment": "neutral"
   }
 ]
