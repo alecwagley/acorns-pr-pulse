@@ -496,7 +496,7 @@
     ],
     "group_size": 1,
     "is_official": true,
-    "sentiment": "neutral"
+    "sentiment": "positive"
   },
   {
     "brand": "Robinhood",
@@ -2937,7 +2937,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "positive"
+    "sentiment": "neutral"
   },
   {
     "brand": "Polymarket",

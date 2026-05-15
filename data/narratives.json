@@ -1,64 +1,64 @@
 {
-  "refresh_date": "2026-05-14",
+  "refresh_date": "2026-05-15",
   "brands": {
     "Acorns": {
-      "theme": "Quiet news week",
-      "summary": "Acorns is barely in the news this period (2 stories). One positive roundup naming Acorns in the best robo-advisors of May, one neutral Q&A on whether you can pick individual stocks. No earned-media drumbeat right now.",
-      "watch": "Coverage volume is far below competitors. A proactive story angle could land easily — the space is wide open."
-    },
-    "Kalshi": {
-      "theme": "Regulatory pressure + sports betting growth",
-      "summary": "Kalshi is everywhere this week (34 stories), but the story has two faces. Sports betting markets (NBA, Subway Series, even a Drake album guest-list market) are driving volume, while a federal lawsuit from four New Mexico tribes alleging illegal online sports betting on tribal lands is the dominant negative thread.",
-      "watch": "Negative coverage is concentrated. The tribal lawsuit hit 7 outlets simultaneously — a real legal exposure story for a PR team to track."
-    },
-    "Polymarket": {
-      "theme": "Moral panic + DraftKings disruption",
-      "summary": "Polymarket coverage is more negative than positive (14 negative vs 7 positive). Esquire ran 'The Polymarket Has Turned America into a Deadly Casino,' the Israel/Iran war-betting angle is recurring, and Bloomberg covered Polymarket and Kalshi as the reason DraftKings just got a rare sell rating.",
-      "watch": "Tone is hardening against prediction markets writ large — Kalshi gets pulled into the same narrative."
-    },
-    "Chase": {
-      "theme": "New HQ + earnings cadence",
-      "summary": "JPMorgan Chase coverage is the broad-bank story shape: the new NYC headquarters tower opening, CEO transition speculation, and benchmark earnings analysis. Mostly neutral coverage with positive analyst notes, low negative volume.",
+      "theme": "Robo-advisor roundup presence",
+      "summary": "Acorns earned a spot in May's best robo-advisor rankings, keeping the brand visible in editorial comparison coverage. The week was otherwise quiet with just one explanatory product piece, suggesting no major news is driving the narrative in either direction.",
       "watch": ""
     },
+    "Kalshi": {
+      "theme": "Explosive growth, mounting legal pressure",
+      "summary": "Kalshi landed a landmark MSG naming rights deal, secured a Third Circuit legal win backed by the CFTC, attracted Wall Street market makers like Virtu, and reached a $22 billion valuation, making it the dominant prediction market story this week. Running parallel to that momentum are nine tribal gaming lawsuits, a Minnesota felony-level legislative push, and reporting that retail bettors lost over $100 million on parlays, a combination that sets up a significant PR and regulatory reckoning.",
+      "watch": "The $100M+ retail losses story is gaining traction in mainstream sports-betting media and could cross into consumer-protection framing. If it does, Kalshi's growth narrative will face a direct credibility challenge."
+    },
+    "Polymarket": {
+      "theme": "US relaunch undercut by scandal coverage",
+      "summary": "Polymarket dropped its US waitlist and launched an iOS rollout alongside an official Serie A partnership, signaling a serious push for mainstream legitimacy. But the week's coverage is dominated by negatives: an Air Force officer indicted for insider betting, ongoing scrutiny of its anonymous governance and Panama headquarters, and a volume slide from its prior peak.",
+      "watch": "The insider betting indictment and Panama HQ opacity story are not resolved and will continue attracting coverage. Polymarket's regulatory contrast with Kalshi is becoming a visible narrative, which may benefit Kalshi but also raises the overall prediction market scrutiny level that touches Acorns-adjacent fintech brands."
+    },
+    "Chase": {
+      "theme": "Institutional strength, quiet restructuring",
+      "summary": "Chase generated mostly neutral coverage this week centered on investment banking leadership reshuffles and routine filings, with its standing as a top global corporate bank reaffirmed in industry rankings. A congressional request to interview a former executive in the Epstein probe is the sole reputational risk item, though it has not driven significant media volume.",
+      "watch": "Monitor the Epstein-linked congressional inquiry for any escalation that could bring JPMorgan's name into broader political news cycles."
+    },
     "Robinhood": {
-      "theme": "Crypto + second venture fund",
-      "summary": "The dominant Robinhood thread is a new SEC filing for a second venture fund and continued crypto positioning. Coverage is mostly positive (8 pos, 5 neutral, 0 negative) — analysts framing them as more resilient than Coinbase among multi-asset platforms.",
+      "theme": "Venture expansion + retail investor enthusiasm",
+      "summary": "Robinhood had a strong week, anchored by confidential filings for a second venture fund targeting early-stage AI startups, which drew widespread coverage and framed the brand as an emerging institutional investor. Trump's disclosed purchase of HOOD shares and Barclays maintaining its $85 buy rating added retail and analyst credibility to the momentum story.",
       "watch": ""
     },
     "Cash App": {
-      "theme": "Scam warnings + product chatter",
-      "summary": "Cash App coverage skews positive on product usage but carries a recurring negative thread: local-news warnings about Cash App scams targeting consumers. Block's earnings remain the backbone.",
-      "watch": "Scam warnings hit local TV repeatedly — could erode trust signals over time."
+      "theme": "AI lending pivot drives earnings beat",
+      "summary": "Cash App was the standout story inside Block's strong Q1 earnings beat, with the AI-powered lending hub emerging as the growth engine that prompted a raised full-year outlook. Coverage was tightly linked to tangible financial results, making this one of the cleanest positive narratives in fintech this week.",
+      "watch": "Cash App's AI lending positioning is becoming a defining brand story that competitors will need to respond to narratively."
     },
     "SoFi": {
-      "theme": "Growth story dominant",
-      "summary": "SoFi coverage is heavily positive (7 of 8 stories). Analyst upgrades, member growth metrics, and lending-segment commentary lead the buzz. No negative coverage in the window.",
-      "watch": ""
+      "theme": "PrimaryBid acquisition, post-earnings stock slide",
+      "summary": "SoFi dominated its own coverage with the acquisition of PrimaryBid assets, expanding its platform into retail capital markets access and adding a UK fintech angle to the growth story. A 14% stock drop following record earnings created a counternarrative about investor uncertainty, but the fundamental story remains positive heading into the rest of 2026.",
+      "watch": "SoFi's move into retail capital markets puts it in adjacent territory to Acorns' investing proposition. Watch how media characterizes SoFi's product evolution over the next few weeks."
     },
     "Chime": {
-      "theme": "Mixed — IPO follow-on + complaints",
-      "summary": "Chime coverage is split. Positive thread is IPO/secondary trading and neobank growth analysis. Negative thread is the recurring customer-complaint angle around account freezes and customer service.",
-      "watch": ""
+      "theme": "First GAAP profit, data breach shadow",
+      "summary": "Chime's first-ever GAAP profit and 10.2 million member count generated a wave of positive coverage that positioned the brand as a fintech success story ready for an IPO narrative. A concurrent lawsuit alleging a hacktivist data breach has not displaced that story, but it represents a live reputational risk at a sensitive moment for the brand.",
+      "watch": "If the hacktivist breach story gets picked up by consumer finance or cybersecurity press, it could directly undercut the profitability milestone. Chime reaching GAAP profit also signals competitive pressure in the challenger-bank category."
     },
     "Wealthfront": {
-      "theme": "Earnings cadence",
-      "summary": "Two stories, both neutral — fiscal Q1 2027 earnings date announcement plus a robo-advisor roundup. Quiet news cycle.",
+      "theme": "Analyst confidence, pre-earnings quiet",
+      "summary": "Wealthfront had a low-volume week, with the only notable item being Wells Fargo reiterating its buy rating and raising its price target. The brand announced Q1 financial results on June 4, which sets up a near-term coverage catalyst.",
       "watch": ""
     },
     "Betterment": {
-      "theme": "Robo-advisor roundups",
-      "summary": "Two stories, both light coverage in robo-advisor 'best of' lists. Sentiment positive but volume low.",
+      "theme": "Steady editorial presence",
+      "summary": "Betterment appeared in two editorial robo-advisor reviews this week, maintaining its position as a standard reference brand in comparison pieces. No news-driven stories and no sentiment movement.",
       "watch": ""
     },
     "Greenlight": {
-      "theme": "Light coverage",
-      "summary": "One story this period — a positive mention in a financial-literacy roundup for kids. Below the news radar.",
+      "theme": "Bank partnership, thin coverage",
+      "summary": "Greenlight's only story this week is a partnership with Trustmark, adding another regional bank to its financial literacy distribution network for families. Coverage volume is low and the single item is positive.",
       "watch": ""
     },
     "Alinea": {
       "theme": "Off the radar",
-      "summary": "No press coverage in the last 14 days. Either pre-stealth, or actively avoiding media — worth a manual check.",
+      "summary": "Alinea generated no coverage this week and is absent from the news cycle. Quiet news week.",
       "watch": ""
     }
   }
