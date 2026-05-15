@@ -112,6 +112,7 @@ BLOCKED_PUBLISHERS = {
     "rotowire",              # same
     "action network",        # same
     "stock titan",           # algorithmic SEC-filing repackager (we get filings direct from EDGAR)
+    "streetinsider",         # same — scrapes 424B2 / FWP prospectus filings, huge volume, zero PR value
     "motley fool",           # clickbait
     "nasdaq.com",            # algorithmic stock-data repackages (not the exchange's own PR)
     "seeking alpha",         # paywalled analyst content
@@ -244,6 +245,18 @@ BLOCKED_TITLE_PATTERNS = [
     "stocks to buy",
     "stocks to watch",
     "stock to watch",
+    # Structured-note / bond prospectus boilerplate. Big banks (esp. JPMorgan
+    # Chase) file dozens of these weekly; repackagers scrape the cover-page
+    # title verbatim. Zero PR value, inflates group counts. Defense-in-depth
+    # for any repackager not caught by BLOCKED_PUBLISHERS.
+    "guarantor:",
+    "form 424b",
+    "424b2",
+    "424b5",
+    "free writing prospectus",
+    "form fwp",
+    "pricing supplement",
+    "prospectus supplement",
 ]
 
 # SEC filing forms worth surfacing. 8-K = material events (the gold). 10-Q/10-K

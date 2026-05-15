@@ -2,6 +2,32 @@
   {
     "brand": "Kalshi",
     "slug": "kalshi",
+    "title": "Prediction markets for Yankees vs Mets: Trade Subway Series on Kalshi",
+    "summary": "Trade the Subway Series on Kalshi with prediction markets for the Yankees vs Mets on Friday night.",
+    "url": "https://ca.sports.yahoo.com/news/prediction-markets-yankees-vs-mets-173340348.html",
+    "source": "Yahoo Sports Canada",
+    "author": "Craig Dudek",
+    "date": "2026-05-15T17:33:40+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "Yahoo Sports Canada",
+        "url": "https://ca.sports.yahoo.com/news/prediction-markets-yankees-vs-mets-173340348.html",
+        "author": "Craig Dudek"
+      },
+      {
+        "publisher": "SILive.com",
+        "url": "https://www.silive.com/betting/2026/05/yankees-vs-mets-kalshi-markets-and-preview-of-the-subway-series.html",
+        "author": ""
+      }
+    ],
+    "group_size": 2,
+    "is_official": false,
+    "sentiment": "neutral"
+  },
+  {
+    "brand": "Kalshi",
+    "slug": "kalshi",
     "title": "Ho-Chunk lawsuit against Kalshi, online gambling can move forward",
     "summary": "Judge William Conley for the U.S. District Court in Green Bay denied Kalshi, Inc.\u2019s motion to dismiss the lawsuit against it by the Ho-Chunk Nation, in part, on May 11.",
     "url": "https://www.jsonline.com/story/news/local/wisconsin/2026/05/15/ho-chunk-lawsuit-against-kalshi-online-gambling-can-move-forward/90099049007/",
@@ -367,102 +393,6 @@
     "sentiment": "positive"
   },
   {
-    "brand": "Chase",
-    "slug": "chase",
-    "title": "Guarantor: JPMorgan Chase & Co.",
-    "summary": "Guarantor: JPMorgan Chase & Co. StreetInsider",
-    "url": "https://www.streetinsider.com/SEC+Filings/Form+424B2+JPMORGAN+CHASE+%26amp%3B+CO/26498341.html",
-    "source": "StreetInsider",
-    "author": "",
-    "date": "2026-05-15T10:16:12+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "StreetInsider",
-        "url": "https://www.streetinsider.com/SEC+Filings/Form+424B2+JPMORGAN+CHASE+%26amp%3B+CO/26498341.html",
-        "author": ""
-      },
-      {
-        "publisher": "StreetInsider",
-        "url": "https://www.streetinsider.com/SEC+Filings/Form+424B2+JPMORGAN+CHASE+%26amp%3B+CO/26493693.html",
-        "author": ""
-      },
-      {
-        "publisher": "StreetInsider",
-        "url": "https://www.streetinsider.com/SEC+Filings/Form+424B2+JPMORGAN+CHASE+%26amp%3B+CO/26493655.html",
-        "author": ""
-      },
-      {
-        "publisher": "StreetInsider",
-        "url": "https://www.streetinsider.com/SEC+Filings/Form+424B2+JPMORGAN+CHASE+%26amp%3B+CO/26493599.html",
-        "author": ""
-      },
-      {
-        "publisher": "StreetInsider",
-        "url": "https://www.streetinsider.com/SEC+Filings/Form+424B2+JPMORGAN+CHASE+%26amp%3B+CO/26493079.html",
-        "author": ""
-      },
-      {
-        "publisher": "StreetInsider",
-        "url": "https://www.streetinsider.com/SEC+Filings/Form+424B2+JPMORGAN+CHASE+%26amp%3B+CO/26487238.html",
-        "author": ""
-      },
-      {
-        "publisher": "StreetInsider",
-        "url": "https://www.streetinsider.com/SEC+Filings/Form+424B2+JPMORGAN+CHASE+%26amp%3B+CO/26484899.html",
-        "author": ""
-      },
-      {
-        "publisher": "StreetInsider",
-        "url": "https://www.streetinsider.com/SEC+Filings/Form+424B2+JPMORGAN+CHASE+%26amp%3B+CO/26484856.html",
-        "author": ""
-      },
-      {
-        "publisher": "StreetInsider",
-        "url": "https://www.streetinsider.com/SEC+Filings/Form+424B2+JPMORGAN+CHASE+%26amp%3B+CO/26483540.html",
-        "author": ""
-      },
-      {
-        "publisher": "StreetInsider",
-        "url": "https://www.streetinsider.com/SEC+Filings/Form+424B2+JPMORGAN+CHASE+%26amp%3B+CO/26483515.html",
-        "author": ""
-      },
-      {
-        "publisher": "StreetInsider",
-        "url": "https://www.streetinsider.com/SEC+Filings/Form+424B2+JPMORGAN+CHASE+%26amp%3B+CO/26478972.html",
-        "author": ""
-      },
-      {
-        "publisher": "StreetInsider",
-        "url": "https://www.streetinsider.com/SEC+Filings/Form+424B2+JPMORGAN+CHASE+%26amp%3B+CO/26477155.html",
-        "author": ""
-      },
-      {
-        "publisher": "StreetInsider",
-        "url": "https://www.streetinsider.com/SEC+Filings/Form+424B2+JPMORGAN+CHASE+%26amp%3B+CO/26477123.html",
-        "author": ""
-      },
-      {
-        "publisher": "StreetInsider",
-        "url": "https://www.streetinsider.com/SEC+Filings/Form+424B2+JPMORGAN+CHASE+%26amp%3B+CO/26476997.html",
-        "author": ""
-      },
-      {
-        "publisher": "StreetInsider",
-        "url": "https://www.streetinsider.com/SEC+Filings/Form+424B2+JPMORGAN+CHASE+%26amp%3B+CO/26476178.html",
-        "author": ""
-      },
-      {
-        "publisher": "StreetInsider",
-        "url": "https://www.streetinsider.com/SEC+Filings/Form+424B2+JPMORGAN+CHASE+%26amp%3B+CO/26474749.html",
-        "author": ""
-      }
-    ],
-    "group_size": 16,
-    "is_official": false,
-    "sentiment": "neutral"
-  },
-  {
     "brand": "Polymarket",
     "slug": "polymarket",
     "title": "Polymarket signs deal with Serie A USA ahead of World Cup",
@@ -498,6 +428,27 @@
         "publisher": "gamingintelligence.com",
         "url": "https://www.gamingintelligence.com/marketing/230624-kalshi-becomes-madison-square-gardens-official-prediction-market-partner/",
         "author": "Kio Dawson"
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "positive"
+  },
+  {
+    "brand": "Cash App",
+    "slug": "cash-app",
+    "title": "Cash App\u2019s Strategy Shifts And Its Help In Company Growth",
+    "summary": "Cash App strategy shifts: See how Block",
+    "url": "https://ventureburn.com/cash-apps-strategy-shifts-and-its-help-in-company-growth/?amp=1",
+    "source": "Ventureburn",
+    "author": "",
+    "date": "2026-05-15T04:36:52+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "Ventureburn",
+        "url": "https://ventureburn.com/cash-apps-strategy-shifts-and-its-help-in-company-growth/?amp=1",
+        "author": ""
       }
     ],
     "group_size": 1,
@@ -547,17 +498,12 @@
         "author": ""
       },
       {
-        "publisher": "KOB.com",
-        "url": "https://www.kob.com/news/top-news/new-mexico-tribes-sue-kalshi/",
-        "author": ""
-      },
-      {
         "publisher": "Albuquerque Journal",
         "url": "https://www.abqjournal.com/business/new-mexico-tribes-sue-kalshi-alleging-illegal-sports-betting-on-tribal-lands/3041695",
         "author": ""
       }
     ],
-    "group_size": 4,
+    "group_size": 3,
     "is_official": false,
     "sentiment": "negative"
   },
@@ -586,27 +532,6 @@
     "group_size": 2,
     "is_official": false,
     "sentiment": "positive"
-  },
-  {
-    "brand": "Kalshi",
-    "slug": "kalshi",
-    "title": "Kalshi Gets Margin Trading Clearance for Professional Clients",
-    "summary": "Margin trading allows investors to enter positions using less capital than the full value of a trade.",
-    "url": "https://coinmarketcap.com/academy/article/kalshi-gets-margin-trading-clearance-for-professional-clients",
-    "source": "CoinMarketCap",
-    "author": "",
-    "date": "2026-05-14T23:11:35+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "CoinMarketCap",
-        "url": "https://coinmarketcap.com/academy/article/kalshi-gets-margin-trading-clearance-for-professional-clients",
-        "author": ""
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "neutral"
   },
   {
     "brand": "Chase",
@@ -670,27 +595,6 @@
     "group_size": 1,
     "is_official": false,
     "sentiment": "negative"
-  },
-  {
-    "brand": "Kalshi",
-    "slug": "kalshi",
-    "title": "Yankees vs. Mets: Kalshi markets and preview of the Subway Series",
-    "summary": "Yankees vs. Mets: Kalshi markets and preview of the Subway Series SILive.com",
-    "url": "https://www.silive.com/betting/2026/05/yankees-vs-mets-kalshi-markets-and-preview-of-the-subway-series.html",
-    "source": "SILive.com",
-    "author": "",
-    "date": "2026-05-14T20:30:00+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "SILive.com",
-        "url": "https://www.silive.com/betting/2026/05/yankees-vs-mets-kalshi-markets-and-preview-of-the-subway-series.html",
-        "author": ""
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "neutral"
   },
   {
     "brand": "Kalshi",
@@ -761,8 +665,8 @@
     "sentiment": "negative"
   },
   {
-    "brand": "Polymarket",
-    "slug": "polymarket",
+    "brand": "Kalshi",
+    "slug": "kalshi",
     "title": "DraftKings gets rare sell rating as Kalshi, Polymarket threaten growth",
     "summary": "The risks loom even though DraftKings rolled out its own prediction market app in December, said analyst Charlie Muir-Sands in a note to clients.",
     "url": "https://www.bostonglobe.com/2026/05/14/business/draftkings-sell-rating-kalshi-polymarket/",
@@ -775,9 +679,14 @@
         "publisher": "The Boston Globe",
         "url": "https://www.bostonglobe.com/2026/05/14/business/draftkings-sell-rating-kalshi-polymarket/",
         "author": ""
+      },
+      {
+        "publisher": "Bloomberg.com",
+        "url": "https://www.bloomberg.com/news/articles/2026-05-14/draftkings-dkng-gets-rare-sell-rating-as-kalshi-polymarket-threaten-growth",
+        "author": ""
       }
     ],
-    "group_size": 1,
+    "group_size": 2,
     "is_official": false,
     "sentiment": "positive"
   },
@@ -796,27 +705,6 @@
         "publisher": "CDC Gaming",
         "url": "https://cdcgaming.com/brief/kalshis-true-betting-handle-obscured-but-it-may-have-caught-up-to-draftkings-and-fanduel/",
         "author": "InGame"
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "positive"
-  },
-  {
-    "brand": "Kalshi",
-    "slug": "kalshi",
-    "title": "DraftKings Gets Rare Sell Rating as Kalshi, Polymarket Threaten Growth",
-    "summary": "The rapid expansion of sports prediction markets is hurting DraftKings Inc., according to the stock\u2019s only bear on Wall Street.",
-    "url": "https://www.bloomberg.com/news/articles/2026-05-14/draftkings-dkng-gets-rare-sell-rating-as-kalshi-polymarket-threaten-growth",
-    "source": "Bloomberg.com",
-    "author": "Joel Leon",
-    "date": "2026-05-14T17:05:46+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "Bloomberg.com",
-        "url": "https://www.bloomberg.com/news/articles/2026-05-14/draftkings-dkng-gets-rare-sell-rating-as-kalshi-polymarket-threaten-growth",
-        "author": "Joel Leon"
       }
     ],
     "group_size": 1,
@@ -1081,27 +969,6 @@
     "sentiment": "negative"
   },
   {
-    "brand": "Kalshi",
-    "slug": "kalshi",
-    "title": "What's next for prediction markets in Nevada after Kalshi ban?",
-    "summary": "Your phone, TV commercials, and casinos. You can't escape it... For many here in the silver state...Nats: taking out gambling slipSports gambling is a way of li",
-    "url": "https://mynews4.com/news/local/whats-next-for-prediction-markets-in-nevada-after-kalshi-ban",
-    "source": "mynews4.com",
-    "author": "Will Payne",
-    "date": "2026-05-14T03:28:42+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "mynews4.com",
-        "url": "https://mynews4.com/news/local/whats-next-for-prediction-markets-in-nevada-after-kalshi-ban",
-        "author": "Will Payne"
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "neutral"
-  },
-  {
     "brand": "Chase",
     "slug": "chase",
     "title": "Bank of America, JPMorgan Chase and Citi rank as the world's best corporate, investment and wholesale banks",
@@ -1163,27 +1030,6 @@
     "group_size": 1,
     "is_official": false,
     "sentiment": "neutral"
-  },
-  {
-    "brand": "Chase",
-    "slug": "chase",
-    "title": "How many employees does JPMorgan Chase have in 2026? Its workforce, locations, and layoffs explained",
-    "summary": "How many employees does JPMorgan Chase have in 2026? Its workforce, locations, and layoffs explained thestreet.com",
-    "url": "https://www.thestreet.com/investing/stocks/jpmorgan-chase-employees",
-    "source": "thestreet.com",
-    "author": "",
-    "date": "2026-05-13T21:11:32+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "thestreet.com",
-        "url": "https://www.thestreet.com/investing/stocks/jpmorgan-chase-employees",
-        "author": ""
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "negative"
   },
   {
     "brand": "Kalshi",
@@ -1335,6 +1181,27 @@
   {
     "brand": "Kalshi",
     "slug": "kalshi",
+    "title": "Kalshi NHL predictions today: Best trades for Wild vs. Avalanche Game 5 on Wednesday, May 13",
+    "summary": "Here are the top NHL playoff trades available at Kalshi for Wednesday",
+    "url": "https://www.cbssports.com/betting/news/kalshi-nhl-predictions-today-best-trades-for-wild-vs-avalanche-game-5-on-wednesday-may-13/",
+    "source": "CBS Sports",
+    "author": "Brandon Gustafson",
+    "date": "2026-05-13T15:52:00+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/betting/news/kalshi-nhl-predictions-today-best-trades-for-wild-vs-avalanche-game-5-on-wednesday-may-13/",
+        "author": "Brandon Gustafson"
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "positive"
+  },
+  {
+    "brand": "Kalshi",
+    "slug": "kalshi",
     "title": "The Difference Between Kalshi vs Polymarket: What US Traders Actually Need to Know in 2026",
     "summary": "There are actually three platforms to understand here, not two. The differences matter a lot depending on where you live and how you trade.",
     "url": "https://www.si.com/betting/prediction-market/prediction-markets-101/the-difference-between-kalshi-vs-polymarket-what-us-traders-actually-need-to-know-in-2026",
@@ -1394,6 +1261,27 @@
     "group_size": 1,
     "is_official": false,
     "sentiment": "positive"
+  },
+  {
+    "brand": "Chase",
+    "slug": "chase",
+    "title": "Why Is JPMorgan Chase Stock Trending Right Now",
+    "summary": "JPMorgan Chase discussions centered on digital finance expansion, enterprise banking operations, trading activity, and banking modernization themes connected with broader United States market benchmarks.",
+    "url": "https://kalkinemedia.com/us/stocks/financial/why-is-jpmorgan-chase-stock-trending-right-now",
+    "source": "Kalkine Media",
+    "author": "",
+    "date": "2026-05-13T13:42:00+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "Kalkine Media",
+        "url": "https://kalkinemedia.com/us/stocks/financial/why-is-jpmorgan-chase-stock-trending-right-now",
+        "author": ""
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "neutral"
   },
   {
     "brand": "SoFi",
@@ -1652,19 +1540,24 @@
     "slug": "chase",
     "title": "Comer requests interview with former JPMorgan Chase executive in Epstein probe",
     "summary": "House Oversight and Government Reform Committee Chair James Comer requested an interview with former JPMorgan Chase executive Jes Staley in the panel's probe.",
-    "url": "https://cbs2iowa.com/news/nation-world/comer-requests-interview-with-former-jpmorgan-chase-executive-in-epstein-probe-jes-staley-jamie-dimon-house-oversight-committee",
-    "source": "KGAN",
+    "url": "https://okcfox.com/news/nation-world/comer-requests-interview-with-former-jpmorgan-chase-executive-in-epstein-probe-jes-staley-jamie-dimon-house-oversight-committee",
+    "source": "KOKH",
     "author": "",
-    "date": "2026-05-12T17:02:03+00:00",
+    "date": "2026-05-12T16:59:33+00:00",
     "type": "news",
     "sources": [
       {
-        "publisher": "KGAN",
-        "url": "https://cbs2iowa.com/news/nation-world/comer-requests-interview-with-former-jpmorgan-chase-executive-in-epstein-probe-jes-staley-jamie-dimon-house-oversight-committee",
+        "publisher": "Baltimore Sun",
+        "url": "https://www.baltimoresun.com/2026/05/12/comer-requests-interview-with-former-jpmorgan-chase-exec-in-epstein-probe/",
+        "author": ""
+      },
+      {
+        "publisher": "KOKH",
+        "url": "https://okcfox.com/news/nation-world/comer-requests-interview-with-former-jpmorgan-chase-executive-in-epstein-probe-jes-staley-jamie-dimon-house-oversight-committee",
         "author": ""
       }
     ],
-    "group_size": 1,
+    "group_size": 2,
     "is_official": false,
     "sentiment": "negative"
   },
@@ -2124,27 +2017,6 @@
     "sentiment": "negative"
   },
   {
-    "brand": "Kalshi",
-    "slug": "kalshi",
-    "title": "Kalshi Review: is Kalshi Legit For Prediction Markets?",
-    "summary": "Kalshi Review | Is Kalshi Legit for Prediction Markets? \u2714\ufe0f Detailed Analysis of Kalshi as a Prediction Market Platform in May 2026 \u2714\ufe0f",
-    "url": "https://deadspin.com/prediction-markets/kalshi/",
-    "source": "Deadspin",
-    "author": "",
-    "date": "2026-05-10T07:00:00+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "Deadspin",
-        "url": "https://deadspin.com/prediction-markets/kalshi/",
-        "author": ""
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "neutral"
-  },
-  {
     "brand": "Polymarket",
     "slug": "polymarket",
     "title": "Polymarket New Markets (Monthly)",
@@ -2290,27 +2162,6 @@
     "group_size": 1,
     "is_official": false,
     "sentiment": "positive"
-  },
-  {
-    "brand": "Kalshi",
-    "slug": "kalshi",
-    "title": "Kalshi\u2019s $22 billion problem",
-    "summary": "Kalshi\u2019s $22 billion problem Fast Company",
-    "url": "https://www.fastcompany.com/91538789/kalshi-22-billion-problem-sports-betting-states",
-    "source": "Fast Company",
-    "author": "",
-    "date": "2026-05-08T11:09:53+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "Fast Company",
-        "url": "https://www.fastcompany.com/91538789/kalshi-22-billion-problem-sports-betting-states",
-        "author": ""
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "negative"
   },
   {
     "brand": "Kalshi",
@@ -2581,27 +2432,6 @@
     "sentiment": "positive"
   },
   {
-    "brand": "Chime",
-    "slug": "chime",
-    "title": "Chime hits GAAP profitability in Q1",
-    "summary": "The neobank reported a 25% year-over-year increase in revenue for the quarter ended March 31, with active users jumping 19% to 10.2 million. The company also raised its full-year 2026 guidance and authorized a $200 million share repurchase program.",
-    "url": "https://www.americanbanker.com/payments/news/chime-hits-gaap-profitability-in-q1",
-    "source": "American Banker",
-    "author": "",
-    "date": "2026-05-06T21:03:00+00:00",
-    "type": "news",
-    "sources": [
-      {
-        "publisher": "American Banker",
-        "url": "https://www.americanbanker.com/payments/news/chime-hits-gaap-profitability-in-q1",
-        "author": ""
-      }
-    ],
-    "group_size": 1,
-    "is_official": false,
-    "sentiment": "positive"
-  },
-  {
     "brand": "Cash App",
     "slug": "cash-app",
     "title": "Ex-HOA general manager accused of using bank card on Amazon, Cash App, personal bills",
@@ -2678,6 +2508,27 @@
       {
         "publisher": "Reuters",
         "url": "https://www.reuters.com/technology/chime-banks-resilient-consumer-spending-post-maiden-quarterly-bottom-line-2026-05-06/",
+        "author": ""
+      }
+    ],
+    "group_size": 1,
+    "is_official": false,
+    "sentiment": "positive"
+  },
+  {
+    "brand": "Chime",
+    "slug": "chime",
+    "title": "Chime hits GAAP profitability in Q1",
+    "summary": "The neobank reported a 25% year-over-year increase in revenue for the quarter ended March 31, with active users jumping 19% to 10.2 million. The company also raised its full-year 2026 guidance and authorized a $200 million share repurchase program.",
+    "url": "https://www.americanbanker.com/payments/news/chime-hits-gaap-profitability-in-q1",
+    "source": "American Banker",
+    "author": "",
+    "date": "2026-05-06T07:00:00+00:00",
+    "type": "news",
+    "sources": [
+      {
+        "publisher": "American Banker",
+        "url": "https://www.americanbanker.com/payments/news/chime-hits-gaap-profitability-in-q1",
         "author": ""
       }
     ],
