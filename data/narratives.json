@@ -1,59 +1,59 @@
 {
-  "refresh_date": "2026-05-15",
+  "refresh_date": "2026-05-17",
   "brands": {
     "Acorns": {
-      "theme": "Robo-advisor roundup presence",
-      "summary": "Acorns earned a spot in May's best robo-advisor rankings, keeping the brand visible in editorial comparison coverage. The week was otherwise quiet with just one explanatory product piece, suggesting no major news is driving the narrative in either direction.",
+      "theme": "Steady editorial visibility",
+      "summary": "Acorns appeared in a top robo-advisor list this week, maintaining editorial presence in comparison coverage without driving any news cycle of its own. An explanatory product piece rounds out a quiet, stable week with no negative signals.",
       "watch": ""
     },
     "Kalshi": {
-      "theme": "Explosive growth, mounting legal pressure",
-      "summary": "Kalshi landed a landmark MSG naming rights deal, secured a Third Circuit legal win backed by the CFTC, attracted Wall Street market makers like Virtu, and reached a $22 billion valuation, making it the dominant prediction market story this week. Running parallel to that momentum are nine tribal gaming lawsuits, a Minnesota felony-level legislative push, and reporting that retail bettors lost over $100 million on parlays, a combination that sets up a significant PR and regulatory reckoning.",
-      "watch": "The $100M+ retail losses story is gaining traction in mainstream sports-betting media and could cross into consumer-protection framing. If it does, Kalshi's growth narrative will face a direct credibility challenge."
+      "theme": "Explosive growth, multiplying legal battles",
+      "summary": "Kalshi had its highest-volume week yet, landing an MSG naming rights deal, reaching a $22 billion valuation, attracting Virtu as a market maker, and winning CFTC backing in the Third Circuit. Running parallel to that momentum are multiplying tribal gaming lawsuits from New Mexico, Wisconsin, and New York, a Minnesota felony-level legislative push, and a report that retail bettors have lost over $100 million on parlays, a combination that sets up a serious PR and regulatory reckoning.",
+      "watch": "The $100 million retail parlay loss story and the New York AG 'gamesmanship' allegation could cross from gaming press into consumer protection or mainstream political coverage, directly challenging Kalshi's 'financial marketplace' brand positioning."
     },
     "Polymarket": {
-      "theme": "US relaunch undercut by scandal coverage",
-      "summary": "Polymarket dropped its US waitlist and launched an iOS rollout alongside an official Serie A partnership, signaling a serious push for mainstream legitimacy. But the week's coverage is dominated by negatives: an Air Force officer indicted for insider betting, ongoing scrutiny of its anonymous governance and Panama headquarters, and a volume slide from its prior peak.",
-      "watch": "The insider betting indictment and Panama HQ opacity story are not resolved and will continue attracting coverage. Polymarket's regulatory contrast with Kalshi is becoming a visible narrative, which may benefit Kalshi but also raises the overall prediction market scrutiny level that touches Acorns-adjacent fintech brands."
+      "theme": "US relaunch vs. scandal accumulation",
+      "summary": "Polymarket scored wins with a Serie A partnership, a US iOS launch, and continued European soccer expansion ahead of the World Cup. But an Air Force officer indictment for insider betting, criticism of anonymous governance, a Reuters story about its elusive Panama headquarters, and the hantavirus betting controversy are building a counternarrative that could undercut its mainstream legitimacy push.",
+      "watch": "The Air Force indictment and Panama HQ opacity stories are unresolved. Polymarket's regulatory contrast with Kalshi, which has CFTC backing, is sharpening in coverage and could affect how prediction markets are framed in Congress or consumer press."
     },
     "Chase": {
-      "theme": "Institutional strength, quiet restructuring",
-      "summary": "Chase generated mostly neutral coverage this week centered on investment banking leadership reshuffles and routine filings, with its standing as a top global corporate bank reaffirmed in industry rankings. A congressional request to interview a former executive in the Epstein probe is the sole reputational risk item, though it has not driven significant media volume.",
-      "watch": "Monitor the Epstein-linked congressional inquiry for any escalation that could bring JPMorgan's name into broader political news cycles."
+      "theme": "Institutional strength, reputational friction",
+      "summary": "Chase generated broad positive coverage around tokenized financial products, a $400 million construction loan for AT&T, community investment commitments, and multiple analyst buy ratings. A salacious sex harassment lawsuit covered by Reuters and a congressional request tied to the Epstein probe add reputational friction at the margins without yet disrupting the dominant institutional story.",
+      "watch": "Monitor the sex harassment case and Epstein probe for escalation into wider political news cycles."
     },
     "Robinhood": {
-      "theme": "Venture expansion + retail investor enthusiasm",
-      "summary": "Robinhood had a strong week, anchored by confidential filings for a second venture fund targeting early-stage AI startups, which drew widespread coverage and framed the brand as an emerging institutional investor. Trump's disclosed purchase of HOOD shares and Barclays maintaining its $85 buy rating added retail and analyst credibility to the momentum story.",
+      "theme": "Venture expansion, strong trading data",
+      "summary": "Robinhood's confidential filing for a second venture fund targeting early-stage AI startups drove the week's coverage and reframed the brand as a serious institutional investor alongside its retail roots. April trading data was strong with platform assets up 49 percent year over year, and analyst buy ratings held steady at $85.",
       "watch": ""
     },
     "Cash App": {
-      "theme": "AI lending pivot drives earnings beat",
-      "summary": "Cash App was the standout story inside Block's strong Q1 earnings beat, with the AI-powered lending hub emerging as the growth engine that prompted a raised full-year outlook. Coverage was tightly linked to tangible financial results, making this one of the cleanest positive narratives in fintech this week.",
-      "watch": "Cash App's AI lending positioning is becoming a defining brand story that competitors will need to respond to narratively."
+      "theme": "AI lending growth, legacy crime association",
+      "summary": "Cash App was the standout story inside Block's Q1 beat, with AI-powered lending driving a raised full-year outlook and media framing Cash App as the core growth engine of the business. The Bob Lee murder story resurfaced in coverage three years after the fact, a reminder that this association flares unpredictably.",
+      "watch": "The Nima Momeni conviction or sentencing milestones can pull Cash App back into negative coverage cycles with no warning. Worth monitoring for upcoming court dates."
     },
     "SoFi": {
-      "theme": "PrimaryBid acquisition, post-earnings stock slide",
-      "summary": "SoFi dominated its own coverage with the acquisition of PrimaryBid assets, expanding its platform into retail capital markets access and adding a UK fintech angle to the growth story. A 14% stock drop following record earnings created a counternarrative about investor uncertainty, but the fundamental story remains positive heading into the rest of 2026.",
-      "watch": "SoFi's move into retail capital markets puts it in adjacent territory to Acorns' investing proposition. Watch how media characterizes SoFi's product evolution over the next few weeks."
+      "theme": "PrimaryBid acquisition, near-unanimous positivity",
+      "summary": "SoFi's acquisition of PrimaryBid assets drove nearly all of its coverage this week, with five separate stories framing the deal as a strategic move into retail capital markets and UK fintech. A positive credit card review added consumer-facing brand value to an otherwise business-story week.",
+      "watch": "SoFi's move into retail capital markets puts it in territory adjacent to Acorns' investing proposition. Watch how the PrimaryBid narrative develops over the next few weeks as a potential competitive signal."
     },
     "Chime": {
-      "theme": "First GAAP profit, data breach shadow",
-      "summary": "Chime's first-ever GAAP profit and 10.2 million member count generated a wave of positive coverage that positioned the brand as a fintech success story ready for an IPO narrative. A concurrent lawsuit alleging a hacktivist data breach has not displaced that story, but it represents a live reputational risk at a sensitive moment for the brand.",
-      "watch": "If the hacktivist breach story gets picked up by consumer finance or cybersecurity press, it could directly undercut the profitability milestone. Chime reaching GAAP profit also signals competitive pressure in the challenger-bank category."
+      "theme": "First profit milestone, breach risk",
+      "summary": "Chime's first-ever GAAP profit and 10.2 million member count generated a sustained wave of positive coverage that built a strong IPO-readiness narrative. A lawsuit alleging a hacktivist data breach has not displaced that story yet, but consumer finance and cybersecurity coverage of the breach could directly undercut the profitability milestone at a pivotal moment.",
+      "watch": "If the hacktivist breach story moves beyond trade press into mainstream consumer outlets, it could follow the profitability story and damage the IPO narrative."
     },
     "Wealthfront": {
-      "theme": "Analyst confidence, pre-earnings quiet",
-      "summary": "Wealthfront had a low-volume week, with the only notable item being Wells Fargo reiterating its buy rating and raising its price target. The brand announced Q1 financial results on June 4, which sets up a near-term coverage catalyst.",
+      "theme": "Analyst confidence, thin coverage",
+      "summary": "Wealthfront had a quiet week, with Wells Fargo raising its price target and maintaining a buy rating as the only notable item. No news-driven stories and no negative signals.",
       "watch": ""
     },
     "Betterment": {
-      "theme": "Steady editorial presence",
-      "summary": "Betterment appeared in two editorial robo-advisor reviews this week, maintaining its position as a standard reference brand in comparison pieces. No news-driven stories and no sentiment movement.",
+      "theme": "Steady editorial roundup presence",
+      "summary": "Betterment appeared in one editorial review this week, maintaining its standard reference position in comparison coverage. No news-driven stories and no sentiment movement.",
       "watch": ""
     },
     "Greenlight": {
       "theme": "Bank partnership, thin coverage",
-      "summary": "Greenlight's only story this week is a partnership with Trustmark, adding another regional bank to its financial literacy distribution network for families. Coverage volume is low and the single item is positive.",
+      "summary": "Greenlight's only story this week is a Trustmark partnership, adding another regional bank to its financial literacy distribution network for families. Coverage volume remains thin.",
       "watch": ""
     },
     "Alinea": {

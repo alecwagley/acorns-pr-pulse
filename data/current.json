@@ -107,7 +107,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "negative"
   },
   {
     "brand": "Polymarket",
@@ -149,7 +149,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "positive"
   },
   {
     "brand": "Robinhood",
@@ -212,7 +212,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "positive"
+    "sentiment": "neutral"
   },
   {
     "brand": "Robinhood",
@@ -233,7 +233,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "positive"
   },
   {
     "brand": "Chase",
@@ -275,7 +275,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "negative"
   },
   {
     "brand": "Polymarket",
@@ -856,7 +856,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "negative"
+    "sentiment": "neutral"
   },
   {
     "brand": "Polymarket",
@@ -940,7 +940,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "positive"
   },
   {
     "brand": "Kalshi",
@@ -1197,7 +1197,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "positive"
+    "sentiment": "neutral"
   },
   {
     "brand": "Kalshi",
@@ -1302,7 +1302,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "positive"
   },
   {
     "brand": "Chase",
@@ -1846,7 +1846,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "positive"
   },
   {
     "brand": "SoFi",
@@ -1888,7 +1888,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "negative"
   },
   {
     "brand": "Chase",
@@ -2119,7 +2119,7 @@
     ],
     "group_size": 1,
     "is_official": false,
-    "sentiment": "neutral"
+    "sentiment": "negative"
   },
   {
     "brand": "Cash App",
