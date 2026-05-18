@@ -34,8 +34,8 @@ jobs:
 
       - name: Commit + push if data changed
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "alecwagley"
+          git config user.email "alec@vscrl.co"
           git add data/ dashboard/
           if git diff --cached --quiet; then
             echo "No changes."
