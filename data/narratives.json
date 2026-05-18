@@ -1,64 +1,64 @@
 {
-  "refresh_date": "2026-05-17",
+  "refresh_date": "2026-05-18",
   "brands": {
     "Acorns": {
-      "theme": "Steady editorial visibility",
-      "summary": "Acorns appeared in a top robo-advisor list this week, maintaining editorial presence in comparison coverage without driving any news cycle of its own. An explanatory product piece rounds out a quiet, stable week with no negative signals.",
+      "theme": "Quiet news week",
+      "summary": "No new coverage collected this cycle. Acorns remains off the active news radar with no positive or negative signals to track.",
       "watch": ""
     },
     "Kalshi": {
-      "theme": "Explosive growth, multiplying legal battles",
-      "summary": "Kalshi had its highest-volume week yet, landing an MSG naming rights deal, reaching a $22 billion valuation, attracting Virtu as a market maker, and winning CFTC backing in the Third Circuit. Running parallel to that momentum are multiplying tribal gaming lawsuits from New Mexico, Wisconsin, and New York, a Minnesota felony-level legislative push, and a report that retail bettors have lost over $100 million on parlays, a combination that sets up a serious PR and regulatory reckoning.",
-      "watch": "The $100 million retail parlay loss story and the New York AG 'gamesmanship' allegation could cross from gaming press into consumer protection or mainstream political coverage, directly challenging Kalshi's 'financial marketplace' brand positioning."
+      "theme": "Quiet news week",
+      "summary": "No new coverage collected this cycle. Last week's story combined explosive growth milestones with multiplying tribal gaming lawsuits. Monitor for any legal or regulatory developments that may surface.",
+      "watch": "Tribal gaming lawsuits and the retail parlay loss reporting from last cycle remain unresolved. Any new court filings or legislative votes could reignite coverage quickly."
     },
     "Polymarket": {
-      "theme": "US relaunch vs. scandal accumulation",
-      "summary": "Polymarket scored wins with a Serie A partnership, a US iOS launch, and continued European soccer expansion ahead of the World Cup. But an Air Force officer indictment for insider betting, criticism of anonymous governance, a Reuters story about its elusive Panama headquarters, and the hantavirus betting controversy are building a counternarrative that could undercut its mainstream legitimacy push.",
-      "watch": "The Air Force indictment and Panama HQ opacity stories are unresolved. Polymarket's regulatory contrast with Kalshi, which has CFTC backing, is sharpening in coverage and could affect how prediction markets are framed in Congress or consumer press."
+      "theme": "Quiet news week",
+      "summary": "No new coverage collected this cycle. The Air Force indictment and Panama HQ opacity stories from last week are still unresolved and could resurface without warning.",
+      "watch": "The Air Force officer indictment for insider betting has not reached a verdict. Any update could pull Polymarket back into negative coverage."
     },
     "Chase": {
-      "theme": "Institutional strength, reputational friction",
-      "summary": "Chase generated broad positive coverage around tokenized financial products, a $400 million construction loan for AT&T, community investment commitments, and multiple analyst buy ratings. A salacious sex harassment lawsuit covered by Reuters and a congressional request tied to the Epstein probe add reputational friction at the margins without yet disrupting the dominant institutional story.",
-      "watch": "Monitor the sex harassment case and Epstein probe for escalation into wider political news cycles."
+      "theme": "Quiet news week",
+      "summary": "No new coverage collected this cycle. No new signals on the sex harassment case or Epstein probe threads from last week.",
+      "watch": ""
     },
     "Robinhood": {
-      "theme": "Venture expansion, strong trading data",
-      "summary": "Robinhood's confidential filing for a second venture fund targeting early-stage AI startups drove the week's coverage and reframed the brand as a serious institutional investor alongside its retail roots. April trading data was strong with platform assets up 49 percent year over year, and analyst buy ratings held steady at $85.",
+      "theme": "Quiet news week",
+      "summary": "No new coverage collected this cycle. No new signals following last week's venture fund filing and strong April trading data.",
       "watch": ""
     },
     "Cash App": {
-      "theme": "AI lending growth, legacy crime association",
-      "summary": "Cash App was the standout story inside Block's Q1 beat, with AI-powered lending driving a raised full-year outlook and media framing Cash App as the core growth engine of the business. The Bob Lee murder story resurfaced in coverage three years after the fact, a reminder that this association flares unpredictably.",
-      "watch": "The Nima Momeni conviction or sentencing milestones can pull Cash App back into negative coverage cycles with no warning. Worth monitoring for upcoming court dates."
+      "theme": "Quiet news week",
+      "summary": "No new coverage collected this cycle. The Bob Lee murder association and the AI lending growth story from last week both remain in the background.",
+      "watch": "Monitor for Nima Momeni sentencing milestones, which can pull Cash App into negative coverage cycles with no advance notice."
     },
     "SoFi": {
-      "theme": "PrimaryBid acquisition, near-unanimous positivity",
-      "summary": "SoFi's acquisition of PrimaryBid assets drove nearly all of its coverage this week, with five separate stories framing the deal as a strategic move into retail capital markets and UK fintech. A positive credit card review added consumer-facing brand value to an otherwise business-story week.",
-      "watch": "SoFi's move into retail capital markets puts it in territory adjacent to Acorns' investing proposition. Watch how the PrimaryBid narrative develops over the next few weeks as a potential competitive signal."
+      "theme": "Quiet news week",
+      "summary": "No new coverage collected this cycle. SoFi's PrimaryBid acquisition story from last week is still developing and could generate follow-on coverage.",
+      "watch": "SoFi's entry into retail capital markets remains a competitive signal worth tracking as the PrimaryBid deal closes."
     },
     "Chime": {
-      "theme": "First profit milestone, breach risk",
-      "summary": "Chime's first-ever GAAP profit and 10.2 million member count generated a sustained wave of positive coverage that built a strong IPO-readiness narrative. A lawsuit alleging a hacktivist data breach has not displaced that story yet, but consumer finance and cybersecurity coverage of the breach could directly undercut the profitability milestone at a pivotal moment.",
-      "watch": "If the hacktivist breach story moves beyond trade press into mainstream consumer outlets, it could follow the profitability story and damage the IPO narrative."
+      "theme": "Quiet news week",
+      "summary": "No new coverage collected this cycle. The first-profit milestone and the hacktivist breach lawsuit from last week are both still active threads.",
+      "watch": "If the hacktivist breach story moves into mainstream consumer outlets it could follow the profitability story and damage the IPO narrative."
     },
     "Wealthfront": {
-      "theme": "Analyst confidence, thin coverage",
-      "summary": "Wealthfront had a quiet week, with Wells Fargo raising its price target and maintaining a buy rating as the only notable item. No news-driven stories and no negative signals.",
+      "theme": "Off the radar",
+      "summary": "No new coverage collected this cycle. Wealthfront remains off the active news radar.",
       "watch": ""
     },
     "Betterment": {
-      "theme": "Steady editorial roundup presence",
-      "summary": "Betterment appeared in one editorial review this week, maintaining its standard reference position in comparison coverage. No news-driven stories and no sentiment movement.",
+      "theme": "Off the radar",
+      "summary": "No new coverage collected this cycle. Betterment remains off the active news radar.",
       "watch": ""
     },
     "Greenlight": {
-      "theme": "Bank partnership, thin coverage",
-      "summary": "Greenlight's only story this week is a Trustmark partnership, adding another regional bank to its financial literacy distribution network for families. Coverage volume remains thin.",
+      "theme": "Off the radar",
+      "summary": "No new coverage collected this cycle. Greenlight remains off the active news radar.",
       "watch": ""
     },
     "Alinea": {
       "theme": "Off the radar",
-      "summary": "Alinea generated no coverage this week and is absent from the news cycle. Quiet news week.",
+      "summary": "No new coverage collected this cycle. Alinea generated no coverage and is absent from the news cycle.",
       "watch": ""
     }
   }
