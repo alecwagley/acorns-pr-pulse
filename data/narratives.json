@@ -1,64 +1,64 @@
 {
-  "refresh_date": "2026-05-19",
+  "refresh_date": "2026-05-20",
   "brands": {
     "Acorns": {
-      "theme": "Quiet roundup coverage",
-      "summary": "Acorns appeared in two articles this period, both evaluative rather than newsworthy: a best robo-advisors roundup and an explainer about its individual-stock limits. No momentum story and no crisis -- just passive brand presence in evergreen listicles.",
+      "theme": "Quiet news week",
+      "summary": "No coverage surfaced in this refresh window. Acorns is off the media radar for now.",
       "watch": ""
     },
     "Kalshi": {
-      "theme": "Tribal lawsuits vs. sports betting growth",
-      "summary": "Kalshi faces a significant legal headwind: a tribal lawsuit alleging illegal online gambling has been allowed to move forward in court, and it is not the only tribe filing. At the same time, the brand is generating high-volume sports prediction market coverage across NBA, MLB, and other leagues. The split between 11 positive and 11 negative stories reflects this tension precisely.",
-      "watch": "The Ho-Chunk lawsuit moving forward is the story to track. If other tribes join or the case advances to discovery, it could become a recurring negative thread that reframes Kalshi as a gambling operator rather than a financial markets platform -- a distinction that also affects how Polymarket is covered."
+      "theme": "Quiet news week",
+      "summary": "No stories collected in this cycle. Kalshi is not generating news at the moment.",
+      "watch": ""
     },
     "Polymarket": {
-      "theme": "CFTC regulatory uncertainty",
-      "summary": "Polymarket's CFTC conversations dominate its coverage this period, with media framing the talks as a battle over who gets to price reality. Negative stories outpace positive ones nine to seven, which suggests the regulatory narrative is winning the framing contest right now.",
-      "watch": "Polymarket's CFTC outcome will set a precedent that shapes how prediction markets are regulated broadly. Acorns PR should track this: if Polymarket gets a favorable ruling, it legitimizes the space and could generate spillover coverage comparing fintech approaches to market access."
+      "theme": "Quiet news week",
+      "summary": "No new coverage appeared in this refresh. The prediction market space is quiet this cycle.",
+      "watch": ""
     },
     "Chase": {
-      "theme": "Routine coverage, one legal thread",
-      "summary": "Chase's 21 stories are largely financial commentary, routine disclosure filings, and structured-note market reports. One negative thread involves a salacious lawsuit with significant media pickup, though it does not appear connected to any financial misconduct. No dominant PR narrative is driving coverage this period.",
+      "theme": "Quiet news week",
+      "summary": "No items collected for Chase this cycle. No notable coverage to track.",
       "watch": ""
     },
     "Robinhood": {
-      "theme": "Crypto headwinds, strong trading volumes",
-      "summary": "Robinhood lost momentum after a major crypto bill failed to advance, dragging down sentiment for both Coinbase and HOOD. April equity and options trading volumes came in strong, giving the stock a partial recovery. The story is mixed: fundamentals are solid, but crypto legislative uncertainty is the overhanging risk.",
-      "watch": "Crypto bill timeline is the variable. If it advances in May or June, Robinhood sentiment will swing sharply positive and drive a wave of retail investing coverage that Acorns will want to be positioned inside."
+      "theme": "Quiet news week",
+      "summary": "No coverage surfaced in this refresh. Robinhood is out of the news cycle for now.",
+      "watch": ""
     },
     "Cash App": {
-      "theme": "Block earnings beat, growth momentum",
-      "summary": "Block's Q1 2026 earnings beat expectations, driven by Cash App and Square strength, and the company guided for faster growth and margin expansion going forward. Coverage was largely positive, with several pieces analyzing Cash App's strategic shift and its contribution to Block's recovery story.",
+      "theme": "Quiet news week",
+      "summary": "No stories collected in this window. Cash App is not generating media attention this cycle.",
       "watch": ""
     },
     "SoFi": {
-      "theme": "PrimaryBid acquisition, strong momentum",
-      "summary": "SoFi made its biggest move of the period by acquiring most of PrimaryBid's assets to expand into retail investing, a deal that ended PrimaryBid's UK operations and signals SoFi's international ambition. Product reviews across credit and banking remain positive, and sentiment this period is seven positive to zero negative.",
-      "watch": "The PrimaryBid acquisition puts SoFi in the IPO-access space. If SoFi starts marketing retail IPO participation as a differentiator, it opens a competitive narrative Acorns does not currently have an answer to."
+      "theme": "Quiet news week",
+      "summary": "No items appeared in this refresh. SoFi has no notable coverage to report.",
+      "watch": ""
     },
     "Chime": {
-      "theme": "Profitability milestone, IPO setup",
-      "summary": "Chime's headline story is hitting profitability with 10.2 million members, a milestone that generated strong positive coverage across fintech outlets. A few pieces noted risks accompanying its first profitable quarter, but the dominant frame is that Chime has crossed a credibility threshold.",
-      "watch": "The profitability milestone is likely the final beat before Chime files for an IPO. When that happens, it will trigger a wave of neobank comparison coverage. Acorns PR should be ready with a clear differentiation narrative before that cycle starts."
+      "theme": "Quiet news week",
+      "summary": "No coverage surfaced this cycle. Chime is off the media radar for now.",
+      "watch": ""
     },
     "Wealthfront": {
-      "theme": "Analyst upgrade, quiet week",
-      "summary": "Wealthfront received a Buy rating and price target raise from Wells Fargo, which is the only substantive story this period. Coverage is otherwise minimal. The brand is not generating news and not under any pressure.",
+      "theme": "Quiet news week",
+      "summary": "No stories collected in this window. Wealthfront is not generating press attention.",
       "watch": ""
     },
     "Betterment": {
-      "theme": "Off the radar",
-      "summary": "Betterment generated one review article this period, a factual 2026 update with no news peg. There is nothing to track or respond to. The brand is quiet.",
+      "theme": "Quiet news week",
+      "summary": "No items appeared in this refresh. Betterment has no notable coverage this cycle.",
       "watch": ""
     },
     "Greenlight": {
-      "theme": "Partnership announcement",
-      "summary": "Greenlight announced a partnership with Trustmark focused on financial education for families, generating one positive pickup. Coverage is thin but the partnership is a clean, on-brand story with no downside.",
+      "theme": "Quiet news week",
+      "summary": "No coverage surfaced in this cycle. Greenlight is out of the news cycle for now.",
       "watch": ""
     },
     "Alinea": {
-      "theme": "Off the radar",
-      "summary": "Alinea produced no coverage this period across any tracked outlets. The brand is not in the news cycle.",
+      "theme": "Quiet news week",
+      "summary": "No stories collected in this window. Alinea has no media presence to track this cycle.",
       "watch": ""
     }
   }
