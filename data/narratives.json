@@ -1,64 +1,64 @@
 {
-  "refresh_date": "2026-05-20",
+  "refresh_date": "2026-05-21",
   "brands": {
     "Acorns": {
-      "theme": "Quiet news week",
-      "summary": "No coverage surfaced in this refresh window. Acorns is off the media radar for now.",
+      "theme": "Off the radar",
+      "summary": "No coverage surfaced for Acorns in this refresh window. The brand is quiet across financial and general press.",
       "watch": ""
     },
     "Kalshi": {
-      "theme": "Quiet news week",
-      "summary": "No stories collected in this cycle. Kalshi is not generating news at the moment.",
+      "theme": "Off the radar",
+      "summary": "No stories collected for Kalshi this cycle. No regulatory, product, or funding news detected.",
       "watch": ""
     },
     "Polymarket": {
-      "theme": "Quiet news week",
-      "summary": "No new coverage appeared in this refresh. The prediction market space is quiet this cycle.",
+      "theme": "Off the radar",
+      "summary": "No new coverage appeared for Polymarket in this refresh. The prediction market space is quiet.",
       "watch": ""
     },
     "Chase": {
-      "theme": "Quiet news week",
-      "summary": "No items collected for Chase this cycle. No notable coverage to track.",
+      "theme": "Off the radar",
+      "summary": "No items collected for Chase this cycle. No notable press, regulatory, or product coverage to track.",
       "watch": ""
     },
     "Robinhood": {
-      "theme": "Quiet news week",
-      "summary": "No coverage surfaced in this refresh. Robinhood is out of the news cycle for now.",
+      "theme": "Off the radar",
+      "summary": "No coverage surfaced for Robinhood in this refresh. The brand is out of the news cycle for now.",
       "watch": ""
     },
     "Cash App": {
-      "theme": "Quiet news week",
-      "summary": "No stories collected in this window. Cash App is not generating media attention this cycle.",
+      "theme": "Off the radar",
+      "summary": "No stories collected for Cash App this window. The brand is not generating media attention this cycle.",
       "watch": ""
     },
     "SoFi": {
-      "theme": "Quiet news week",
-      "summary": "No items appeared in this refresh. SoFi has no notable coverage to report.",
+      "theme": "Off the radar",
+      "summary": "No items appeared for SoFi in this refresh. No notable coverage to report this period.",
       "watch": ""
     },
     "Chime": {
-      "theme": "Quiet news week",
-      "summary": "No coverage surfaced this cycle. Chime is off the media radar for now.",
+      "theme": "Off the radar",
+      "summary": "No coverage surfaced for Chime this cycle. The brand is off the media radar for now.",
       "watch": ""
     },
     "Wealthfront": {
-      "theme": "Quiet news week",
-      "summary": "No stories collected in this window. Wealthfront is not generating press attention.",
+      "theme": "Off the radar",
+      "summary": "No stories collected for Wealthfront in this window. The brand is not generating press attention.",
       "watch": ""
     },
     "Betterment": {
-      "theme": "Quiet news week",
-      "summary": "No items appeared in this refresh. Betterment has no notable coverage this cycle.",
+      "theme": "Off the radar",
+      "summary": "No items appeared for Betterment in this refresh. No notable coverage surfaced this cycle.",
       "watch": ""
     },
     "Greenlight": {
-      "theme": "Quiet news week",
-      "summary": "No coverage surfaced in this cycle. Greenlight is out of the news cycle for now.",
+      "theme": "Off the radar",
+      "summary": "No coverage surfaced for Greenlight this cycle. The brand is out of the news cycle for now.",
       "watch": ""
     },
     "Alinea": {
-      "theme": "Quiet news week",
-      "summary": "No stories collected in this window. Alinea has no media presence to track this cycle.",
+      "theme": "Off the radar",
+      "summary": "No stories collected for Alinea this window. The brand has no media presence to track this cycle.",
       "watch": ""
     }
   }
